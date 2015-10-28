@@ -21,7 +21,7 @@ else
     # production server
     wmsurl=http://rain1.fsv.cvut.cz/services/wms
     wpsurl=http://rain1.fsv.cvut.cz/services/wps
-    data=/home/landamar
+    data=/opt
     wwwdir=/var/www/html
 fi
 
@@ -34,7 +34,6 @@ chown $user:$user wms/subdayprecip.map
 sed "s?#URL#?$wpsurl?g;s?#DATADIR#?$data?g;s?#HOST#?$host?g;s?#WWWDIR#?$wwwdir?g" \
     wps/pywps.cfg.sed > wps/pywps.cfg
 chown $user:$user wps/pywps.cfg
-ln -sf `pwd`/wps/pywps.cgi /usr/lib/cgi-bin
 
 if [ -d /var/www/html/ ] ; then
     cd /var/www/html

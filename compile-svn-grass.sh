@@ -9,7 +9,7 @@
 # Licence: see LICENCE file for details
 ####################################################################
 
-cd /opt/src/grass
+cd /opt/grass
 svn up 
 if [ "$1" = "f" ] ; then
     make distclean
@@ -28,5 +28,10 @@ fi
 
 set -e
 make
+
+export GRASS_BATCH_JOB=/opt/subdayprecip-design/grass/extension.sh
+export GRASS_SKIP_MAPSET_OWNER_CHECK=1
+/opt/grass/bin.x86_64-unknown-linux-gnu/grass70 --text /opt/grassdata/subdayprecip/PERMANENT
+unset GRASS_BATCH_JOB
 
 exit 0

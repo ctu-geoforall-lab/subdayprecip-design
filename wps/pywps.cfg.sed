@@ -39,13 +39,13 @@ logfile_module_stderr=/var/log/pywps_grass_stderr.log
 #debug=True
 
 [grass]
-path=/opt/src/grass/dist.x86_64-unknown-linux-gnu/bin/:/opt/src/grass/dist.x86_64-unknown-linux-gnu/scripts/:/usr/bin:/opt/.grass7/addons/scripts
+path=/opt/grass/dist.x86_64-unknown-linux-gnu/bin/:/opt/grass/dist.x86_64-unknown-linux-gnu/scripts/:/usr/bin
 version=7.0.2svn
 gui=text
-gisbase=/opt/src/grass/dist.x86_64-unknown-linux-gnu
-ldLibraryPath=/opt/src/grass/dist.x86_64-unknown-linux-gnu/lib
+gisbase=/opt/grass/dist.x86_64-unknown-linux-gnu
+ldLibraryPath=/opt/grass/dist.x86_64-unknown-linux-gnu/lib
 gisdbase=#DATADIR#/grassdata
-pythonPath=/opt/src/grass/dist.x86_64-unknown-linux-gnu/etc/python
+pythonPath=/opt/grass/dist.x86_64-unknown-linux-gnu/etc/python
 
 [mapserver]
 mapserveraddress=http://#HOST#.fsv.cvut.cz/cgi-bin/mapserv

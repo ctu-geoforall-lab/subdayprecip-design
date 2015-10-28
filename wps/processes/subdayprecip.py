@@ -18,7 +18,7 @@ import logging
 from mimetypes import MimeTypes
 import magic
 
-os.environ['GISBASE'] = '/usr/local/grass70'
+os.environ['GISBASE'] = '/opt/grass/dist.x86_64-unknown-linux-gnu'
 sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
 
 from grass.pygrass.modules import Module
