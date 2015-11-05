@@ -27,7 +27,7 @@ MAP
       "wms_title"                        "Rain WMS server"
       "wms_onlineresource"               "#URL#"
       "wms_abstract"                     "WMS server projektu QJ1520265, vice informaci na http://rain.fsv.cvut.cz/webove-sluzby/wms/"
-      "wms_srs"                          "EPSG:5514"
+      "wms_srs"                          "EPSG:5514 EPSG:2065 EPSG:102067"
       "wms_encoding"                     "UTF-8"
       "wms_contactelectronicmailaddress" "martin.landa@fsv.cvut.cz"
       "wms_contactperson"                "Martin Landa"
@@ -43,10 +43,13 @@ MAP
       "wms_title"           "H_002"
       "wms_abstract"        "H_002"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067"
       "wms_enable_request"  "*"
       "wms_extent"           "-907000 -1230000 -429000 -933000"
     END # METADATA
+    PROJECTION
+	"init=epsg:5514"
+    END # PROJECTION
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_002.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_002"
@@ -60,10 +63,13 @@ MAP
       "wms_title"           "H_005"
       "wms_abstract"        "H_005"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067"
       "wms_enable_request"  "*"
       "wms_extent"           "-907000 -1230000 -429000 -933000"
     END # METADATA
+    PROJECTION
+	"init=epsg:5514"
+    END # PROJECTION
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_005.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_005"
@@ -77,10 +83,13 @@ MAP
       "wms_title"           "H_010"
       "wms_abstract"        "H_010"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067"
       "wms_enable_request"  "*"
       "wms_extent"           "-907000 -1230000 -429000 -933000"
     END # METADATA
+    PROJECTION
+	"init=epsg:5514"
+    END # PROJECTION
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_010.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_010"
@@ -94,10 +103,13 @@ MAP
       "wms_title"           "H_020"
       "wms_abstract"        "H_020"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067"
       "wms_enable_request"  "*"
       "wms_extent"          "-907000 -1230000 -429000 -933000"
     END # METADATA
+    PROJECTION
+	"init=epsg:5514"
+    END # PROJECTION
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_020.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_020"
@@ -111,10 +123,13 @@ MAP
       "wms_title"           "H_050"
       "wms_abstract"        "H_050"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067"
       "wms_enable_request"  "*"
       "wms_extent"          "-907000 -1230000 -429000 -933000"
     END # METADATA
+    PROJECTION
+	"init=epsg:5514"
+    END # PROJECTION
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_050.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_050"
@@ -128,10 +143,13 @@ MAP
       "wms_title"           "H_100"
       "wms_abstract"        "H_100"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067"
       "wms_enable_request"  "*"
       "wms_extent"          "-907000 -1230000 -429000 -933000"
     END # METADATA
+    PROJECTION
+	"init=epsg:5514"
+    END # PROJECTION
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_100.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_100"
