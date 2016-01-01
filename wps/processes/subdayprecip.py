@@ -18,15 +18,15 @@ import logging
 from mimetypes import MimeTypes
 import magic
 
-os.environ['GISBASE'] = '/opt/grass/dist.x86_64-unknown-linux-gnu'
+os.environ['GISBASE'] = '/opt/grass/dist.x86_64-pc-linux-gnu'
 sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
-
+logging.info(sys.path)
 from grass.pygrass.modules import Module
 from grass.exceptions import CalledModuleError
 from pywps.Process import WPSProcess
 
 class SubDayPrecipProcess(WPSProcess):
-     def __init__(self, identifier, description, location='subdayprecip'):
+     def __init__(self, identifier, description, location='subdayprecip', skip_input=False):
           WPSProcess.__init__(self,
                               identifier=identifier,
                               version="0.1",
@@ -34,14 +34,15 @@ class SubDayPrecipProcess(WPSProcess):
                               abstract="Computes subday design precipitation series using GRASS GIS. "
                               "See http://grass.osgeo.org/grass70/manuals/addons/r.subdayprecip.design.html for details.",
                               grassLocation=location, storeSupported = True, statusSupported = True)
-          
-          self.input = self.addComplexInput(identifier = "input",
-                                            title = "Input vector data",
-                                            formats = [ {"mimeType":"text/xml",
-                                                         "encoding":"utf-8",
-                                                         "schema":"http://schemas.opengis.net/gml/3.2.1/gml.xsd"} ],
-                                            minOccurs=0)
 
+          if not skip_input:
+               self.input = self.addComplexInput(identifier = "input",
+                                                 title = "Input vector data",
+                                                 formats = [ {"mimeType":"text/xml",
+                                                              "encoding":"utf-8",
+                                                              "schema":"http://schemas.opengis.net/gml/3.2.1/gml.xsd"} ],
+                                                 minOccurs=0)
+          
           self.raster = self.addLiteralInput(identifier = "raster",
                                              title = "Name of repetition periods raster map(s)",
                                              type = types.StringType,
