@@ -5,7 +5,7 @@ var map, wpsObj, urlWPS, obsPoint;
 var urlWPS="http://rain1.fsv.cvut.cz/services/wps";
 
 // OPTION GRITTER
-$.extend($.gritter.options,{position:'bottom-right',fade_in_speed:'medium',fade_out_speed:2000,time:2000});
+$.extend($.gritter.options,{position:'top-left',fade_in_speed:'medium',fade_out_speed:2000,time:2000});
 
 /*
  * CREATION OF WPS OBJECT, CALL OF WPS OBJECT
@@ -27,9 +27,10 @@ function callWPS(){
         identifier : "obs_y",
         value: obsPoint.y
     });
+    var layers = map.getLayersBy("visibility", true);
     var raster = new OpenLayers.WPS.LiteralPut({
         identifier : "raster",
-        value: "H_002" 
+        value: layers[0].name
     });
     var rainLength = new OpenLayers.WPS.LiteralPut({
         identifier : "rainlength",
@@ -79,9 +80,11 @@ function triggerGritter(text){
 function showResult(text){
     var div = document.getElementById('resultNote');
     var rainLength = document.getElementById('rainlength').value;
+    var layers = map.getLayersBy("visibility", true);
     
     div.innerHTML = '<div align="center">Výsledek</div>';
-    div.innerHTML += '<table>' + '<tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) + 
+    div.innerHTML += '<table>' + '<tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
+    '</td></tr><tr><td>Rastr doby opakování:</td><td>' + layers[0].name + 
     '</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + 
     '</td></tr><tr><td>Hodnota návrhové srážky:</td><td>' + parseFloat(text).toFixed(1) + '</td></tr>' +  '</table>';
 };
@@ -91,18 +94,36 @@ function showResult(text){
  */
 
 $(document).ready(function() {
+    var switcher = new OpenLayers.Control.LayerSwitcher();
     var options = { projection: new OpenLayers.Projection('EPSG:4326'), 
                     units: 'm',
                     controls: [ new OpenLayers.Control.Navigation(),
-                                new OpenLayers.Control.PanPanel() ],
+                                new OpenLayers.Control.PanPanel(),
+				switcher],
                   };
-
+    
     map = new OpenLayers.Map('map1', options);
-
+    switcher.maximizeControl();
+    
     // base layer
-    gphyLayer = new OpenLayers.Layer.WMS("H_002",
+    h002Layer = new OpenLayers.Layer.WMS("H_002",
                                          "http://rain1.fsv.cvut.cz/services/wms",
                                          {layers: "H_002", srs: "EPSG:4326"});
+    h005Layer = new OpenLayers.Layer.WMS("H_005",
+                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         {layers: "H_010", srs: "EPSG:4326"});
+    h010Layer = new OpenLayers.Layer.WMS("H_010",
+                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         {layers: "H_020", srs: "EPSG:4326"});
+    h020Layer = new OpenLayers.Layer.WMS("H_020",
+                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         {layers: "H_030", srs: "EPSG:4326"});
+    h050Layer = new OpenLayers.Layer.WMS("H_050",
+                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         {layers: "H_050", srs: "EPSG:4326"});
+    h100Layer = new OpenLayers.Layer.WMS("H_100",
+                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         {layers: "H_100", srs: "EPSG:4326"});
 
     // observation point layer
     obsLayer = new OpenLayers.Layer.Vector("Observation Point");
@@ -114,7 +135,7 @@ $(document).ready(function() {
     obsLayer.addFeatures([new OpenLayers.Feature.Vector(obsPoint, {icon: "./img/map-pointer.png"})]);
     
     // add everything to map
-    map.addLayers([gphyLayer, obsLayer]);
+    map.addLayers([h002Layer, h005Layer, h010Layer, h020Layer, h050Layer, h100Layer, obsLayer]);
     map.setCenter(new OpenLayers.LonLat(15.474897, 49.803578), 8);
     
     // drag feature control here is where wps is called !!!!
