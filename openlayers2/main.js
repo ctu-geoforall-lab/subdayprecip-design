@@ -117,7 +117,7 @@ $(document).ready(function() {
                                          {layers: "H_020", srs: "EPSG:4326"});
     h020Layer = new OpenLayers.Layer.WMS("H_020",
                                          "http://rain1.fsv.cvut.cz/services/wms",
-                                         {layers: "H_030", srs: "EPSG:4326"});
+                                         {layers: "H_020", srs: "EPSG:4326"});
     h050Layer = new OpenLayers.Layer.WMS("H_050",
                                          "http://rain1.fsv.cvut.cz/services/wms",
                                          {layers: "H_050", srs: "EPSG:4326"});
