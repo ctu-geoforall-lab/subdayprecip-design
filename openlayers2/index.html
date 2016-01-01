@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <!-- http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/ -->
+    <!-- http://th.atguy.com/mycode/xor_js_encryption/ -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>WPS example in OpenLayers</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/generic.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./css/jquery.gritter.css" type="text/css" media="screen">
+
+    <script type="text/javascript" src="./jquery/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="./jquery/jquery.gritter.min.js"></script>
+    <script type="text/javascript" src="./OpenLayers.js"></script>
+    <script type="text/javascript" src="./proj4js/lib/proj4js.js"></script>
+    <script type="text/javascript" src="./proj4js/lib/defs/EPSG3857.js"></script>
+    <script type="text/javascript" src="./WPS.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+
+<body>
+
+  <div id="map1"></div>
+  
+  <div class="note" id="contactNote">
+    <h2>Testovací aplikace Rain</h2>
+    <p>Nástroj vyčíslí návrhovou srážku pro lokalitu zadanou uživatelem v podobě bodu.</p>
+    <p><a href="http://rain.fsv.cvut.cz">http://rain.fsv.cvut.cz</a></p>
+  </div>
+
+  <div class="note" id="resultNote">
+    Pro zahajení výpočtu <br>posuňte s ukazatelem na mapě.
+  </div>
+
+  </body>
+  
+</html>

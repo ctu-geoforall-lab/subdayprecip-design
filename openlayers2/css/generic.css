@@ -1,0 +1,83 @@
+/* NOTE position*/
+.textGitter {
+font-size: 14px;
+letter-spacing: 1px;
+font-weight: 700;
+font-family: verdana, helvetica, arial, sans-serif;
+}
+.note {
+position: absolute;
+float: left;
+color: #ffffff;
+border: solid 1px;
+padding: 1px;
+margin: 4px;
+background: #000000;
+z-index:1000;
+filter: alpha(opacity=85);
+opacity: .85;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-topright: 20px;
+-webkit-border-top-left-radius: 20px;
+-webkit-border-top-right-radius: 20px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+-moz-border-radius-bottomleft: 20px;
+-moz-border-radius-bottomright: 20px;
+-webkit-border-bottom-left-radius: 20px;
+-webkit-border-bottom-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+padding-left:15px;
+font-weight: 900;
+}
+
+
+
+.note#contactNote{
+bottom: 10px; /* just over google logo, legal requirement*/
+width: 250px;
+}
+
+.note#crashNote{
+right: 40px;
+top: 40px;
+padding: 1px;
+width:225px;
+height:25px;
+}
+
+.note#downloadNote{
+top:80px;
+padding: 1px;
+right: 40px;
+width: 350px;
+height:25px;
+}
+
+.note#resultNote{
+top:10px;
+padding: 5px;
+right: 10px;
+width: 350px;
+height:110px;
+opacity: .65;
+text-align: center;
+}
+
+.note p {
+font-size: 11px;
+letter-spacing: 1px;
+font-family: verdana, helvetica, arial, sans-serif;
+}
+.note h2 {
+font-size: 12px;
+letter-spacing: 1px;
+font-family: verdana, helvetica, arial, sans-serif;
+}
+
+a:link {color: #9294e7; text-decoration: underline; }
+a:active {color: #9294e7; text-decoration: underline; }
+a:visited {color: #9294e7; text-decoration: underline; }
+a:hover {color: #9294e7; text-decoration: none; }
+
