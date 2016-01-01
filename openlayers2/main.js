@@ -33,7 +33,7 @@ function callWPS(){
     });
     var rainLength = new OpenLayers.WPS.LiteralPut({
         identifier : "rainlength",
-        value: "60"
+        value: document.getElementById('rainlength').value
     });
 
     // Setting outputs
@@ -78,11 +78,12 @@ function triggerGritter(text){
 
 function showResult(text){
     var div = document.getElementById('resultNote');
-
-    div.innerHTML = '<div align="center">Výsledek:<br><br>';
-    div.innerHTML += 'GPS: ' + obsPoint.x + ',' + obsPoint.y + '<br><br>';
-    div.innerHTML += 'Hodnota: ' + text;
-    div.innerHTML += '</div>';
+    var rainLength = document.getElementById('rainlength').value;
+    
+    div.innerHTML = '<div align="center">Výsledek</div>';
+    div.innerHTML += '<table>' + '<tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) + 
+    '</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + 
+    '</td></tr><tr><td>Hodnota návrhové srážky:</td><td>' + parseFloat(text).toFixed(1) + '</td></tr>' +  '</table>';
 };
 
 /*
