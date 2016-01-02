@@ -30,7 +30,7 @@ function callWPS(){
     var layers = map.getLayersBy("visibility", true);
     var raster = new OpenLayers.WPS.LiteralPut({
         identifier : "raster",
-        value: layers[0].name
+        value: layers[0].title
     });
     var rainLength = new OpenLayers.WPS.LiteralPut({
         identifier : "rainlength",
@@ -84,8 +84,8 @@ function showResult(text){
     
     div.innerHTML = '<div align="center">Výsledek</div>';
     div.innerHTML += '<table>' + '<tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
-    '</td></tr><tr><td>Rastr doby opakování:</td><td>' + layers[0].name + 
-    '</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + 
+    '</td></tr><tr><td>Doba opakování:</td><td>' + layers[0].name +
+    '</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + ' (minuty)' + 
     '</td></tr><tr><td>Hodnota návrhové srážky:</td><td>' + parseFloat(text).toFixed(1) + '</td></tr>' +  '</table>';
 };
 
@@ -95,6 +95,7 @@ function showResult(text){
 
 $(document).ready(function() {
     var switcher = new OpenLayers.Control.LayerSwitcher();
+    
     var options = { projection: new OpenLayers.Projection('EPSG:4326'), 
                     units: 'm',
                     controls: [ new OpenLayers.Control.Navigation(),
@@ -106,27 +107,38 @@ $(document).ready(function() {
     switcher.maximizeControl();
     
     // base layer
-    h002Layer = new OpenLayers.Layer.WMS("H_002",
+    h002Layer = new OpenLayers.Layer.WMS("2 roky",
                                          "http://rain1.fsv.cvut.cz/services/wms",
                                          {layers: "H_002", srs: "EPSG:4326"});
-    h005Layer = new OpenLayers.Layer.WMS("H_005",
+    h002Layer.title = "H_002";
+
+    h005Layer = new OpenLayers.Layer.WMS("5 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
                                          {layers: "H_010", srs: "EPSG:4326"});
-    h010Layer = new OpenLayers.Layer.WMS("H_010",
+    h005Layer.title = "H_005";
+
+    h010Layer = new OpenLayers.Layer.WMS("10 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
                                          {layers: "H_020", srs: "EPSG:4326"});
-    h020Layer = new OpenLayers.Layer.WMS("H_020",
+    h010Layer.title = "H_010";
+    
+    h020Layer = new OpenLayers.Layer.WMS("20 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
                                          {layers: "H_020", srs: "EPSG:4326"});
-    h050Layer = new OpenLayers.Layer.WMS("H_050",
+    h020Layer.title = "H_020";
+    
+    h050Layer = new OpenLayers.Layer.WMS("50 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
                                          {layers: "H_050", srs: "EPSG:4326"});
-    h100Layer = new OpenLayers.Layer.WMS("H_100",
+    h050Layer.title = "H_050";
+    
+    h100Layer = new OpenLayers.Layer.WMS("100 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
                                          {layers: "H_100", srs: "EPSG:4326"});
+    h100Layer.title = "H_100";
 
     // observation point layer
-    obsLayer = new OpenLayers.Layer.Vector("Observation Point");
+    obsLayer = new OpenLayers.Layer.Vector("Observační bod");
     obsPoint = new OpenLayers.Geometry.Point(15.474897, 49.803578);
     
     // style observation point map of obsLayer
@@ -138,7 +150,7 @@ $(document).ready(function() {
     map.addLayers([h002Layer, h005Layer, h010Layer, h020Layer, h050Layer, h100Layer, obsLayer]);
     map.setCenter(new OpenLayers.LonLat(15.474897, 49.803578), 8);
     
-    // drag feature control here is where wps is called !!!!
+    // drag feature control here is where wps is called
     controlDrag = new OpenLayers.Control.DragFeature(obsLayer,
                                                      {onComplete: function(featureObj, pixelObj) {
 	                                                 triggerGritter("Spouštím WPS proces");
