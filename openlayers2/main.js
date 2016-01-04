@@ -83,10 +83,11 @@ function showResult(text){
     var layers = map.getLayersBy("visibility", true);
     
     div.innerHTML = '<div align="center">Výsledek</div>';
-    div.innerHTML += '<table>' + '<tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
-    '</td></tr><tr><td>Doba opakování:</td><td>' + layers[0].name +
-    '</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + ' (minuty)' + 
-    '</td></tr><tr><td>Hodnota návrhové srážky:</td><td>' + parseFloat(text).toFixed(1) + '</td></tr>' +  '</table>';
+    div.innerHTML += '<table><tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
+	'</td></tr><tr><td>Doba opakování:</td><td>' + layers[0].name +
+	'</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + ' (minuty)' +
+	'</td></tr><tr><td>Hodnota návrhové srážky:</td><td><font color="red">' + parseFloat(text).toFixed(1) +
+	'</font> (milimetry)</td></tr></table>';
 };
 
 /*
