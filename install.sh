@@ -25,7 +25,7 @@ if [ `grep 5514 $EPSG | wc -l` = 1 ] ; then
 fi
 
 if [ ! -d /opt/grass ] ; then
-    svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_7_0 /opt/grass
+    svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_7_2 /opt/grass
     ./compile-svn-grass.sh
     git clone https://github.com/geopython/PyWPS.git /opt/pywps
     cp wps/pywps.cgi /usr/lib/cgi-bin
