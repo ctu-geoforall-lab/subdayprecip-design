@@ -26,7 +26,7 @@ MAP
     METADATA
       "wms_title"                        "Rain WMS server"
       "wms_onlineresource"               "#URL#"
-      "wms_abstract"                     "WMS server projektu QJ1520265, vice informaci na http://rain.fsv.cvut.cz/webove-sluzby/wms/"
+      "wms_abstract"                     "WMS server projektu QJ1520265, vice informaci na http://rain.fsv.cvut.cz/webove-sluzby/ogc-wms"
       "wms_srs"                          "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
       "wms_encoding"                     "UTF-8"
       "wms_contactelectronicmailaddress" "martin.landa@fsv.cvut.cz"
