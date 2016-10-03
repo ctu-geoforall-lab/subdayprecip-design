@@ -12,7 +12,6 @@ lang=cs-CZ
 [provider]
 providerName=CVUT v Praze, Fakulta stavebni
 individualName=Martin Landa
-positionName=GIS Lecturer
 deliveryPoint=Thakurova 7
 city=Praha
 postalCode=166 29
@@ -26,7 +25,7 @@ hoursofservice=0:00-24:00
 contactinstructions=none
 
 [server]
-maxoperations=5
+maxoperations=2
 maxinputparamlength=1024
 maxfilesize=200mb
 tempPath=/tmp
