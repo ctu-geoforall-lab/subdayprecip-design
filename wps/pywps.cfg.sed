@@ -2,7 +2,7 @@
 encoding=utf-8
 title=Rain WPS Server
 version=1.0.0
-abstract=WPS projektu QJ1520265, vice informaci na http://rain.fsv.cvut.cz/webove-sluzby/wfs
+abstract=WPS projektu QJ1520265, vice informaci na http://rain.fsv.cvut.cz/webove-sluzby/ogc-wps/
 fees=none
 constraints=none
 serveraddress=#URL#
