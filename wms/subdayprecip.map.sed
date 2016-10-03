@@ -41,7 +41,7 @@ MAP
     NAME "H_002"
     METADATA
       "wms_title"           "H_002"
-      "wms_abstract"        "H_002"
+      "wms_abstract"        "Vrstva 2-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
       "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
       "wms_enable_request"  "*"
@@ -61,7 +61,7 @@ MAP
     NAME "H_005"
     METADATA
       "wms_title"           "H_005"
-      "wms_abstract"        "H_005"
+      "wms_abstract"        "Vrstva 5-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
       "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
       "wms_enable_request"  "*"
@@ -81,7 +81,7 @@ MAP
     NAME "H_010"
     METADATA
       "wms_title"           "H_010"
-      "wms_abstract"        "H_010"
+      "wms_abstract"        "Vrstva 10-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
       "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
       "wms_enable_request"  "*"
@@ -101,7 +101,7 @@ MAP
     NAME "H_020"
     METADATA
       "wms_title"           "H_020"
-      "wms_abstract"        "H_020"
+      "wms_abstract"        "Vrstva 20-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
       "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
       "wms_enable_request"  "*"
@@ -121,7 +121,7 @@ MAP
     NAME "H_050"
     METADATA
       "wms_title"           "H_050"
-      "wms_abstract"        "H_050"
+      "wms_abstract"        "Vrstva 50-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
       "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
       "wms_enable_request"  "*"
@@ -141,7 +141,7 @@ MAP
     NAME "H_100"
     METADATA
       "wms_title"           "H_100"
-      "wms_abstract"        "H_100"
+      "wms_abstract"        "Vrstva 100-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
       "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
       "wms_enable_request"  "*"
