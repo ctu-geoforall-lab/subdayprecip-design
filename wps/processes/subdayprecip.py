@@ -92,7 +92,8 @@ class SubDayPrecipProcess(WPSProcess):
           if 'gzip' in mime:
                input_data = '/vsigzip/' + input_data
           elif 'zip' in mime:
-               input_data = '/vsizip/' + input_data
+               os.rename(input_data, input_data + '.zip') # GDAL requires zip extension
+               input_data = '/vsizip/' + input_data + '.zip'
 
           # link or import ?
           module_in_args = {}
@@ -111,7 +112,7 @@ class SubDayPrecipProcess(WPSProcess):
                       overwrite=True,
                       **module_in_args)
           except CalledModuleError as e:
-               raise Exception("Unable to import input vector data")
+               raise Exception("Unable to import input vector data: {}".format(e))
           
           logging.debug("Input data finished ({})".format(module_in))
           
