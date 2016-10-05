@@ -5,10 +5,10 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="data_cr20161004194541771" name="data cr">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="data_cr20161004194541771" name="ČR">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="data_basins_iii20161004194541768" name="data basins_iii">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="data_basins_iii20161004194541768" name="Povodí III.">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="H_10020161004195025641" name="H_100">
@@ -40,10 +40,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-1025825.0847102248808369</xmin>
-      <ymin>-1244134.88833500701002777</ymin>
-      <xmax>-324321.7527897726977244</xmax>
-      <ymax>-925595.1100649933796376</ymax>
+      <xmin>-916406.31024999998044223</xmin>
+      <ymin>-1234597.31099999998696148</ymin>
+      <xmax>-419905.39974999998230487</xmax>
+      <ymax>-927935.10899999993853271</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -88,12 +88,12 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="data cr" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ČR" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="data_cr20161004194541771" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="data basins_iii" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Povodí III." showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="data_basins_iii20161004194541768" visible="1"/>
       </filegroup>
@@ -512,7 +512,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>data basins_iii</layername>
+      <layername>Povodí III.</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -818,7 +818,7 @@ def my_form_open(dialog, layer, feature):
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>data cr</layername>
+      <layername>ČR</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -1142,10 +1142,10 @@ def my_form_open(dialog, layer, feature):
       <variableNames type="QStringList"/>
       <variableValues type="QStringList"/>
     </Variables>
-    <WMSContactPerson type="QString"></WMSContactPerson>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSContactPerson type="QString">Martin Landa</WMSContactPerson>
+    <WMSOnlineResource type="QString">rain.fsv.cvut.cz</WMSOnlineResource>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
-    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSContactOrganization type="QString">ČVUT v Praze, Fakulta stavební</WMSContactOrganization>
     <WMSKeywordList type="QStringList">
       <value></value>
     </WMSKeywordList>
@@ -1155,14 +1155,14 @@ def my_form_open(dialog, layer, feature):
     </Paths>
     <WMSServiceTitle type="QString"></WMSServiceTitle>
     <WFSLayers type="QStringList"/>
-    <WMSContactMail type="QString"></WMSContactMail>
+    <WMSContactMail type="QString">martin.landa@fsv.cvut.cz</WMSContactMail>
     <PositionPrecision>
       <DecimalPlaces type="int">2</DecimalPlaces>
       <Automatic type="bool">true</Automatic>
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
     <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
