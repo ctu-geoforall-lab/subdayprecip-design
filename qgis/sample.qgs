@@ -1154,7 +1154,10 @@ def my_form_open(dialog, layer, feature):
       <Absolute type="bool">false</Absolute>
     </Paths>
     <WMSServiceTitle type="QString"></WMSServiceTitle>
-    <WFSLayers type="QStringList"/>
+    <WFSLayers type="QStringList">
+      <value>data_basins_iii20161004194541768</value>
+      <value>data_cr20161004194541771</value>
+    </WFSLayers>
     <WMSContactMail type="QString">martin.landa@fsv.cvut.cz</WMSContactMail>
     <PositionPrecision>
       <DecimalPlaces type="int">2</DecimalPlaces>
@@ -1162,8 +1165,8 @@ def my_form_open(dialog, layer, feature):
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
+    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
@@ -1191,6 +1194,10 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
     </Digitizing>
+    <WFSLayersPrecision>
+      <data_cr20161004194541771 type="int">8</data_cr20161004194541771>
+      <data_basins_iii20161004194541768 type="int">8</data_basins_iii20161004194541768>
+    </WFSLayersPrecision>
     <Identify>
       <disabledLayers type="QStringList"/>
     </Identify>
