@@ -30,7 +30,7 @@ function callWPS(){
     var layers = map.getLayersBy("visibility", true);
     var raster = new OpenLayers.WPS.LiteralPut({
         identifier : "raster",
-        value: layers[0].title
+        value: document.getElementById('raster').value
     });
     var rainLength = new OpenLayers.WPS.LiteralPut({
         identifier : "rainlength",
@@ -79,12 +79,13 @@ function triggerGritter(text){
 
 function showResult(text){
     var div = document.getElementById('resultNote');
+    var raster = document.getElementById('raster').value;
     var rainLength = document.getElementById('rainlength').value;
     var layers = map.getLayersBy("visibility", true);
     
     div.innerHTML = '<div align="center">Výsledek</div>';
     div.innerHTML += '<table><tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
-	'</td></tr><tr><td>Doba opakování:</td><td>' + layers[0].name +
+	'</td></tr><tr><td>Doba opakování:</td><td>' + String(raster) +
 	'</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + ' (minuty)' +
 	'</td></tr><tr><td>Hodnota návrhové srážky:</td><td><font color="red">' + parseFloat(text).toFixed(1) +
 	'</font> (milimetry)</td></tr></table>';
@@ -108,6 +109,11 @@ $(document).ready(function() {
     switcher.maximizeControl();
     
     // base layer
+    zm10Layer = new OpenLayers.Layer.WMS("ZM 10 (CUZK)",
+                                         "http://geoportal.cuzk.cz/WMS_ZM10_PUB/WMService.aspx",
+                                         {layers: "GR_ZM10", srs: "EPSG:4326"});
+    zm10Layer.title = "ZM10";
+
     h002Layer = new OpenLayers.Layer.WMS("2 roky",
                                          "http://rain1.fsv.cvut.cz/services/wms",
                                          {layers: "H_002", srs: "EPSG:4326"});
@@ -148,7 +154,7 @@ $(document).ready(function() {
     obsLayer.addFeatures([new OpenLayers.Feature.Vector(obsPoint, {icon: "./img/map-pointer.png"})]);
     
     // add everything to map
-    map.addLayers([h002Layer, h005Layer, h010Layer, h020Layer, h050Layer, h100Layer, obsLayer]);
+    map.addLayers([h002Layer, h005Layer, h010Layer, h020Layer, h050Layer, h100Layer, zm10Layer, obsLayer]);
     map.setCenter(new OpenLayers.LonLat(15.474897, 49.803578), 8);
     
     // drag feature control here is where wps is called

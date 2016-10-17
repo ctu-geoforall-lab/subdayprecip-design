@@ -6,7 +6,7 @@
     <!-- http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/ -->
     <!-- http://th.atguy.com/mycode/xor_js_encryption/ -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Testovací aplikace Rain</title>
+    <title>Testovací webová aplikace Rain</title>
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="./css/generic.css" type="text/css" media="screen">
     <link rel="stylesheet" href="./css/jquery.gritter.css" type="text/css" media="screen">
@@ -25,9 +25,20 @@
   <div id="map1"></div>
   
   <div class="note" id="contactNote">
-    <h2>Testovací aplikace Rain</h2>
+    <h2>Testovací webová aplikace Rain</h2>
     <p>Nástroj vyčíslí návrhovou srážku pro lokalitu zadanou uživatelem v podobě bodu.</p>
-    <p>Délka srážky (v minutách): <input type="text" id="rainlength" type="number" value="60" min="1" max="1439" size="5>"
+    <p>Doba opakování:
+      <select name="raster" id="raster">
+	<option value="H_002">2 roky</option>
+	<option value="H_005">5 let</option>
+	<option value="H_010">10 let</option>
+	<option value="H_020">20 let</option>
+	<option value="H_050">50 let</option>
+	<option value="H_100">100 let</option>
+      </select>
+    </p>
+    <p>Délka srážky (v minutách):
+      <input type="text" id="rainlength" type="number" value="60" min="1" max="1439" size="5>" />
     </p>
     <p><a href="http://rain.fsv.cvut.cz">http://rain.fsv.cvut.cz</a></p>
   </div>
