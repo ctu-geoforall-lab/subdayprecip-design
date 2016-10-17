@@ -11,28 +11,28 @@
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="data_basins_iii20161004194541768" name="Povodí III.">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="H_10020161004195025641" name="H_100">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="100_leté_maximální_denní_úhrny20161017155128775" name="100-leté maximální denní úhrny">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="H_05020161004195022457" name="H_050">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="50_leté_maximální_denní_úhrny20161017155125814" name="50-leté maximální denní úhrny">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="H_02020161004195019337" name="H_020">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="20_leté_maximální_denní_úhrny20161017155123318" name="20-leté maximální denní úhrny">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="H_01020161004195016513" name="H_010">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="10_leté_maximální_denní_úhrny20161017155120934" name="10-leté maximální denní úhrny">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="H_00520161004195013657" name="H_005">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="5_leté_maximální_denní_úhrny20161017155117454" name="5-leté maximální denní úhrny">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="H_00220161004195010113" name="H_002">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="2_leté_maximální_denní_úhrny20161017155114650" name="2-leté maximální denní úhrny">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="Základní_mapa_1_10_00020161004194913657" name="Základní mapa 1:10 000">
+    <layer-tree-layer expanded="0" checked="Qt::Checked" id="Základní_mapa_1_10_00020161004194913657" name="Základní mapa 1:10 000">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Checked" id="Ortofoto20161004194827824" name="Ortofoto">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="Ortofoto20161004194827824" name="Ortofoto">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -40,10 +40,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-940454.78879749891348183</xmin>
-      <ymin>-1244134.88833500118926167</ymin>
-      <xmax>-409692.04870249959640205</xmax>
-      <ymax>-925595.11006500152871013</ymax>
+      <xmin>-918950</xmin>
+      <ymin>-1237425</ymin>
+      <xmax>-417050</xmax>
+      <ymax>-925575</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -63,9 +63,15 @@
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="H_01020161004195016513"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="H_02020161004195019337"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="10_leté_maximální_denní_úhrny20161017155120934"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="100_leté_maximální_denní_úhrny20161017155128775"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="data_cr20161004194541771"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="H_00520161004195013657"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="2_leté_maximální_denní_úhrny20161017155114650"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="5_leté_maximální_denní_úhrny20161017155117454"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="20_leté_maximální_denní_úhrny20161017155123318"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="data_basins_iii20161004194541768"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="50_leté_maximální_denní_úhrny20161017155125814"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="Ortofoto20161004194827824"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="Základní_mapa_1_10_00020161004194913657"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="H_00220161004195010113"/>
@@ -79,12 +85,12 @@
       <item>data_cr20161004194541771</item>
       <item>Ortofoto20161004194827824</item>
       <item>Základní_mapa_1_10_00020161004194913657</item>
-      <item>H_00220161004195010113</item>
-      <item>H_00520161004195013657</item>
-      <item>H_01020161004195016513</item>
-      <item>H_02020161004195019337</item>
-      <item>H_05020161004195022457</item>
-      <item>H_10020161004195025641</item>
+      <item>2_leté_maximální_denní_úhrny20161017155114650</item>
+      <item>5_leté_maximální_denní_úhrny20161017155117454</item>
+      <item>10_leté_maximální_denní_úhrny20161017155120934</item>
+      <item>20_leté_maximální_denní_úhrny20161017155123318</item>
+      <item>50_leté_maximální_denní_úhrny20161017155125814</item>
+      <item>100_leté_maximální_denní_úhrny20161017155128775</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -98,44 +104,44 @@
         <legendlayerfile isInOverview="0" layerid="data_basins_iii20161004194541768" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="H_100" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="100-leté maximální denní úhrny" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="H_10020161004195025641" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="100_leté_maximální_denní_úhrny20161017155128775" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="H_050" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="50-leté maximální denní úhrny" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="H_05020161004195022457" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="50_leté_maximální_denní_úhrny20161017155125814" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="H_020" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="20-leté maximální denní úhrny" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="H_02020161004195019337" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="20_leté_maximální_denní_úhrny20161017155123318" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="H_010" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="10-leté maximální denní úhrny" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="H_01020161004195016513" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="10_leté_maximální_denní_úhrny20161017155120934" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="H_005" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="5-leté maximální denní úhrny" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="H_00520161004195013657" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="5_leté_maximální_denní_úhrny20161017155117454" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="H_002" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="2-leté maximální denní úhrny" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="H_00220161004195010113" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="2_leté_maximální_denní_úhrny20161017155114650" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Základní mapa 1:10 000" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Základní mapa 1:10 000" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_10_00020161004194913657" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_10_00020161004194913657" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Ortofoto" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Ortofoto" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Ortofoto20161004194827824" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="Ortofoto20161004194827824" visible="0"/>
       </filegroup>
     </legendlayer>
   </legend>
@@ -147,237 +153,237 @@
         <xmax>-429000</xmax>
         <ymax>-933000</ymax>
       </extent>
-      <id>H_00220161004195010113</id>
-      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_002&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>H_002</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
-          <srsid>26812</srsid>
-          <srid>5514</srid>
-          <authid>EPSG:5514</authid>
-          <description>S-JTSK (Greenwich) / Krovak East North</description>
-          <projectionacronym>krovak</projectionacronym>
-          <ellipsoidacronym>bessel</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Undefined"/>
-      </customproperties>
-      <provider>wms</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>-907000</xmin>
-        <ymin>-1230000</ymin>
-        <xmax>-429000</xmax>
-        <ymax>-933000</ymax>
-      </extent>
-      <id>H_00520161004195013657</id>
-      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_005&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>H_005</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
-          <srsid>26812</srsid>
-          <srid>5514</srid>
-          <authid>EPSG:5514</authid>
-          <description>S-JTSK (Greenwich) / Krovak East North</description>
-          <projectionacronym>krovak</projectionacronym>
-          <ellipsoidacronym>bessel</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Undefined"/>
-      </customproperties>
-      <provider>wms</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>-907000</xmin>
-        <ymin>-1230000</ymin>
-        <xmax>-429000</xmax>
-        <ymax>-933000</ymax>
-      </extent>
-      <id>H_01020161004195016513</id>
-      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_010&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>H_010</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
-          <srsid>26812</srsid>
-          <srid>5514</srid>
-          <authid>EPSG:5514</authid>
-          <description>S-JTSK (Greenwich) / Krovak East North</description>
-          <projectionacronym>krovak</projectionacronym>
-          <ellipsoidacronym>bessel</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Undefined"/>
-      </customproperties>
-      <provider>wms</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>-907000</xmin>
-        <ymin>-1230000</ymin>
-        <xmax>-429000</xmax>
-        <ymax>-933000</ymax>
-      </extent>
-      <id>H_02020161004195019337</id>
-      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_020&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>H_020</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
-          <srsid>26812</srsid>
-          <srid>5514</srid>
-          <authid>EPSG:5514</authid>
-          <description>S-JTSK (Greenwich) / Krovak East North</description>
-          <projectionacronym>krovak</projectionacronym>
-          <ellipsoidacronym>bessel</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Undefined"/>
-      </customproperties>
-      <provider>wms</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>-907000</xmin>
-        <ymin>-1230000</ymin>
-        <xmax>-429000</xmax>
-        <ymax>-933000</ymax>
-      </extent>
-      <id>H_05020161004195022457</id>
-      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_050&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>H_050</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
-          <srsid>26812</srsid>
-          <srid>5514</srid>
-          <authid>EPSG:5514</authid>
-          <description>S-JTSK (Greenwich) / Krovak East North</description>
-          <projectionacronym>krovak</projectionacronym>
-          <ellipsoidacronym>bessel</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Undefined"/>
-      </customproperties>
-      <provider>wms</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>-907000</xmin>
-        <ymin>-1230000</ymin>
-        <xmax>-429000</xmax>
-        <ymax>-933000</ymax>
-      </extent>
-      <id>H_10020161004195025641</id>
+      <id>100_leté_maximální_denní_úhrny20161017155128775</id>
       <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_100&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>H_100</layername>
+      <layername>100-leté maximální denní úhrny</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Undefined"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-907000</xmin>
+        <ymin>-1230000</ymin>
+        <xmax>-429000</xmax>
+        <ymax>-933000</ymax>
+      </extent>
+      <id>10_leté_maximální_denní_úhrny20161017155120934</id>
+      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_010&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>10-leté maximální denní úhrny</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Undefined"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-907000</xmin>
+        <ymin>-1230000</ymin>
+        <xmax>-429000</xmax>
+        <ymax>-933000</ymax>
+      </extent>
+      <id>20_leté_maximální_denní_úhrny20161017155123318</id>
+      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_020&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>20-leté maximální denní úhrny</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Undefined"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-907000</xmin>
+        <ymin>-1230000</ymin>
+        <xmax>-429000</xmax>
+        <ymax>-933000</ymax>
+      </extent>
+      <id>2_leté_maximální_denní_úhrny20161017155114650</id>
+      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_002&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>2-leté maximální denní úhrny</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Undefined"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-907000</xmin>
+        <ymin>-1230000</ymin>
+        <xmax>-429000</xmax>
+        <ymax>-933000</ymax>
+      </extent>
+      <id>50_leté_maximální_denní_úhrny20161017155125814</id>
+      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_050&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>50-leté maximální denní úhrny</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Undefined"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-907000</xmin>
+        <ymin>-1230000</ymin>
+        <xmax>-429000</xmax>
+        <ymax>-933000</ymax>
+      </extent>
+      <id>5_leté_maximální_denní_úhrny20161017155117454</id>
+      <datasource>contextualWMSLegend=0&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=H_005&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>5-leté maximální denní úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -1165,8 +1171,8 @@ def my_form_open(dialog, layer, feature):
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
     <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
@@ -1190,9 +1196,30 @@ def my_form_open(dialog, layer, feature):
     </Gui>
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
+      <LayerSnappingList type="QStringList">
+        <value>data_basins_iii20161004194541768</value>
+        <value>data_cr20161004194541771</value>
+      </LayerSnappingList>
+      <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
+        <value>disabled</value>
+      </LayerSnappingEnabledList>
       <SnappingMode type="QString">current_layer</SnappingMode>
+      <AvoidIntersectionsList type="QStringList"/>
+      <LayerSnappingToleranceUnitList type="QStringList">
+        <value>2</value>
+        <value>2</value>
+      </LayerSnappingToleranceUnitList>
+      <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+      </LayerSnapToList>
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
+      <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
+        <value>0.000000</value>
+      </LayerSnappingToleranceList>
     </Digitizing>
     <WFSLayersPrecision>
       <data_cr20161004194541771 type="int">8</data_cr20161004194541771>
