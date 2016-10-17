@@ -27,24 +27,32 @@
   <div class="note" id="contactNote">
     <h2>Testovací webová aplikace Rain</h2>
     <p>Nástroj vyčíslí návrhovou srážku pro lokalitu zadanou uživatelem v podobě bodu.</p>
-    <p>Doba opakování:
-      <select name="raster" id="raster">
-	<option value="H_002">2 roky</option>
-	<option value="H_005">5 let</option>
-	<option value="H_010">10 let</option>
-	<option value="H_020">20 let</option>
-	<option value="H_050">50 let</option>
-	<option value="H_100">100 let</option>
-      </select>
-    </p>
-    <p>Délka srážky (v minutách):
-      <input type="text" id="rainlength" type="number" value="60" min="1" max="1439" size="5>" />
-    </p>
+    <table>
+      <tr>
+	<td>Doba opakování:</td>
+	<td>
+	  <select name="raster" id="raster">
+	    <option value="H_002">2 roky</option>
+	    <option value="H_005">5 let</option>
+	    <option value="H_010">10 let</option>
+	    <option value="H_020">20 let</option>
+	    <option value="H_050">50 let</option>
+	    <option value="H_100">100 let</option>
+	  </select>
+	</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>Délka srážky (v minutách):</td>
+	<td><input type="text" id="rainlength" type="number" value="60" min="1" max="1439" size="5>" /></td>
+	<td><button onclick="callWPS()">Spustit</button></td>
+      </tr>
+    </table>
     <p><a href="http://rain.fsv.cvut.cz">http://rain.fsv.cvut.cz</a></p>
   </div>
 
   <div class="note" id="resultNote">
-    <div align="center">Pro zahajení výpočtu <br>posuňte s ukazatelem na mapě.</div>
+    <div align="center">Pro zahajení výpočtu <br>posuňte s ukazatelem na mapě<br>klikněte na tlačítko spustit.</div>
   </div>
 
   </body>

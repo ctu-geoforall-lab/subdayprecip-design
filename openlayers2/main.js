@@ -158,13 +158,15 @@ $(document).ready(function() {
     map.setCenter(new OpenLayers.LonLat(15.474897, 49.803578), 8);
     
     // drag feature control here is where wps is called
-    controlDrag = new OpenLayers.Control.DragFeature(obsLayer,
+    controlDrag = new OpenLayers.Control.DragFeature(obsLayer);
+						     /*
                                                      {onComplete: function(featureObj, pixelObj) {
 	                                                 triggerGritter("Spouštím WPS proces");
 	                                                 callWPS();
 	                                             } // end function
 	                                             } // end onComplete
 	                                            ); //end controlDrag
+						    */
     
     // add control to map 
     map.addControl(controlDrag);
