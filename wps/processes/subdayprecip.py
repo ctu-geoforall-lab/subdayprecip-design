@@ -12,6 +12,7 @@
 import os
 import sys
 
+import time
 import types
 import shutil
 import logging
@@ -74,14 +75,15 @@ class SubDayPrecipProcess(WPSProcess):
           rasters = self.raster.getValue().split(',')
           Module('g.region', raster=rasters[0])
           logging.debug("Subday computation started")
+          start = time.time()
           Module('r.subdayprecip.design',
                  map=self.map_name, raster=rasters, rainlength=self.rainlength.getValue())
-          logging.debug("Subday computation finished")
+          logging.info("Subday computation finished: {} sec".format(time.time() - start))
           
           self.export()
 
      def import_data(self, link_only=False):
-          map_name = 'input_map'
+          map_name = 'subdayprecip_output'
           input_data = self.input.getValue()
 
           # guess mine type
@@ -104,8 +106,10 @@ class SubDayPrecipProcess(WPSProcess):
           else:
                module_in = 'v.in.ogr'
                module_in_args['input'] = input_data
+               # skip projection check
                module_in_args['flags'] = 'o'
           logging.debug("Import started ({})".format(input_data))
+          start = time.time()
           try:
                Module(module_in,
                       output=map_name,
@@ -114,7 +118,7 @@ class SubDayPrecipProcess(WPSProcess):
           except CalledModuleError as e:
                raise Exception("Unable to import input vector data: {}".format(e))
           
-          logging.debug("Input data finished ({})".format(module_in))
+          logging.info("Input data imported ({}): {} sec".format(module_in, time.time() - start))
           
           return map_name
      
