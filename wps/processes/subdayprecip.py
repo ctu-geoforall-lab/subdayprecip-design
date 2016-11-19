@@ -104,7 +104,7 @@ class SubDayPrecipProcess(WPSProcess):
           else:
                module_in = 'v.in.ogr'
                module_in_args['input'] = input_data
-          
+               module_in_args['flags'] = 'o'
           logging.debug("Import started ({})".format(input_data))
           try:
                Module(module_in,
