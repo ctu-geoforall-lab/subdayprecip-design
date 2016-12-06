@@ -1,0 +1,28 @@
+NOTES
+-----
+
+0) Prepare data:
+
+ogr2ogr -f GML /vsigzip//var/www/html/data/povodi_i.gml.gz data.sqlite povodi_i
+ogr2ogr -f GML /vsigzip//var/www/html/data/povodi_ii.gml.gz data.sqlite povodi_ii
+ogr2ogr -f GML /vsigzip//var/www/html/data/povodi_iii.gml.gz data.sqlite povodi_iii
+ogr2ogr -f GML /vsigzip//var/www/html/data/povodi_iv.gml.gz data.sqlite povodi_iv
+
+1) Perform computations:
+
+http://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=subdayprecip-design-shp&datainputs=[input=http://rain1.fsv.cvut.cz/data/povodi_i.gml.gz;raster=H_002,H_005,H_010,H_020,H_050,H_100;rainlength=360]
+
+-> wget http://rain1.fsv.cvut.cz/wps/outputs/output-6bebd9a8-bb37-11e6-86e0-005056a5dc63.zip -O p1.zip
+
+http://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=subdayprecip-design-shp&datainputs=[input=http://rain1.fsv.cvut.cz/data/povodi_ii.gml.gz;raster=H_002,H_005,H_010,H_020,H_050,H_100;rainlength=360]
+
+http://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=subdayprecip-design-shp&datainputs=[input=http://rain1.fsv.cvut.cz/data/povodi_iii.gml.gz;raster=H_002,H_005,H_010,H_020,H_050,H_100;rainlength=360]
+
+http://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=subdayprecip-design-shp&datainputs=[input=http://rain1.fsv.cvut.cz/data/povodi_iv.gml.gz;raster=H_002,H_005,H_010,H_020,H_050,H_100;rainlength=360]
+
+2) Overwrite GPKG layers:
+
+ogr2ogr -f SQLite -a_srs EPSG:5514 -nln povodi_i -overwrite data.sqlite /vsizip/p1.zip subdayprecip_output
+ogr2ogr -f SQLite -a_srs EPSG:5514 -nln povodi_ii -append data.sqlite /vsizip/p2.zip subdayprecip_output
+ogr2ogr -f SQLite -a_srs EPSG:5514 -nln povodi_iii -append data.sqlite /vsizip/p3.zip subdayprecip_output
+ogr2ogr -f SQLite -a_srs EPSG:5514 -nln povodi_iv -append data.sqlite /vsizip/p4.zip subdayprecip_output

@@ -2,3 +2,4 @@
 *[0-9]*.qgs
 publish.sh
 *~
+data.sqlite
