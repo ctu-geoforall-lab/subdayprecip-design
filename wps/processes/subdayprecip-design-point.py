@@ -9,9 +9,6 @@
 # Licence: see LICENCE file for details
 ####################################################################
 
-import os
-import glob
-from zipfile import ZipFile
 import logging
 import types
 from subprocess import PIPE

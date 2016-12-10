@@ -10,7 +10,6 @@
 ####################################################################
 
 import os
-import glob
 from zipfile import ZipFile
 import logging
 

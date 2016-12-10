@@ -10,7 +10,6 @@
 ####################################################################
 
 import os
-import glob
 from gzip import GzipFile
 import logging
 import shutil

@@ -9,10 +9,6 @@
 # Licence: see LICENCE file for details
 ####################################################################
 
-import os
-import glob
-import logging
-
 from subdayprecip import SubDayPrecipProcess
 from grass.pygrass.modules import Module
 

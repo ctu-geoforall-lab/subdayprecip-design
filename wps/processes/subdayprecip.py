@@ -16,7 +16,6 @@ import time
 import types
 import shutil
 import logging
-from mimetypes import MimeTypes
 import magic
 
 os.environ['GISBASE'] = '/opt/grass/dist.x86_64-pc-linux-gnu'
