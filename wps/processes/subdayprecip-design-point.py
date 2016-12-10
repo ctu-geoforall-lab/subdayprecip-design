@@ -23,14 +23,14 @@ class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
                                        identifier="subdayprecip-design-point",
-                                       description="Service returns compulted value for observation point.",
+                                       description="Service returns computed value for observation point.",
                                        skip_input=True)
 
           self.obs_x=self.addLiteralInput(identifier = "obs_x",
-                                          title = "Observation point (X)",
+                                          title = "Observation point (longitude)",
                                           type = types.FloatType)
           self.obs_y=self.addLiteralInput(identifier = "obs_y",
-                                          title = "Observation point (Y)",
+                                          title = "Observation point (latitude)",
                                           type = types.FloatType)
           
           self.output = self.addLiteralOutput(identifier = "output",
