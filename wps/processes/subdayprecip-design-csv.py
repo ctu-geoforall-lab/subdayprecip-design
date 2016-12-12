@@ -27,6 +27,7 @@ class Process(SubDayPrecipProcess):
           self.output_file = '{}/{}.csv'.format(self.output_dir, self.map_name)
           
           Module('v.out.ogr',
+                 flags='sm',
                  input=self.map_name,
                  output=self.output_file,
                  overwrite=True, format='CSV')

@@ -33,7 +33,7 @@ class Process(SubDayPrecipProcess):
           logging.debug("Export started")          
           Module('v.out.ogr',
                  input=self.map_name,
-                 flags='s',
+                 flags='sm',
                  output='{}/{}.shp'.format(self.output_dir, self.map_name),
                  overwrite=True)
           
