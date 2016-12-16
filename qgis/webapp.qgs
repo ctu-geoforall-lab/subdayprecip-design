@@ -20,7 +20,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté úhrny (360 min)" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté úhrny (360 min)" mutually-exclusive-child="2">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any20161206000220474" name="Povodí I.řádu - 5-leté (360 min)">
         <customproperties/>
@@ -35,7 +35,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté úhrny (360 min)" mutually-exclusive-child="3">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté úhrny (360 min)" mutually-exclusive-child="2">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any201612061024419191778778480" name="Povodí I.řádu - 10-leté (360 min)">
         <customproperties/>
@@ -50,7 +50,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté úhrny (360 min)" mutually-exclusive-child="3">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté úhrny (360 min)" mutually-exclusive-child="2">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any201612061201612061027099711708821478" name="Povodí I.řádu - 20-leté (360 min)">
         <customproperties/>
@@ -65,7 +65,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté úhrny (360 min)" mutually-exclusive-child="3">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté úhrny (360 min)" mutually-exclusive-child="2">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any201612061201612061028513611657366423" name="Povodí I.řádu - 50-leté (360 min)">
         <customproperties/>
@@ -80,7 +80,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté úhrny (360 min)" mutually-exclusive-child="3">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté úhrny (360 min)" mutually-exclusive-child="2">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any201612061201612061030560541683214802" name="Povodí I.řádu - 100-leté (360 min)">
         <customproperties/>
