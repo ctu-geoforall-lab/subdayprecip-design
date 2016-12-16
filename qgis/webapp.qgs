@@ -1,11 +1,11 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="Rain WebApp project" version="2.18.0">
-  <title>Rain WebApp project</title>
+<qgis projectname="Rain WebApp" version="2.18.1">
+  <title>Rain WebApp</title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-group expanded="1" checked="Qt::Checked" mutually-exclusive="1" name="2-leté denní úhrny (360 min)" mutually-exclusive-child="2">
+    <layer-tree-group expanded="0" checked="Qt::Checked" mutually-exclusive="1" name="2-leté úhrny (360 min)" mutually-exclusive-child="2">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any20161206100243558410427724" name="Povodí I.řádu - 2-leté (360 min)">
         <customproperties/>
@@ -20,7 +20,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté denní úhrny (360 min)" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté úhrny (360 min)" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any20161206000220474" name="Povodí I.řádu - 5-leté (360 min)">
         <customproperties/>
@@ -35,7 +35,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté denní úhrny (360 min)" mutually-exclusive-child="3">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté úhrny (360 min)" mutually-exclusive-child="3">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any201612061024419191778778480" name="Povodí I.řádu - 10-leté (360 min)">
         <customproperties/>
@@ -50,7 +50,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté denní úhrny (360 min)" mutually-exclusive-child="3">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté úhrny (360 min)" mutually-exclusive-child="3">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any201612061201612061027099711708821478" name="Povodí I.řádu - 20-leté (360 min)">
         <customproperties/>
@@ -65,7 +65,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté denní úhrny (360 min)" mutually-exclusive-child="3">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté úhrny (360 min)" mutually-exclusive-child="3">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any201612061201612061028513611657366423" name="Povodí I.řádu - 50-leté (360 min)">
         <customproperties/>
@@ -80,7 +80,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté denní úhrny (360 min)" mutually-exclusive-child="3">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté úhrny (360 min)" mutually-exclusive-child="3">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_i_any201612061201612061030560541683214802" name="Povodí I.řádu - 100-leté (360 min)">
         <customproperties/>
@@ -95,28 +95,28 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Maximální denní úhrny">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Maximální úhrny">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="100_leté_maximální_denní_úhrny20161120191845906" name="100-leté maximální denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="100_leté_maximální_denní_úhrny20161120191845906" name="100-leté maximální úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="50_leté_maximální_denní_úhrny20161120191841954" name="50-leté maximální denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="50_leté_maximální_denní_úhrny20161120191841954" name="50-leté maximální úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="20_leté_maximální_denní_úhrny20161120191839411" name="20-leté maximální denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="20_leté_maximální_denní_úhrny20161120191839411" name="20-leté maximální úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="10_leté_maximální_denní_úhrny20161120191837483" name="10-leté maximální denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="10_leté_maximální_denní_úhrny20161120191837483" name="10-leté maximální úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="5_leté_maximální_denní_úhrny20161120191835586" name="5-leté maximální denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="5_leté_maximální_denní_úhrny20161120191835586" name="5-leté maximální úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="2_leté_maximální_denní_úhrny20161120191833827" name="2-leté maximální denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="2_leté_maximální_denní_úhrny20161120191833827" name="2-leté maximální úhrny">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-layer expanded="0" checked="Qt::Checked" id="Základní_mapa_1_10_00020161120190318609" name="Základní mapa 1:10 000">
+    <layer-tree-layer expanded="0" checked="Qt::Checked" id="Základní_mapy_ČR20161216102549574" name="Základní mapy ČR">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -124,10 +124,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-940454.78879749798215926</xmin>
-      <ymin>-1244134.88833500002510846</ymin>
-      <xmax>-409692.04870250006206334</xmax>
-      <ymax>-925595.11006499803625047</ymax>
+      <xmin>-1035479.90708955319132656</xmin>
+      <ymin>-1359619.95670155482366681</ymin>
+      <xmax>-348583.00190818647388369</xmax>
+      <ymax>-806436.77087027067318559</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -148,7 +148,6 @@
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
-      <item>Základní_mapa_1_10_00020161120190318609</item>
       <item>2_leté_maximální_denní_úhrny20161120191833827</item>
       <item>5_leté_maximální_denní_úhrny20161120191835586</item>
       <item>10_leté_maximální_denní_úhrny20161120191837483</item>
@@ -179,10 +178,11 @@
       <item>data_povodi_ii_any20161206201612061030560551529304194</item>
       <item>data_povodi_iii_any201612061020161206103056055226064162</item>
       <item>data_povodi_iv_any201612061020161206103056056323290986</item>
+      <item>Základní_mapy_ČR20161216102549574</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendgroup open="true" checked="Qt::Checked" name="2-leté denní úhrny (360 min)">
+    <legendgroup open="false" checked="Qt::Checked" name="2-leté úhrny (360 min)">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí I.řádu - 2-leté (360 min)" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_i_any20161206100243558410427724" visible="0"/>
@@ -204,7 +204,7 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="5-leté denní úhrny (360 min)">
+    <legendgroup open="false" checked="Qt::Unchecked" name="5-leté úhrny (360 min)">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí I.řádu - 5-leté (360 min)" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_i_any20161206000220474" visible="0"/>
@@ -226,7 +226,7 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="10-leté denní úhrny (360 min)">
+    <legendgroup open="false" checked="Qt::Unchecked" name="10-leté úhrny (360 min)">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí I.řádu - 10-leté (360 min)" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_i_any201612061024419191778778480" visible="0"/>
@@ -248,7 +248,7 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="20-leté denní úhrny (360 min)">
+    <legendgroup open="false" checked="Qt::Unchecked" name="20-leté úhrny (360 min)">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí I.řádu - 20-leté (360 min)" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_i_any201612061201612061027099711708821478" visible="0"/>
@@ -270,7 +270,7 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="50-leté denní úhrny (360 min)">
+    <legendgroup open="false" checked="Qt::Unchecked" name="50-leté úhrny (360 min)">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí I.řádu - 50-leté (360 min)" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_i_any201612061201612061028513611657366423" visible="0"/>
@@ -292,7 +292,7 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="100-leté denní úhrny (360 min)">
+    <legendgroup open="false" checked="Qt::Unchecked" name="100-leté úhrny (360 min)">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí I.řádu - 100-leté (360 min)" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_i_any201612061201612061030560541683214802" visible="0"/>
@@ -314,41 +314,41 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="Maximální denní úhrny">
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="100-leté maximální denní úhrny" showFeatureCount="0">
+    <legendgroup open="false" checked="Qt::Unchecked" name="Maximální úhrny">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="100-leté maximální úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="100_leté_maximální_denní_úhrny20161120191845906" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="50-leté maximální denní úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="50-leté maximální úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="50_leté_maximální_denní_úhrny20161120191841954" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="20-leté maximální denní úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="20-leté maximální úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="20_leté_maximální_denní_úhrny20161120191839411" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="10-leté maximální denní úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="10-leté maximální úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="10_leté_maximální_denní_úhrny20161120191837483" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="5-leté maximální denní úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="5-leté maximální úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="5_leté_maximální_denní_úhrny20161120191835586" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="2-leté maximální denní úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="2-leté maximální úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="2_leté_maximální_denní_úhrny20161120191833827" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Základní mapa 1:10 000" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Základní mapy ČR" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_10_00020161120190318609" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="Základní_mapy_ČR20161216102549574" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
@@ -365,7 +365,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>100-leté maximální denní úhrny</layername>
+      <layername>100-leté maximální úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -410,7 +410,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>10-leté maximální denní úhrny</layername>
+      <layername>10-leté maximální úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -455,7 +455,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>20-leté maximální denní úhrny</layername>
+      <layername>20-leté maximální úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -500,7 +500,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>2-leté maximální denní úhrny</layername>
+      <layername>2-leté maximální úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -545,7 +545,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>50-leté maximální denní úhrny</layername>
+      <layername>50-leté maximální úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -590,7 +590,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>5-leté maximální denní úhrny</layername>
+      <layername>5-leté maximální úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -625,17 +625,17 @@
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
-        <xmin>-906000.28575029317289591</xmin>
-        <ymin>-1228000.20625000004656613</ymin>
-        <xmax>-430000.27873899985570461</xmax>
-        <ymax>-933999.5553982068086043</ymax>
+        <xmin>-1019125.21887094923295081</xmin>
+        <ymin>-1346448.92846747674047947</ymin>
+        <xmax>-364937.69012679043225944</xmax>
+        <ymax>-819607.79910434887278825</ymax>
       </extent>
-      <id>Základní_mapa_1_10_00020161120190318609</id>
-      <datasource>contextualWMSLegend=1&amp;crs=EPSG:5514&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=GR_ZM10&amp;styles=&amp;url=http://geoportal.cuzk.cz/WMS_ZM10_PUB/WMService.aspx</datasource>
+      <id>Základní_mapy_ČR20161216102549574</id>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=zm&amp;styles=default&amp;tileMatrixSet=jtsk:epsg:5514&amp;url=http://geoportal.cuzk.cz/WMTS_ZM/WMTService.aspx?service%3DWMTS%26REQUEST%3DGetCapabilities</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Základní mapa 1:10 000</layername>
+      <layername>Základní mapy ČR</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -1144,7 +1144,7 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="UTF-8">ogr</provider>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "rad_i", '&lt;NULL>' )</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -1537,7 +1537,19 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
-        <columns/>
+        <columns>
+          <column width="-1" hidden="0" type="field" name="ogc_fid"/>
+          <column width="-1" hidden="0" type="field" name="rad_i"/>
+          <column width="-1" hidden="0" type="field" name="shape_area"/>
+          <column width="-1" hidden="0" type="field" name="shape_len"/>
+          <column width="-1" hidden="0" type="field" name="h_002_360"/>
+          <column width="-1" hidden="0" type="field" name="h_005_360"/>
+          <column width="-1" hidden="0" type="field" name="h_010_360"/>
+          <column width="-1" hidden="0" type="field" name="h_020_360"/>
+          <column width="-1" hidden="0" type="field" name="h_050_360"/>
+          <column width="-1" hidden="0" type="field" name="h_100_360"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
       </attributetableconfig>
       <editform>.</editform>
       <editforminit/>
@@ -6994,7 +7006,7 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="UTF-8">ogr</provider>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "rad_iii", '&lt;NULL>' )</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -7387,7 +7399,19 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
-        <columns/>
+        <columns>
+          <column width="-1" hidden="0" type="field" name="ogc_fid"/>
+          <column width="-1" hidden="0" type="field" name="rad_iii"/>
+          <column width="-1" hidden="0" type="field" name="shape_area"/>
+          <column width="-1" hidden="0" type="field" name="shape_len"/>
+          <column width="-1" hidden="0" type="field" name="h_002_360"/>
+          <column width="-1" hidden="0" type="field" name="h_005_360"/>
+          <column width="-1" hidden="0" type="field" name="h_010_360"/>
+          <column width="-1" hidden="0" type="field" name="h_020_360"/>
+          <column width="-1" hidden="0" type="field" name="h_050_360"/>
+          <column width="-1" hidden="0" type="field" name="h_100_360"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
       </attributetableconfig>
       <editform>.</editform>
       <editforminit/>
@@ -12177,22 +12201,142 @@ def my_form_open(dialog, layer, feature):
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
+        <value>data_povodi_i_any20161206000220474</value>
+        <value>data_povodi_i_any20161206100243558410427724</value>
+        <value>data_povodi_i_any201612061024419191778778480</value>
+        <value>data_povodi_i_any201612061201612061027099711708821478</value>
+        <value>data_povodi_i_any201612061201612061028513611657366423</value>
+        <value>data_povodi_i_any201612061201612061030560541683214802</value>
         <value>data_povodi_ii_any20161205232607753</value>
+        <value>data_povodi_ii_any20161206000220489</value>
+        <value>data_povodi_ii_any2016120610024355978073608</value>
+        <value>data_povodi_ii_any201612061024419201382046609</value>
+        <value>data_povodi_ii_any20161206201612061027099711911878992</value>
+        <value>data_povodi_ii_any20161206201612061028513621675909071</value>
+        <value>data_povodi_ii_any20161206201612061030560551529304194</value>
+        <value>data_povodi_iii_any20161206000220500</value>
+        <value>data_povodi_iii_any201612061002435591645868459</value>
+        <value>data_povodi_iii_any201612061020161206102709972474208324</value>
+        <value>data_povodi_iii_any201612061020161206102851363703148241</value>
+        <value>data_povodi_iii_any201612061020161206103056055226064162</value>
+        <value>data_povodi_iii_any201612061024419201371817665</value>
+        <value>data_povodi_iv_any20161206000220509</value>
+        <value>data_povodi_iv_any201612061002435591437399835</value>
+        <value>data_povodi_iv_any201612061020161206102709972164818856</value>
+        <value>data_povodi_iv_any201612061020161206102851363649587533</value>
+        <value>data_povodi_iv_any201612061020161206103056056323290986</value>
+        <value>data_povodi_iv_any20161206102441921465245529</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
         <value>disabled</value>
       </LayerSnappingEnabledList>
       <SnappingMode type="QString">current_layer</SnappingMode>
       <AvoidIntersectionsList type="QStringList"/>
       <LayerSnappingToleranceUnitList type="QStringList">
         <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
       </LayerSnapToList>
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
         <value>0.000000</value>
       </LayerSnappingToleranceList>
     </Digitizing>
@@ -12224,8 +12368,8 @@ def my_form_open(dialog, layer, feature):
       <data_povodi_ii_any20161206201612061027099711911878992 type="int">8</data_povodi_ii_any20161206201612061027099711911878992>
       <data_povodi_iv_any201612061002435591437399835 type="int">8</data_povodi_iv_any201612061002435591437399835>
       <data_povodi_iv_any201612061020161206103056056323290986 type="int">8</data_povodi_iv_any201612061020161206103056056323290986>
-      <data_povodi_i_any201612061201612061030560541683214802 type="int">8</data_povodi_i_any201612061201612061030560541683214802>
       <data_povodi_i_any20161206000220474 type="int">8</data_povodi_i_any20161206000220474>
+      <data_povodi_i_any201612061201612061030560541683214802 type="int">8</data_povodi_i_any201612061201612061030560541683214802>
     </WFSLayersPrecision>
     <Identify>
       <disabledLayers type="QStringList"/>
@@ -12242,6 +12386,7 @@ def my_form_open(dialog, layer, feature):
       <ProjectCRSProj4String type="QString">+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</ProjectCRSProj4String>
       <ProjectCrs type="QString">EPSG:5514</ProjectCrs>
       <ProjectCRSID type="int">26812</ProjectCRSID>
+      <ProjectionsEnabled type="int">0</ProjectionsEnabled>
     </SpatialRefSys>
     <DefaultStyles>
       <Fill type="QString"></Fill>
