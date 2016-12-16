@@ -21,10 +21,10 @@ class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
                                        identifier="subdayprecip-design-gml",
-                                       description="Vrací vyčíslené návrhové srážky jako GML.")
+                                       description="Vrací vyčíslené návrhové srážky jako vektorová data ve formátu GML.")
           
           self.output = self.addComplexOutput(identifier = "output",
-                                              title = "Výsledný soubor ve formátu GML",
+                                              title = "Výsledek ve formátu GML",
                                               formats = [ {"mimeType":"text/xml"} ],
                                               asReference = True)
           

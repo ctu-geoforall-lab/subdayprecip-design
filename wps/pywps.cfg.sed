@@ -3,16 +3,17 @@ encoding=utf-8
 title=Rain WPS Server
 version=1.0.0
 abstract=WPS projektu QJ1520265, vice informaci na http://rain.fsv.cvut.cz/webove-sluzby/ogc-wps/
-fees=none
-constraints=none
+fees=žádné
+constraints=žádné
 serveraddress=#URL#
-keywords=GRASS,GIS,WPS
+keywords=Rain,GRASS,GIS,WPS
 lang=cs-CZ
 
 [provider]
 providerName=CVUT v Praze, Fakulta stavebni
 individualName=Martin Landa
 deliveryPoint=Thakurova 7
+positionName=Administrator
 city=Praha
 postalCode=166 29
 country=cz
@@ -22,7 +23,8 @@ phoneVoice=+420 224 354 644
 phoneFacsimile=False
 administrativeArea=False
 hoursofservice=0:00-24:00
-contactinstructions=none
+contactinstructions=E-mail je preferován
+role=Administrator
 
 [server]
 maxoperations=2
