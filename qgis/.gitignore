@@ -1,5 +1,4 @@
-*.meta
+*[0-9]*.meta
 *[0-9]*.qgs
-publish.sh
 *~
 data.sqlite
