@@ -20,10 +20,10 @@ class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
                                        identifier="subdayprecip-design-shp",
-                                       description="Service returns zipped shapefile.")
+                                       description="Vrací vyčíslené návrhové srážky jako Esri Shapefile.")
           
           self.output = self.addComplexOutput(identifier = "output",
-                                              title = "Output zipped shapefile",
+                                              title = "Výsledný soubor ve formátu Esri Shapefile",
                                               formats = [ {"mimeType":"application/x-zipped-shp"} ],
                                               asReference = True)
           

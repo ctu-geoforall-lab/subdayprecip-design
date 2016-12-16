@@ -16,10 +16,10 @@ class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
                                        identifier="subdayprecip-design-dbf",
-                                       description="Service returns DBF file.")
+                                       description="Vrací vyčíslené návrhové srážky jako DBF.")
           
           self.output = self.addComplexOutput(identifier = "output",
-                                              title = "Output DBF file",
+                                              title = "Výsledný soubor ve formátu DBF",
                                               formats = [ {"mimeType":"application/dbase"} ],
                                               asReference = True)
           

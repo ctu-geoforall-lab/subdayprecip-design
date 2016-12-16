@@ -39,7 +39,7 @@ logfile_module_stderr=/var/log/pywps_grass_stderr.log
 
 [grass]
 path=/home/landamar/.grass7/addons/scripts:/opt/grass/dist.x86_64-pc-linux-gnu/bin/:/opt/grass/dist.x86_64-pc-linux-gnu/scripts/:/usr/bin
-version=7.1.svn
+version=7.2.svn
 gui=text
 gisbase=/opt/grass/dist.x86_64-pc-linux-gnu
 ldLibraryPath=/opt/grass/dist.x86_64-pc-linux-gnu/lib

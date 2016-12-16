@@ -30,26 +30,26 @@ class SubDayPrecipProcess(WPSProcess):
           WPSProcess.__init__(self,
                               identifier=identifier,
                               version="0.1",
-                              title="Subday design precipitation. " + description,
-                              abstract="Computes subday design precipitation series using GRASS GIS. "
-                              "See http://grass.osgeo.org/grass70/manuals/addons/r.subdayprecip.design.html for details.",
+                              title="Návrhová srážka pro zvolenou lokalitu. " + description,
+                              abstract="Počítá návrhovou srážku pro zvolenou lokalitu s využitím nástroje GRASS GIS. "
+                              "Více informací na http://rain.fsv.cvut.cz/nastroje/r.subdayprecip.design",
                               grassLocation=location, storeSupported = True, statusSupported = True)
 
           if not skip_input:
                self.input = self.addComplexInput(identifier = "input",
-                                                 title = "Input vector data",
+                                                 title = "Vstupní bodová anebo polygonová vektorová data",
                                                  formats = [ {"mimeType":"text/xml",
                                                               "encoding":"utf-8",
                                                               "schema":"http://schemas.opengis.net/gml/3.2.1/gml.xsd"} ],
                                                  minOccurs=0)
           
           self.raster = self.addLiteralInput(identifier = "raster",
-                                             title = "Name of repetition periods raster map(s)",
+                                             title = "Zvolené doby opakování",
                                              type = types.StringType,
                                              default = "H_002,H_005,H_010,H_020,H_050,H_100")
           
           self.rainlength = self.addLiteralInput(identifier = "rainlength",
-                                                 title = "Rain length value in minutes",
+                                                 title = "Délka srážky v minutách",
                                                  type = types.IntType)
           
           self.output = None # to be defined by descendant
