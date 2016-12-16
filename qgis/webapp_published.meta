@@ -34,7 +34,7 @@
     {
       "layers": [
         {
-          "drawing_order": 2, 
+          "drawing_order": 3, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": true, 
@@ -45,7 +45,7 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed III.\u0159\u00e1du - 2-let\u00e9 (360 min)", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 2-let\u00e9 (360 min)", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
@@ -54,8 +54,32 @@
               "name": "ogc_fid"
             }, 
             {
+              "type": "INTEGER", 
+              "name": "hlgp_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "utokh_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "plocha"
+            }, 
+            {
+              "type": "TEXT", 
+              "name": "hlgp_char"
+            }, 
+            {
               "type": "DOUBLE", 
               "name": "rad_iii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_ii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_i"
             }, 
             {
               "type": "DOUBLE", 
@@ -106,7 +130,7 @@
     {
       "layers": [
         {
-          "drawing_order": 6, 
+          "drawing_order": 7, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -117,7 +141,7 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed III.\u0159\u00e1du - 5-let\u00e9 (360 min)", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 5-let\u00e9 (360 min)", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
@@ -126,8 +150,32 @@
               "name": "ogc_fid"
             }, 
             {
+              "type": "INTEGER", 
+              "name": "hlgp_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "utokh_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "plocha"
+            }, 
+            {
+              "type": "TEXT", 
+              "name": "hlgp_char"
+            }, 
+            {
               "type": "DOUBLE", 
               "name": "rad_iii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_ii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_i"
             }, 
             {
               "type": "DOUBLE", 
@@ -178,7 +226,7 @@
     {
       "layers": [
         {
-          "drawing_order": 10, 
+          "drawing_order": 11, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -189,7 +237,7 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed III.\u0159\u00e1du - 10-let\u00e9 (360 min)", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 10-let\u00e9 (360 min)", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
@@ -198,8 +246,32 @@
               "name": "ogc_fid"
             }, 
             {
+              "type": "INTEGER", 
+              "name": "hlgp_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "utokh_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "plocha"
+            }, 
+            {
+              "type": "TEXT", 
+              "name": "hlgp_char"
+            }, 
+            {
               "type": "DOUBLE", 
               "name": "rad_iii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_ii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_i"
             }, 
             {
               "type": "DOUBLE", 
@@ -250,7 +322,7 @@
     {
       "layers": [
         {
-          "drawing_order": 14, 
+          "drawing_order": 15, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -261,7 +333,7 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed III.\u0159\u00e1du - 20-let\u00e9 (360 min)", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 20-let\u00e9 (360 min)", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
@@ -270,8 +342,32 @@
               "name": "ogc_fid"
             }, 
             {
+              "type": "INTEGER", 
+              "name": "hlgp_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "utokh_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "plocha"
+            }, 
+            {
+              "type": "TEXT", 
+              "name": "hlgp_char"
+            }, 
+            {
               "type": "DOUBLE", 
               "name": "rad_iii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_ii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_i"
             }, 
             {
               "type": "DOUBLE", 
@@ -322,7 +418,7 @@
     {
       "layers": [
         {
-          "drawing_order": 18, 
+          "drawing_order": 19, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -333,7 +429,7 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed III.\u0159\u00e1du - 50-let\u00e9 (360 min)", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 50-let\u00e9 (360 min)", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
@@ -342,8 +438,32 @@
               "name": "ogc_fid"
             }, 
             {
+              "type": "INTEGER", 
+              "name": "hlgp_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "utokh_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "plocha"
+            }, 
+            {
+              "type": "TEXT", 
+              "name": "hlgp_char"
+            }, 
+            {
               "type": "DOUBLE", 
               "name": "rad_iii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_ii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_i"
             }, 
             {
               "type": "DOUBLE", 
@@ -394,7 +514,7 @@
     {
       "layers": [
         {
-          "drawing_order": 22, 
+          "drawing_order": 23, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -405,7 +525,7 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed III.\u0159\u00e1du - 100-let\u00e9 (360 min)", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 100-let\u00e9 (360 min)", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
@@ -414,8 +534,32 @@
               "name": "ogc_fid"
             }, 
             {
+              "type": "INTEGER", 
+              "name": "hlgp_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "utokh_id"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "plocha"
+            }, 
+            {
+              "type": "TEXT", 
+              "name": "hlgp_char"
+            }, 
+            {
               "type": "DOUBLE", 
               "name": "rad_iii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_ii"
+            }, 
+            {
+              "type": "DOUBLE", 
+              "name": "rad_i"
             }, 
             {
               "type": "DOUBLE", 
@@ -491,42 +635,42 @@
     {
       "abstract": "2-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
       "visible_overlays": [
-        "Povod\u00ed III.\u0159\u00e1du - 2-let\u00e9 (360 min)"
+        "Povod\u00ed IV.\u0159\u00e1du - 2-let\u00e9 (360 min)"
       ], 
       "title": "2-let\u00e9 \u00fahrny (360min)"
     }, 
     {
       "abstract": "5-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
       "visible_overlays": [
-        "Povod\u00ed III.\u0159\u00e1du - 5-let\u00e9 (360 min)"
+        "Povod\u00ed IV.\u0159\u00e1du - 5-let\u00e9 (360 min)"
       ], 
       "title": "5-let\u00e9 \u00fahrny (360min)"
     }, 
     {
       "abstract": "10-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
       "visible_overlays": [
-        "Povod\u00ed III.\u0159\u00e1du - 10-let\u00e9 (360 min)"
+        "Povod\u00ed IV.\u0159\u00e1du - 10-let\u00e9 (360 min)"
       ], 
       "title": "10-let\u00e9 \u00fahrny (360min)"
     }, 
     {
       "abstract": "20-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
       "visible_overlays": [
-        "Povod\u00ed III.\u0159\u00e1du - 20-let\u00e9 (360 min)"
+        "Povod\u00ed IV.\u0159\u00e1du - 20-let\u00e9 (360 min)"
       ], 
       "title": "20-let\u00e9 \u00fahrny (360min)"
     }, 
     {
       "abstract": "50-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
       "visible_overlays": [
-        "Povod\u00ed III.\u0159\u00e1du - 50-let\u00e9 (360 min)"
+        "Povod\u00ed IV.\u0159\u00e1du - 50-let\u00e9 (360 min)"
       ], 
       "title": "50-let\u00e9 \u00fahrny (360min)"
     }, 
     {
       "abstract": "100-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
       "visible_overlays": [
-        "Povod\u00ed III.\u0159\u00e1du - 100-let\u00e9 (360 min)"
+        "Povod\u00ed IV.\u0159\u00e1du - 100-let\u00e9 (360 min)"
       ], 
       "title": "100-let\u00e9 \u00fahrny (360min)"
     }
@@ -551,8 +695,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1481892818, 
-  "publish_date": "Fri Dec 16 13:53:38 2016", 
+  "publish_date_unix": 1481894209, 
+  "publish_date": "Fri Dec 16 14:16:49 2016", 
   "expiration": "", 
   "contact_person": "", 
   "extent_buffer": 0.0, 
@@ -626,7 +770,7 @@
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": -1, 
+          "dpi": 96, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
