@@ -26,6 +26,7 @@ class Process(SubDayPrecipProcess):
           self.obs_x=self.addLiteralInput(identifier = "obs_x",
                                           title = "Zeměpisná délka zájmového bodu",
                                           type = types.FloatType)
+
           self.obs_y=self.addLiteralInput(identifier = "obs_y",
                                           title = "Zeměpisná šířka zájmového bodu",
                                           type = types.FloatType)

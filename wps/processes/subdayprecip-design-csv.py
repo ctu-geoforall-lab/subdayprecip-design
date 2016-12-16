@@ -9,6 +9,8 @@
 # Licence: see LICENCE file for details
 ####################################################################
 
+import types
+
 from subdayprecip import SubDayPrecipProcess
 from grass.pygrass.modules import Module
 
@@ -18,6 +20,10 @@ class Process(SubDayPrecipProcess):
                                        identifier="subdayprecip-design-csv",
                                        description="Vrací vyčíslené návrhové srážky jako atributová data ve formátu CSV.")
           
+          self.keycolumn=self.addLiteralInput(identifier = "column",
+                                              title = "Klíčový atribut vstupních dat",
+                                              type = types.StringType)
+
           self.output = self.addComplexOutput(identifier = "output",
                                               title = "Výsledek ve formátu CSV",
                                               formats = [ {"mimeType":"application/csv"} ],
@@ -25,12 +31,23 @@ class Process(SubDayPrecipProcess):
           
      def export(self):
           self.output_file = '{}/{}.csv'.format(self.output_dir, self.map_name)
-          
-          Module('v.out.ogr',
-                 flags='sm',
-                 input=self.map_name,
-                 output=self.output_file,
-                 overwrite=True, format='CSV')
+
+          cols = [self.keycolumn.getValue()]
+          rasters = self.raster.getValue().split(',')
+          rainlength = self.rainlength.getValue()
+          for rast in rasters:
+               cols.append('{}_{}'.format(rast, rainlength))
+
+          Module('v.db.select',
+                 map=self.map_name,
+                 separator='comma',
+                 columns=cols,
+                 file=self.output_file)
+          # Module('v.out.ogr',
+          #        flags='sm',
+          #        input=self.map_name,
+          #        output=self.output_file,
+          #        overwrite=True, format='CSV')
           
           self.output.setValue(self.output_file)
           
