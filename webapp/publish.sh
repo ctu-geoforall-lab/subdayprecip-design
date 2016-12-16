@@ -21,7 +21,7 @@ basename="webapp"
 cd ../qgis
 rsync -av --delete data.sqlite webapp.qgs $user@$host:$dest
 for f in `ls -t ${basename}_[0-9]* | head -2`; do
-    #scp $f $user@$host:$dest
+    scp $f $user@$host:$dest
     ext=`echo $f | cut -d'.' -f2`
     cp $f webapp_published.${ext}
 done
