@@ -31,6 +31,7 @@ class Process(SubDayPrecipProcess):
      def export(self, dbf_only=False):
           self.output_file = '{}/{}.gml.gz'.format(self.output_dir, self.map_name)
           Module('v.out.ogr',
+                 flags='sm',
                  input=self.map_name,
                  output='{}/{}.gml'.format(self.output_dir, self.map_name),
                  overwrite=True, format="GML")
