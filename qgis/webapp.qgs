@@ -13,10 +13,10 @@
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_ii_any2016120610024355978073608" name="Povodí II.řádu - 2-leté (360 min)">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iii_any201612061002435591645868459" name="Povodí III.řádu - 2-leté (360 min)">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iii_any201612061002435591645868459" name="Povodí III.řádu - 2-leté (360min)">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Checked" id="data_povodi_iv_any201612061002435591437399835" name="Povodí IV.řádu - 2-leté (360 min)">
+      <layer-tree-layer expanded="0" checked="Qt::Checked" id="data_povodi_iv_any201612061002435591437399835" name="Povodí IV.řádu - 2-leté">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -31,7 +31,7 @@
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iii_any20161206000220500" name="Povodí III.řádu - 5-leté (360 min)">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509" name="Povodí IV.řádu - 5-leté (360 min)">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509" name="Povodí IV.řádu - 5-leté">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -46,7 +46,7 @@
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iii_any201612061024419201371817665" name="Povodí III.řádu - 10-leté (360 min)">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529" name="Povodí IV.řádu - 10-leté (360 min)">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529" name="Povodí IV.řádu - 10-leté">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -61,7 +61,7 @@
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iii_any201612061020161206102709972474208324" name="Povodí III.řádu - 20-leté (360 min)">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856" name="Povodí IV.řádu - 20-leté (360 min)">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856" name="Povodí IV.řádu - 20-leté">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -76,7 +76,7 @@
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iii_any201612061020161206102851363703148241" name="Povodí III.řádu - 50-leté (360 min)">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533" name="Povodí IV.řádu - 50-leté (360 min)">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533" name="Povodí IV.řádu - 50-leté">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -91,32 +91,32 @@
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iii_any201612061020161206103056055226064162" name="Povodí III.řádu - 100-leté (360 min)">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986" name="Povodí IV.řádu - 100-leté (360 min)">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986" name="Povodí IV.řádu - 100-leté">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Maximální úhrny">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Maximální denní úhrny">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="100_leté_maximální_denní_úhrny20161120191845906" name="100-leté maximální úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="100_leté_maximální_denní_úhrny20161120191845906" name="100-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="50_leté_maximální_denní_úhrny20161120191841954" name="50-leté maximální úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="50_leté_maximální_denní_úhrny20161120191841954" name="50-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="20_leté_maximální_denní_úhrny20161120191839411" name="20-leté maximální úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="20_leté_maximální_denní_úhrny20161120191839411" name="20-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="10_leté_maximální_denní_úhrny20161120191837483" name="10-leté maximální úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="10_leté_maximální_denní_úhrny20161120191837483" name="10-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="5_leté_maximální_denní_úhrny20161120191835586" name="5-leté maximální úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="5_leté_maximální_denní_úhrny20161120191835586" name="5-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="2_leté_maximální_denní_úhrny20161120191833827" name="2-leté maximální úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="2_leté_maximální_denní_úhrny20161120191833827" name="2-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-layer expanded="0" checked="Qt::Checked" id="Základní_mapy_ČR20161216102549574" name="Základní mapy ČR">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="Základní_mapa_1_50_00020161216150757234" name="Základní mapa 1:50 000">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -124,13 +124,13 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-1035479.90708955319132656</xmin>
-      <ymin>-1359619.95670155482366681</ymin>
-      <xmax>-348583.00190818647388369</xmax>
-      <ymax>-806436.77087027067318559</ymax>
+      <xmin>-987018.12741998536512256</xmin>
+      <ymin>-1309873.09443584666587412</ymin>
+      <xmax>-382629.01572938845492899</xmax>
+      <ymax>-857464.21096633118577302</ymax>
     </extent>
     <rotation>0</rotation>
-    <projections>0</projections>
+    <projections>1</projections>
     <destinationsrs>
       <spatialrefsys>
         <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -144,7 +144,12 @@
       </spatialrefsys>
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
-    <layer_coordinate_transform_info/>
+    <layer_coordinate_transform_info>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="data_povodi_iv_any201612061002435591437399835"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:900913" srcDatumTransform="-1" destDatumTransform="-1" layerid="Základní_mapa_1_25_00020161216150704588"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:900913" srcDatumTransform="-1" destDatumTransform="-1" layerid="Základní_mapa_1_50_00020161216150757234"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="Základní_mapy_ČR20161216102549574"/>
+    </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
@@ -178,7 +183,7 @@
       <item>data_povodi_ii_any20161206201612061030560551529304194</item>
       <item>data_povodi_iii_any201612061020161206103056055226064162</item>
       <item>data_povodi_iv_any201612061020161206103056056323290986</item>
-      <item>Základní_mapy_ČR20161216102549574</item>
+      <item>Základní_mapa_1_50_00020161216150757234</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -193,12 +198,12 @@
           <legendlayerfile isInOverview="0" layerid="data_povodi_ii_any2016120610024355978073608" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí III.řádu - 2-leté (360 min)" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí III.řádu - 2-leté (360min)" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iii_any201612061002435591645868459" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Povodí IV.řádu - 2-leté (360 min)" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Povodí IV.řádu - 2-leté" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061002435591437399835" visible="1"/>
         </filegroup>
@@ -220,7 +225,7 @@
           <legendlayerfile isInOverview="0" layerid="data_povodi_iii_any20161206000220500" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 5-leté (360 min)" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 5-leté" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206000220509" visible="0"/>
         </filegroup>
@@ -242,7 +247,7 @@
           <legendlayerfile isInOverview="0" layerid="data_povodi_iii_any201612061024419201371817665" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 10-leté (360 min)" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 10-leté" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206102441921465245529" visible="0"/>
         </filegroup>
@@ -264,7 +269,7 @@
           <legendlayerfile isInOverview="0" layerid="data_povodi_iii_any201612061020161206102709972474208324" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 20-leté (360 min)" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 20-leté" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102709972164818856" visible="0"/>
         </filegroup>
@@ -286,7 +291,7 @@
           <legendlayerfile isInOverview="0" layerid="data_povodi_iii_any201612061020161206102851363703148241" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 50-leté (360 min)" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 50-leté" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102851363649587533" visible="0"/>
         </filegroup>
@@ -308,47 +313,47 @@
           <legendlayerfile isInOverview="0" layerid="data_povodi_iii_any201612061020161206103056055226064162" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 100-leté (360 min)" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 100-leté" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206103056056323290986" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="Maximální úhrny">
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="100-leté maximální úhrny" showFeatureCount="0">
+    <legendgroup open="false" checked="Qt::Unchecked" name="Maximální denní úhrny">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="100-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="100_leté_maximální_denní_úhrny20161120191845906" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="50-leté maximální úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="50-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="50_leté_maximální_denní_úhrny20161120191841954" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="20-leté maximální úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="20-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="20_leté_maximální_denní_úhrny20161120191839411" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="10-leté maximální úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="10-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="10_leté_maximální_denní_úhrny20161120191837483" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="5-leté maximální úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="5-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="5_leté_maximální_denní_úhrny20161120191835586" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="2-leté maximální úhrny" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="2-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="2_leté_maximální_denní_úhrny20161120191833827" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Základní mapy ČR" showFeatureCount="0">
-      <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Základní_mapy_ČR20161216102549574" visible="1"/>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Základní mapa 1:50 000" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_50_00020161216150757234" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
@@ -365,7 +370,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>100-leté maximální úhrny</layername>
+      <layername>100-leté max. denní úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -410,7 +415,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>10-leté maximální úhrny</layername>
+      <layername>10-leté max. denní úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -455,7 +460,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>20-leté maximální úhrny</layername>
+      <layername>20-leté max. denní úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -500,7 +505,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>2-leté maximální úhrny</layername>
+      <layername>2-leté max. denní úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -545,7 +550,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>50-leté maximální úhrny</layername>
+      <layername>50-leté max. denní úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -590,7 +595,7 @@
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>5-leté maximální úhrny</layername>
+      <layername>5-leté max. denní úhrny</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -625,26 +630,26 @@
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
-        <xmin>-1019125.21887094923295081</xmin>
-        <ymin>-1346448.92846747674047947</ymin>
-        <xmax>-364937.69012679043225944</xmax>
-        <ymax>-819607.79910434887278825</ymax>
+        <xmin>1303484.79925787076354027</xmin>
+        <ymin>6123180.46668604481965303</ymin>
+        <xmax>2129234.39587765512987971</xmax>
+        <ymax>6694014.33758463431149721</ymax>
       </extent>
-      <id>Základní_mapy_ČR20161216102549574</id>
-      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=zm&amp;styles=default&amp;tileMatrixSet=jtsk:epsg:5514&amp;url=http://geoportal.cuzk.cz/WMTS_ZM/WMTService.aspx?service%3DWMTS%26REQUEST%3DGetCapabilities</datasource>
+      <id>Základní_mapa_1_50_00020161216150757234</id>
+      <datasource>crs=EPSG:900913&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ZM50&amp;styles=&amp;url=http://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Základní mapy ČR</layername>
+      <layername>Základní mapa 1:50 000</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
-          <srsid>26812</srsid>
-          <srid>5514</srid>
-          <authid>EPSG:5514</authid>
-          <description>S-JTSK (Greenwich) / Krovak East North</description>
-          <projectionacronym>krovak</projectionacronym>
-          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +over +no_defs</proj4>
+          <srsid>28234</srsid>
+          <srid>900913</srid>
+          <authid>EPSG:900913</authid>
+          <description>Google Mercator</description>
+          <projectionacronym>merc</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
@@ -6992,7 +6997,7 @@ def my_form_open(dialog, layer, feature):
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Povodí III.řádu - 2-leté (360 min)</layername>
+      <layername>Povodí III.řádu - 2-leté (360min)</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -9254,7 +9259,7 @@ def my_form_open(dialog, layer, feature):
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Povodí IV.řádu - 5-leté (360 min)</layername>
+      <layername>Povodí IV.řádu - 5-leté</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -9734,7 +9739,7 @@ def my_form_open(dialog, layer, feature):
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Povodí IV.řádu - 2-leté (360 min)</layername>
+      <layername>Povodí IV.řádu - 2-leté</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -10214,7 +10219,7 @@ def my_form_open(dialog, layer, feature):
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Povodí IV.řádu - 20-leté (360 min)</layername>
+      <layername>Povodí IV.řádu - 20-leté</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -10694,7 +10699,7 @@ def my_form_open(dialog, layer, feature):
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Povodí IV.řádu - 50-leté (360 min)</layername>
+      <layername>Povodí IV.řádu - 50-leté</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -11174,7 +11179,7 @@ def my_form_open(dialog, layer, feature):
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Povodí IV.řádu - 100-leté (360 min)</layername>
+      <layername>Povodí IV.řádu - 100-leté</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -11654,7 +11659,7 @@ def my_form_open(dialog, layer, feature):
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Povodí IV.řádu - 10-leté (360 min)</layername>
+      <layername>Povodí IV.řádu - 10-leté</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
@@ -12386,7 +12391,7 @@ def my_form_open(dialog, layer, feature):
       <ProjectCRSProj4String type="QString">+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</ProjectCRSProj4String>
       <ProjectCrs type="QString">EPSG:5514</ProjectCrs>
       <ProjectCRSID type="int">26812</ProjectCRSID>
-      <ProjectionsEnabled type="int">0</ProjectionsEnabled>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
     </SpatialRefSys>
     <DefaultStyles>
       <Fill type="QString"></Fill>
