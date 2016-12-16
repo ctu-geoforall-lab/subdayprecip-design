@@ -16,10 +16,10 @@ class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
                                        identifier="subdayprecip-design-csv",
-                                       description="Vrací vyčíslené návrhové srážky jako CSV.")
+                                       description="Vrací vyčíslené návrhové srážky jako atributová data ve formátu CSV.")
           
           self.output = self.addComplexOutput(identifier = "output",
-                                              title = "Výsledný soubor ve formátu CSV",
+                                              title = "Výsledek ve formátu CSV",
                                               formats = [ {"mimeType":"application/csv"} ],
                                               asReference = True)
           

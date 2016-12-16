@@ -31,13 +31,13 @@ class SubDayPrecipProcess(WPSProcess):
                               identifier=identifier,
                               version="0.1",
                               title="Návrhová srážka pro zvolenou lokalitu. " + description,
-                              abstract="Počítá návrhovou srážku pro zvolenou lokalitu s využitím nástroje GRASS GIS. "
+                              abstract="Počítá návrhovou srážku pro zvolenou lokalitu s využitím nástroje GRASS GIS r.subdayprecip.design. "
                               "Více informací na http://rain.fsv.cvut.cz/nastroje/r.subdayprecip.design",
                               grassLocation=location, storeSupported = True, statusSupported = True)
 
           if not skip_input:
                self.input = self.addComplexInput(identifier = "input",
-                                                 title = "Vstupní bodová anebo polygonová vektorová data",
+                                                 title = "Vstupní bodová nebo polygonová vektorová data",
                                                  formats = [ {"mimeType":"text/xml",
                                                               "encoding":"utf-8",
                                                               "schema":"http://schemas.opengis.net/gml/3.2.1/gml.xsd"} ],

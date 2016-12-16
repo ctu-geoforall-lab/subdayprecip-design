@@ -20,19 +20,19 @@ class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
                                        identifier="subdayprecip-design-point",
-                                       description="Service returns computed value for observation point.",
+                                       description="Vrací vyčíslenou návrhovou srážky pro zvolený bod ve WGS-84.",
                                        skip_input=True)
 
           self.obs_x=self.addLiteralInput(identifier = "obs_x",
-                                          title = "Observation point (longitude)",
+                                          title = "Zeměpisná délka zájmového bodu",
                                           type = types.FloatType)
           self.obs_y=self.addLiteralInput(identifier = "obs_y",
-                                          title = "Observation point (latitude)",
+                                          title = "Zeměpisná šířka zájmového bodu",
                                           type = types.FloatType)
           
           self.output = self.addLiteralOutput(identifier = "output",
-                                              title = "Output value",
-                                              type = types.FloatType) # TODO
+                                              title = "Vyčíslená hodnota",
+                                              type = types.FloatType)
 
      def execute(self):
           rasters = self.raster.getValue().split(',')
