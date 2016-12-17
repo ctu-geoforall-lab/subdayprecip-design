@@ -11,6 +11,7 @@
 
 import types
 
+from subprocess import PIPE
 from subdayprecip import SubDayPrecipProcess
 from grass.pygrass.modules import Module
 
@@ -33,6 +34,14 @@ class Process(SubDayPrecipProcess):
           self.output_file = '{}/{}.csv'.format(self.output_dir, self.map_name)
 
           cols = [self.keycolumn.getValue()]
+
+          # check if key columns exists
+          map_cols = Module('db.columns', table=self.map_name, stdout_=PIPE).outputs.stdout.splitlines()
+          if cols[0] not in map_cols:
+               raise StandardError("Key column ({}) not found in input attribute table ({})".format(
+                         cols[0], ','.join(map_cols)
+               ))
+
           rasters = self.raster.getValue().split(',')
           rainlength = self.rainlength.getValue()
           for rast in rasters:
