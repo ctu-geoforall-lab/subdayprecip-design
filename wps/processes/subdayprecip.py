@@ -84,7 +84,6 @@ class SubDayPrecipProcess(WPSProcess):
           logging.info("Subday computation finished: {} sec".format(time.time() - start))
           
           self.export()
-
          
      def check_keycolumn(self, keycol):
           # check if key columns exists
