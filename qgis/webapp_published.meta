@@ -15,17 +15,14 @@
     50000, 
     25000, 
     10000, 
-    5000, 
-    2500, 
-    1000, 
-    500
+    5000
   ], 
   "abstract": "", 
   "zoom_extent": [
-    -1026459.571, 
-    -1309873.094, 
-    -343187.573, 
-    -857464.211
+    -940454.789, 
+    -1247063.123, 
+    -409692.049, 
+    -922666.875
   ], 
   "fees": "conditions unknown", 
   "message": null, 
@@ -33,7 +30,7 @@
     {
       "layers": [
         {
-          "drawing_order": 3, 
+          "drawing_order": 0, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": true, 
@@ -44,14 +41,10 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed IV.\u0159\u00e1du - 2-let\u00e9", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 2-let\u00e9/6h", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
-            {
-              "type": "INTEGER", 
-              "name": "ogc_fid"
-            }, 
             {
               "type": "INTEGER", 
               "name": "hlgp_id"
@@ -61,12 +54,9 @@
               "name": "utokh_id"
             }, 
             {
+              "alias": "vymera_km2", 
               "type": "DOUBLE", 
               "name": "plocha"
-            }, 
-            {
-              "type": "TEXT", 
-              "name": "hlgp_char"
             }, 
             {
               "type": "DOUBLE", 
@@ -79,14 +69,6 @@
             {
               "type": "DOUBLE", 
               "name": "rad_i"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_area"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_len"
             }, 
             {
               "type": "DOUBLE", 
@@ -124,12 +106,12 @@
           }
         }
       ], 
-      "name": "2-let\u00e9 \u00fahrny (360 min)"
+      "name": "2-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
       "layers": [
         {
-          "drawing_order": 7, 
+          "drawing_order": 1, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -140,14 +122,10 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed IV.\u0159\u00e1du - 5-let\u00e9", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 5-let\u00e9/6h", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
-            {
-              "type": "INTEGER", 
-              "name": "ogc_fid"
-            }, 
             {
               "type": "INTEGER", 
               "name": "hlgp_id"
@@ -157,12 +135,9 @@
               "name": "utokh_id"
             }, 
             {
+              "alias": "vymera_km2", 
               "type": "DOUBLE", 
               "name": "plocha"
-            }, 
-            {
-              "type": "TEXT", 
-              "name": "hlgp_char"
             }, 
             {
               "type": "DOUBLE", 
@@ -175,14 +150,6 @@
             {
               "type": "DOUBLE", 
               "name": "rad_i"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_area"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_len"
             }, 
             {
               "type": "DOUBLE", 
@@ -220,12 +187,12 @@
           }
         }
       ], 
-      "name": "5-let\u00e9 \u00fahrny (360 min)"
+      "name": "5-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
       "layers": [
         {
-          "drawing_order": 11, 
+          "drawing_order": 2, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -236,14 +203,10 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed IV.\u0159\u00e1du - 10-let\u00e9", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 10-let\u00e9/6h", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
-            {
-              "type": "INTEGER", 
-              "name": "ogc_fid"
-            }, 
             {
               "type": "INTEGER", 
               "name": "hlgp_id"
@@ -253,12 +216,9 @@
               "name": "utokh_id"
             }, 
             {
+              "alias": "vymera_km2", 
               "type": "DOUBLE", 
               "name": "plocha"
-            }, 
-            {
-              "type": "TEXT", 
-              "name": "hlgp_char"
             }, 
             {
               "type": "DOUBLE", 
@@ -271,14 +231,6 @@
             {
               "type": "DOUBLE", 
               "name": "rad_i"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_area"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_len"
             }, 
             {
               "type": "DOUBLE", 
@@ -316,12 +268,12 @@
           }
         }
       ], 
-      "name": "10-let\u00e9 \u00fahrny (360 min)"
+      "name": "10-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
       "layers": [
         {
-          "drawing_order": 15, 
+          "drawing_order": 3, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -332,14 +284,10 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed IV.\u0159\u00e1du - 20-let\u00e9", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 20-let\u00e9/6h", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
-            {
-              "type": "INTEGER", 
-              "name": "ogc_fid"
-            }, 
             {
               "type": "INTEGER", 
               "name": "hlgp_id"
@@ -349,12 +297,9 @@
               "name": "utokh_id"
             }, 
             {
+              "alias": "vymera_km2", 
               "type": "DOUBLE", 
               "name": "plocha"
-            }, 
-            {
-              "type": "TEXT", 
-              "name": "hlgp_char"
             }, 
             {
               "type": "DOUBLE", 
@@ -367,14 +312,6 @@
             {
               "type": "DOUBLE", 
               "name": "rad_i"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_area"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_len"
             }, 
             {
               "type": "DOUBLE", 
@@ -412,12 +349,12 @@
           }
         }
       ], 
-      "name": "20-let\u00e9 \u00fahrny (360 min)"
+      "name": "20-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
       "layers": [
         {
-          "drawing_order": 19, 
+          "drawing_order": 4, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -428,14 +365,10 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed IV.\u0159\u00e1du - 50-let\u00e9", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 50-let\u00e9/6h", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
-            {
-              "type": "INTEGER", 
-              "name": "ogc_fid"
-            }, 
             {
               "type": "INTEGER", 
               "name": "hlgp_id"
@@ -445,12 +378,9 @@
               "name": "utokh_id"
             }, 
             {
+              "alias": "vymera_km2", 
               "type": "DOUBLE", 
               "name": "plocha"
-            }, 
-            {
-              "type": "TEXT", 
-              "name": "hlgp_char"
             }, 
             {
               "type": "DOUBLE", 
@@ -463,14 +393,6 @@
             {
               "type": "DOUBLE", 
               "name": "rad_i"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_area"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_len"
             }, 
             {
               "type": "DOUBLE", 
@@ -508,12 +430,12 @@
           }
         }
       ], 
-      "name": "50-let\u00e9 \u00fahrny (360 min)"
+      "name": "50-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
       "layers": [
         {
-          "drawing_order": 23, 
+          "drawing_order": 5, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -524,14 +446,10 @@
             -933179.390499998
           ], 
           "geom_type": "POLYGON", 
-          "name": "Povod\u00ed IV.\u0159\u00e1du - 100-let\u00e9", 
+          "name": "Povod\u00ed IV.\u0159\u00e1du - 100-let\u00e9/6h", 
           "pk_attributes": [], 
           "serverName": "", 
           "attributes": [
-            {
-              "type": "INTEGER", 
-              "name": "ogc_fid"
-            }, 
             {
               "type": "INTEGER", 
               "name": "hlgp_id"
@@ -541,12 +459,9 @@
               "name": "utokh_id"
             }, 
             {
+              "alias": "vymera_km2", 
               "type": "DOUBLE", 
               "name": "plocha"
-            }, 
-            {
-              "type": "TEXT", 
-              "name": "hlgp_char"
             }, 
             {
               "type": "DOUBLE", 
@@ -559,14 +474,6 @@
             {
               "type": "DOUBLE", 
               "name": "rad_i"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_area"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "shape_len"
             }, 
             {
               "type": "DOUBLE", 
@@ -604,7 +511,7 @@
           }
         }
       ], 
-      "name": "100-let\u00e9 \u00fahrny (360 min)"
+      "name": "100-let\u00e9 max. \u00fahrny za 6h"
     }
   ], 
   "tile_resolutions": [
@@ -618,10 +525,7 @@
     13.229193125052916, 
     6.614596562526458, 
     2.645838625010583, 
-    1.3229193125052916, 
-    0.6614596562526458, 
-    0.2645838625010583, 
-    0.13229193125052915
+    1.3229193125052916
   ], 
   "gislab_user": "martin", 
   "title": "Rain WebApp", 
@@ -631,46 +535,46 @@
   "contact_phone": "", 
   "topics": [
     {
-      "abstract": "2-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
+      "abstract": "2-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
-        "Povod\u00ed IV.\u0159\u00e1du - 2-let\u00e9"
+        "Povod\u00ed IV.\u0159\u00e1du - 2-let\u00e9/6h"
       ], 
-      "title": "2-let\u00e9 \u00fahrny (360min)"
+      "title": "2-let\u00e9 max. \u00fahrny za 6h "
     }, 
     {
-      "abstract": "5-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
+      "abstract": "5-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
-        "Povod\u00ed IV.\u0159\u00e1du - 5-let\u00e9"
+        "Povod\u00ed IV.\u0159\u00e1du - 5-let\u00e9/6h"
       ], 
-      "title": "5-let\u00e9 \u00fahrny (360min)"
+      "title": "5-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
-      "abstract": "10-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
+      "abstract": "10-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
-        "Povod\u00ed IV.\u0159\u00e1du - 10-let\u00e9"
+        "Povod\u00ed IV.\u0159\u00e1du - 10-let\u00e9/6h"
       ], 
-      "title": "10-let\u00e9 \u00fahrny (360min)"
+      "title": "10-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
-      "abstract": "20-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
+      "abstract": "20-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
-        "Povod\u00ed IV.\u0159\u00e1du - 20-let\u00e9"
+        "Povod\u00ed IV.\u0159\u00e1du - 20-let\u00e9/6h"
       ], 
-      "title": "20-let\u00e9 \u00fahrny (360min)"
+      "title": "20-let\u00e9 max \u00fahrny za 6h"
     }, 
     {
-      "abstract": "50-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
+      "abstract": "50-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
-        "Povod\u00ed IV.\u0159\u00e1du - 50-let\u00e9"
+        "Povod\u00ed IV.\u0159\u00e1du - 50-let\u00e9/6h"
       ], 
-      "title": "50-let\u00e9 \u00fahrny (360min)"
+      "title": "50-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
-      "abstract": "100-let\u00e9 \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 360min", 
+      "abstract": "100-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
-        "Povod\u00ed IV.\u0159\u00e1du - 100-let\u00e9"
+        "Povod\u00ed IV.\u0159\u00e1du - 100-let\u00e9/6h"
       ], 
-      "title": "100-let\u00e9 \u00fahrny (360min)"
+      "title": "100-let\u00e9 max. \u00fahrny za 6h"
     }
   ], 
   "measure_ellipsoid": "NONE", 
@@ -693,8 +597,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1481897498, 
-  "publish_date": "Fri Dec 16 15:11:38 2016", 
+  "publish_date_unix": 1482055827, 
+  "publish_date": "Sun Dec 18 11:10:27 2016", 
   "expiration": "", 
   "contact_person": "", 
   "extent_buffer": 0.0, 
@@ -719,10 +623,7 @@
         13.229193125052916, 
         6.614596562526458, 
         2.645838625010583, 
-        1.3229193125052916, 
-        0.6614596562526458, 
-        0.2645838625010583, 
-        0.13229193125052915
+        1.3229193125052916
       ], 
       "type": "blank", 
       "metadata": {
@@ -753,10 +654,7 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916, 
-            0.6614596562526458, 
-            0.2645838625010583, 
-            0.13229193125052915
+            1.3229193125052916
           ], 
           "name": "100-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "http://rain1.fsv.cvut.cz/services/wms", 
@@ -766,7 +664,7 @@
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": 96, 
+          "dpi": -1, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
@@ -794,10 +692,7 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916, 
-            0.6614596562526458, 
-            0.2645838625010583, 
-            0.13229193125052915
+            1.3229193125052916
           ], 
           "name": "50-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "http://rain1.fsv.cvut.cz/services/wms", 
@@ -835,10 +730,7 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916, 
-            0.6614596562526458, 
-            0.2645838625010583, 
-            0.13229193125052915
+            1.3229193125052916
           ], 
           "name": "20-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "http://rain1.fsv.cvut.cz/services/wms", 
@@ -876,10 +768,7 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916, 
-            0.6614596562526458, 
-            0.2645838625010583, 
-            0.13229193125052915
+            1.3229193125052916
           ], 
           "name": "10-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "http://rain1.fsv.cvut.cz/services/wms", 
@@ -917,10 +806,7 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916, 
-            0.6614596562526458, 
-            0.2645838625010583, 
-            0.13229193125052915
+            1.3229193125052916
           ], 
           "name": "5-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "http://rain1.fsv.cvut.cz/services/wms", 
@@ -958,10 +844,7 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916, 
-            0.6614596562526458, 
-            0.2645838625010583, 
-            0.13229193125052915
+            1.3229193125052916
           ], 
           "name": "2-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "http://rain1.fsv.cvut.cz/services/wms", 
@@ -1002,10 +885,7 @@
         13.229193125052916, 
         6.614596562526458, 
         2.645838625010583, 
-        1.3229193125052916, 
-        0.6614596562526458, 
-        0.2645838625010583, 
-        0.13229193125052915
+        1.3229193125052916
       ], 
       "name": "Z\u00e1kladn\u00ed mapa 1:50 000", 
       "url": "http://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx", 
