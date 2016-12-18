@@ -9,7 +9,10 @@
 # Licence: see LICENCE file for details
 ####################################################################
 
-from subdayprecip import SubDayPrecipProcess
+import sys
+
+sys.path.insert(0, '..')
+from base.subdayprecip import SubDayPrecipProcess
 from grass.pygrass.modules import Module
 
 class Process(SubDayPrecipProcess):

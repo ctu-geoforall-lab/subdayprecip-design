@@ -10,10 +10,12 @@
 ####################################################################
 
 import os
-from zipfile import ZipFile
+import sys
 import logging
+from zipfile import ZipFile
 
-from subdayprecip import SubDayPrecipProcess
+sys.path.insert(0, '..')
+from base.subdayprecip import SubDayPrecipProcess
 from grass.pygrass.modules import Module
 
 class Process(SubDayPrecipProcess):

@@ -9,11 +9,13 @@
 # Licence: see LICENCE file for details
 ####################################################################
 
+import sys
 import logging
 import types
 from subprocess import PIPE
 
-from subdayprecip import SubDayPrecipProcess
+sys.path.insert(0, '..')
+from base.subdayprecip import SubDayPrecipProcess
 from grass.pygrass.modules import Module
 
 class Process(SubDayPrecipProcess):
