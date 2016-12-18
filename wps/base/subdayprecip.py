@@ -27,7 +27,7 @@ from grass.exceptions import CalledModuleError
 from pywps.Process import WPSProcess
 
 class SubDayPrecipProcess(WPSProcess):
-     def __init__(self, identifier, description, location='subdayprecip', skip_input=False):
+     def __init__(self, identifier, description, location='subdayprecip', skip=[]):
           WPSProcess.__init__(self,
                               identifier=identifier,
                               version="0.1",
@@ -36,7 +36,7 @@ class SubDayPrecipProcess(WPSProcess):
                               "Více informací na http://rain.fsv.cvut.cz/nastroje/r.subdayprecip.design",
                               grassLocation=location, storeSupported = True, statusSupported = True)
 
-          if not skip_input:
+          if 'input' not in skip:
                self.input = self.addComplexInput(identifier = "input",
                                                  title = "Vstupní bodová nebo polygonová vektorová data",
                                                  formats = [ {"mimeType":"text/xml",
@@ -48,11 +48,13 @@ class SubDayPrecipProcess(WPSProcess):
                                              title = "Zvolené doby opakování",
                                              type = types.StringType,
                                              default = "H_002,H_005,H_010,H_020,H_050,H_100")
-          
-          self.rainlength = self.addLiteralInput(identifier = "rainlength",
-                                                 title = "Délka srážky v minutách",
-                                                 type = types.IntType)
-          
+
+          self.rainlength_value = None
+          if 'rainlength' not in skip:
+               self.rainlength = self.addLiteralInput(identifier = "rainlength",
+                                                      title = "Délka srážky v minutách",
+                                                      type = types.IntType)
+
           self.output = None # to be defined by descendant
           self.output_dir = None
           
@@ -64,6 +66,8 @@ class SubDayPrecipProcess(WPSProcess):
                shutil.rmtree(self.output_dir)
      
      def execute(self):
+          if not self.rainlength_value:
+               self.rainlength_value = self.rainlength.getValue()
           if self.input:
                self.map_name = self.import_data()
           else:
@@ -80,7 +84,7 @@ class SubDayPrecipProcess(WPSProcess):
           logging.debug("Subday computation started")
           start = time.time()
           Module('r.subdayprecip.design',
-                 map=self.map_name, raster=rasters, rainlength=self.rainlength.getValue())
+                 map=self.map_name, raster=rasters, rainlength=self.rainlength_value)
           logging.info("Subday computation finished: {} sec".format(time.time() - start))
           
           self.export()

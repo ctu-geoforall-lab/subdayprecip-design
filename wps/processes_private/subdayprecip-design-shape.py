@@ -24,11 +24,13 @@ class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
                                        identifier="subdayprecip-design-shape",
-                                       description="Vrací tvary návrhových srážek v tabulkové formě.")
+                                       description="Vrací tvary návrhových srážek v tabulkové formě s pevně stanovenou délkou srážky 6 hodin.",
+                                       skip = ['rainlength'])
 
           self.mapset = 'rl360'
           self.shapetype = range(1, 7)
           self.sep = ','
+          self.rainlength_value = '360'
 
           self.keycolumn=self.addLiteralInput(identifier = "column",
                                               title = "Klíčový atribut vstupních dat",
@@ -61,7 +63,7 @@ class Process(SubDayPrecipProcess):
                                                            self.mapset, 'sqlite/sqlite.db'))
 
           # query map attributes
-          columns = map(lambda x: '{}_{}'.format(x.lower(), self.rainlength.getValue()), rasters)
+          columns = map(lambda x: '{}_{}'.format(x.lower(), self.rainlength_value), rasters)
           columns.insert(0, self.keycolumn.getValue())
           data = gscript.vector_db_select(map=self.map_name, columns=','.join(columns))
 

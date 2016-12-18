@@ -23,7 +23,7 @@ class Process(SubDayPrecipProcess):
           SubDayPrecipProcess.__init__(self,
                                        identifier="subdayprecip-design-point",
                                        description="Vrací vyčíslenou návrhovou srážky pro zvolený bod ve WGS-84.",
-                                       skip_input=True)
+                                       skip=['input'])
 
           self.obs_x=self.addLiteralInput(identifier = "obs_x",
                                           title = "Zeměpisná délka zájmového bodu",
