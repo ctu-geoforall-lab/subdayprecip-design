@@ -11,6 +11,9 @@
 
 import os
 import logging
+import types
+import time
+from zipfile import ZipFile
 
 from subdayprecip import SubDayPrecipProcess
 import grass.script as gscript # TODO: replace by pyGRASS
@@ -18,24 +21,30 @@ import grass.script as gscript # TODO: replace by pyGRASS
 class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
-                                       identifier="subdayprecip-design-shapes",
-                                       description="Service returns shapes (TODO: explain better)",
-                                       skip_input=True)
+                                       identifier="subdayprecip-design-shape",
+                                       description="Vrací tvary návrhových srážek v tabulkové a grafické formě.")
 
           self.mapset = 'rl360'
-          self.shapetype = [5, 6]
+          self.shapetype = range(1, 7)
           self.sep = ','
 
-          self.output = self.addComplexOutput(identifier = "output",
-                                              title = "Output CSV file",
-                                              formats = [ {"mimeType":"application/csv"} ],
-                                              asReference = True)
+          self.keycolumn=self.addLiteralInput(identifier = "column",
+                                              title = "Klíčový atribut vstupních dat",
+                                              type = types.StringType)
 
-     def execute(self):
-          map_name = 'povodi_iii@{}'.format(self.mapset) # TODO: input
-          # TODO: self.output_dir already defined in superclass
-          self.output_dir = os.path.join('/tmp', '{}_{}'.format(map_name, os.getpid()))
-          os.mkdir(self.output_dir)
+          self.output_csv = self.addComplexOutput(identifier = "output_csv",
+                                                  title = "Hodnoty tvaru návrhových srážek ve formátu CSV",
+                                                  formats = [ {"mimeType":"application/csv"} ],
+                                                  asReference = True)
+
+          # self.output_png = self.addComplexOutput(identifier = "output_png",
+          #                                       title = "Tvar návrhových srážek jako graf ve formátu PNG",
+          #                                       formats = [ {"mimeType":"image/png"} ],
+          #                                       asReference = True)
+
+     def export(self):
+          logging.debug("Shapes computation started")
+          start = time.time()
 
           rasters = self.raster.getValue().split(',')
           gisenv = gscript.gisenv()
@@ -51,16 +60,29 @@ class Process(SubDayPrecipProcess):
 
           # query map attributes
           columns = map(lambda x: '{}_{}'.format(x.lower(), self.rainlength.getValue()), rasters)
-          data = gscript.vector_db_select(map=map_name, columns=','.join(columns))
+          columns.insert(0, self.keycolumn.getValue())
+          data = gscript.vector_db_select(map=self.map_name, columns=','.join(columns))
 
-          self.output_file = '{}/{}.csv'.format(self.output_dir, map_name)
+          # export csv
+          self.output_file = '{}/{}.csv'.format(self.output_dir, self.map_name)
           with open(self.output_file, 'w') as fd:
-               self.export(fd, rasters, data, shapes)
-          self.output.setValue(self.output_file)
+               self.export_csv(fd, rasters, data, shapes)
+          # output_zfile = self.output_file + '.zip'
+          # os.chdir(self.output_dir)
+          # with ZipFile(output_zfile, 'w') as fzip:
+          #      fzip.write('{}'.format(os.path.basename(self.output_file)))
+          # self.output_csv.setValue(output_zfile)
+          self.output_csv.setValue(self.output_file)
 
-     def export(self, fd, rasters, data, shapes):
+          # export png (graph)
+          ### TODO
+
+          logging.info("Shapes calculated successfully: {} sec".format(time.time() - start))
+
+     def export_csv(self, fd, rasters, data, shapes):
+          keycolumn = self.keycolumn.getValue()
           # write header
-          fd.write('fid{sep}T'.format(sep=self.sep))
+          fd.write('{key}{sep}T'.format(key=keycolumn, sep=self.sep))
           for stype in self.shapetype:
                for rast in rasters:
                     fd.write('{sep}T_{stype}_{rast}'.format(
@@ -73,8 +95,8 @@ class Process(SubDayPrecipProcess):
                for s in shapes:
                     time = s[0]
                     timeshapes = s[1:]
-                    fd.write('{fid}{sep}{time}'.format(fid=fid, time=time, sep=self.sep))
-                    for val in attrib:
+                    fd.write('{fid}{sep}{time}'.format(fid=attrib[0], time=time, sep=self.sep))
+                    for val in attrib[1:]:
                          for shape in timeshapes:
                               fd.write('{sep}{val}'.format(sep=self.sep, val=float(val)*float(shape)))
                     fd.write('\r\n')

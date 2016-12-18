@@ -17,6 +17,7 @@ import types
 import shutil
 import logging
 import magic
+from subprocess import PIPE
 
 os.environ['GISBASE'] = '/opt/grass/dist.x86_64-pc-linux-gnu'
 sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
@@ -67,7 +68,10 @@ class SubDayPrecipProcess(WPSProcess):
                self.map_name = self.import_data()
           else:
                self.map_name = self.copy()
-          
+
+          if hasattr(self, 'keycolumn'):
+               self.check_keycolumn(self.keycolumn.getValue())
+
           self.output_dir = os.path.join('/tmp', '{}_{}'.format(self.map_name, os.getpid()))
           os.mkdir(self.output_dir)
           
@@ -80,7 +84,15 @@ class SubDayPrecipProcess(WPSProcess):
           logging.info("Subday computation finished: {} sec".format(time.time() - start))
           
           self.export()
-
+         
+     def check_keycolumn(self, keycol):
+          # check if key columns exists
+          map_cols = Module('db.columns', table=self.map_name, stdout_=PIPE).outputs.stdout.splitlines()
+          if keycol not in map_cols:
+               raise StandardError("Key column ({}) not found in input attribute table ({})".format(
+                         keycol, ','.join(map_cols)
+               ))
+          
      def import_data(self, link_only=False):
           map_name = 'subdayprecip_output'
           input_data = self.input.getValue()
