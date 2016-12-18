@@ -23,11 +23,11 @@ phoneVoice=+420 224 354 644
 phoneFacsimile=False
 administrativeArea=False
 hoursofservice=0:00-24:00
-contactinstructions=E-mail je preferován
+contactinstructions=E-mail preferován
 role=Administrator
 
 [server]
-maxoperations=2
+maxoperations=4
 maxinputparamlength=1024
 maxfilesize=200mb
 tempPath=/tmp

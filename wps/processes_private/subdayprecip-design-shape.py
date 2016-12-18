@@ -10,6 +10,7 @@
 ####################################################################
 
 import os
+import sys
 import logging
 import types
 import time
@@ -23,7 +24,7 @@ class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
                                        identifier="subdayprecip-design-shape",
-                                       description="Vrací tvary návrhových srážek v tabulkové a grafické formě.")
+                                       description="Vrací tvary návrhových srážek v tabulkové formě.")
 
           self.mapset = 'rl360'
           self.shapetype = range(1, 7)
