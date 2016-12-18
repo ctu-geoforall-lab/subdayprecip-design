@@ -82,10 +82,10 @@ class Process(SubDayPrecipProcess):
      def export_csv(self, fd, rasters, data, shapes):
           keycolumn = self.keycolumn.getValue()
           # write header
-          fd.write('{key}{sep}T'.format(key=keycolumn, sep=self.sep))
+          fd.write('{key}{sep}cas_min'.format(key=keycolumn, sep=self.sep))
           for stype in self.shapetype:
                for rast in rasters:
-                    fd.write('{sep}T_{stype}_{rast}'.format(
+                    fd.write('{sep}typ_{stype}_{rast}_mm'.format(
                               sep=self.sep, stype=stype, rast=rast[2:]) # skip H_
                     ) 
           fd.write('\r\n')
@@ -98,7 +98,9 @@ class Process(SubDayPrecipProcess):
                     fd.write('{fid}{sep}{time}'.format(fid=attrib[0], time=time, sep=self.sep))
                     for val in attrib[1:]:
                          for shape in timeshapes:
-                              fd.write('{sep}{val}'.format(sep=self.sep, val=float(val)*float(shape)))
+                              fd.write('{sep}{val}'.format(sep=self.sep,
+                                                           val=(float(val)*float(shape))/100
+                              ))
                     fd.write('\r\n')
 
 if __name__ == "__main__":
