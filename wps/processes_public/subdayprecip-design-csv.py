@@ -35,10 +35,9 @@ class Process(SubDayPrecipProcess):
           self.output_file = '{}/{}.csv'.format(self.output_dir, self.map_name)
 
           cols = [self.keycolumn.getValue()]
-          rasters = self.raster.getValue().split(',')
           rainlength = self.rainlength.getValue()
-          for rast in rasters:
-               cols.append('{}_{}'.format(rast, rainlength))
+          for rp in self.return_period.getValue().split(','):
+               cols.append('H_{}_T{}_mm'.format(rp, rainlength))
 
           Module('v.db.select',
                  map=self.map_name,

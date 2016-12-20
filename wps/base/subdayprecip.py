@@ -44,10 +44,10 @@ class SubDayPrecipProcess(WPSProcess):
                                                               "schema":"http://schemas.opengis.net/gml/3.2.1/gml.xsd"} ],
                                                  minOccurs=0)
           
-          self.raster = self.addLiteralInput(identifier = "raster",
-                                             title = "Zvolené doby opakování",
-                                             type = types.StringType,
-                                             default = "H_002,H_005,H_010,H_020,H_050,H_100")
+          self.return_period = self.addLiteralInput(identifier = "return_period",
+                                                    title = "Doby opakování",
+                                                    type = types.StringType,
+                                                    default = "N2,N5,N10,N20,N50,N100")
 
           self.rainlength_value = None
           if 'rainlength' not in skip:
@@ -64,7 +64,7 @@ class SubDayPrecipProcess(WPSProcess):
      def __del__(self):
           if self.output_dir:
                shutil.rmtree(self.output_dir)
-     
+
      def execute(self):
           if not self.rainlength_value:
                self.rainlength_value = self.rainlength.getValue()
@@ -76,15 +76,16 @@ class SubDayPrecipProcess(WPSProcess):
           if hasattr(self, 'keycolumn'):
                self.check_keycolumn(self.keycolumn.getValue())
 
+          self.rasters = self.return_period.getValue().split(',')
+
           self.output_dir = os.path.join('/tmp', '{}_{}'.format(self.map_name, os.getpid()))
           os.mkdir(self.output_dir)
-          
-          rasters = self.raster.getValue().split(',')
-          Module('g.region', raster=rasters[0])
+
+          Module('g.region', raster=self.rasters[0])
           logging.debug("Subday computation started")
           start = time.time()
           Module('r.subdayprecip.design',
-                 map=self.map_name, raster=rasters, rainlength=self.rainlength_value)
+                 map=self.map_name, return_period=self.rasters, rainlength=self.rainlength_value)
           logging.info("Subday computation finished: {} sec".format(time.time() - start))
           
           self.export()

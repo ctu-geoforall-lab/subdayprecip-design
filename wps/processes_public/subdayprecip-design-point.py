@@ -38,8 +38,8 @@ class Process(SubDayPrecipProcess):
                                               type = types.FloatType)
 
      def execute(self):
-          rasters = self.raster.getValue().split(',')
-          Module('g.region', raster=rasters[0])
+          self.rasters = self.return_period.getValue().split(',')
+          Module('g.region', raster=self.rasters[0])
 
           map_name = 'obs'
           p = Module('m.proj', coordinates=[self.obs_x.getValue(), self.obs_y.getValue()],
@@ -51,7 +51,7 @@ class Process(SubDayPrecipProcess):
           Module('v.db.addtable', map=map_name)
           logging.debug("Subday computation started")
           Module('r.subdayprecip.design',
-                 map=map_name, raster=rasters, rainlength=self.rainlength.getValue())
+                 map=map_name, return_period=self.rasters, rainlength=self.rainlength.getValue())
           logging.debug("Subday computation finished")
 
           p = Module('v.db.select', map=map_name, flags='c', stdout_=PIPE)

@@ -1,2 +1,2 @@
-__all__ = ["subdayprecip-design-shape",
+__all__ = ["subdayprecip-design-shapes",
            ]

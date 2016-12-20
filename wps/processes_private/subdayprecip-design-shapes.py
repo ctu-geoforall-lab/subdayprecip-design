@@ -23,21 +23,25 @@ import grass.script as gscript # TODO: replace by pyGRASS
 class Process(SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
-                                       identifier="subdayprecip-design-shape",
+                                       identifier="subdayprecip-design-shapes",
                                        description="Vrací tvary návrhových srážek v tabulkové formě s pevně stanovenou délkou srážky 6 hodin.",
                                        skip = ['rainlength'])
 
           self.mapset = 'rl360'
-          self.shapetype = range(1, 7)
           self.sep = ','
           self.rainlength_value = '360'
+
+          self.shapetype = self.addLiteralInput(identifier = "type",
+                                                title = "Typy rozložení srážky",
+                                                type = types.StringType,
+                                                default = "1,2,3,4,5,6")
 
           self.keycolumn=self.addLiteralInput(identifier = "column",
                                               title = "Klíčový atribut vstupních dat",
                                               type = types.StringType)
 
           self.output_csv = self.addComplexOutput(identifier = "output_csv",
-                                                  title = "Hodnoty tvaru návrhových srážek ve formátu CSV",
+                                                  title = "Hodnoty průběhu návrhových srážek ve formátu CSV",
                                                   formats = [ {"mimeType":"application/csv"} ],
                                                   asReference = True)
 
@@ -47,15 +51,16 @@ class Process(SubDayPrecipProcess):
           #                                       asReference = True)
 
      def export(self):
+          self.shapetypes = self.shapetype.getValue().split(',')
+
           logging.debug("Shapes computation started")
           start = time.time()
 
-          rasters = self.raster.getValue().split(',')
           gisenv = gscript.gisenv()
 
           # query shapes
           sql = 'select min'
-          for stype in self.shapetype:
+          for stype in self.shapetypes:
                sql += ',typ{}'.format(stype)
           sql += ' from tvary'
           shapes = gscript.db_select(sql=sql, driver='sqlite',
@@ -63,14 +68,14 @@ class Process(SubDayPrecipProcess):
                                                            self.mapset, 'sqlite/sqlite.db'))
 
           # query map attributes
-          columns = map(lambda x: '{}_{}'.format(x.lower(), self.rainlength_value), rasters)
+          columns = map(lambda x: 'H_{}_T{}_mm'.format(x, self.rainlength_value), self.rasters)
           columns.insert(0, self.keycolumn.getValue())
           data = gscript.vector_db_select(map=self.map_name, columns=','.join(columns))
 
           # export csv
           self.output_file = '{}/{}.csv'.format(self.output_dir, self.map_name)
           with open(self.output_file, 'w') as fd:
-               self.export_csv(fd, rasters, data, shapes)
+               self.export_csv(fd, data, shapes)
           # output_zfile = self.output_file + '.zip'
           # os.chdir(self.output_dir)
           # with ZipFile(output_zfile, 'w') as fzip:
@@ -83,14 +88,14 @@ class Process(SubDayPrecipProcess):
 
           logging.info("Shapes calculated successfully: {} sec".format(time.time() - start))
 
-     def export_csv(self, fd, rasters, data, shapes):
+     def export_csv(self, fd, data, shapes):
           keycolumn = self.keycolumn.getValue()
           # write header
-          fd.write('{key}{sep}cas_min'.format(key=keycolumn, sep=self.sep))
-          for stype in self.shapetype:
-               for rast in rasters:
-                    fd.write('{sep}typ_{stype}_{rast}_mm'.format(
-                              sep=self.sep, stype=stype, rast=rast[2:]) # skip H_
+          fd.write('{key}{sep}CAS_min'.format(key=keycolumn, sep=self.sep))
+          for stype in self.shapetypes:
+               for rp in self.return_period.getValue().split(','):
+                    fd.write('{sep}H_{rast}_T{rl}_TYP{stype}_mm'.format(
+                              sep=self.sep, stype=stype, rast=rp, rl=self.rainlength_value)
                     ) 
           fd.write('\r\n')
 
