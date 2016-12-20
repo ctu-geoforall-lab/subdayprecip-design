@@ -19,18 +19,42 @@
   ], 
   "abstract": "", 
   "zoom_extent": [
-    -940454.789, 
-    -1247063.123, 
-    -409692.049, 
-    -922666.875
+    -1054929.237, 
+    -1309873.094, 
+    -314717.906, 
+    -857464.211
   ], 
   "fees": "conditions unknown", 
   "message": null, 
   "overlays": [
     {
+      "drawing_order": 0, 
+      "projection": "EPSG:5514", 
+      "labels": false, 
+      "visible": false, 
+      "extent": [
+        -901459.5126953125, 
+        -1227368.1799926758, 
+        -432481.0701904297, 
+        -937173.4058837891
+      ], 
+      "geom_type": "POLYGON", 
+      "name": "Klasifikovan\u00e1 povod\u00ed IV. \u0159\u00e1du", 
+      "serverName": "", 
+      "hidden": false, 
+      "provider_type": "ogr", 
+      "type": "vector", 
+      "queryable": false, 
+      "metadata": {
+        "keyword_list": "", 
+        "abstract": "", 
+        "title": ""
+      }
+    }, 
+    {
       "layers": [
         {
-          "drawing_order": 0, 
+          "drawing_order": 1, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": true, 
@@ -111,7 +135,7 @@
     {
       "layers": [
         {
-          "drawing_order": 1, 
+          "drawing_order": 2, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -192,7 +216,7 @@
     {
       "layers": [
         {
-          "drawing_order": 2, 
+          "drawing_order": 3, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -273,7 +297,7 @@
     {
       "layers": [
         {
-          "drawing_order": 3, 
+          "drawing_order": 4, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -354,7 +378,7 @@
     {
       "layers": [
         {
-          "drawing_order": 4, 
+          "drawing_order": 5, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -435,7 +459,7 @@
     {
       "layers": [
         {
-          "drawing_order": 5, 
+          "drawing_order": 6, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -597,8 +621,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1482243076, 
-  "publish_date": "Tue Dec 20 15:11:16 2016", 
+  "publish_date_unix": 1482248139, 
+  "publish_date": "Tue Dec 20 16:35:39 2016", 
   "expiration": "", 
   "contact_person": "", 
   "extent_buffer": 0.0, 
@@ -664,7 +688,7 @@
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": 96, 
+          "dpi": -1, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
@@ -702,7 +726,7 @@
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": 96, 
+          "dpi": -1, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
@@ -740,7 +764,7 @@
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": 96, 
+          "dpi": -1, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
@@ -778,7 +802,7 @@
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": 96, 
+          "dpi": -1, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
@@ -816,7 +840,7 @@
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": 96, 
+          "dpi": -1, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
@@ -854,7 +878,7 @@
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": 96, 
+          "dpi": -1, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
