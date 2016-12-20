@@ -87,7 +87,7 @@ class SubDayPrecipProcess(WPSProcess):
           Module('r.subdayprecip.design',
                  map=self.map_name, return_period=self.rasters, rainlength=self.rainlength_value)
           logging.info("Subday computation finished: {} sec".format(time.time() - start))
-          
+          logging.info("{}".format(Module('v.info', flags='c', map=self.map_name, stdout_=PIPE).outputs.stdout))
           self.export()
          
      def check_keycolumn(self, keycol):

@@ -37,7 +37,7 @@ class Process(SubDayPrecipProcess):
           cols = [self.keycolumn.getValue()]
           rainlength = self.rainlength.getValue()
           for rp in self.return_period.getValue().split(','):
-               cols.append('H_{}_T{}_mm'.format(rp, rainlength))
+               cols.append('H_{}T{}'.format(rp, rainlength))
 
           Module('v.db.select',
                  map=self.map_name,

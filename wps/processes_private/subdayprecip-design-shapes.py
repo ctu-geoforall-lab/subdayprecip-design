@@ -68,7 +68,7 @@ class Process(SubDayPrecipProcess):
                                                            self.mapset, 'sqlite/sqlite.db'))
 
           # query map attributes
-          columns = map(lambda x: 'H_{}_T{}_mm'.format(x, self.rainlength_value), self.rasters)
+          columns = map(lambda x: 'H_{}T{}'.format(x, self.rainlength_value), self.rasters)
           columns.insert(0, self.keycolumn.getValue())
           data = gscript.vector_db_select(map=self.map_name, columns=','.join(columns))
 
@@ -94,7 +94,7 @@ class Process(SubDayPrecipProcess):
           fd.write('{key}{sep}CAS_min'.format(key=keycolumn, sep=self.sep))
           for stype in self.shapetypes:
                for rp in self.return_period.getValue().split(','):
-                    fd.write('{sep}H_{rast}_T{rl}_TYP{stype}_mm'.format(
+                    fd.write('{sep}H_{rast}T{rl}TYP{stype}'.format(
                               sep=self.sep, stype=stype, rast=rp, rl=self.rainlength_value)
                     ) 
           fd.write('\r\n')
