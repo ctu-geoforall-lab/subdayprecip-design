@@ -116,32 +116,32 @@ $(document).ready(function() {
 
     h002Layer = new OpenLayers.Layer.WMS("2 roky",
                                          "http://rain1.fsv.cvut.cz/services/wms",
-                                         {layers: "H_002", srs: "EPSG:4326"});
+                                         {layers: "H_N2_24h", srs: "EPSG:4326"});
     h002Layer.title = "N2";
 
     h005Layer = new OpenLayers.Layer.WMS("5 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
-                                         {layers: "H_010", srs: "EPSG:4326"});
+                                         {layers: "H_N5_24h", srs: "EPSG:4326"});
     h005Layer.title = "N5";
 
     h010Layer = new OpenLayers.Layer.WMS("10 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
-                                         {layers: "H_020", srs: "EPSG:4326"});
+                                         {layers: "H_N10_24h", srs: "EPSG:4326"});
     h010Layer.title = "N10";
     
     h020Layer = new OpenLayers.Layer.WMS("20 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
-                                         {layers: "H_020", srs: "EPSG:4326"});
+                                         {layers: "H_N20_24h", srs: "EPSG:4326"});
     h020Layer.title = "N20";
     
     h050Layer = new OpenLayers.Layer.WMS("50 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
-                                         {layers: "H_050", srs: "EPSG:4326"});
+                                         {layers: "H_N50_24h", srs: "EPSG:4326"});
     h050Layer.title = "N50";
     
     h100Layer = new OpenLayers.Layer.WMS("100 let",
                                          "http://rain1.fsv.cvut.cz/services/wms",
-                                         {layers: "H_100", srs: "EPSG:4326"});
+                                         {layers: "H_N100_24h", srs: "EPSG:4326"});
     h100Layer.title = "N100";
 
     // observation point layer

@@ -38,7 +38,7 @@ MAP
   END # WEB
 
   LAYER
-    NAME "H_002"
+    NAME "H_N2_24h"
     METADATA
       "wms_title"           "2-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 2-letých maximálních denních úhrnů"
@@ -53,12 +53,12 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_002.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_002"
-    CLASS NAME "H_002"
+    CLASS NAME "H_N2_24h"
     END # CLASS
   END # LAYER
 
   LAYER
-    NAME "H_005"
+    NAME "H_N5_24h"
     METADATA
       "wms_title"           "5-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 5-letých maximálních denních úhrnů"
@@ -73,12 +73,12 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_005.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_005"
-    CLASS NAME "H_005"
+    CLASS NAME "H_N5_24h"
     END # CLASS
   END # LAYER
 
   LAYER
-    NAME "H_010"
+    NAME "H_N10_24h"
     METADATA
       "wms_title"           "10-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 10-letých maximálních denních úhrnů"
@@ -93,12 +93,12 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_010.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_010"
-    CLASS NAME "H_010"
+    CLASS NAME "H_N10_24h"
     END # CLASS
   END # LAYER
 
   LAYER
-    NAME "H_020"
+    NAME "H_N20_24h"
     METADATA
       "wms_title"           "20-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 20-letých maximálních denních úhrnů"
@@ -113,12 +113,12 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_020.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_020"
-    CLASS NAME "H_020"
+    CLASS NAME "H_N20_24h"
     END # CLASS
   END # LAYER
 
   LAYER
-    NAME "H_050"
+    NAME "H_N50_24h"
     METADATA
       "wms_title"           "50-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 50-letých maximálních denních úhrnů"
@@ -133,12 +133,12 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_050.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_050"
-    CLASS NAME "H_050"
+    CLASS NAME "H_N50_24h"
     END # CLASS
   END # LAYER
 
   LAYER
-    NAME "H_100"
+    NAME "H_N100_24h"
     METADATA
       "wms_title"           "100-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 100-letých maximálních denních úhrnů"
@@ -153,7 +153,7 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_100.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_100"
-    CLASS NAME "H_100"
+    CLASS NAME "H_N100_24h"
     END # CLASS
   END # LAYER
 
