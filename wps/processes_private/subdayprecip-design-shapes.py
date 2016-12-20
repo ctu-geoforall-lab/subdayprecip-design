@@ -36,7 +36,7 @@ class Process(SubDayPrecipProcess):
                                                 type = types.StringType,
                                                 default = "1,2,3,4,5,6")
 
-          self.keycolumn=self.addLiteralInput(identifier = "column",
+          self.keycolumn=self.addLiteralInput(identifier = "keycolumn",
                                               title = "Klíčový atribut vstupních dat",
                                               type = types.StringType)
 

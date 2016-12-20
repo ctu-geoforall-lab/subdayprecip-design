@@ -22,7 +22,7 @@ class Process(SubDayPrecipProcess):
                                        identifier="subdayprecip-design-csv",
                                        description="Vrací vyčíslené návrhové srážky jako atributová data ve formátu CSV.")
           
-          self.keycolumn=self.addLiteralInput(identifier = "column",
+          self.keycolumn=self.addLiteralInput(identifier = "keycolumn",
                                               title = "Klíčový atribut vstupních dat",
                                               type = types.StringType)
 
