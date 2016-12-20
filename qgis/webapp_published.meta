@@ -597,8 +597,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1482055827, 
-  "publish_date": "Sun Dec 18 11:10:27 2016", 
+  "publish_date_unix": 1482243076, 
+  "publish_date": "Tue Dec 20 15:11:16 2016", 
   "expiration": "", 
   "contact_person": "", 
   "extent_buffer": 0.0, 
@@ -656,129 +656,15 @@
             2.645838625010583, 
             1.3229193125052916
           ], 
-          "name": "100-let\u00e9 max. denn\u00ed \u00fahrny", 
+          "name": "2-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "http://rain1.fsv.cvut.cz/services/wms", 
           "serverName": "", 
           "wms_layers": [
-            "H_100"
+            "H_N2_24h"
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": -1, 
-          "metadata": {
-            "keyword_list": "", 
-            "abstract": "", 
-            "title": ""
-          }
-        }, 
-        {
-          "projection": "EPSG:5514", 
-          "format": "image/png", 
-          "visible": false, 
-          "extent": [
-            -907000.0, 
-            -1230000.0, 
-            -429000.0, 
-            -933000.0
-          ], 
-          "resolutions": [
-            2645.838625010583, 
-            1322.9193125052916, 
-            661.4596562526458, 
-            264.5838625010583, 
-            132.29193125052916, 
-            66.14596562526458, 
-            26.458386250105832, 
-            13.229193125052916, 
-            6.614596562526458, 
-            2.645838625010583, 
-            1.3229193125052916
-          ], 
-          "name": "50-let\u00e9 max. denn\u00ed \u00fahrny", 
-          "url": "http://rain1.fsv.cvut.cz/services/wms", 
-          "serverName": "", 
-          "wms_layers": [
-            "H_050"
-          ], 
-          "provider_type": "wms", 
-          "type": "wms", 
-          "dpi": -1, 
-          "metadata": {
-            "keyword_list": "", 
-            "abstract": "", 
-            "title": ""
-          }
-        }, 
-        {
-          "projection": "EPSG:5514", 
-          "format": "image/png", 
-          "visible": false, 
-          "extent": [
-            -907000.0, 
-            -1230000.0, 
-            -429000.0, 
-            -933000.0
-          ], 
-          "resolutions": [
-            2645.838625010583, 
-            1322.9193125052916, 
-            661.4596562526458, 
-            264.5838625010583, 
-            132.29193125052916, 
-            66.14596562526458, 
-            26.458386250105832, 
-            13.229193125052916, 
-            6.614596562526458, 
-            2.645838625010583, 
-            1.3229193125052916
-          ], 
-          "name": "20-let\u00e9 max. denn\u00ed \u00fahrny", 
-          "url": "http://rain1.fsv.cvut.cz/services/wms", 
-          "serverName": "", 
-          "wms_layers": [
-            "H_020"
-          ], 
-          "provider_type": "wms", 
-          "type": "wms", 
-          "dpi": -1, 
-          "metadata": {
-            "keyword_list": "", 
-            "abstract": "", 
-            "title": ""
-          }
-        }, 
-        {
-          "projection": "EPSG:5514", 
-          "format": "image/png", 
-          "visible": false, 
-          "extent": [
-            -907000.0, 
-            -1230000.0, 
-            -429000.0, 
-            -933000.0
-          ], 
-          "resolutions": [
-            2645.838625010583, 
-            1322.9193125052916, 
-            661.4596562526458, 
-            264.5838625010583, 
-            132.29193125052916, 
-            66.14596562526458, 
-            26.458386250105832, 
-            13.229193125052916, 
-            6.614596562526458, 
-            2.645838625010583, 
-            1.3229193125052916
-          ], 
-          "name": "10-let\u00e9 max. denn\u00ed \u00fahrny", 
-          "url": "http://rain1.fsv.cvut.cz/services/wms", 
-          "serverName": "", 
-          "wms_layers": [
-            "H_010"
-          ], 
-          "provider_type": "wms", 
-          "type": "wms", 
-          "dpi": -1, 
+          "dpi": 96, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
@@ -812,11 +698,11 @@
           "url": "http://rain1.fsv.cvut.cz/services/wms", 
           "serverName": "", 
           "wms_layers": [
-            "H_005"
+            "H_N5_24h"
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": -1, 
+          "dpi": 96, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
@@ -846,15 +732,129 @@
             2.645838625010583, 
             1.3229193125052916
           ], 
-          "name": "2-let\u00e9 max. denn\u00ed \u00fahrny", 
+          "name": "10-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "http://rain1.fsv.cvut.cz/services/wms", 
           "serverName": "", 
           "wms_layers": [
-            "H_002"
+            "H_N10_24h"
           ], 
           "provider_type": "wms", 
           "type": "wms", 
-          "dpi": -1, 
+          "dpi": 96, 
+          "metadata": {
+            "keyword_list": "", 
+            "abstract": "", 
+            "title": ""
+          }
+        }, 
+        {
+          "projection": "EPSG:5514", 
+          "format": "image/png", 
+          "visible": false, 
+          "extent": [
+            -907000.0, 
+            -1230000.0, 
+            -429000.0, 
+            -933000.0
+          ], 
+          "resolutions": [
+            2645.838625010583, 
+            1322.9193125052916, 
+            661.4596562526458, 
+            264.5838625010583, 
+            132.29193125052916, 
+            66.14596562526458, 
+            26.458386250105832, 
+            13.229193125052916, 
+            6.614596562526458, 
+            2.645838625010583, 
+            1.3229193125052916
+          ], 
+          "name": "20-let\u00e9 max. denn\u00ed \u00fahrny", 
+          "url": "http://rain1.fsv.cvut.cz/services/wms", 
+          "serverName": "", 
+          "wms_layers": [
+            "H_N20_24h"
+          ], 
+          "provider_type": "wms", 
+          "type": "wms", 
+          "dpi": 96, 
+          "metadata": {
+            "keyword_list": "", 
+            "abstract": "", 
+            "title": ""
+          }
+        }, 
+        {
+          "projection": "EPSG:5514", 
+          "format": "image/png", 
+          "visible": false, 
+          "extent": [
+            -907000.0, 
+            -1230000.0, 
+            -429000.0, 
+            -933000.0
+          ], 
+          "resolutions": [
+            2645.838625010583, 
+            1322.9193125052916, 
+            661.4596562526458, 
+            264.5838625010583, 
+            132.29193125052916, 
+            66.14596562526458, 
+            26.458386250105832, 
+            13.229193125052916, 
+            6.614596562526458, 
+            2.645838625010583, 
+            1.3229193125052916
+          ], 
+          "name": "50-let\u00e9 max. denn\u00ed \u00fahrny", 
+          "url": "http://rain1.fsv.cvut.cz/services/wms", 
+          "serverName": "", 
+          "wms_layers": [
+            "H_N50_24h"
+          ], 
+          "provider_type": "wms", 
+          "type": "wms", 
+          "dpi": 96, 
+          "metadata": {
+            "keyword_list": "", 
+            "abstract": "", 
+            "title": ""
+          }
+        }, 
+        {
+          "projection": "EPSG:5514", 
+          "format": "image/png", 
+          "visible": false, 
+          "extent": [
+            -907000.0, 
+            -1230000.0, 
+            -429000.0, 
+            -933000.0
+          ], 
+          "resolutions": [
+            2645.838625010583, 
+            1322.9193125052916, 
+            661.4596562526458, 
+            264.5838625010583, 
+            132.29193125052916, 
+            66.14596562526458, 
+            26.458386250105832, 
+            13.229193125052916, 
+            6.614596562526458, 
+            2.645838625010583, 
+            1.3229193125052916
+          ], 
+          "name": "100-let\u00e9 max. denn\u00ed \u00fahrny", 
+          "url": "http://rain1.fsv.cvut.cz/services/wms", 
+          "serverName": "", 
+          "wms_layers": [
+            "H_N100_24h"
+          ], 
+          "provider_type": "wms", 
+          "type": "wms", 
+          "dpi": 96, 
           "metadata": {
             "keyword_list": "", 
             "abstract": "", 
