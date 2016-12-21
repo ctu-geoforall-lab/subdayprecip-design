@@ -4495,10 +4495,10 @@ def my_form_open(dialog, layer, feature):
       <variableNames type="QStringList"/>
       <variableValues type="QStringList"/>
     </Variables>
-    <WMSContactPerson type="QString"></WMSContactPerson>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSContactPerson type="QString">Martin Landa</WMSContactPerson>
+    <WMSOnlineResource type="QString">http://rain.fsv.cvut.cz/nastroje/webapp/</WMSOnlineResource>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
-    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSContactOrganization type="QString">ČVUT v Praze, Fakulta stavební</WMSContactOrganization>
     <WMSKeywordList type="QStringList">
       <value></value>
     </WMSKeywordList>
@@ -4506,7 +4506,7 @@ def my_form_open(dialog, layer, feature):
     <Paths>
       <Absolute type="bool">false</Absolute>
     </Paths>
-    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <WMSServiceTitle type="QString">Pilotní webová aplikace projektu QJ1520265</WMSServiceTitle>
     <WFSLayers type="QStringList">
       <value>data_povodi_ii_any20161205232607753</value>
       <value>data_povodi_iv_any20161206000220509</value>
@@ -4516,16 +4516,16 @@ def my_form_open(dialog, layer, feature):
       <value>data_povodi_iv_any201612061020161206103056056323290986</value>
       <value>data_povodi_iv_any20161206102441921465245529</value>
     </WFSLayers>
-    <WMSContactMail type="QString"></WMSContactMail>
+    <WMSContactMail type="QString">martin.landa@fsv.cvut.cz</WMSContactMail>
     <PositionPrecision>
       <DecimalPlaces type="int">2</DecimalPlaces>
       <Automatic type="bool">true</Automatic>
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
+    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
     <WMSContactPhone type="QString"></WMSContactPhone>
-    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
-    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSServiceAbstract type="QString">Tato webová aplikace umožňuje prohlížet podkladové vrstvy (Základní mapu ČR a vrstvy maximálních denních úhrnů poskytovaných v rámci projektu veřejnou službou OGC WMS) a vrstvu povodí IV. řádu s vyčíslenými hodnotami návrhových srážek s délkou srážky 6 hodin. Na základě těchto hodnot je vrstva povodí IV. řádu stylována v jednotlivých tématech (topics) podle doby opakování (2 roky, 5, 10, 20, 50 a 100 let).</WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <Measure>
