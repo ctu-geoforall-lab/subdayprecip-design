@@ -25,7 +25,10 @@
     -857464.211
   ], 
   "fees": "conditions unknown", 
-  "message": null, 
+  "message": {
+    "valid_until": "31.03.2017", 
+    "text": "Pilotn\u00ed webov\u00e1 aplikace projektu QJ1520265, v\u00edce informac\u00ed na http://rain.fsv.cvut.cz"
+  }, 
   "overlays": [
     {
       "drawing_order": 0, 
@@ -621,8 +624,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1482354296, 
-  "publish_date": "Wed Dec 21 22:04:56 2016", 
+  "publish_date_unix": 1482354720, 
+  "publish_date": "Wed Dec 21 22:12:00 2016", 
   "expiration": "", 
   "contact_person": "", 
   "extent_buffer": 0.0, 
