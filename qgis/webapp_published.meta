@@ -47,7 +47,7 @@
       "queryable": false, 
       "metadata": {
         "keyword_list": "", 
-        "abstract": "", 
+        "abstract": "0) Povod\u00ed s extr\u00e9my parametr\u016f ovlivn\u011bn\u00fdmi malou rozlohou a specifickou geometri\u00ed nebo v\u011bt\u0161\u00ed povod\u00ed s vysokou hustotou odvod\u0148ovac\u00edch kan\u00e1l\u016f.\n1) Povod\u00ed v\u011bj\u00ed\u0159ovit\u00e1, st\u0159edn\u00ed hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b a odtokov\u00fdch drah. Sm\u00ed\u0161en\u00fd p\u016fdn\u00ed pokryv.\n2) Prot\u00e1hl\u00e1 povod\u00ed, vysok\u00e1 hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b, kr\u00e1tk\u00e9 odtokov\u00e9 dr\u00e1hy. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s n\u00edzkou retenc\u00ed.\n3) P\u0159echodn\u00fd tvar povod\u00ed, vy\u0161\u0161\u00ed hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b a st\u0159edn\u00ed odtokov\u00e9 dr\u00e1hy. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s vysokou retenc\u00ed.\n4) Prot\u00e1hl\u00e1 povod\u00ed, n\u00edzk\u00e1 hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b a del\u0161\u00ed odtokov\u00e9 dr\u00e1hy. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s n\u00edzkou retenc\u00ed.\n5) P\u0159echodn\u00fd a\u017e v\u011bj\u00ed\u0159ovit\u00fd tvar povod\u00ed, velmi dlouh\u00e9 dr\u00e1hy odtoku. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s vysokou retenc\u00ed.", 
         "title": ""
       }
     }, 
@@ -621,8 +621,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1482248139, 
-  "publish_date": "Tue Dec 20 16:35:39 2016", 
+  "publish_date_unix": 1482354296, 
+  "publish_date": "Wed Dec 21 22:04:56 2016", 
   "expiration": "", 
   "contact_person": "", 
   "extent_buffer": 0.0, 

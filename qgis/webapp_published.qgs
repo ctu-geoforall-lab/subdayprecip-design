@@ -5,67 +5,67 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973_1482248139" name="Klasifikovaná povodí IV. řádu">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973_1482354296" name="Klasifikovaná povodí IV. řádu">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="1" checked="Qt::Checked" mutually-exclusive="1" name="2-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Checked" mutually-exclusive="1" name="2-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Checked" id="data_povodi_iv_any201612061002435591437399835_1482248139" name="Povodí IV.řádu - 2-leté/6h">
+      <layer-tree-layer expanded="0" checked="Qt::Checked" id="data_povodi_iv_any201612061002435591437399835_1482354296" name="Povodí IV.řádu - 2-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509_1482248139" name="Povodí IV.řádu - 5-leté/6h">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509_1482354296" name="Povodí IV.řádu - 5-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529_1482248139" name="Povodí IV.řádu - 10-leté/6h">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529_1482354296" name="Povodí IV.řádu - 10-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856_1482248139" name="Povodí IV.řádu - 20-leté/6h">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856_1482354296" name="Povodí IV.řádu - 20-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533_1482248139" name="Povodí IV.řádu - 50-leté/6h">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533_1482354296" name="Povodí IV.řádu - 50-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986_1482248139" name="Povodí IV.řádu - 100-leté/6h">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986_1482354296" name="Povodí IV.řádu - 100-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Maximální denní úhrny">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="2_leté_maximální_denní_úhrny20161220150937114_1482248139" name="2-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="2_leté_maximální_denní_úhrny20161220150937114_1482354296" name="2-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="5_leté_maximální_denní_úhrny20161220150937930_1482248139" name="5-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="5_leté_maximální_denní_úhrny20161220150937930_1482354296" name="5-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="10_leté_maximální_denní_úhrny20161220150936231_1482248139" name="10-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="10_leté_maximální_denní_úhrny20161220150936231_1482354296" name="10-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="20_leté_maximální_denní_úhrny20161220150937519_1482248139" name="20-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="20_leté_maximální_denní_úhrny20161220150937519_1482354296" name="20-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="50_leté_maximální_denní_úhrny20161220150938320_1482248139" name="50-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="50_leté_maximální_denní_úhrny20161220150938320_1482354296" name="50-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="100_leté_maximální_denní_úhrny20161220150936703_1482248139" name="100-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="100_leté_maximální_denní_úhrny20161220150936703_1482354296" name="100-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="Základní_mapa_1_50_00020161216150757234_1482248139" name="Základní mapa 1:50 000">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="Základní_mapa_1_50_00020161216150757234_1482354296" name="Základní mapa 1:50 000">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -94,120 +94,120 @@
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="data_povodi_iv_any201612061002435591437399835_1482248139"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="data_povodi_iv_any201612061002435591437399835_1482354296"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:900913" srcDatumTransform="-1" destDatumTransform="-1" layerid="Základní_mapa_1_25_00020161216150704588"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="10_leté_maximální_denní_úhrny20161220150936231_1482248139"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:900913" srcDatumTransform="-1" destDatumTransform="-1" layerid="Základní_mapa_1_50_00020161216150757234_1482248139"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="10_leté_maximální_denní_úhrny20161220150936231_1482354296"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:900913" srcDatumTransform="-1" destDatumTransform="-1" layerid="Základní_mapa_1_50_00020161216150757234_1482354296"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="Základní_mapy_ČR20161216102549574"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="data_povodi_klasifikace20161220152951973_1482248139"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="100_leté_maximální_denní_úhrny20161220150936703_1482248139"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="2_leté_maximální_denní_úhrny20161220150937114_1482248139"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="20_leté_maximální_denní_úhrny20161220150937519_1482248139"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="5_leté_maximální_denní_úhrny20161220150937930_1482248139"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="50_leté_maximální_denní_úhrny20161220150938320_1482248139"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="data_povodi_klasifikace20161220152951973_1482354296"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="100_leté_maximální_denní_úhrny20161220150936703_1482354296"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="2_leté_maximální_denní_úhrny20161220150937114_1482354296"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="20_leté_maximální_denní_úhrny20161220150937519_1482354296"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="5_leté_maximální_denní_úhrny20161220150937930_1482354296"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="50_leté_maximální_denní_úhrny20161220150938320_1482354296"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
-      <item>data_povodi_iv_any20161206000220509_1482248139</item>
-      <item>data_povodi_iv_any201612061002435591437399835_1482248139</item>
-      <item>data_povodi_iv_any20161206102441921465245529_1482248139</item>
-      <item>data_povodi_iv_any201612061020161206102709972164818856_1482248139</item>
-      <item>data_povodi_iv_any201612061020161206102851363649587533_1482248139</item>
-      <item>data_povodi_iv_any201612061020161206103056056323290986_1482248139</item>
-      <item>Základní_mapa_1_50_00020161216150757234_1482248139</item>
-      <item>10_leté_maximální_denní_úhrny20161220150936231_1482248139</item>
-      <item>100_leté_maximální_denní_úhrny20161220150936703_1482248139</item>
-      <item>2_leté_maximální_denní_úhrny20161220150937114_1482248139</item>
-      <item>20_leté_maximální_denní_úhrny20161220150937519_1482248139</item>
-      <item>5_leté_maximální_denní_úhrny20161220150937930_1482248139</item>
-      <item>50_leté_maximální_denní_úhrny20161220150938320_1482248139</item>
-      <item>data_povodi_klasifikace20161220152951973_1482248139</item>
+      <item>data_povodi_iv_any20161206000220509_1482354296</item>
+      <item>data_povodi_iv_any201612061002435591437399835_1482354296</item>
+      <item>data_povodi_iv_any20161206102441921465245529_1482354296</item>
+      <item>data_povodi_iv_any201612061020161206102709972164818856_1482354296</item>
+      <item>data_povodi_iv_any201612061020161206102851363649587533_1482354296</item>
+      <item>data_povodi_iv_any201612061020161206103056056323290986_1482354296</item>
+      <item>Základní_mapa_1_50_00020161216150757234_1482354296</item>
+      <item>10_leté_maximální_denní_úhrny20161220150936231_1482354296</item>
+      <item>100_leté_maximální_denní_úhrny20161220150936703_1482354296</item>
+      <item>2_leté_maximální_denní_úhrny20161220150937114_1482354296</item>
+      <item>20_leté_maximální_denní_úhrny20161220150937519_1482354296</item>
+      <item>5_leté_maximální_denní_úhrny20161220150937930_1482354296</item>
+      <item>50_leté_maximální_denní_úhrny20161220150938320_1482354296</item>
+      <item>data_povodi_klasifikace20161220152951973_1482354296</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Klasifikovaná povodí IV. řádu" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="data_povodi_klasifikace20161220152951973_1482248139" visible="0"/>
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Klasifikovaná povodí IV. řádu" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="data_povodi_klasifikace20161220152951973_1482354296" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="true" checked="Qt::Checked" name="2-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Checked" name="2-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Povodí IV.řádu - 2-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061002435591437399835_1482248139" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061002435591437399835_1482354296" visible="1"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="5-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="5-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 5-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206000220509_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206000220509_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="10-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="10-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 10-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206102441921465245529_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206102441921465245529_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="20-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="20-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 20-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102709972164818856_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102709972164818856_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="50-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="50-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 50-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102851363649587533_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102851363649587533_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="100-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="100-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 100-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206103056056323290986_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206103056056323290986_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
     <legendgroup open="false" checked="Qt::Unchecked" name="Maximální denní úhrny">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="2-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="2_leté_maximální_denní_úhrny20161220150937114_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="2_leté_maximální_denní_úhrny20161220150937114_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="5-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="5_leté_maximální_denní_úhrny20161220150937930_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="5_leté_maximální_denní_úhrny20161220150937930_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="10-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="10_leté_maximální_denní_úhrny20161220150936231_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="10_leté_maximální_denní_úhrny20161220150936231_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="20-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="20_leté_maximální_denní_úhrny20161220150937519_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="20_leté_maximální_denní_úhrny20161220150937519_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="50-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="50_leté_maximální_denní_úhrny20161220150938320_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="50_leté_maximální_denní_úhrny20161220150938320_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="100-leté max. denní úhrny" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="100_leté_maximální_denní_úhrny20161220150936703_1482248139" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="100_leté_maximální_denní_úhrny20161220150936703_1482354296" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Základní mapa 1:50 000" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_50_00020161216150757234_1482248139" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_50_00020161216150757234_1482354296" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
@@ -219,7 +219,7 @@
         <xmax>-429000</xmax>
         <ymax>-933000</ymax>
       </extent>
-      <id>100_leté_maximální_denní_úhrny20161220150936703_1482248139</id>
+      <id>100_leté_maximální_denní_úhrny20161220150936703_1482354296</id>
       <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N100_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
@@ -265,7 +265,7 @@
         <xmax>-429000</xmax>
         <ymax>-933000</ymax>
       </extent>
-      <id>10_leté_maximální_denní_úhrny20161220150936231_1482248139</id>
+      <id>10_leté_maximální_denní_úhrny20161220150936231_1482354296</id>
       <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N10_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
@@ -311,7 +311,7 @@
         <xmax>-429000</xmax>
         <ymax>-933000</ymax>
       </extent>
-      <id>20_leté_maximální_denní_úhrny20161220150937519_1482248139</id>
+      <id>20_leté_maximální_denní_úhrny20161220150937519_1482354296</id>
       <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N20_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
@@ -357,7 +357,7 @@
         <xmax>-429000</xmax>
         <ymax>-933000</ymax>
       </extent>
-      <id>2_leté_maximální_denní_úhrny20161220150937114_1482248139</id>
+      <id>2_leté_maximální_denní_úhrny20161220150937114_1482354296</id>
       <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N2_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
@@ -403,7 +403,7 @@
         <xmax>-429000</xmax>
         <ymax>-933000</ymax>
       </extent>
-      <id>50_leté_maximální_denní_úhrny20161220150938320_1482248139</id>
+      <id>50_leté_maximální_denní_úhrny20161220150938320_1482354296</id>
       <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N50_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
@@ -449,7 +449,7 @@
         <xmax>-429000</xmax>
         <ymax>-933000</ymax>
       </extent>
-      <id>5_leté_maximální_denní_úhrny20161220150937930_1482248139</id>
+      <id>5_leté_maximální_denní_úhrny20161220150937930_1482354296</id>
       <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N5_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
@@ -495,7 +495,7 @@
         <xmax>2129234.39587765512987971</xmax>
         <ymax>6694014.33758463431149721</ymax>
       </extent>
-      <id>Základní_mapa_1_50_00020161216150757234_1482248139</id>
+      <id>Základní_mapa_1_50_00020161216150757234_1482354296</id>
       <datasource>crs=EPSG:900913&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ZM50&amp;styles=&amp;url=http://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx</datasource>
       <keywordList>
         <value></value>
@@ -990,7 +990,7 @@ def my_form_open(dialog, layer, feature):
         <xmax>-422329.2567999999737367</xmax>
         <ymax>-933179.39049999800045043</ymax>
       </extent>
-      <id>data_povodi_iv_any20161206000220509_1482248139</id>
+      <id>data_povodi_iv_any20161206000220509_1482354296</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
       <keywordList>
         <value></value>
@@ -1496,7 +1496,7 @@ def my_form_open(dialog, layer, feature):
         <xmax>-422329.2567999999737367</xmax>
         <ymax>-933179.39049999800045043</ymax>
       </extent>
-      <id>data_povodi_iv_any201612061002435591437399835_1482248139</id>
+      <id>data_povodi_iv_any201612061002435591437399835_1482354296</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
       <keywordList>
         <value></value>
@@ -2002,7 +2002,7 @@ def my_form_open(dialog, layer, feature):
         <xmax>-422329.2567999999737367</xmax>
         <ymax>-933179.39049999800045043</ymax>
       </extent>
-      <id>data_povodi_iv_any201612061020161206102709972164818856_1482248139</id>
+      <id>data_povodi_iv_any201612061020161206102709972164818856_1482354296</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
       <keywordList>
         <value></value>
@@ -2508,7 +2508,7 @@ def my_form_open(dialog, layer, feature):
         <xmax>-422329.2567999999737367</xmax>
         <ymax>-933179.39049999800045043</ymax>
       </extent>
-      <id>data_povodi_iv_any201612061020161206102851363649587533_1482248139</id>
+      <id>data_povodi_iv_any201612061020161206102851363649587533_1482354296</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
       <keywordList>
         <value></value>
@@ -3014,7 +3014,7 @@ def my_form_open(dialog, layer, feature):
         <xmax>-422329.2567999999737367</xmax>
         <ymax>-933179.39049999800045043</ymax>
       </extent>
-      <id>data_povodi_iv_any201612061020161206103056056323290986_1482248139</id>
+      <id>data_povodi_iv_any201612061020161206103056056323290986_1482354296</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
       <keywordList>
         <value></value>
@@ -3520,7 +3520,7 @@ def my_form_open(dialog, layer, feature):
         <xmax>-422329.2567999999737367</xmax>
         <ymax>-933179.39049999800045043</ymax>
       </extent>
-      <id>data_povodi_iv_any20161206102441921465245529_1482248139</id>
+      <id>data_povodi_iv_any20161206102441921465245529_1482354296</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
       <keywordList>
         <value></value>
@@ -4026,8 +4026,14 @@ def my_form_open(dialog, layer, feature):
         <xmax>-432481.0701904296875</xmax>
         <ymax>-937173.4058837890625</ymax>
       </extent>
-      <id>data_povodi_klasifikace20161220152951973_1482248139</id>
+      <id>data_povodi_klasifikace20161220152951973_1482354296</id>
       <datasource>./data.sqlite|layerid=4</datasource>
+      <abstract>0) Povodí s extrémy parametrů ovlivněnými malou rozlohou a specifickou geometrií nebo větší povodí s vysokou hustotou odvodňovacích kanálů.
+1) Povodí vějířovitá, střední hustota říční sítě a odtokových drah. Smíšený půdní pokryv.
+2) Protáhlá povodí, vysoká hustota říční sítě, krátké odtokové dráhy. Převažuje půdní pokryv s nízkou retencí.
+3) Přechodný tvar povodí, vyšší hustota říční sítě a střední odtokové dráhy. Převažuje půdní pokryv s vysokou retencí.
+4) Protáhlá povodí, nízká hustota říční sítě a delší odtokové dráhy. Převažuje půdní pokryv s nízkou retencí.
+5) Přechodný až vějířovitý tvar povodí, velmi dlouhé dráhy odtoku. Převažuje půdní pokryv s vysokou retencí.</abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4102,19 +4108,18 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 attr="pov_tridy" forceraster="0" symbollevels="0" type="categorizedSymbol" enableorderby="0">
         <categories>
-          <category render="true" symbol="0" value="-2" label="-2"/>
-          <category render="true" symbol="1" value="-1" label="-1"/>
-          <category render="true" symbol="2" value="1" label="1"/>
-          <category render="true" symbol="3" value="2" label="2"/>
-          <category render="true" symbol="4" value="3" label="3"/>
-          <category render="true" symbol="5" value="4" label="4"/>
-          <category render="true" symbol="6" value="5" label="5"/>
+          <category render="true" symbol="0" value="0" label="0 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="1" value="1" label="1 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="2" value="2" label="2 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="3" value="3" label="3 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="4" value="4" label="4 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="5" value="5" label="5 - popis viz abstrakt vrstvy"/>
         </categories>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="32,187,234,255"/>
+              <prop k="color" v="41,190,220,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4129,7 +4134,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="1">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="140,227,108,255"/>
+              <prop k="color" v="24,233,87,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4144,7 +4149,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="2">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="228,122,179,255"/>
+              <prop k="color" v="238,42,94,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4159,7 +4164,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="3">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="225,85,46,255"/>
+              <prop k="color" v="204,172,123,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4174,7 +4179,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="4">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="180,33,233,255"/>
+              <prop k="color" v="171,210,122,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4189,22 +4194,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="5">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="81,83,200,255"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0.4"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="style" v="solid"/>
-            </layer>
-          </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="fill" name="6">
-            <layer pass="0" class="SimpleFill" locked="0">
-              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="132,225,177,255"/>
+              <prop k="color" v="102,100,203,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4411,6 +4401,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -4436,7 +4427,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
         <alias field="hydroid" index="1" name=""/>
@@ -4469,10 +4460,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -4518,12 +4509,12 @@ def my_form_open(dialog, layer, feature):
     <WMSServiceTitle type="QString"></WMSServiceTitle>
     <WFSLayers type="QStringList">
       <value>data_povodi_ii_any20161205232607753</value>
-      <value>data_povodi_iv_any20161206000220509_1482248139</value>
-      <value>data_povodi_iv_any201612061002435591437399835_1482248139</value>
-      <value>data_povodi_iv_any201612061020161206102709972164818856_1482248139</value>
-      <value>data_povodi_iv_any201612061020161206102851363649587533_1482248139</value>
-      <value>data_povodi_iv_any201612061020161206103056056323290986_1482248139</value>
-      <value>data_povodi_iv_any20161206102441921465245529_1482248139</value>
+      <value>data_povodi_iv_any20161206000220509_1482354296</value>
+      <value>data_povodi_iv_any201612061002435591437399835_1482354296</value>
+      <value>data_povodi_iv_any201612061020161206102709972164818856_1482354296</value>
+      <value>data_povodi_iv_any201612061020161206102851363649587533_1482354296</value>
+      <value>data_povodi_iv_any201612061020161206103056056323290986_1482354296</value>
+      <value>data_povodi_iv_any20161206102441921465245529_1482354296</value>
     </WFSLayers>
     <WMSContactMail type="QString"></WMSContactMail>
     <PositionPrecision>
@@ -4560,12 +4551,12 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
         <value>data_povodi_ii_any20161205232607753</value>
-        <value>data_povodi_iv_any20161206000220509_1482248139</value>
-        <value>data_povodi_iv_any201612061002435591437399835_1482248139</value>
-        <value>data_povodi_iv_any201612061020161206102709972164818856_1482248139</value>
-        <value>data_povodi_iv_any201612061020161206102851363649587533_1482248139</value>
-        <value>data_povodi_iv_any201612061020161206103056056323290986_1482248139</value>
-        <value>data_povodi_iv_any20161206102441921465245529_1482248139</value>
+        <value>data_povodi_iv_any20161206000220509_1482354296</value>
+        <value>data_povodi_iv_any201612061002435591437399835_1482354296</value>
+        <value>data_povodi_iv_any201612061020161206102709972164818856_1482354296</value>
+        <value>data_povodi_iv_any201612061020161206102851363649587533_1482354296</value>
+        <value>data_povodi_iv_any201612061020161206103056056323290986_1482354296</value>
+        <value>data_povodi_iv_any20161206102441921465245529_1482354296</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
         <value>disabled</value>

@@ -5,40 +5,40 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973" name="Klasifikovaná povodí IV. řádu">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973" name="Klasifikovaná povodí IV. řádu">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="1" checked="Qt::Checked" mutually-exclusive="1" name="2-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Checked" mutually-exclusive="1" name="2-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Checked" id="data_povodi_iv_any201612061002435591437399835" name="Povodí IV.řádu - 2-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509" name="Povodí IV.řádu - 5-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529" name="Povodí IV.řádu - 10-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856" name="Povodí IV.řádu - 20-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533" name="Povodí IV.řádu - 50-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986" name="Povodí IV.řádu - 100-leté/6h">
         <customproperties/>
@@ -126,47 +126,47 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Klasifikovaná povodí IV. řádu" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Klasifikovaná povodí IV. řádu" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
         <legendlayerfile isInOverview="0" layerid="data_povodi_klasifikace20161220152951973" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="true" checked="Qt::Checked" name="2-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Checked" name="2-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Povodí IV.řádu - 2-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061002435591437399835" visible="1"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="5-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="5-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 5-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206000220509" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="10-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="10-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 10-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206102441921465245529" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="20-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="20-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 20-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102709972164818856" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="50-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="50-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 50-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102851363649587533" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="100-leté max. úhrny za 6h">
+    <legendgroup open="false" checked="Qt::Unchecked" name="100-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu - 100-leté/6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206103056056323290986" visible="0"/>
@@ -4028,6 +4028,12 @@ def my_form_open(dialog, layer, feature):
       </extent>
       <id>data_povodi_klasifikace20161220152951973</id>
       <datasource>./data.sqlite|layerid=4</datasource>
+      <abstract>0) Povodí s extrémy parametrů ovlivněnými malou rozlohou a specifickou geometrií nebo větší povodí s vysokou hustotou odvodňovacích kanálů.
+1) Povodí vějířovitá, střední hustota říční sítě a odtokových drah. Smíšený půdní pokryv.
+2) Protáhlá povodí, vysoká hustota říční sítě, krátké odtokové dráhy. Převažuje půdní pokryv s nízkou retencí.
+3) Přechodný tvar povodí, vyšší hustota říční sítě a střední odtokové dráhy. Převažuje půdní pokryv s vysokou retencí.
+4) Protáhlá povodí, nízká hustota říční sítě a delší odtokové dráhy. Převažuje půdní pokryv s nízkou retencí.
+5) Přechodný až vějířovitý tvar povodí, velmi dlouhé dráhy odtoku. Převažuje půdní pokryv s vysokou retencí.</abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4102,19 +4108,18 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 attr="pov_tridy" forceraster="0" symbollevels="0" type="categorizedSymbol" enableorderby="0">
         <categories>
-          <category render="true" symbol="0" value="-2" label="-2"/>
-          <category render="true" symbol="1" value="-1" label="-1"/>
-          <category render="true" symbol="2" value="1" label="1"/>
-          <category render="true" symbol="3" value="2" label="2"/>
-          <category render="true" symbol="4" value="3" label="3"/>
-          <category render="true" symbol="5" value="4" label="4"/>
-          <category render="true" symbol="6" value="5" label="5"/>
+          <category render="true" symbol="0" value="0" label="0 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="1" value="1" label="1 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="2" value="2" label="2 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="3" value="3" label="3 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="4" value="4" label="4 - popis viz abstrakt vrstvy"/>
+          <category render="true" symbol="5" value="5" label="5 - popis viz abstrakt vrstvy"/>
         </categories>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="32,187,234,255"/>
+              <prop k="color" v="41,190,220,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4129,7 +4134,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="1">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="140,227,108,255"/>
+              <prop k="color" v="24,233,87,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4144,7 +4149,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="2">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="228,122,179,255"/>
+              <prop k="color" v="238,42,94,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4159,7 +4164,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="3">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="225,85,46,255"/>
+              <prop k="color" v="204,172,123,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4174,7 +4179,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="4">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="180,33,233,255"/>
+              <prop k="color" v="171,210,122,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4189,22 +4194,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="5">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="81,83,200,255"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0.4"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="style" v="solid"/>
-            </layer>
-          </symbol>
-          <symbol alpha="1" clip_to_extent="1" type="fill" name="6">
-            <layer pass="0" class="SimpleFill" locked="0">
-              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="132,225,177,255"/>
+              <prop k="color" v="102,100,203,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -4411,6 +4401,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -4436,7 +4427,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
         <alias field="hydroid" index="1" name=""/>
@@ -4469,10 +4460,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
