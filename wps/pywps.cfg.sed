@@ -32,7 +32,7 @@ maxinputparamlength=1024
 maxfilesize=200mb
 tempPath=/tmp
 processesPath=
-outputUrl=http://#HOST#.fsv.cvut.cz/wps/outputs
+outputUrl=https://#HOST#.fsv.cvut.cz:4433/wps/outputs
 outputPath=#WWWDIR#/wps/outputs
 logFile=/var/log/pywps.log
 logLevel=INFO
@@ -49,6 +49,6 @@ gisdbase=#DATADIR#/grassdata
 pythonPath=/opt/grass/dist.x86_64-pc-linux-gnu/etc/python
 
 [mapserver]
-mapserveraddress=http://#HOST#.fsv.cvut.cz/cgi-bin/mapserv
+mapserveraddress=https://#HOST#.fsv.cvut.cz:4433/cgi-bin/mapserv
 projdatapath=/usr/share/proj
 projs=epsg:5514,epsg:4326

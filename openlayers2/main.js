@@ -2,7 +2,7 @@
 var map, wpsObj, urlWPS, obsPoint;
 
 // URLs change according to needs
-var urlWPS="http://rain1.fsv.cvut.cz/services/wps";
+var urlWPS="https://rain1.fsv.cvut.cz:4433/services/wps";
 
 // OPTION GRITTER
 $.extend($.gritter.options,{position:'top-left',fade_in_speed:'medium',fade_out_speed:2000,time:2000});
@@ -115,32 +115,32 @@ $(document).ready(function() {
     zm10Layer.title = "ZM10";
 
     h002Layer = new OpenLayers.Layer.WMS("2 roky",
-                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         "https://rain1.fsv.cvut.cz:4433/services/wms",
                                          {layers: "H_N2_24h", srs: "EPSG:4326"});
     h002Layer.title = "N2";
 
     h005Layer = new OpenLayers.Layer.WMS("5 let",
-                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         "https://rain1.fsv.cvut.cz:4433/services/wms",
                                          {layers: "H_N5_24h", srs: "EPSG:4326"});
     h005Layer.title = "N5";
 
     h010Layer = new OpenLayers.Layer.WMS("10 let",
-                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         "https://rain1.fsv.cvut.cz:4433/services/wms",
                                          {layers: "H_N10_24h", srs: "EPSG:4326"});
     h010Layer.title = "N10";
     
     h020Layer = new OpenLayers.Layer.WMS("20 let",
-                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         "https://rain1.fsv.cvut.cz:4433/services/wms",
                                          {layers: "H_N20_24h", srs: "EPSG:4326"});
     h020Layer.title = "N20";
     
     h050Layer = new OpenLayers.Layer.WMS("50 let",
-                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         "https://rain1.fsv.cvut.cz:4433/services/wms",
                                          {layers: "H_N50_24h", srs: "EPSG:4326"});
     h050Layer.title = "N50";
     
     h100Layer = new OpenLayers.Layer.WMS("100 let",
-                                         "http://rain1.fsv.cvut.cz/services/wms",
+                                         "https://rain1.fsv.cvut.cz:4433/services/wms",
                                          {layers: "H_N100_24h", srs: "EPSG:4326"});
     h100Layer.title = "N100";
 
