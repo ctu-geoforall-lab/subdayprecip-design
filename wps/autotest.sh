@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 # Test WPS processes
 DATA="https://rain1.fsv.cvut.cz:4433/data/povodi_i.zip"
 KEY="RAD_I"
