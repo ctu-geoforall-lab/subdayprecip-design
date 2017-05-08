@@ -33,21 +33,21 @@ class SubDayPrecipProcess(Process):
           if 'input' not in skip:
                inputs.append(ComplexInput(
                     identifier="input",
-                    title="Vstupni bodová nebo polygonova vektorova data",
+                    title=u"Vstupni bodová nebo polygonova vektorova data",
                     supported_formats=[Format('application/gml+xml'),
                                        Format('application/zip; charset=binary')])
                )
 
           inputs.append(LiteralInput(
                identifier="return_period",
-               title="Doby opakovani",
+               title=u"Doby opakovani",
                data_type='string',
                default="N2,N5,N10,N20,N50,N100")
           )
           if 'rainlength' not in skip:
                inputs.append(LiteralInput(
                     identifier="rainlength",
-                    title="Delka srazky v minutach",
+                    title=u"Delka srazky v minutach",
                     data_type='integer')
                )
 
@@ -55,8 +55,8 @@ class SubDayPrecipProcess(Process):
                self._handler,
                identifier=identifier,
                version="0.1",
-               title="Navrhova srazka pro zvolenou lokalitu. " + description,
-               abstract="Pocita navrhovou srazku pro zvolenou lokalitu s vyuzitim nastroje GRASS GIS r.subdayprecip.design. Vice informaci na http://rain.fsv.cvut.cz/nastroje/r.subdayprecip.design",
+               title=u"Navrhova srazka pro zvolenou lokalitu. " + description,
+               abstract=u"Pocita navrhovou srazku pro zvolenou lokalitu s vyuzitim nastroje GRASS GIS r.subdayprecip.design. Vice informaci na http://rain.fsv.cvut.cz/nastroje/r.subdayprecip.design",
                inputs=inputs,
                outputs=outputs,
                grass_location=location,
