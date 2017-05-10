@@ -9,6 +9,8 @@
 # Licence: see LICENCE file for details
 ####################################################################
 
+__author__ = "Martin Landa"
+
 import os
 import sys
 import logging
@@ -18,16 +20,14 @@ sys.path.insert(0, '..')
 from base.subdayprecip import SubDayPrecipProcess
 from grass.pygrass.modules import Module
 
-class Process(SubDayPrecipProcess):
+class SubDayPrecipShp(SubDayPrecipProcess):
      def __init__(self):
-          SubDayPrecipProcess.__init__(self,
-                                       identifier="subdayprecip-design-shp",
-                                       description="Vrací vyčíslené návrhové srážky jako vektorová data ve formátu Esri Shapefile.")
-          
-          self.output = self.addComplexOutput(identifier = "output",
-                                              title = "Výsledek ve formátu Esri Shapefile",
-                                              formats = [ {"mimeType":"application/x-zipped-shp"} ],
-                                              asReference = True)
+          super(SubDayPrecipShp, self).__init__(
+               identifier="subdayprecip-design-shp",
+               description="Vraci vycislene navrhove srazky jako vektorova data ve formatu Esri Shapefile.",
+               input_params=['input', 'return_period', 'rainlength'],
+               output_params=['output_shp']
+          )
           
      def export(self):
           self.output_file = '{}/{}.zip'.format(self.output_dir, self.map_name)
@@ -46,9 +46,5 @@ class Process(SubDayPrecipProcess):
                shpzip.write('{}.shx'.format(self.map_name))
                shpzip.write('{}.prj'.format(self.map_name))
           logging.debug("Export finished")
-          
-          self.output.setValue(self.output_file)
-          
-if __name__ == "__main__":
-     process = Process()
-     process.execute()
+
+          return self.output_file
