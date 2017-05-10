@@ -4,14 +4,10 @@ __author__ = "Martin Landa"
 
 from pywps.app.Service import Service
 
-from processes_public.subdayprecip_design_shp import SubDayPrecipShp
-from processes_public.subdayprecip_design_csv import SubDayPrecipCsv
-from processes_public.subdayprecip_design_point import SubDayPrecipPoint
+from processes_private.subdayprecip_design_shapes import SubDayPrecipShapes
 
 processes = [
-    SubDayPrecipShp(),
-    SubDayPrecipCsv(),
-    SubDayPrecipPoint(),
+    SubDayPrecipShapes(),
 ]
 
 # Service accepts two parameters:

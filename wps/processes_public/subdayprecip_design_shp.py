@@ -20,21 +20,13 @@ sys.path.insert(0, '..')
 from base.subdayprecip import SubDayPrecipProcess
 from grass.pygrass.modules import Module
 
-from pywps import ComplexOutput, Format
-
 class SubDayPrecipShp(SubDayPrecipProcess):
      def __init__(self):
-          outputs = [ComplexOutput(
-               identifier = "output",
-               title = u"Vysledek ve formatu Esri Shapefile",
-               supported_formats=[Format('application/x-zipped-shp')],
-               as_reference = True)
-          ]
-
           super(SubDayPrecipShp, self).__init__(
                identifier="subdayprecip-design-shp",
                description="Vraci vycislene navrhove srazky jako vektorova data ve formatu Esri Shapefile.",
-               outputs=outputs
+               input_params=['input', 'return_period', 'rainlength'],
+               output_params=['output_shp']
           )
           
      def export(self):

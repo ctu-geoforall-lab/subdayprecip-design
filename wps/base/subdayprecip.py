@@ -25,12 +25,15 @@ logging.info(sys.path)
 from grass.pygrass.modules import Module
 from grass.exceptions import CalledModuleError
 
-from pywps import Process, ComplexInput, LiteralInput, Format
+from pywps import Process, ComplexInput, LiteralInput, Format, ComplexOutput, LiteralOutput
 
 class SubDayPrecipProcess(Process):
-     def __init__(self, identifier, description, location='/opt/grassdata/subdayprecip', skip=[],
-                  inputs=[], outputs=[]):
-          if 'input' not in skip:
+     def __init__(self, identifier, description,
+                  location='/opt/grassdata/subdayprecip',
+                  input_params=[], output_params=[]):
+          inputs = []
+          outputs = []
+          if 'input' in input_params:
                inputs.append(ComplexInput(
                     identifier="input",
                     title=u"Vstupni bodová nebo polygonova vektorova data",
@@ -38,18 +41,85 @@ class SubDayPrecipProcess(Process):
                                        Format('application/zip; charset=binary')])
                )
 
-          inputs.append(LiteralInput(
-               identifier="return_period",
-               title=u"Doby opakovani",
-               data_type='string',
-               default="N2,N5,N10,N20,N50,N100")
-          )
-          if 'rainlength' not in skip:
+          if 'obs' in input_params:
+               inputs.append(LiteralInput(
+                    identifier="obs_x",
+                    title=u"Zemepisna delka zajmoveho bodu",
+                    data_type='float')
+               )
+               inputs.append(LiteralInput(
+                    identifier="obs_y",
+                    title=u"Zemepisna sirka zajmoveho bodu",
+                    data_type='float')
+               )
+
+          if 'keycolumn' in input_params:
+               inputs.append(LiteralInput(
+                    identifier="keycolumn",
+                    title=u"Klicovy atribut vstupnich dat",
+                    data_type='string')
+               )
+          
+          if 'return_period' in input_params:
+               inputs.append(LiteralInput(
+                    identifier="return_period",
+                    title=u"Doby opakovani",
+                    data_type='string',
+                    default="N2,N5,N10,N20,N50,N100")
+               )
+          
+          if 'rainlength' in input_params:
                inputs.append(LiteralInput(
                     identifier="rainlength",
                     title=u"Delka srazky v minutach",
                     data_type='integer')
                )
+
+          if 'type' in input_params:
+               inputs.append(LiteralInput(
+                    identifier="type",
+                    title=u"Typy rozlozeni srazky",
+                    data_type='string',
+                    default='1,2,3,4,5,6')
+               )
+
+          if 'output_shp' in output_params:
+               outputs.append(ComplexOutput(
+                    identifier="output",
+                    title=u"Vysledek ve formatu Esri Shapefile",
+                    supported_formats=[Format('application/x-zipped-shp')],
+                    as_reference=True)
+               )
+
+          if 'output_csv' in output_params:
+               outputs.append(ComplexOutput(
+                    identifier="output",
+                    title=u"Vysledek ve formatu CSV",
+                    supported_formats=[Format('application/csv')],
+                    as_reference = True)
+               )
+
+          if 'output_value' in output_params:
+               outputs.append(LiteralOutput(
+                    identifier="output",
+                    title=u"Vycislena hodnota",
+                    data_type='float')
+               )
+
+          if 'output_shapes' in output_params:
+               outputs.append(ComplexOutput(
+                    identifier="output",
+                    title=u"Hodnoty prubehu navrhovych srazek ve formatu CSV",
+                    supported_formats=[Format('application/csv')],
+                    as_reference = True)
+               )
+          
+          # self.output_png = self.addComplexOutput(identifier = "output_png",
+          #                                       title = "Tvar návrhových srážek jako graf ve formátu PNG",
+          #                                       formats = [ {"mimeType":"image/png"} ],
+          #                                       asReference = True)
+
+               
 
           super(SubDayPrecipProcess, self).__init__(
                self._handler,
@@ -62,8 +132,12 @@ class SubDayPrecipProcess(Process):
                grass_location=location,
                store_supported=True,
                status_supported=True)
-          
-          self.rainlength_value = None
+
+          self.keycolumn = None
+          self.return_period = None
+          self.rainlength = None
+          self.shapetype = None
+
           self.output = None # to be defined by descendant
           self.output_dir = None
           
@@ -75,8 +149,15 @@ class SubDayPrecipProcess(Process):
      #           shutil.rmtree(self.output_dir)
 
      def _handler(self, request, response):
-          if not self.rainlength_value:
-               self.rainlength_value = request.inputs['rainlength'][0].data
+          if 'keycolumn' in request.inputs.keys():
+               self.keycolumn = request.inputs['keycolumn'][0].data
+          if 'return_period' in request.inputs.keys():
+               self.return_period = request.inputs['return_period'][0].data.split(',')
+          if 'rainlength' in request.inputs.keys():
+               self.rainlength = request.inputs['rainlength'][0].data
+          if 'type' in request.inputs.keys():
+               self.shapetype = request.inputs['type'][0].data.split(',')
+               
           # if 'input' in request.inputs.keys():
           #      self.map_name = self.import_data()
           # else:
@@ -84,21 +165,21 @@ class SubDayPrecipProcess(Process):
           self.map_name = self.import_data(request.inputs['input'][0].data)
           
           if 'keycolumn' in request.inputs.keys():
-               self.check_keycolumn(request.inputs['keycolumn'][0].data)
-
-          self.rasters = request.inputs['return_period'][0].data.split(',')
+               self.check_keycolumn(self.keycolumn)
 
           self.output_dir = os.path.join('/tmp', '{}_{}'.format(
                self.map_name, os.getpid())
           )
+          if os.path.exists(self.output_dir):
+               shutil.rmtree(self.output_dir)
           os.mkdir(self.output_dir)
 
-          Module('g.region', raster=self.rasters[0])
+          Module('g.region', raster=self.return_period[0])
           logging.debug("Subday computation started")
           start = time.time()
           Module('r.subdayprecip.design',
-                 map=self.map_name, return_period=self.rasters,
-                 rainlength=self.rainlength_value
+                 map=self.map_name, return_period=self.return_period,
+                 rainlength=self.rainlength
           )
           logging.info("Subday computation finished: {} sec".format(time.time() - start))
           logging.info("{}".format(Module(
@@ -166,5 +247,5 @@ class SubDayPrecipProcess(Process):
 
      #      return map_name
      
-     def export(self):
+     def export(self, inputs):
           pass

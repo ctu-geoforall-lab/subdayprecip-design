@@ -20,39 +20,20 @@ sys.path.insert(0, '..')
 from base.subdayprecip import SubDayPrecipProcess
 import grass.script as gscript # TODO: replace by pyGRASS
 
-class Process(SubDayPrecipProcess):
+class SubDayPrecipShapes(SubDayPrecipProcess):
      def __init__(self):
-          SubDayPrecipProcess.__init__(self,
-                                       identifier="subdayprecip-design-shapes",
-                                       description="Vrací tvary návrhových srážek v tabulkové formě s pevně stanovenou délkou srážky 6 hodin.",
-                                       skip = ['rainlength'])
+          super(SubDayPrecipShapes, self).__init__(
+               identifier="subdayprecip-design-shapes",
+               description=u"Vraci tvary navrhovych srazek v tabulkove forme s pevne stanovenou delkou srazky 6 hodin.",
+               input_params=['input', 'keycolumn', 'return_period', 'type'],
+               output_params=['output_shapes']
+          )
 
           self.mapset = 'rl360'
           self.sep = ','
-          self.rainlength_value = '360'
-
-          self.shapetype = self.addLiteralInput(identifier = "type",
-                                                title = "Typy rozložení srážky",
-                                                type = types.StringType,
-                                                default = "1,2,3,4,5,6")
-
-          self.keycolumn=self.addLiteralInput(identifier = "keycolumn",
-                                              title = "Klíčový atribut vstupních dat",
-                                              type = types.StringType)
-
-          self.output_csv = self.addComplexOutput(identifier = "output_csv",
-                                                  title = "Hodnoty průběhu návrhových srážek ve formátu CSV",
-                                                  formats = [ {"mimeType":"application/csv"} ],
-                                                  asReference = True)
-
-          # self.output_png = self.addComplexOutput(identifier = "output_png",
-          #                                       title = "Tvar návrhových srážek jako graf ve formátu PNG",
-          #                                       formats = [ {"mimeType":"image/png"} ],
-          #                                       asReference = True)
+          self.rainlength = '360'
 
      def export(self):
-          self.shapetypes = self.shapetype.getValue().split(',')
-
           logging.debug("Shapes computation started")
           start = time.time()
 
@@ -60,16 +41,18 @@ class Process(SubDayPrecipProcess):
 
           # query shapes
           sql = 'select min'
-          for stype in self.shapetypes:
+          for stype in self.shapetype:
                sql += ',typ{}'.format(stype)
           sql += ' from tvary'
           shapes = gscript.db_select(sql=sql, driver='sqlite',
-                                     database=os.path.join(gisenv['GISDBASE'], gisenv['LOCATION_NAME'],
-                                                           self.mapset, 'sqlite/sqlite.db'))
+                                     database=os.path.join(
+                                          gisenv['GISDBASE'], gisenv['LOCATION_NAME'],
+                                          self.mapset, 'sqlite/sqlite.db')
+          )
 
           # query map attributes
-          columns = map(lambda x: 'H_{}T{}'.format(x, self.rainlength_value), self.rasters)
-          columns.insert(0, self.keycolumn.getValue())
+          columns = map(lambda x: 'H_{}T{}'.format(x, self.rainlength), self.return_period)
+          columns.insert(0, self.keycolumn)
           data = gscript.vector_db_select(map=self.map_name, columns=','.join(columns))
 
           # export csv
@@ -81,21 +64,21 @@ class Process(SubDayPrecipProcess):
           # with ZipFile(output_zfile, 'w') as fzip:
           #      fzip.write('{}'.format(os.path.basename(self.output_file)))
           # self.output_csv.setValue(output_zfile)
-          self.output_csv.setValue(self.output_file)
 
           # export png (graph)
           ### TODO
 
           logging.info("Shapes calculated successfully: {} sec".format(time.time() - start))
-
+          
+          return self.output_file
+     
      def export_csv(self, fd, data, shapes):
-          keycolumn = self.keycolumn.getValue()
           # write header
-          fd.write('{key}{sep}CAS_min'.format(key=keycolumn, sep=self.sep))
-          for stype in self.shapetypes:
-               for rp in self.return_period.getValue().split(','):
+          fd.write('{key}{sep}CAS_min'.format(key=self.keycolumn, sep=self.sep))
+          for stype in self.shapetype:
+               for rp in self.return_period:
                     fd.write('{sep}H_{rast}T{rl}TYP{stype}'.format(
-                              sep=self.sep, stype=stype, rast=rp, rl=self.rainlength_value)
+                              sep=self.sep, stype=stype, rast=rp, rl=self.rainlength)
                     ) 
           fd.write('\r\n')
 
