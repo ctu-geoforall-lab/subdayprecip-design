@@ -37,7 +37,8 @@ class SubDayPrecipProcess(Process):
                inputs.append(ComplexInput(
                     identifier="input",
                     title=u"Vstupni bodová nebo polygonova vektorova data",
-                    supported_formats=[Format('application/gml+xml'),
+                    supported_formats=[Format('text/xml'), # requires QGIS WPS client
+                                       Format('GML'),
                                        Format('application/zip; charset=binary')])
                )
 
