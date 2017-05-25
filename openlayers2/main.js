@@ -42,7 +42,7 @@ function callWPS(){
 
     
     // Creating Process
-    var processName = "subdayprecip-design-point"
+    var processName = "d-rain-point"
     rainProcess = new OpenLayers.WPS.Process({identifier: processName,
                                                   inputs: [obsXInput, obsYInput, raster, rainLength],
                                                   async: false,

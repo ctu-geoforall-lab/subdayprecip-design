@@ -18,7 +18,7 @@ from grass.pygrass.modules import Module
 class SubDayPrecipCsv(SubDayPrecipProcess):
      def __init__(self):
           super(SubDayPrecipCsv, self).__init__(
-               identifier="subdayprecip-design-csv",
+               identifier="d-rain-csv",
                description=u"Vraci vycislene navrhove srazky jako atributova data ve formatu CSV.",
                input_params=['input', 'keycolumn', 'return_period', 'rainlength'],
                output_params=['output_csv']

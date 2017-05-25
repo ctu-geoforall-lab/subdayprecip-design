@@ -23,7 +23,7 @@ from grass.pygrass.modules import Module
 class SubDayPrecipShp(SubDayPrecipProcess):
      def __init__(self):
           super(SubDayPrecipShp, self).__init__(
-               identifier="subdayprecip-design-shp",
+               identifier="d-rain-shp",
                description="Vraci vycislene navrhove srazky jako vektorova data ve formatu Esri Shapefile.",
                input_params=['input', 'return_period', 'rainlength'],
                output_params=['output_shp']

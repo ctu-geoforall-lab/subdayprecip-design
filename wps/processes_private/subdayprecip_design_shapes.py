@@ -23,7 +23,7 @@ import grass.script as gscript # TODO: replace by pyGRASS
 class SubDayPrecipShapes(SubDayPrecipProcess):
      def __init__(self):
           super(SubDayPrecipShapes, self).__init__(
-               identifier="subdayprecip-design-shapes",
+               identifier="d-rain-timedist",
                description=u"Vraci tvary navrhovych srazek v tabulkove forme s pevne stanovenou delkou srazky 6 hodin.",
                input_params=['input', 'keycolumn', 'return_period', 'type'],
                output_params=['output_shapes']

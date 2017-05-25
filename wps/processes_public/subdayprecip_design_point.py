@@ -21,7 +21,7 @@ class SubDayPrecipPoint(SubDayPrecipProcess):
      def __init__(self):
 
           super(SubDayPrecipPoint, self).__init__(
-               identifier="subdayprecip-design-point",
+               identifier="d-rain-point",
                description=u"Vraci vycislenou navrhovou srazku pro zvoleny bod ve WGS-84.",
                input_params=['obs', 'return_period', 'rainlength'],
                output_params=['output_value']
