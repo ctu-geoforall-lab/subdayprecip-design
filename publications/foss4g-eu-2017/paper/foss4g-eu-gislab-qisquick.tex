@@ -51,31 +51,32 @@
 \icwg{}   %This field is optional.
 
 % KAO: Use times symbol
-\abstract{ Building complete open source GIS computing and data
-  publication platform can be relatively easy task. In this paper will
-  be demonstrated automated deployment of such platform using two open
-  source software projects - GIS.lab and Gisquick. GIS.lab is a
-  project for rapid deploying complete, centrally managed and
-  horizontally scalable GIS infrastructure in local area network, data
-  center or cloud. It provides comprehensive set of free geospatial
-  software seamlessly integrated into one, easy-to-use system. A
-  platform for GIS computing (in our case demonstrated on hydrological
-  modeling) requires core components like geoprocessing server, map
-  server, and computation engine like GRASS GIS, SAGA, or other
-  similar GIS software. All these components can be easily
-  automatically deployed by GIS.lab platform. In demonstrated solution
-  PyWPS is used for serving WPS processes built on the top of GRASS
-  GIS computation platform. GIS.lab can be easily extended by other
-  components running in Docker containers. This approach is shown on
-  Gisquick seamless integration. Gisquick is an open source platform
-  for publishing geospatial data in the sense of rapid sharing QGIS
-  projects on the web. The platform consists of QGIS plugin,
-  Django-based server application, QGIS server, and web/mobile
+\abstract{ Building complete free and open source GIS computing and
+  data publication platform can be relatively easy task. In this paper
+  is described automated deployment of such platform using two open
+  source software projects -- GIS.lab and Gisquick. GIS.lab
+  (\url{http://web.gislab.io}) is a project for rapid deploying
+  complete, centrally managed and horizontally scalable GIS
+  infrastructure in local area network, data center or cloud. It
+  provides comprehensive set of free geospatial software seamlessly
+  integrated into one, easy-to-use system. A platform for GIS
+  computing (in our case demonstrated on hydrological modeling)
+  requires core components like geoprocessing server, map server, and
+  computation engine like GRASS GIS, SAGA, or other similar GIS
+  software. All these components can be easily automatically deployed
+  by GIS.lab platform. In demonstrated solution PyWPS is used for
+  serving WPS processes built on the top of GRASS GIS computation
+  platform. GIS.lab can be easily extended by other components running
+  in Docker containers. This approach is shown on Gisquick seamless
+  integration. Gisquick (\url{http://gisquick.org}) is an open source
+  platform for publishing geospatial data in the sense of rapid
+  sharing QGIS projects on the web. The platform consists of QGIS
+  plugin, Django-based server application, QGIS server, and web/mobile
   clients. In this paper is shown how to easily deploy complete open
   source GIS infrastructure allowing all required operations from data
   preparation on desktop, data sharing, geospatial computation as the
   service, and publication of results in the sense of OGC Web Services
-  and importantly also as web mapping applications.  }
+  and importantly also in the sense of web mapping applications.  }
 
 \keywords{GIS, Open Source, Free Software, Deployment, Hydrology, GIS.lab, Gisquick}
 
@@ -98,7 +99,7 @@ mainly after 2000 came into existence many other FOSS GIS
 projects. Comprehensive overview shows nowadays not maintained
 FreeGIS.org website \cite{freegis.org}. List of GIS packages presented
 on this website appears to be impressive. But it is not easy task to
-understand which software projects are still alive, solid, mature and
+understand which software projects are alive, solid, mature and
 reasonably maintained. Later in 2006 has been established Open Source
 Geospatial Consorcium (OSGeo) with clear goal to support the
 collaborative development of open source geospatial software, and
@@ -109,21 +110,21 @@ projects which pass incubation procedure are graduated as official
 \textit{OSGeo Projects}. This status is a clear sign to the
 users/consumers that such project is reasonable mature, has strong and
 diverse user and developer community. Shortly, it is a sign of the
-quality. Mature components are crucial for building GIS
+quality. Solid components are crucial for building GIS
 infrastructure. OSGeo Projects should fulfill such requirements in
 many ways.
 
 \subsection{Putting Blocks Together}\label{sec:Putting blocks together}
 
-Building complete Open Source GIS infrastructure allowing operations
+Building complete open source GIS infrastructure allowing operations
 from data preparation, performing analysis and computation, and
 publishing results to end user is a very complex task. There are two
-major conditions for creating well organized, mature and fully
-operational open source infrastructure: (a) solid bricks and (b)
-flexible glue to connect them. By solid bricks it is meant mature,
-well-driven open source GIS software projects. Crucial is a glue which
-puts bricks together in flexible but solid manner. Underestimating the
-importance of such glue leads to various problems when maintaining
+major conditions for creating well organized, and fully operational
+open source infrastructure: (a) solid bricks and (b) flexible glue to
+connect them. By solid bricks it is meant mature, well-driven open
+source GIS software projects. Crucial is a glue which puts bricks
+together in flexible but solid manner. Underestimating the importance
+of such glue leads to various problems when maintaining
 infrastructure, upgrading or replacing bricks (software packages), and
 hardware equipment.
 
@@ -172,27 +173,26 @@ distribution provided by Canonical.
 \end{figure}
 
 There is a large number of possible deployment scenarios in which
-GIS.lab can be used. GIS.lab can play a key role for building
-geospatial computation cluster with effective horizontally scalable
-computer power providing geospatial services to be consumed by
-different clients within local network area or even in the data center
-or cloud. GIS.lab is able to turn heterogeneous computers into fully
-operative, centrally managed GIS easy-to-use system and
+GIS.lab can be successfully used. GIS.lab can play a key role for
+building geospatial computation cluster with effective horizontally
+scalable computer power providing geospatial services to be consumed
+by different clients within local network area or even in the data
+center or cloud. GIS.lab is able to turn heterogeneous computers into
+fully operative, centrally managed GIS easy-to-use system and
 maintenance-free clients in few moments. It is ideal platform for GIS
 \textit{education and popularization} of open source
 technologies. GIS.lab technology is able to be incorporated into
 existing computer network or to create its own computer
-network. Further option can be very useful for crisis management in
-very hard conditions of natural disaster with Internet
-outages. GIS.lab can be customized in many ways in order to fulfill
-different requirements.
+network. Further option can be useful for crisis management in very
+hard conditions of natural disaster with Internet outages. GIS.lab can
+be customized in many ways in order to fulfill different requirements.
 
 % KAO: Remove spacing before label: can cause reference to be wrong
 \begin{figure}[ht!]
 \begin{center}
   \includegraphics[width=1.0\columnwidth]{figures/gislab-architecture.png}
-  \caption{GIS.lab infrastructure as a platform for teaching, or
-    crisis management (source: GIS.lab Documentation)}
+  \caption{GIS.lab infrastructure as a platform for teaching,
+    computation, or crisis management (source: GIS.lab Documentation)}
 \label{fig:gislab_infrastructure}
 \end{center}
 \end{figure}
@@ -222,55 +222,53 @@ platform. Desired system should allowing the user to collect, prepare,
 and preprocess data from heterogeneous data sources for hydrological
 computation using GIS software packages. The user will be able to
 perform hydrological computation locally on desktop clients, and also
-consume dedicated geoprocessing service provided by a server running
-in the infrastructure. Results of hydrological modeling is possible
-easily publish via web services from user desktop environment and
-ideally also as interactive web mapping application provided by server
-component (master node) in the infrastructure.
+consume dedicated geoprocessing service provided by a master node
+running in the infrastructure. Results of hydrological modeling is
+possible easily publish via web services from user desktop environment
+and ideally also as interactive web mapping applications provided by
+server component (master node) in the infrastructure.
 
-Most of the requirements are already fulfilled by GIS.lab
-platform. It provides fully established computer network consists of
-server (master node) and desktop clients (client nodes). On the server
-is running Lighttpd web server in order to provide web services,
-PostGIS geospatial database server to collect, store and manipulate
-with geospatial data, GRASS GIS engine for performing geospatial
-analysis, and QGIS Server providing OGC Web Services (OWS). On client
-side is requested desktop GIS application to collect, manage and
-preprocess input geospatial data. For this task GIS.lab desktop client
-offers well known QGIS Desktop. Performing hydrological modeling can
-be in desktop environment possible thanks to integrated GRASS GIS and
-QGIS GRASS plugin. GIS.lab main objective is a rapid deployment of
-complete geospatial computation platform enabling collaborative data
-managing, storing, processing, analyzing thanks to fully automatic
-provisioning.
+Most of the requirements are already fulfilled by GIS.lab platform. It
+provides fully established computer network consisting of server
+(master node) and desktop clients (client nodes). On master node is
+running Lighttpd web server in order to provide web services, PostGIS
+geospatial database server to collect, store and manipulate with
+geospatial data, GRASS GIS engine for performing geospatial analysis,
+and QGIS Server providing OGC Web Services (OWS). On client side is
+requested desktop GIS application to collect, manage and preprocess
+input geospatial data. For this task GIS.lab desktop client offers
+well known QGIS Desktop. Performing hydrological modeling can be in
+desktop environment possible thanks to integrated GRASS GIS and QGIS
+GRASS plugin. GIS.lab main objective is a rapid deployment of complete
+geospatial computation platform enabling collaborative data managing,
+storing, processing, analyzing thanks to fully automatic provisioning.
 
 Missing features can be easily integrated into GIS.lab eco-system by
 customization of deployment of the both master/server and desktop
-client components. Since geoprocessing services should be provided by
-the infrastructure the master component (server) must be extended by
-application able to provide OGC Web Processing Service (WPS). In this
-paper PyWPS version 4 seamless deployment integration will be
-demonstrated.
+client components. Since geoprocessing service should be provided by
+the infrastructure the master node must be extended by application
+able to provide OGC Web Processing Service (WPS). In this paper PyWPS
+version 4 seamless deployment integration will be demonstrated.
 
 Another missing component is a publishing platform providing ability
 to easily publish results of computation in the form of an interactive
-web mapping applications. For this purpose will be used Gisquick open
-source project. In this part will be demonstrated integration based on
-Docker containers.
+web mapping application. For this purpose will be used Gisquick open
+source project. Gisquick integration will executed by using Docker
+containers.
 
-The last missing component --- a tool for hydrological modeling and
-computation --- will be shown on GRASS AddOn tool
-\textit{r.subdayprecip.design} integration as desktop tool and
-geoprocessing service implemented as OGC WPS. Presented
-\textit{r.subdayprecip.design} GRASS module provides subday design
-precipitation totals based on hydrological Hradek's method of
-reduction of daily maximums to chosen duration
+The last missing component -- a tool for hydrological modeling and
+computation -- will be shown on GRASS AddOn tool
+\textit{r.subdayprecip.design} integration in the sense of desktop
+tool as well as a geoprocessing service implemented as OGC WPS
+service. Presented \textit{r.subdayprecip.design} GRASS module
+provides subday design precipitation totals based on hydrological
+Hradek's method of reduction of daily maximums to chosen duration
 \cite{landa.2015:FOSS4GE2015}.
 
 \subsection{Gisquick as Publication Platform}
 
 Gisquick (\url{http://gisquick.org}) is a separate project not
-directly related to GIS.lab. It's web applications based on modern
+directly related to GIS.lab. It's web application based on modern
 technologies like Django, Angular and OpenLayers 3 with fully
 responsive design optimized also for mobile devices. The main purpose
 of Gisquick is capability to easily publish QGIS projects on web. From
@@ -317,7 +315,7 @@ Described procedure consists of three steps:
 
 \subsection{Deployment of Master Node}\label{Deployment of Master Node}
 
-Master node (playing a role of a server) of geospatial cluster will be
+Master node (playing a role of a server) of geospatial cluster can be
 deployed thanks to GIS.lab technology. There are some hardware and
 software requirements which have to satisfied. First of all, hardware
 on which the master node will be running need to be available, it can
@@ -338,8 +336,8 @@ framework must be installed. Node(s) described in so-called
 \end{center}
 \end{figure}
 
-At first on host machine needs to downloaded GIS.lab source code
-(available freely from GitHub
+At first on controlling machine needs to downloaded GIS.lab source
+code (available freely from GitHub
 repository\footnote{\url{https://github.com/gislab-npo/gislab}}) and
 standard Ubuntu Server installation ISO image. In the next step a new
 customized ISO will be created by GIS.lab utility
@@ -348,13 +346,13 @@ hardware unit. After successful installation a plain Ubuntu operating
 system will be available on that machine.
 
 Afterwards two Ansible playbooks (both located in GIS.lab source code
-tree) will be launched from host machine. The first playbook
+tree) will be launched from controlling machine. The first playbook
 \texttt{gislab-unit.yml} is dedicated for Intel NUC only and stands
 for GIS.lab Unit initialization. The second -- core -- playbook
 \texttt{gislab.yml} performs provisioning whole GIS.lab technology on
-master node hardware. It installs all requirements, set up all the
-services, creates and configure desktop client images. This step can
-take from tens of minutes to few hours depending on Internet
+master node equipment. It installs all required software packages, set
+up all the services, creates and configure desktop client images. This
+step can take from few dozen of minutes to few hours depending on Internet
 connection speed and hardware limits. Simplified commands are shown
 below.
 
@@ -373,17 +371,17 @@ below.
 \end{center}
 \end{figure}
 
-Detail information about GIS.lab deployment including its
+Detail information about GIS.lab deployment procedure including its
 configuration is part of official GIS.lab documentation
 \cite{gislab-docs}.
 
-Result of successful deployment is a fully operative master node
-running in our infrastructure providing all the services which GIS.lab
-offers out of the box. For our use-case is crucial database server
+After successful deployment a fully operative master node is running
+in our infrastructure providing all the services which GIS.lab offers
+out of the box. For our use-case is crucial database server
 (PostgreSQL), map server (QGIS Server) and GIS computation engine
-(GRASS GIS). All these components are available and configured on
+(GRASS GIS). All these components are available and configured by
 GIS.lab. The clients can boot from master node using standard
-protocols like PXE a HTTP. The master and clients node creating our
+protocols like PXE a HTTP. The master and clients node creating
 geospatial cluster includes technologies like load balancing and
 centrally managed system. It also covers user accounts management
 which is controlled centrally by LDAP server running on master node.
@@ -400,12 +398,12 @@ which is controlled centrally by LDAP server running on master node.
 
 \subsection{Master Node Customization}
 
-Master node in GIS infrastructure has been successfully deployed using
-GIS.lab technology. In the following steps customization will be
+Master node has been successfully deployed using GIS.lab
+technology. In the following steps customization will be
 performed. Customization rules will be defined by \textit{Ansible
-  Playbooks} \cite{shah2015ansible} similarly how GIS.lab provision
-works. Ansible Playbooks express configurations, deployment, and
-orchestration in Ansible. Playbooks are based on YAML human-readable
+  Playbooks} similarly how GIS.lab provision works. Ansible Playbooks
+express configurations, deployment, and orchestration in Ansible
+\cite{shah2015ansible}. Playbooks are based on YAML human-readable
 data serialization language and Jinja templates. As described in
 section \ref{GIS Infrastructure for Hydrological Computation and
   Modeling} customization procedure will performed. Let's summarize
@@ -444,15 +442,14 @@ implemented a role for installing and configuring PyPWS4.
 \end{lstlisting}
 
 PyWPS4 package will be installed by standard pythonic \textit{pip}
-command which is implemented by Ansible framework within \textit{pip
-  module}, see lines 1-4. In the next step, PyWPS4 configuration file
-is stored in the right placed on the server, see lines
-6-10. Simi\-larly is processed PyWPS4 application file. From
-provisioning point of view, the both files are placed in
-\textit{templates} directory. Template module based on Jinja2
-templating language allows variable propagation. Simplified and
-shorten example of sample PyWPS4 configuration file
-\textit{pywps.cfg.j2} is shown below.
+command which is implemented by Ansible \textit{pip module}, see lines
+1-4. In the next step, PyWPS4 configuration file is stored in the
+right placed on the server, see lines 6-10. Simi\-larly is processed
+PyWPS4 application file. From provisioning point of view, the both
+files are placed in \textit{templates} directory. Template module
+based on Jinja templating language allows variable
+propagation. Simplified and shorten example of sample PyWPS4
+configuration file \textit{pywps.cfg.j2} is shown below.
 
 \begin{lstlisting}[numbers=left,xleftmargin=1em]
 [server]
@@ -468,7 +465,7 @@ base_url: http://gislab.mydomain.org
 
 In similar way will be defined other two roles for installing GRASS
 tool \textit{r.subdayprecip.design} and related WPS process. All roles
-will be put together in main YAML file \textit{deployment.yml}.
+will be put together in main \textit{deployment.yml} YAML file.
 
 \begin{lstlisting}[numbers=left,xleftmargin=1em]
 roles:
@@ -485,7 +482,7 @@ itself has been performed in section \ref{Deployment of Master Node}.
   $ ansible-playbook ... provision/deployment.yml
 \end{lstlisting}
 
-As a result of customization on master node will be running new
+As a result of customization will be running on master node new
 service based on OGC WPS thanks to integrated PyWPS4 software
 package. Newly installed GRASS tool providing hydrological computation
 of subday design precipitation totals based on hydrological Hradek's
@@ -494,15 +491,23 @@ available on master node and desktop clients. Also ready-to-use WPS
 process providing described functionality will be offered by master
 node via OGC WPS service over HTTP(S) protocol.
 
+Complete overview of customization Ansible Playbooks is available from
+GitHub
+repository\footnote{\url{https://github.com/ctu-geoforall-lab/subdayprecip-design}}. Another
+example of GIS.lab customization is available from GISMentors training
+group GitHub
+respository\footnote{\url{https://github.com/GISMentors/gislab-customization}}.
+
 \subsection{Gisquick integration}
 
-On Gisquick publishing platform integration will be demonstrated
+On Gisquick publishing platform integration is demonstrated
 different approach. Instead of specific Ansible Playbooks, integration
 based on \textit{Docker} containers will be performed. Gisquick
 project provides core Docker images needed for successful running of
 this publishing platform. It significantly simplifies Gisquick
-integration into GIS.lab infrastructure. The core Gisquick Dorker
-images are listed below:
+integration into GIS.lab infrastructure.
+
+The core Gisquick Dorker images are listed below:
 
 \begin{itemize}
 \setlength\itemsep{0em}\setlength\parskip{0em}\setlength\topsep{0em}\setlength\partopsep{0em}\setlength\parsep{0em}
@@ -523,7 +528,7 @@ are located. Official Dockerfiles are available in Gisquick Git
 repository on GitHub
 \footnote{\url{https://github.com/gislab-npo/gisquick}}. Before
 running \textit{docker-compose} command a configuration rules for
-composing Docker images must be defined. The rules are stored in the
+composing Docker images must be created. The rules are stored in the
 file named \textit{docker-compose.yml} located in the directory from
 which the command is run. Shorten example of compose YAML file is
 shown below.
@@ -549,31 +554,31 @@ services:
 \end{lstlisting}
 
 The most important part of configuration from GIS.lab integration
-point of view is definition of volumes (mounted/shared directories),
-see lines 5, 10, 16. Here are listed local directories which will be
-mounted into running Docker containers. This procedure can be
-automized also Ansible Playbooks too.
+point of view is definition of volumes, see lines 5, 10, 16. Here are
+listed local directories which will be mounted into running Docker
+containers. This procedure can be automized also Ansible Playbooks
+too.
 
 Gisquick is running on master node and it's available via HTTP(S)
-protocol in the GIS.lab network to all the clients. Clients can
-publish their projects by QGIS Gisquick plugin and simply copying them
-to shared directories mounted over NFS from master node(s).
+protocol in the GIS.lab network. Clients can publish their projects by
+QGIS Gisquick plugin and simply copying them to shared directories
+mounted over NFS from master node(s).
 
 \section{CONCLUSIONS}
 
 Geospatial cluster can be arranged thanks to open source orchestration
-technologies in automated easy to maintain manner. In this paper is
-presented Ansible framework allowing fully automatize software
-provisioning, configuration management, and application deployment. On
-the top of Ansible is built GIS.lab project. GIS.lab can significantly
-simplifies whole procedure of designing, deploying and configuring GIS
+technologies in automated easy to maintain manner. Paper presents
+Ansible framework allowing fully automatize software provisioning,
+configuration management, and application deployment. On the top of
+Ansible is built GIS.lab project. GIS.lab can significantly simplifies
+whole procedure of designing, deploying and configuring GIS
 infrastructure using centrally managed deployment to absolute
 minimum. GIS.lab itself offers basic components, tools, and services
-for building GIS (and not only GIS) infrastructure based on computer
-network. Network constists of master node and client nodes. Client
-nodes are booting from master over PXE or HTTP boot protocols. Master
-node services, user accounts, data stores are centrally managed and
-consumed with the clients. 
+for building GIS (and not only GIS) infrastructure. GIS cluster
+constists of master node and client nodes. Client nodes are booting
+from master over PXE or HTTP boot protocols. Master node services,
+user accounts, data volumes are centrally managed and consumed with
+the clients over NFS (Network File System).
 
 Master and client nodes can be customized using specific Ansible
 Playbooks including software provisioning and also configuration
