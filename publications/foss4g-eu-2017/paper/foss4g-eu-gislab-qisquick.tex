@@ -298,13 +298,13 @@ web mapping application.
 
 As mentioned earlier, one of the main objectives of GIS.lab technology
 is a rapid and fully automated deployment. GIS.lab uses for this task
-\textit{Ansible} framework. Ansible offers human-readable
-automatizing language, agent-less execution, various modules and
-support for different providers like AWS (Amazon Web Services), Azure
-and others. It's important to mention that currently GIS.lab (version
-0.7) supports two providers: GIS.lab Unit and AWS. In this paper we
-will focus on GIS.lab Unit provider in order to have whole
-infrastructure under full control.
+\textit{Ansible} framework. Ansible offers human-readable automatizing
+language, agent-less execution, various modules and support for
+different providers like AWS (Amazon Web Services), Azure and others
+\cite{hochstein2014ansible}. It's important to mention that currently
+GIS.lab (version 0.7) supports two providers: GIS.lab Unit and AWS. In
+this paper we will focus on GIS.lab Unit provider in order to have
+whole infrastructure under full control.
 
 Described procedure consists of three steps:
 
@@ -323,8 +323,10 @@ software requirements which have to satisfied. First of all, hardware
 on which the master node will be running need to be available, it can
 be everything from Intel NUC unit (ideal for testing) to real server
 rack hardware inhouse or provided by AWS, Azure or similar
-services. The operator runs host machine which will be used for master
-node provision. On host machine Ansible framework must be installed.
+services. The operator runs host (controlling) machine which will be
+used for master node provision. On controlling machine Ansible
+framework must be installed. Node(s) described in so-called
+\textit{inventory} file are accessed over SSH.
 
 % KAO: Remove spacing before label: can cause reference to be wrong
 \begin{figure}[ht!]
@@ -401,7 +403,10 @@ which is controlled centrally by LDAP server running on master node.
 Master node in GIS infrastructure has been successfully deployed using
 GIS.lab technology. In the following steps customization will be
 performed. Customization rules will be defined by \textit{Ansible
-  Playbooks} similarly how GIS.lab provision works. As described in
+  Playbooks} \cite{shah2015ansible} similarly how GIS.lab provision
+works. Ansible Playbooks express configurations, deployment, and
+orchestration in Ansible. Playbooks are based on YAML human-readable
+data serialization language and Jinja templates. As described in
 section \ref{GIS Infrastructure for Hydrological Computation and
   Modeling} customization procedure will performed. Let's summarize
 our requirements:
@@ -419,10 +424,10 @@ our requirements:
 \end{enumerate}
 
 Ansible Playbooks used for customization will be saved in
-\textit{provision} directory and separated into \textit{roles}. Each
-role will have defined \textit{tasks} which will be performed by
-deployment procedure. Tasks for each role are defined in
-\textit{main.yml} file. Example bellow demonstrates how can be
+\textit{provision} directory and separated into set of
+\textit{roles}. Each role is represented by \textit{tasks} which
+perform calls to Ansible. Tasks for each role are defined in
+\textit{main.yml} YAML file. Example bellow demonstrates how can be
 implemented a role for installing and configuring PyPWS4.
 
 \begin{lstlisting}[numbers=left,xleftmargin=1em]
@@ -487,7 +492,7 @@ of subday design precipitation totals based on hydrological Hradek's
 method of reduction of daily maximums to chosen duration will be
 available on master node and desktop clients. Also ready-to-use WPS
 process providing described functionality will be offered by master
-node via OGC WPS service.
+node via OGC WPS service over HTTP(S) protocol.
 
 \subsection{Gisquick integration}
 
@@ -546,37 +551,42 @@ services:
 The most important part of configuration from GIS.lab integration
 point of view is definition of volumes (mounted/shared directories),
 see lines 5, 10, 16. Here are listed local directories which will be
-mounted into running Docker containers.
+mounted into running Docker containers. This procedure can be
+automized also Ansible Playbooks too.
+
+Gisquick is running on master node and it's available via HTTP(S)
+protocol in the GIS.lab network to all the clients. Clients can
+publish their projects by QGIS Gisquick plugin and simply copying them
+to shared directories mounted over NFS from master node(s).
 
 \section{CONCLUSIONS}
 
-TODO
+Geospatial cluster can be arranged thanks to open source orchestration
+technologies in automated easy to maintain manner. In this paper is
+presented Ansible framework allowing fully automatize software
+provisioning, configuration management, and application deployment. On
+the top of Ansible is built GIS.lab project. GIS.lab can significantly
+simplifies whole procedure of designing, deploying and configuring GIS
+infrastructure using centrally managed deployment to absolute
+minimum. GIS.lab itself offers basic components, tools, and services
+for building GIS (and not only GIS) infrastructure based on computer
+network. Network constists of master node and client nodes. Client
+nodes are booting from master over PXE or HTTP boot protocols. Master
+node services, user accounts, data stores are centrally managed and
+consumed with the clients. 
+
+Master and client nodes can be customized using specific Ansible
+Playbooks including software provisioning and also configuration
+managent. Customized infrastructure can be easily deployed on new
+hardware equipment. Integration of new compoments can be also
+simplified by using Docker containers and combinaing them into working
+system seamlessly integrated into customized infrastructure. 
 
 {%\footnotesize
   \begin{spacing}{0.9}% tune the size by altering the parameter
-    \bibliography{foss4g-eu-gislab-qisquick} % Include your own bibliography (*.bib), style is given in isprs.cls
+    \bibliography{foss4g-eu-gislab-qisquick} 
   \end{spacing}
 }
-
-References should be cited in the text, thus~\cite{smith1987rep}, and
-listed in alphabetical order in the reference section. The following
-arrangements should be used:
-
-% KAO: Use proper quotes and non-breaking space
-\subsubsection{References from Journals:} 
-Journals should be cited like~\cite{smith1987art}. Names of journals can be abbreviated according to the ``International List of Periodical Title Word Abbreviations''. In case of doubt, write names in full.
-
-% KAO: Non-breaking space
-\subsubsection{References from Books:} 
-Books should be cited like~\cite{smith1989}.
-
-% KAO: Non-breaking space, remove newline
-\subsubsection{References from Other Literature:}
-Other literature should be cited like~\cite{smith1987rep} and~\cite{smith2000}.
-
-% KAO: Non-breaking space
-\subsubsection{References from websites:}
-References from the internet should be cited like~\cite{moons1997}.
 
 \section*{ACKNOWLEDGEMENTS}\label{ACKNOWLEDGEMENTS}
 
@@ -586,24 +596,5 @@ Drainage Basins and its Influence on Water Resources Management".
 
 The article is distributed under the Creative Commons Attribution 3.0
 Unported License.
-
-
-
-%Moons, T., 1997. Report on the Joint ISPRS Commission III/IV Workshop 
-%``3D Reconstruction and Modelling of Topographic Objects'', Stuttgart, Germany.
-%{http://www.radig.informatik.tu-}\\
-%{muenchen.de/ISPRS/WG-III4-IV2-Report.html} (28 Sep. 1999).
-
-%Smith, J., 1987a. Close range photogrammetry for analyzing distressed trees. 
-%\textit{Photogrammetria}, 42(1), pp. 47-56.
-
-%Smith, J., 1987b. Economic printing of color orthophotos. Report KRL-01234, Kennedy Research Laboratories, Arlington, VA, USA.
-
-%Smith, J., 1989. \textit{Space Data from Earth Sciences}. Elsevier, Amsterdam, pp. 321-332.
-
-%Smith, J., 2000. Remote sensing to predict volcano outbursts. 
-%In: \textit{The International Archives of the Photogrammetry, Remote 
-%Sensing and Spatial Information Sciences}, Kyoto, 
-%Japan, Vol. XXVII, Part B1, pp. 456-469.
 
 \end{document}
