@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="Rain WebApp" version="2.18.1">
+<qgis projectname="Rain WebApp" version="2.18.4">
   <title>Rain WebApp</title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
@@ -533,7 +533,7 @@
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -559,22 +559,9 @@
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>COALESCE( "fid", '&lt;NULL>' )</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
-      <defaults>
-        <default field="ogc_fid" expression=""/>
-        <default field="rad_ii" expression=""/>
-        <default field="shape_area" expression=""/>
-        <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
-      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -982,8 +969,21 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="ogc_fid" expression=""/>
+        <default field="rad_ii" expression=""/>
+        <default field="shape_area" expression=""/>
+        <default field="shape_len" expression=""/>
+        <default field="h_002_360" expression=""/>
+        <default field="h_005_360" expression=""/>
+        <default field="h_010_360" expression=""/>
+        <default field="h_020_360" expression=""/>
+        <default field="h_050_360" expression=""/>
+        <default field="h_100_360" expression=""/>
+      </defaults>
+      <previewExpression>COALESCE( "fid", '&lt;NULL>' )</previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -1009,28 +1009,9 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
-      <defaults>
-        <default field="ogc_fid" expression=""/>
-        <default field="hlgp_id" expression=""/>
-        <default field="utokh_id" expression=""/>
-        <default field="plocha" expression=""/>
-        <default field="hlgp_char" expression=""/>
-        <default field="rad_iii" expression=""/>
-        <default field="rad_ii" expression=""/>
-        <default field="rad_i" expression=""/>
-        <default field="shape_area" expression=""/>
-        <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
-      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -1488,8 +1469,27 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="ogc_fid" expression=""/>
+        <default field="hlgp_id" expression=""/>
+        <default field="utokh_id" expression=""/>
+        <default field="plocha" expression=""/>
+        <default field="hlgp_char" expression=""/>
+        <default field="rad_iii" expression=""/>
+        <default field="rad_ii" expression=""/>
+        <default field="rad_i" expression=""/>
+        <default field="shape_area" expression=""/>
+        <default field="shape_len" expression=""/>
+        <default field="h_002_360" expression=""/>
+        <default field="h_005_360" expression=""/>
+        <default field="h_010_360" expression=""/>
+        <default field="h_020_360" expression=""/>
+        <default field="h_050_360" expression=""/>
+        <default field="h_100_360" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -1515,28 +1515,9 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>COALESCE( "hlgp_id", '&lt;NULL>' )</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
-      <defaults>
-        <default field="ogc_fid" expression=""/>
-        <default field="hlgp_id" expression=""/>
-        <default field="utokh_id" expression=""/>
-        <default field="plocha" expression=""/>
-        <default field="hlgp_char" expression=""/>
-        <default field="rad_iii" expression=""/>
-        <default field="rad_ii" expression=""/>
-        <default field="rad_i" expression=""/>
-        <default field="shape_area" expression=""/>
-        <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
-      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -1994,8 +1975,27 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="ogc_fid" expression=""/>
+        <default field="hlgp_id" expression=""/>
+        <default field="utokh_id" expression=""/>
+        <default field="plocha" expression=""/>
+        <default field="hlgp_char" expression=""/>
+        <default field="rad_iii" expression=""/>
+        <default field="rad_ii" expression=""/>
+        <default field="rad_i" expression=""/>
+        <default field="shape_area" expression=""/>
+        <default field="shape_len" expression=""/>
+        <default field="h_002_360" expression=""/>
+        <default field="h_005_360" expression=""/>
+        <default field="h_010_360" expression=""/>
+        <default field="h_020_360" expression=""/>
+        <default field="h_050_360" expression=""/>
+        <default field="h_100_360" expression=""/>
+      </defaults>
+      <previewExpression>COALESCE( "hlgp_id", '&lt;NULL>' )</previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -2021,28 +2021,9 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
-      <defaults>
-        <default field="ogc_fid" expression=""/>
-        <default field="hlgp_id" expression=""/>
-        <default field="utokh_id" expression=""/>
-        <default field="plocha" expression=""/>
-        <default field="hlgp_char" expression=""/>
-        <default field="rad_iii" expression=""/>
-        <default field="rad_ii" expression=""/>
-        <default field="rad_i" expression=""/>
-        <default field="shape_area" expression=""/>
-        <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
-      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -2500,8 +2481,27 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="ogc_fid" expression=""/>
+        <default field="hlgp_id" expression=""/>
+        <default field="utokh_id" expression=""/>
+        <default field="plocha" expression=""/>
+        <default field="hlgp_char" expression=""/>
+        <default field="rad_iii" expression=""/>
+        <default field="rad_ii" expression=""/>
+        <default field="rad_i" expression=""/>
+        <default field="shape_area" expression=""/>
+        <default field="shape_len" expression=""/>
+        <default field="h_002_360" expression=""/>
+        <default field="h_005_360" expression=""/>
+        <default field="h_010_360" expression=""/>
+        <default field="h_020_360" expression=""/>
+        <default field="h_050_360" expression=""/>
+        <default field="h_100_360" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -2527,28 +2527,9 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
-      <defaults>
-        <default field="ogc_fid" expression=""/>
-        <default field="hlgp_id" expression=""/>
-        <default field="utokh_id" expression=""/>
-        <default field="plocha" expression=""/>
-        <default field="hlgp_char" expression=""/>
-        <default field="rad_iii" expression=""/>
-        <default field="rad_ii" expression=""/>
-        <default field="rad_i" expression=""/>
-        <default field="shape_area" expression=""/>
-        <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
-      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -3006,8 +2987,27 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="ogc_fid" expression=""/>
+        <default field="hlgp_id" expression=""/>
+        <default field="utokh_id" expression=""/>
+        <default field="plocha" expression=""/>
+        <default field="hlgp_char" expression=""/>
+        <default field="rad_iii" expression=""/>
+        <default field="rad_ii" expression=""/>
+        <default field="rad_i" expression=""/>
+        <default field="shape_area" expression=""/>
+        <default field="shape_len" expression=""/>
+        <default field="h_002_360" expression=""/>
+        <default field="h_005_360" expression=""/>
+        <default field="h_010_360" expression=""/>
+        <default field="h_020_360" expression=""/>
+        <default field="h_050_360" expression=""/>
+        <default field="h_100_360" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -3033,28 +3033,9 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
-      <defaults>
-        <default field="ogc_fid" expression=""/>
-        <default field="hlgp_id" expression=""/>
-        <default field="utokh_id" expression=""/>
-        <default field="plocha" expression=""/>
-        <default field="hlgp_char" expression=""/>
-        <default field="rad_iii" expression=""/>
-        <default field="rad_ii" expression=""/>
-        <default field="rad_i" expression=""/>
-        <default field="shape_area" expression=""/>
-        <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
-      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -3512,8 +3493,27 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="ogc_fid" expression=""/>
+        <default field="hlgp_id" expression=""/>
+        <default field="utokh_id" expression=""/>
+        <default field="plocha" expression=""/>
+        <default field="hlgp_char" expression=""/>
+        <default field="rad_iii" expression=""/>
+        <default field="rad_ii" expression=""/>
+        <default field="rad_i" expression=""/>
+        <default field="shape_area" expression=""/>
+        <default field="shape_len" expression=""/>
+        <default field="h_002_360" expression=""/>
+        <default field="h_005_360" expression=""/>
+        <default field="h_010_360" expression=""/>
+        <default field="h_020_360" expression=""/>
+        <default field="h_050_360" expression=""/>
+        <default field="h_100_360" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -3539,28 +3539,9 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
-      <defaults>
-        <default field="ogc_fid" expression=""/>
-        <default field="hlgp_id" expression=""/>
-        <default field="utokh_id" expression=""/>
-        <default field="plocha" expression=""/>
-        <default field="hlgp_char" expression=""/>
-        <default field="rad_iii" expression=""/>
-        <default field="rad_ii" expression=""/>
-        <default field="rad_i" expression=""/>
-        <default field="shape_area" expression=""/>
-        <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
-      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -4018,8 +3999,27 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="ogc_fid" expression=""/>
+        <default field="hlgp_id" expression=""/>
+        <default field="utokh_id" expression=""/>
+        <default field="plocha" expression=""/>
+        <default field="hlgp_char" expression=""/>
+        <default field="rad_iii" expression=""/>
+        <default field="rad_ii" expression=""/>
+        <default field="rad_i" expression=""/>
+        <default field="shape_area" expression=""/>
+        <default field="shape_len" expression=""/>
+        <default field="h_002_360" expression=""/>
+        <default field="h_005_360" expression=""/>
+        <default field="h_010_360" expression=""/>
+        <default field="h_020_360" expression=""/>
+        <default field="h_050_360" expression=""/>
+        <default field="h_100_360" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-901459.5126953125</xmin>
         <ymin>-1227368.17999267578125</ymin>
@@ -4051,23 +4051,9 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
-      <defaults>
-        <default field="ogc_fid" expression=""/>
-        <default field="hydroid" expression=""/>
-        <default field="cn_ii_deta" expression=""/>
-        <default field="k_alfa" expression=""/>
-        <default field="hrs2" expression=""/>
-        <default field="sflen_mean" expression=""/>
-        <default field="lmax_std" expression=""/>
-        <default field="shape_len" expression=""/>
-        <default field="shape_area" expression=""/>
-        <default field="ss_group" expression=""/>
-        <default field="pov_tridy" expression=""/>
-      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -4224,8 +4210,6 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
         </source-symbol>
-        <colorramp type="randomcolors" name="[source]"/>
-        <invertedcolorramp value="0"/>
         <rotation/>
         <sizescale scalemethod="diameter"/>
       </renderer-v2>
@@ -4488,6 +4472,20 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="ogc_fid" expression=""/>
+        <default field="hydroid" expression=""/>
+        <default field="cn_ii_deta" expression=""/>
+        <default field="k_alfa" expression=""/>
+        <default field="hrs2" expression=""/>
+        <default field="sflen_mean" expression=""/>
+        <default field="lmax_std" expression=""/>
+        <default field="shape_len" expression=""/>
+        <default field="shape_area" expression=""/>
+        <default field="ss_group" expression=""/>
+        <default field="pov_tridy" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
     </maplayer>
   </projectlayers>
   <properties>
@@ -4523,8 +4521,8 @@ def my_form_open(dialog, layer, feature):
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
     <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
     <WMSServiceAbstract type="QString">Tato webová aplikace umožňuje prohlížet podkladové vrstvy (Základní mapu ČR a vrstvy maximálních denních úhrnů poskytovaných v rámci projektu veřejnou službou OGC WMS) a vrstvu povodí IV. řádu s vyčíslenými hodnotami návrhových srážek s délkou srážky 6 hodin. Na základě těchto hodnot je vrstva povodí IV. řádu stylována v jednotlivých tématech (topics) podle doby opakování (2 roky, 5, 10, 20, 50 a 100 let).</WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
