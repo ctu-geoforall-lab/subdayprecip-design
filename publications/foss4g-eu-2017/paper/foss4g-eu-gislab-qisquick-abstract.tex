@@ -1,0 +1,85 @@
+% Version 2016-11-14
+% update – 161114 by Ken Arroyo Ohori: made spacing closer to Word template throughout, put proper quotes everywhere, removed spacing that could cause labels to be wrong, added non-breaking and inter-sentence spacing where applicable, removed explicit newlines
+
+\documentclass{isprs}
+\usepackage{subfigure}
+\usepackage{setspace}
+\usepackage{geometry} % added 27-02-2014 Markus Englich
+\usepackage{epstopdf}
+\usepackage[labelsep=period]{caption}  % added 14-04-2016 Markus Englich - Recommendation by Sebastian Brocks
+
+\geometry{a4paper, top=25mm, left=20mm, right=20mm, bottom=25mm, headsep=10mm, footskip=12mm} % added 27-02-2014 Markus Englich
+%\usepackage{enumitem}
+
+%\usepackage{isprs}
+%\usepackage[perpage,para,symbol*]{footmisc}
+
+%\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\captionsetup{justification=centering} % thanks to Niclas Borlin 05-05-2016
+
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\scriptsize,
+  showstringspaces=false}
+
+\usepackage{url}
+
+\begin{document}
+
+\title{Building a complete free and open source GIS infrastructure for hydrological computing and data publication using GIS.lab and Gisquick platforms}
+
+% KAO: Remove extra spacing
+\author{
+  M. Landa\textsuperscript{a}, P. Kavka\textsuperscript{b}, L. Strouhal\textsuperscript{b}, J. Cepicky\textsuperscript{c}
+}
+
+% KAO: Remove extra newline
+\address{
+  \textsuperscript{a }Dept.\ of Geomatics, Faculty of Civil Engineering, Czech Technical University in Prague, Czech Republic - martin.landa@fsv.cvut.cz\\
+  \textsuperscript{b }Dept.\ of Irrigation, Drainage and Landscape Engineering, Czech Technical University in Prague, Czech Republic - \\
+  (petr.kavka, ludek.strouhal)@fsv.cvut.cz\\
+  \textsuperscript{c }OpenGeoLabs s.r.o., Prague, Czech Republic - jachym.cepicky@opengeolabs.cz
+}
+
+% If the corresponding author is NOT the final author, always add a % space before the subsequent comma, i.e.
+% first author name\textsuperscript{a,}\thanks{Corresponding author} , % second author name \textsuperscript{b}, etc.
+% thanks to Niclas Borlin 05-05-2016
+
+
+\commission{IV, }{IV} %This field is optional.
+\workinggroup{IV/4} %This field is optional.
+\icwg{}   %This field is optional.
+
+% KAO: Use times symbol
+\abstract{ Building a complete free and open source GIS computing and
+  data publication platform can be a relatively easy task. This paper
+  describes an automated deployment of such platform using two open
+  source software projects -- GIS.lab and Gisquick. GIS.lab
+  (\url{http://web.gislab.io}) is a project for rapid deployment of a
+  complete, centrally managed and horizontally scalable GIS
+  infrastructure in the local area network, data center or cloud. It
+  provides a comprehensive set of free geospatial software seamlessly
+  integrated into one, easy-to-use system. A platform for GIS
+  computing (in our case demonstrated on hydrological data processing)
+  requires core components as a geoprocessing server, map server, and
+  a computation engine as eg. GRASS GIS, SAGA, or other similar GIS
+  software. All these components can be rapidly, and automatically
+  deployed by GIS.lab platform. In our demonstrated solution PyWPS is
+  used for serving WPS processes built on the top of GRASS GIS
+  computation platform. GIS.lab can be easily extended by other
+  components running in Docker containers. This approach is shown on
+  Gisquick seamless integration. Gisquick (\url{http://gisquick.org})
+  is an open source platform for publishing geospatial data in the
+  sense of rapid sharing of QGIS projects on the web. The platform
+  consists of QGIS plugin, Django-based server application, QGIS
+  server, and web/mobile clients. In this paper is shown how to easily
+  deploy complete open source GIS infrastructure allowing all required
+  operations as data preparation on desktop, data sharing, and
+  geospatial computation as the service. It also includes data
+  publication in the sense of OGC Web Services and importantly also as
+  interactive web mapping applications.  }
+
+\keywords{GIS, Open Source, Free Software, Deployment, Hydrology, GIS.lab, Gisquick}
+
+\maketitle
+
+\end{document}
