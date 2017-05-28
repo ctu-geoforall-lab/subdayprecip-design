@@ -136,12 +136,14 @@ an open source software solution which helps to build such complete fully
 open source GIS infrastructure in an easy, but still fully customized
 manner.
 
+\section{METHODS}
+
 \subsection{GIS.lab as a Core Component}
 
 % KAO: Remove spacing before label: can cause reference to be wrong
 \begin{figure}[ht!]
 \begin{center}
-  \includegraphics[width=.25\columnwidth]{figures/gislab-logo.png}
+  \includegraphics[width=.16\columnwidth]{figures/gislab-logo.png}
   \caption{GIS.lab logo}
 \label{fig:gislab_logo}
 \end{center}
@@ -190,7 +192,7 @@ be customized in many ways in order to fulfill different requirements.
 % KAO: Remove spacing before label: can cause reference to be wrong
 \begin{figure}[ht!]
 \begin{center}
-  \includegraphics[width=1.0\columnwidth]{figures/gislab-architecture.png}
+  \includegraphics[width=0.8\columnwidth]{figures/gislab-architecture.png}
   \caption{GIS.lab infrastructure as a platform for teaching,
     computation, or crisis management (source: GIS.lab Documentation)}
 \label{fig:gislab_infrastructure}
@@ -206,12 +208,39 @@ client nodes.
 % KAO: Remove spacing before label: can cause reference to be wrong
 \begin{figure}[ht!]
 \begin{center}
-  \includegraphics[width=0.9\columnwidth]{figures/gislab-real.jpg}
+  \includegraphics[width=0.8\columnwidth]{figures/gislab-real.jpg}
   \caption{GIS.lab components running in the real environment (source:
     GIS.lab Documentation)}
 \label{fig:gislab_infrastructure}
 \end{center}
 \end{figure}
+
+\subsection{Gisquick as Publication Platform}
+
+Gisquick (\url{http://gisquick.org}) is a separate project not
+directly related to GIS.lab. It is a web application based on modern
+technologies as Django, Angular and OpenLayers 3 with fully responsive
+design optimized also for mobile devices. The main purpose of Gisquick
+is to provide the capability for easy publishing the QGIS projects on
+the web. From this perspective Gisquick is strongly connected to QGIS
+Desktop environment and stands on QGIS Server component.
+
+% KAO: Remove spacing before label: can cause reference to be wrong
+\begin{figure}[ht!]
+\begin{center}
+  \includegraphics[width=0.9\columnwidth]{figures/gisquick-identify.png}
+  \caption{Gisquick web application interface
+    (source: author)}
+\label{fig:gislab_infrastructure}
+\end{center}
+\end{figure}
+
+Combining GIS.lab and Gisquick technologies leads to a complete, seamlessly
+integrated platform capable to prepare the input data, perform geospatial
+analysis and publish results easily on the web in the sense of interactive
+web mapping application.
+
+\section{CASE STUDY}
 
 \subsection{GIS Infrastructure for Hydrological Computation and
   Data Processing}\label{GIS Infrastructure for Hydrological Computation and
@@ -268,33 +297,6 @@ service. Presented \textit{r.subdayprecip.design} GRASS module
 provides the subday design precipitation totals based on hydrological
 Hradek's method of reduction of daily maximums to a chosen duration
 \cite{landa.2015:FOSS4GE2015}.
-
-\subsection{Gisquick as Publication Platform}
-
-Gisquick (\url{http://gisquick.org}) is a separate project not
-directly related to GIS.lab. It is a web application based on modern
-technologies as Django, Angular and OpenLayers 3 with fully responsive
-design optimized also for mobile devices. The main purpose of Gisquick
-is to provide the capability for easy publishing the QGIS projects on
-the web. From this perspective Gisquick is strongly connected to QGIS
-Desktop environment and stands on QGIS Server component.
-
-% KAO: Remove spacing before label: can cause reference to be wrong
-\begin{figure}[ht!]
-\begin{center}
-  \includegraphics[width=0.9\columnwidth]{figures/gisquick-identify.png}
-  \caption{Gisquick web application interface
-    (source: author)}
-\label{fig:gislab_infrastructure}
-\end{center}
-\end{figure}
-
-Combining GIS.lab and Gisquick technologies leads to a complete, seamlessly
-integrated platform capable to prepare the input data, perform geospatial
-analysis and publish results easily on the web in the sense of interactive
-web mapping application.
-
-\section{RAPID DEPLOYMENT OF CUSTOMIZED GEOSPATIAL CLUSTER}
 
 \subsection{Fundamentals}
 
