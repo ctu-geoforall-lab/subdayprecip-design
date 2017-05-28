@@ -45,8 +45,8 @@
 % thanks to Niclas Borlin 05-05-2016
 
 
-\commission{}{} %This field is optional.
-\workinggroup{} %This field is optional.
+\commission{IV, }{IV} %This field is optional.
+\workinggroup{IV/4} %This field is optional.
 \icwg{}   %This field is optional.
 
 % KAO: Use times symbol
@@ -215,7 +215,7 @@ client nodes.
 \end{center}
 \end{figure}
 
-\subsection{Gisquick as Publication Platform}
+\subsection{Gisquick as a Publication Platform}
 
 Gisquick (\url{http://gisquick.org}) is a separate project not
 directly related to GIS.lab. It is a web application based on modern
@@ -470,9 +470,10 @@ Variable values can be defined in \textit{main.yml} file located in
 base_url: http://gislab.mydomain.org
 \end{lstlisting}
 
-In similar way will be defined other two roles for installing GRASS
-tool \textit{r.subdayprecip.design} and related WPS process. The roles
-are put together in main \textit{deployment.yml} YAML file.
+In a similar way other two roles for installing GRASS tool
+\textit{r.subdayprecip.design} and related WPS process will be
+defined. The roles are put together in main \textit{deployment.yml}
+YAML file.
 
 \begin{lstlisting}[numbers=left,xleftmargin=1em]
 roles:
@@ -481,7 +482,7 @@ roles:
     - { role: subdayprecip-wps }
 \end{lstlisting}
 
-Automated customization of master node will be perform by
+Automated customization of master node will be performed by
 \textit{Ansible Playbook} command similarly to GIS.lab deployment
 procedure described in section \ref{Deployment of Master Node}.
 
@@ -507,12 +508,12 @@ repository\footnote{\url{https://github.com/GISMentors/gislab-customization}}.
 
 \subsection{Gisquick integration}
 
-On Gisquick publishing platform integration is demonstrated a
-different approach. Instead of specific Ansible Playbooks, integration
-based on \textit{Docker} containers will be performed. Gisquick
-project provides core Docker images needed for successful running of
-this publishing platform. It significantly simplifies Gisquick
-integration into GIS.lab infrastructure.
+On Gisquick publishing platform a different approach is
+demonstrated. Instead of specific Ansible Playbooks, integration based
+on \textit{Docker} containers will be performed. Gisquick project
+provides core Docker images needed for successful running of this
+publishing platform. It significantly simplifies Gisquick integration
+into GIS.lab infrastructure.
 
 The core Gisquick Docker images are listed below:
 
@@ -572,25 +573,25 @@ mounted over NFS from master node(s).
 \section{CONCLUSIONS}
 
 Geospatial cluster can be arranged thanks to open source orchestration
-technologies in automated and easy to maintain manner. This paper
-presents Ansible framework allowing fully automatize software
+technologies in an automated and easily maintainable manner. This
+paper presents Ansible framework allowing fully automated software
 provisioning, configuration management, and application deployment. On
-the top of Ansible framework is built GIS.lab project. GIS.lab can
-significantly simplifies whole procedure of designing, deploying and
-configuring GIS infrastructure using centrally managed deployment to
-absolute minimum. GIS.lab itself offers basic components, tools, and
-services for building GIS (and not only GIS) infrastructure. GIS
-cluster constists of master node and client nodes. Client nodes are
-booting from master over PXE or HTTP boot protocols. Master node
-services, user accounts, data volumes are centrally managed and
-consumed by the clients over NFS (Network File System).
+the top of Ansible framework a GIS.lab project is built. GIS.lab
+significantly reduces the whole procedure of design, deployment and
+configuration of GIS infrastructure to the virtual minimum. GIS.lab
+itself offers basic components, tools, and services for building GIS
+(and not only GIS) infrastructure. GIS cluster consists of the master
+node and the client nodes. Client nodes are booting from the master
+using PXE or HTTP boot protocols. Master node services, user accounts
+and data volumes are centrally managed and consumed by the clients
+over the Network File System.
 
-Master and client nodes can be customized using specific Ansible
-Playbooks including software provisioning and also configuration
-managent. Customized infrastructure can be easily deployed on new
-hardware equipment. Integration of new compoments can be simplified by
-using Docker containers in order to combining them into working system
-seamlessly integrated into customized infrastructure.
+The master and client nodes can be customized using the specific Ansible
+Playbooks including software provisioning and configuration
+management. Customized infrastructure can be easily deployed on a new
+hardware equipment. Integration of the new components can be simplified by
+the Docker containers in order to combine them into the working system
+seamlessly integrated into the customized infrastructure.
 
 {%\footnotesize
   \begin{spacing}{0.9}% tune the size by altering the parameter
