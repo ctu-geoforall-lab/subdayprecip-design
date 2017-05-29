@@ -1,4 +1,4 @@
-FILE=foss4g-eu-gislab-qisquick
+FILE=foss4g-2017-eu-gislab-qisquick
 
 all:
 	pdflatex $(FILE)
