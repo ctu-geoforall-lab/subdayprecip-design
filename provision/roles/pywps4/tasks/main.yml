@@ -1,0 +1,24 @@
+# PyWPS4 integration
+
+- name: Install PyWPS4
+  pip:
+    name: pywps
+    version: 4.0.0
+
+- name: Create configuration directory
+  file:
+    path: /opt/pywps4
+    state: directory
+    
+- name: Set up PyWPS4 configuration
+  template:
+    src: pywps.cfg.j2
+    dest: /opt/pywps4/pywps.cfg
+    mode: 0644
+
+- name: Set up WSGI application
+  file:
+    src: pywps.wsgi
+    dest: /opt/pywps4/pywps.wsgi
+    mode: 0755
+    
