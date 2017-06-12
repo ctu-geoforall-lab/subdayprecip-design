@@ -19,8 +19,8 @@ if [ $host = 'geo102' ] ; then
     wwwdir=/var/www
 else
     # production server
-    wmsurl=https://rain1.fsv.cvut.cz:4433/services/wms
-    wpsurl=https://rain1.fsv.cvut.cz:4433/services/wps
+    wmsurl=https://rain1.fsv.cvut.cz/services/wms
+    wpsurl=https://rain1.fsv.cvut.cz/services/wps
     data=/opt
     wwwdir=/var/www/html
 fi

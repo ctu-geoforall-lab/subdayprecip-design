@@ -3,7 +3,7 @@ encoding=utf-8
 language=cs-CZ
 parallelprocesses=4
 maxrequestsize=1024
-outputurl=https://#HOST#.fsv.cvut.cz:4433/wps/outputs
+outputurl=https://#HOST#.fsv.cvut.cz/wps/outputs
 outputpath=#WWWDIR#/wps/outputs
 url=#URL#
 
