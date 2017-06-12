@@ -1,71 +1,71 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="Rain WebApp" version="2.18.4">
+<qgis projectname="Rain WebApp" version="2.18.9">
   <title>Rain WebApp</title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973" name="Klasifikovaná povodí IV. řádu">
+    <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layerid=4" name="Klasifikovaná povodí IV. řádu">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-group expanded="0" checked="Qt::Checked" mutually-exclusive="1" name="2-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Checked" id="data_povodi_iv_any201612061002435591437399835" name="Povodí IV.řádu - 2-leté/6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="data_povodi_iv_any201612061002435591437399835" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu - 2-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509" name="Povodí IV.řádu - 5-leté/6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu - 5-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529" name="Povodí IV.řádu - 10-leté/6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu - 10-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856" name="Povodí IV.řádu - 20-leté/6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu - 20-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533" name="Povodí IV.řádu - 50-leté/6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu - 50-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986" name="Povodí IV.řádu - 100-leté/6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu - 100-leté/6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Maximální denní úhrny">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="2_leté_maximální_denní_úhrny20161220150937114" name="2-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Unchecked" id="2_leté_maximální_denní_úhrny20161220150937114" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N2_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms" name="2-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="5_leté_maximální_denní_úhrny20161220150937930" name="5-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Unchecked" id="5_leté_maximální_denní_úhrny20161220150937930" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N5_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms" name="5-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="10_leté_maximální_denní_úhrny20161220150936231" name="10-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Unchecked" id="10_leté_maximální_denní_úhrny20161220150936231" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N10_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms" name="10-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="20_leté_maximální_denní_úhrny20161220150937519" name="20-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Unchecked" id="20_leté_maximální_denní_úhrny20161220150937519" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N20_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms" name="20-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="50_leté_maximální_denní_úhrny20161220150938320" name="50-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Unchecked" id="50_leté_maximální_denní_úhrny20161220150938320" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N50_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms" name="50-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="100_leté_maximální_denní_úhrny20161220150936703" name="100-leté max. denní úhrny">
+      <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Unchecked" id="100_leté_maximální_denní_úhrny20161220150936703" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N100_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms" name="100-leté max. denní úhrny">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="Základní_mapa_1_50_00020161216150757234" name="Základní mapa 1:50 000">
+    <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Checked" id="Základní_mapa_1_50_00020161216150757234" source="crs=EPSG:900913&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ZM50&amp;styles=&amp;url=http://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx" name="Základní mapa 1:50 000">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -205,8 +205,8 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Základní mapa 1:50 000" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Základní mapa 1:50 000" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
         <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_50_00020161216150757234" visible="1"/>
       </filegroup>
     </legendlayer>
@@ -220,7 +220,7 @@
         <ymax>-933000</ymax>
       </extent>
       <id>100_leté_maximální_denní_úhrny20161220150936703</id>
-      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N100_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N100_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -266,7 +266,7 @@
         <ymax>-933000</ymax>
       </extent>
       <id>10_leté_maximální_denní_úhrny20161220150936231</id>
-      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N10_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N10_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -312,7 +312,7 @@
         <ymax>-933000</ymax>
       </extent>
       <id>20_leté_maximální_denní_úhrny20161220150937519</id>
-      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N20_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N20_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -358,7 +358,7 @@
         <ymax>-933000</ymax>
       </extent>
       <id>2_leté_maximální_denní_úhrny20161220150937114</id>
-      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N2_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N2_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -404,7 +404,7 @@
         <ymax>-933000</ymax>
       </extent>
       <id>50_leté_maximální_denní_úhrny20161220150938320</id>
-      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N50_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N50_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -450,7 +450,7 @@
         <ymax>-933000</ymax>
       </extent>
       <id>5_leté_maximální_denní_úhrny20161220150937930</id>
-      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N5_24h&amp;styles=&amp;url=http://rain1.fsv.cvut.cz/services/wms</datasource>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=H_N5_24h&amp;styles=&amp;url=https://rain1.fsv.cvut.cz/services/wms</datasource>
       <keywordList>
         <value></value>
       </keywordList>
