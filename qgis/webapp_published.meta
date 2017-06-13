@@ -19,14 +19,14 @@
   ], 
   "abstract": "Tato webov\u00e1 aplikace umo\u017e\u0148uje prohl\u00ed\u017eet podkladov\u00e9 vrstvy (Z\u00e1kladn\u00ed mapu \u010cR a vrstvy maxim\u00e1ln\u00edch denn\u00edch \u00fahrn\u016f poskytovan\u00fdch v r\u00e1mci projektu ve\u0159ejnou slu\u017ebou OGC WMS) a vrstvu povod\u00ed IV. \u0159\u00e1du s vy\u010d\u00edslen\u00fdmi hodnotami n\u00e1vrhov\u00fdch sr\u00e1\u017eek s d\u00e9lkou sr\u00e1\u017eky 6 hodin. Na z\u00e1klad\u011b t\u011bchto hodnot je vrstva povod\u00ed IV. \u0159\u00e1du stylov\u00e1na v jednotliv\u00fdch t\u00e9matech (topics) podle doby opakov\u00e1n\u00ed (2 roky, 5, 10, 20, 50 a 100 let).", 
   "zoom_extent": [
-    -1054929.237, 
+    -1043116.218, 
     -1309873.094, 
-    -314717.906, 
+    -326530.925, 
     -857464.211
   ], 
   "fees": "conditions unknown", 
   "message": {
-    "valid_until": "31.03.2017", 
+    "valid_until": "24.12.2017", 
     "text": "Pilotn\u00ed webov\u00e1 aplikace projektu QJ1520265, v\u00edce informac\u00ed na http://rain.fsv.cvut.cz"
   }, 
   "overlays": [
@@ -539,6 +539,149 @@
         }
       ], 
       "name": "100-let\u00e9 max. \u00fahrny za 6h"
+    }, 
+    {
+      "layers": [
+        {
+          "drawing_order": 14, 
+          "projection": "EPSG:4326", 
+          "labels": false, 
+          "visible": false, 
+          "extent": [
+            -927817.580699998, 
+            -1236550.6079, 
+            -422329.2568, 
+            -933179.390499998
+          ], 
+          "name": "typ1", 
+          "serverName": "", 
+          "hidden": false, 
+          "provider_type": "ogr", 
+          "type": "vector", 
+          "queryable": false, 
+          "metadata": {
+            "keyword_list": "", 
+            "abstract": "", 
+            "title": ""
+          }
+        }, 
+        {
+          "drawing_order": 15, 
+          "projection": "EPSG:4326", 
+          "labels": false, 
+          "visible": false, 
+          "extent": [
+            -927817.580699998, 
+            -1236550.6079, 
+            -422329.2568, 
+            -933179.390499998
+          ], 
+          "name": "typ2", 
+          "serverName": "", 
+          "hidden": false, 
+          "provider_type": "ogr", 
+          "type": "vector", 
+          "queryable": false, 
+          "metadata": {
+            "keyword_list": "", 
+            "abstract": "", 
+            "title": ""
+          }
+        }, 
+        {
+          "drawing_order": 16, 
+          "projection": "EPSG:4326", 
+          "labels": false, 
+          "visible": false, 
+          "extent": [
+            -927817.580699998, 
+            -1236550.6079, 
+            -422329.2568, 
+            -933179.390499998
+          ], 
+          "name": "typ3", 
+          "serverName": "", 
+          "hidden": false, 
+          "provider_type": "ogr", 
+          "type": "vector", 
+          "queryable": false, 
+          "metadata": {
+            "keyword_list": "", 
+            "abstract": "", 
+            "title": ""
+          }
+        }, 
+        {
+          "drawing_order": 17, 
+          "projection": "EPSG:4326", 
+          "labels": false, 
+          "visible": false, 
+          "extent": [
+            -927817.580699998, 
+            -1236550.6079, 
+            -422329.2568, 
+            -933179.390499998
+          ], 
+          "name": "typ4", 
+          "serverName": "", 
+          "hidden": false, 
+          "provider_type": "ogr", 
+          "type": "vector", 
+          "queryable": false, 
+          "metadata": {
+            "keyword_list": "", 
+            "abstract": "", 
+            "title": ""
+          }
+        }, 
+        {
+          "drawing_order": 18, 
+          "projection": "EPSG:4326", 
+          "labels": false, 
+          "visible": false, 
+          "extent": [
+            -927817.580699998, 
+            -1236550.6079, 
+            -422329.2568, 
+            -933179.390499998
+          ], 
+          "name": "typ5", 
+          "serverName": "", 
+          "hidden": false, 
+          "provider_type": "ogr", 
+          "type": "vector", 
+          "queryable": false, 
+          "metadata": {
+            "keyword_list": "", 
+            "abstract": "", 
+            "title": ""
+          }
+        }, 
+        {
+          "drawing_order": 19, 
+          "projection": "EPSG:4326", 
+          "labels": false, 
+          "visible": false, 
+          "extent": [
+            -927817.580699998, 
+            -1236550.6079, 
+            -422329.2568, 
+            -933179.390499998
+          ], 
+          "name": "typ6", 
+          "serverName": "", 
+          "hidden": false, 
+          "provider_type": "ogr", 
+          "type": "vector", 
+          "queryable": false, 
+          "metadata": {
+            "keyword_list": "", 
+            "abstract": "", 
+            "title": ""
+          }
+        }
+      ], 
+      "name": "Tvary"
     }
   ], 
   "tile_resolutions": [
@@ -624,8 +767,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1482357012, 
-  "publish_date": "Wed Dec 21 22:50:12 2016", 
+  "publish_date_unix": 1497357464, 
+  "publish_date": "Tue Jun 13 14:37:44 2017", 
   "expiration": "", 
   "contact_person": "Martin Landa", 
   "extent_buffer": 0.0, 
@@ -684,7 +827,7 @@
             1.3229193125052916
           ], 
           "name": "2-let\u00e9 max. denn\u00ed \u00fahrny", 
-          "url": "http://rain1.fsv.cvut.cz/services/wms", 
+          "url": "https://rain1.fsv.cvut.cz/services/wms", 
           "serverName": "", 
           "wms_layers": [
             "H_N2_24h"
@@ -722,7 +865,7 @@
             1.3229193125052916
           ], 
           "name": "5-let\u00e9 max. denn\u00ed \u00fahrny", 
-          "url": "http://rain1.fsv.cvut.cz/services/wms", 
+          "url": "https://rain1.fsv.cvut.cz/services/wms", 
           "serverName": "", 
           "wms_layers": [
             "H_N5_24h"
@@ -760,7 +903,7 @@
             1.3229193125052916
           ], 
           "name": "10-let\u00e9 max. denn\u00ed \u00fahrny", 
-          "url": "http://rain1.fsv.cvut.cz/services/wms", 
+          "url": "https://rain1.fsv.cvut.cz/services/wms", 
           "serverName": "", 
           "wms_layers": [
             "H_N10_24h"
@@ -798,7 +941,7 @@
             1.3229193125052916
           ], 
           "name": "20-let\u00e9 max. denn\u00ed \u00fahrny", 
-          "url": "http://rain1.fsv.cvut.cz/services/wms", 
+          "url": "https://rain1.fsv.cvut.cz/services/wms", 
           "serverName": "", 
           "wms_layers": [
             "H_N20_24h"
@@ -836,7 +979,7 @@
             1.3229193125052916
           ], 
           "name": "50-let\u00e9 max. denn\u00ed \u00fahrny", 
-          "url": "http://rain1.fsv.cvut.cz/services/wms", 
+          "url": "https://rain1.fsv.cvut.cz/services/wms", 
           "serverName": "", 
           "wms_layers": [
             "H_N50_24h"
@@ -874,7 +1017,7 @@
             1.3229193125052916
           ], 
           "name": "100-let\u00e9 max. denn\u00ed \u00fahrny", 
-          "url": "http://rain1.fsv.cvut.cz/services/wms", 
+          "url": "https://rain1.fsv.cvut.cz/services/wms", 
           "serverName": "", 
           "wms_layers": [
             "H_N100_24h"
