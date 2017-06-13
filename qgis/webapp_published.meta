@@ -544,7 +544,7 @@
       "layers": [
         {
           "drawing_order": 14, 
-          "projection": "EPSG:4326", 
+          "projection": "EPSG:5514", 
           "labels": false, 
           "visible": false, 
           "extent": [
@@ -567,7 +567,7 @@
         }, 
         {
           "drawing_order": 15, 
-          "projection": "EPSG:4326", 
+          "projection": "EPSG:5514", 
           "labels": false, 
           "visible": false, 
           "extent": [
@@ -590,7 +590,7 @@
         }, 
         {
           "drawing_order": 16, 
-          "projection": "EPSG:4326", 
+          "projection": "EPSG:5514", 
           "labels": false, 
           "visible": false, 
           "extent": [
@@ -613,7 +613,7 @@
         }, 
         {
           "drawing_order": 17, 
-          "projection": "EPSG:4326", 
+          "projection": "EPSG:5514", 
           "labels": false, 
           "visible": false, 
           "extent": [
@@ -636,7 +636,7 @@
         }, 
         {
           "drawing_order": 18, 
-          "projection": "EPSG:4326", 
+          "projection": "EPSG:5514", 
           "labels": false, 
           "visible": false, 
           "extent": [
@@ -659,7 +659,7 @@
         }, 
         {
           "drawing_order": 19, 
-          "projection": "EPSG:4326", 
+          "projection": "EPSG:5514", 
           "labels": false, 
           "visible": false, 
           "extent": [
@@ -767,8 +767,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1497360374, 
-  "publish_date": "Tue Jun 13 15:26:14 2017", 
+  "publish_date_unix": 1497362480, 
+  "publish_date": "Tue Jun 13 16:01:20 2017", 
   "expiration": "", 
   "contact_person": "Martin Landa", 
   "extent_buffer": 0.0, 

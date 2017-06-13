@@ -19,7 +19,7 @@ host="$2"
 basename="webapp"
 
 cd ../qgis
-rsync -av --delete data.sqlite data/ webapp.qgs $user@$host:$dest
+rsync -av --delete data.sqlite data webapp.qgs $user@$host:$dest
 for f in `ls -t ${basename}_[0-9]* | head -2`; do
     scp $f $user@$host:$dest
     ext=`echo $f | cut -d'.' -f2`
