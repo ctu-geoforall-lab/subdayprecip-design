@@ -94,10 +94,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-940454.78879749798215926</xmin>
-      <ymin>-1244134.88833500002510846</ymin>
-      <xmax>-409692.04870250006206334</xmax>
-      <ymax>-925595.11006499803625047</ymax>
+      <xmin>-987018.12741998536512256</xmin>
+      <ymin>-1309873.09443584666587412</ymin>
+      <xmax>-382629.01572938845492899</xmax>
+      <ymax>-857464.21096633118577302</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -270,6 +270,82 @@
       </legendlayer>
     </legendgroup>
   </legend>
+  <Composer title="rain" visible="0">
+    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="" alignmentSnap="1" printResolution="300" paperWidth="297" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="210" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+      <symbol alpha="1" clip_to_extent="1" type="fill" name="">
+        <layer pass="0" class="SimpleFill" locked="0">
+          <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="color" v="255,255,255,255"/>
+          <prop k="joinstyle" v="miter"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="0,0,0,255"/>
+          <prop k="outline_style" v="no"/>
+          <prop k="outline_width" v="0.26"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="style" v="solid"/>
+        </layer>
+      </symbol>
+      <ComposerScaleBar lineCapStyle="square" style="Single Box" numMapUnitsPerScaleBarUnit="1000" segmentSizeMode="0" alignment="0" numSegments="4" segmentMillimeters="14.2605" lineJoinStyle="miter" minBarWidth="50" numUnitsPerSegment="50000" units="1" labelBarSpace="3" outlineWidth="0.3" numSegmentsLeft="2" maxBarWidth="150" height="3" boxContentSpace="1" mapId="0" unitLabel="km">
+        <scaleBarFont description="Cantarell,12,-1,5,50,0,0,0,0,0" style=""/>
+        <fillColor alpha="255" red="0" blue="0" green="0"/>
+        <fillColor2 alpha="255" red="255" blue="255" green="255"/>
+        <strokeColor alpha="255" red="0" blue="0" green="0"/>
+        <textColor alpha="255" red="0" blue="0" green="0"/>
+        <ComposerItem pagey="162.307" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="10.6514" y="162.307" visibility="1" zValue="5" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="88.4385" outlineWidth="0.3" excludeFromExports="0" uuid="{ae541f7d-1905-4a7c-a36c-d8b543ccb5c8}" height="20" itemRotation="0" frame="false" pagex="10.6514">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerScaleBar>
+      <ComposerLegend symbolWidth="7" title="Legend" rasterBorderWidth="0" titleAlignment="1" map="0" wmsLegendWidth="50" rasterBorderColor="0,0,0,255" wrapChar="" fontColor="#000000" columnCount="1" wmsLegendHeight="25" columnSpace="2" symbolHeight="4" equalColumnWidth="0" resizeToContents="1" splitLayer="0" boxSpace="2" rasterBorder="1">
+        <styles>
+          <style marginBottom="2" name="title">
+            <styleFont description="Cantarell,16,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="group">
+            <styleFont description="Cantarell,14,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="subgroup">
+            <styleFont description="Cantarell,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="symbol">
+            <styleFont description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" marginLeft="2" name="symbolLabel">
+            <styleFont description="Cantarell,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+        </styles>
+        <ComposerItem pagey="30.9397" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="221.65" y="30.9397" visibility="1" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="71.425" outlineWidth="0.3" excludeFromExports="0" uuid="{458d6329-a087-4b36-8361-0c81b8e3629d}" height="664.9" itemRotation="0" frame="false" pagex="221.65">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerLegend>
+      <ComposerLabel valign="32" marginX="1" marginY="1" labelText="Webová aplikace Rain" htmlState="0" halign="1">
+        <LabelFont description="Accanthis ADF Std,16,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <FontColor red="0" blue="0" green="0"/>
+        <ComposerItem pagey="16.7379" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="221.65" y="16.7379" visibility="1" zValue="3" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="56.0368" outlineWidth="0.3" excludeFromExports="0" uuid="{30cb49f7-c74f-40fa-9c88-481dd06ec690}" height="14.2018" itemRotation="0" frame="false" pagex="221.65">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerLabel>
+      <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Cache" drawCanvasItems="true">
+        <Extent ymin="-1309873.09443584666587412" xmin="-1043116.21849508851300925" ymax="-820886.57123249932192266" xmax="-326530.9246542853070423"/>
+        <LayerSet/>
+        <Grid/>
+        <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
+        <ComposerItem pagey="16.7379" page="1" id="" lastValidViewScaleFactor="1.97158" positionMode="0" positionLock="false" x="10.6514" y="16.7379" visibility="1" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="204.377" outlineWidth="0.3" excludeFromExports="0" uuid="{819666bd-de6f-432f-9457-777b91e3af98}" height="139.464" itemRotation="0" frame="false" pagex="10.6514">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerMap>
+      <customproperties/>
+    </Composition>
+  </Composer>
   <projectlayers>
     <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
