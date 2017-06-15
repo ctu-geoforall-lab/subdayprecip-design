@@ -5,40 +5,40 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layerid=4" name="Klasifikovaná povodí IV. řádu">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layerid=4" name="Klasifikovaná povodí IV. řádu">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="0" checked="Qt::Checked" mutually-exclusive="1" name="2-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="1" checked="Qt::Checked" mutually-exclusive="1" name="2-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="data_povodi_iv_any201612061002435591437399835" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 2-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 5-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 10-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 20-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 50-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 100-leté 6h">
         <customproperties/>
@@ -68,7 +68,7 @@
     <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Checked" id="Základní_mapa_1_50_00020161216150757234" source="crs=EPSG:900913&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ZM50&amp;styles=&amp;url=http://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx" name="Základní mapa 1:50 000">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Tvary">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="Tvary">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ120170613143509511" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ1.csv" name="typ1">
         <customproperties/>
@@ -94,10 +94,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-987018.12741998536512256</xmin>
-      <ymin>-1309873.09443584666587412</ymin>
-      <xmax>-382629.01572938845492899</xmax>
-      <ymax>-857464.21096633118577302</ymax>
+      <xmin>-940454.78879749798215926</xmin>
+      <ymin>-1244134.88833500002510846</ymin>
+      <xmax>-409692.04870250006206334</xmax>
+      <ymax>-925595.11006499803625047</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -153,47 +153,47 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Klasifikovaná povodí IV. řádu" showFeatureCount="0">
-      <filegroup open="false" hidden="false">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Klasifikovaná povodí IV. řádu" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="data_povodi_klasifikace20161220152951973" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="false" checked="Qt::Checked" name="2-leté max. úhrny za 6h">
+    <legendgroup open="true" checked="Qt::Checked" name="2-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Povodí IV.řádu 2-leté 6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061002435591437399835" visible="1"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="5-leté max. úhrny za 6h">
+    <legendgroup open="true" checked="Qt::Unchecked" name="5-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu 5-leté 6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206000220509" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="10-leté max. úhrny za 6h">
+    <legendgroup open="true" checked="Qt::Unchecked" name="10-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu 10-leté 6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any20161206102441921465245529" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="20-leté max. úhrny za 6h">
+    <legendgroup open="true" checked="Qt::Unchecked" name="20-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu 20-leté 6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102709972164818856" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="50-leté max. úhrny za 6h">
+    <legendgroup open="true" checked="Qt::Unchecked" name="50-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu 50-leté 6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206102851363649587533" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="100-leté max. úhrny za 6h">
+    <legendgroup open="true" checked="Qt::Unchecked" name="100-leté max. úhrny za 6h">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu 100-leté 6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061020161206103056056323290986" visible="0"/>
@@ -237,7 +237,7 @@
         <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_50_00020161216150757234" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="false" checked="Qt::Unchecked" name="Tvary">
+    <legendgroup open="true" checked="Qt::Unchecked" name="Tvary">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="typ1" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="typ120170613143509511" visible="0"/>
@@ -293,7 +293,7 @@
         <fillColor2 alpha="255" red="255" blue="255" green="255"/>
         <strokeColor alpha="255" red="0" blue="0" green="0"/>
         <textColor alpha="255" red="0" blue="0" green="0"/>
-        <ComposerItem pagey="162.307" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="10.6514" y="162.307" visibility="1" zValue="5" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="88.4385" outlineWidth="0.3" excludeFromExports="0" uuid="{ae541f7d-1905-4a7c-a36c-d8b543ccb5c8}" height="20" itemRotation="0" frame="false" pagex="10.6514">
+        <ComposerItem pagey="162.307" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="10.6514" y="162.307" visibility="1" zValue="4" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="88.4383" outlineWidth="0.3" excludeFromExports="0" uuid="{ae541f7d-1905-4a7c-a36c-d8b543ccb5c8}" height="20" itemRotation="0" frame="false" pagex="10.6514">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -317,7 +317,7 @@
             <styleFont description="Cantarell,12,-1,5,50,0,0,0,0,0" style=""/>
           </style>
         </styles>
-        <ComposerItem pagey="30.9397" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="221.65" y="30.9397" visibility="1" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="71.425" outlineWidth="0.3" excludeFromExports="0" uuid="{458d6329-a087-4b36-8361-0c81b8e3629d}" height="664.9" itemRotation="0" frame="false" pagex="221.65">
+        <ComposerItem pagey="30.9397" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="221.65" y="30.9397" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="71.425" outlineWidth="0.3" excludeFromExports="0" uuid="{458d6329-a087-4b36-8361-0c81b8e3629d}" height="664.9" itemRotation="0" frame="false" pagex="221.65">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -326,18 +326,66 @@
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="Webová aplikace Rain" htmlState="0" halign="1">
         <LabelFont description="Accanthis ADF Std,16,-1,5,50,0,0,0,0,0" style="Regular"/>
         <FontColor red="0" blue="0" green="0"/>
-        <ComposerItem pagey="16.7379" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="221.65" y="16.7379" visibility="1" zValue="3" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="56.0368" outlineWidth="0.3" excludeFromExports="0" uuid="{30cb49f7-c74f-40fa-9c88-481dd06ec690}" height="14.2018" itemRotation="0" frame="false" pagex="221.65">
+        <ComposerItem pagey="16.7379" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="221.65" y="16.7379" visibility="1" zValue="2" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="56.0368" outlineWidth="0.3" excludeFromExports="0" uuid="{30cb49f7-c74f-40fa-9c88-481dd06ec690}" height="14.2018" itemRotation="0" frame="false" pagex="221.65">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
         </ComposerItem>
       </ComposerLabel>
       <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Cache" drawCanvasItems="true">
-        <Extent ymin="-1309873.09443584666587412" xmin="-1043116.21849508851300925" ymax="-820886.57123249932192266" xmax="-326530.9246542853070423"/>
+        <Extent ymin="-1309873.09443584666587412" xmin="-1043116.21849508851300925" ymax="-820885.33446180960163474" xmax="-326530.9246542853070423"/>
         <LayerSet/>
         <Grid/>
+        <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="1" bottomAnnotationPosition="1" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{870272c6-33df-4ed5-b5db-de88a1ca2227}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" annotationExpression="" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.29999999999999999" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grid 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
+          <lineStyle>
+            <symbol alpha="1" clip_to_extent="1" type="line" name="">
+              <layer pass="0" class="SimpleLine" locked="0">
+                <prop k="capstyle" v="flat"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="0,0,0,255"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0.3"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+              </layer>
+            </symbol>
+          </lineStyle>
+          <markerStyle>
+            <symbol alpha="1" clip_to_extent="1" type="marker" name="">
+              <layer pass="0" class="SimpleMarker" locked="0">
+                <prop k="angle" v="0"/>
+                <prop k="color" v="0,0,0,255"/>
+                <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="name" v="circle"/>
+                <prop k="offset" v="0,0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="0,0,0,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0"/>
+                <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="scale_method" v="diameter"/>
+                <prop k="size" v="2"/>
+                <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="size_unit" v="MM"/>
+                <prop k="vertical_anchor_point" v="1"/>
+              </layer>
+            </symbol>
+          </markerStyle>
+          <annotationFontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+        </ComposerMapGrid>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-        <ComposerItem pagey="16.7379" page="1" id="" lastValidViewScaleFactor="1.97158" positionMode="0" positionLock="false" x="10.6514" y="16.7379" visibility="1" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="204.377" outlineWidth="0.3" excludeFromExports="0" uuid="{819666bd-de6f-432f-9457-777b91e3af98}" height="139.464" itemRotation="0" frame="false" pagex="10.6514">
+        <ComposerItem pagey="16.7379" page="1" id="" lastValidViewScaleFactor="1.97158" positionMode="0" positionLock="false" x="10.6514" y="16.7379" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="204.377" outlineWidth="0.3" excludeFromExports="0" uuid="{819666bd-de6f-432f-9457-777b91e3af98}" height="139.464" itemRotation="0" frame="false" pagex="10.6514">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -1181,26 +1229,29 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="shape_len">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_002_360">
+        <edittype widgetv2type="Hidden" name="H_N2T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="H_N5T360">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_005_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N10T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_010_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N20T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_020_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N50T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_050_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N100T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_100_360">
+        <edittype widgetv2type="TextEdit" name="tvary">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 attr="h_005_360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
+      <renderer-v2 attr="H_N5T360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
         <ranges>
           <range render="true" symbol="0" lower="28.580330692493099" upper="38.098332849710367" label=" 28.6 - 38.1 "/>
           <range render="true" symbol="1" lower="38.098332849710367" upper="47.616335006927635" label=" 38.1 - 47.6 "/>
@@ -1375,7 +1426,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
-        <property key="labeling/isExpression" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -1540,18 +1591,30 @@ def my_form_open(dialog, layer, feature):
         <alias field="rad_i" index="7" name=""/>
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
-        <alias field="h_002_360" index="10" name=""/>
-        <alias field="h_005_360" index="11" name=""/>
-        <alias field="h_010_360" index="12" name=""/>
-        <alias field="h_020_360" index="13" name=""/>
-        <alias field="h_050_360" index="14" name=""/>
-        <alias field="h_100_360" index="15" name=""/>
+        <alias field="H_N2T360" index="10" name=""/>
+        <alias field="H_N5T360" index="11" name=""/>
+        <alias field="H_N10T360" index="12" name=""/>
+        <alias field="H_N20T360" index="13" name=""/>
+        <alias field="H_N50T360" index="14" name=""/>
+        <alias field="H_N100T360" index="15" name=""/>
+        <alias field="tvary" index="16" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>H_N100T360</attribute>
+        <attribute>H_N50T360</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N20T360</attribute>
+        <attribute>H_N10T360</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS>
+        <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
         <attribute>shape_len</attribute>
+        <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N20T360</attribute>
+        <attribute>H_N10T360</attribute>
         <attribute>hlgp_char</attribute>
       </excludeAttributesWFS>
       <attributeactions default="-1"/>
@@ -1566,14 +1629,15 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="rad_i"/>
           <column width="-1" hidden="0" type="field" name="shape_area"/>
           <column width="-1" hidden="0" type="field" name="shape_len"/>
-          <column width="-1" hidden="0" type="field" name="h_002_360"/>
-          <column width="-1" hidden="0" type="field" name="h_005_360"/>
-          <column width="-1" hidden="0" type="field" name="h_010_360"/>
-          <column width="-1" hidden="0" type="field" name="h_020_360"/>
-          <column width="-1" hidden="0" type="field" name="h_050_360"/>
-          <column width="-1" hidden="0" type="field" name="h_100_360"/>
           <column width="-1" hidden="1" type="actions"/>
           <column width="-1" hidden="0" type="field" name="plocha"/>
+          <column width="-1" hidden="0" type="field" name="tvary"/>
+          <column width="-1" hidden="0" type="field" name="H_N2T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N5T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N10T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N20T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N50T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N100T360"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -1615,14 +1679,15 @@ def my_form_open(dialog, layer, feature):
         <default field="rad_i" expression=""/>
         <default field="shape_area" expression=""/>
         <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
+        <default field="H_N2T360" expression=""/>
+        <default field="H_N5T360" expression=""/>
+        <default field="H_N10T360" expression=""/>
+        <default field="H_N20T360" expression=""/>
+        <default field="H_N50T360" expression=""/>
+        <default field="H_N100T360" expression=""/>
+        <default field="tvary" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "ogc_fid", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
@@ -1687,26 +1752,29 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="shape_len">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_002_360">
+        <edittype widgetv2type="TextEdit" name="H_N2T360">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_005_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N5T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_010_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N10T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_020_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N20T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_050_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N50T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_100_360">
+        <edittype widgetv2type="Hidden" name="H_N100T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="tvary">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 attr="h_002_360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
+      <renderer-v2 attr="H_N2T360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
         <ranges>
           <range render="true" symbol="0" lower="19.866795830452201" upper="25.915542657271132" label=" 19.9 - 25.9 "/>
           <range render="true" symbol="1" lower="25.915542657271132" upper="31.964289484090063" label=" 25.9 - 32.0 "/>
@@ -1881,7 +1949,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
-        <property key="labeling/isExpression" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -2046,22 +2114,34 @@ def my_form_open(dialog, layer, feature):
         <alias field="rad_i" index="7" name=""/>
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
-        <alias field="h_002_360" index="10" name=""/>
-        <alias field="h_005_360" index="11" name=""/>
-        <alias field="h_010_360" index="12" name=""/>
-        <alias field="h_020_360" index="13" name=""/>
-        <alias field="h_050_360" index="14" name=""/>
-        <alias field="h_100_360" index="15" name=""/>
+        <alias field="H_N2T360" index="10" name=""/>
+        <alias field="H_N5T360" index="11" name=""/>
+        <alias field="H_N10T360" index="12" name=""/>
+        <alias field="H_N20T360" index="13" name=""/>
+        <alias field="H_N50T360" index="14" name=""/>
+        <alias field="H_N100T360" index="15" name=""/>
+        <alias field="tvary" index="16" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>H_N100T360</attribute>
+        <attribute>H_N50T360</attribute>
+        <attribute>H_N20T360</attribute>
+        <attribute>H_N10T360</attribute>
+        <attribute>H_N5T360</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS>
+        <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
         <attribute>shape_len</attribute>
+        <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>H_N20T360</attribute>
+        <attribute>H_N10T360</attribute>
         <attribute>hlgp_char</attribute>
+        <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;hlgp_char&quot;" sortOrder="1">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;tvary&quot;" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="ogc_fid"/>
           <column width="-1" hidden="0" type="field" name="hlgp_id"/>
@@ -2069,17 +2149,18 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="rad_iii"/>
           <column width="-1" hidden="0" type="field" name="rad_ii"/>
           <column width="-1" hidden="0" type="field" name="rad_i"/>
-          <column width="-1" hidden="0" type="field" name="h_002_360"/>
-          <column width="-1" hidden="0" type="field" name="h_005_360"/>
-          <column width="-1" hidden="0" type="field" name="h_010_360"/>
-          <column width="-1" hidden="0" type="field" name="h_020_360"/>
-          <column width="-1" hidden="0" type="field" name="h_050_360"/>
-          <column width="-1" hidden="0" type="field" name="h_100_360"/>
           <column width="-1" hidden="1" type="actions"/>
           <column width="-1" hidden="0" type="field" name="hlgp_char"/>
           <column width="-1" hidden="0" type="field" name="shape_area"/>
           <column width="-1" hidden="0" type="field" name="shape_len"/>
           <column width="-1" hidden="0" type="field" name="plocha"/>
+          <column width="-1" hidden="0" type="field" name="tvary"/>
+          <column width="-1" hidden="0" type="field" name="H_N2T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N5T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N10T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N20T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N50T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N100T360"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -2105,7 +2186,14 @@ def my_form_open(dialog, layer, feature):
 ]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
+      <widgets>
+        <widget name="h_002_360">
+          <config>
+            <option key="IsMultiline" value="false"/>
+            <option key="UseHtml" value="false"/>
+          </config>
+        </widget>
+      </widgets>
       <conditionalstyles>
         <rowstyles/>
         <fieldstyles/>
@@ -2121,12 +2209,13 @@ def my_form_open(dialog, layer, feature):
         <default field="rad_i" expression=""/>
         <default field="shape_area" expression=""/>
         <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
+        <default field="H_N2T360" expression=""/>
+        <default field="H_N5T360" expression=""/>
+        <default field="H_N10T360" expression=""/>
+        <default field="H_N20T360" expression=""/>
+        <default field="H_N50T360" expression=""/>
+        <default field="H_N100T360" expression=""/>
+        <default field="tvary" expression=""/>
       </defaults>
       <previewExpression>COALESCE( "hlgp_id", '&lt;NULL>' )</previewExpression>
     </maplayer>
@@ -2193,26 +2282,29 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="shape_len">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_002_360">
+        <edittype widgetv2type="Hidden" name="H_N2T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N5T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N10T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="H_N20T360">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_005_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N50T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_010_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N100T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_020_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_050_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_100_360">
+        <edittype widgetv2type="TextEdit" name="tvary">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 attr="h_020_360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
+      <renderer-v2 attr="H_N20T360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
         <ranges>
           <range render="true" symbol="0" lower="40.204477265499399" upper="54.748007679625331" label=" 40.2 - 54.7 "/>
           <range render="true" symbol="1" lower="54.748007679625331" upper="69.291538093751271" label=" 54.7 - 69.3 "/>
@@ -2387,7 +2479,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
-        <property key="labeling/isExpression" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -2552,19 +2644,31 @@ def my_form_open(dialog, layer, feature):
         <alias field="rad_i" index="7" name=""/>
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
-        <alias field="h_002_360" index="10" name=""/>
-        <alias field="h_005_360" index="11" name=""/>
-        <alias field="h_010_360" index="12" name=""/>
-        <alias field="h_020_360" index="13" name=""/>
-        <alias field="h_050_360" index="14" name=""/>
-        <alias field="h_100_360" index="15" name=""/>
+        <alias field="H_N2T360" index="10" name=""/>
+        <alias field="H_N5T360" index="11" name=""/>
+        <alias field="H_N10T360" index="12" name=""/>
+        <alias field="H_N20T360" index="13" name=""/>
+        <alias field="H_N50T360" index="14" name=""/>
+        <alias field="H_N100T360" index="15" name=""/>
+        <alias field="tvary" index="16" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>H_N100T360</attribute>
+        <attribute>H_N50T360</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N10T360</attribute>
+        <attribute>H_N5T360</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS>
+        <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
         <attribute>shape_len</attribute>
+        <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N10T360</attribute>
         <attribute>hlgp_char</attribute>
+        <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
@@ -2578,14 +2682,15 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="rad_i"/>
           <column width="-1" hidden="0" type="field" name="shape_area"/>
           <column width="-1" hidden="0" type="field" name="shape_len"/>
-          <column width="-1" hidden="0" type="field" name="h_002_360"/>
-          <column width="-1" hidden="0" type="field" name="h_005_360"/>
-          <column width="-1" hidden="0" type="field" name="h_010_360"/>
-          <column width="-1" hidden="0" type="field" name="h_020_360"/>
-          <column width="-1" hidden="0" type="field" name="h_050_360"/>
-          <column width="-1" hidden="0" type="field" name="h_100_360"/>
           <column width="-1" hidden="1" type="actions"/>
           <column width="-1" hidden="0" type="field" name="plocha"/>
+          <column width="-1" hidden="0" type="field" name="tvary"/>
+          <column width="-1" hidden="0" type="field" name="H_N2T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N5T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N10T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N20T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N50T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N100T360"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -2627,12 +2732,13 @@ def my_form_open(dialog, layer, feature):
         <default field="rad_i" expression=""/>
         <default field="shape_area" expression=""/>
         <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
+        <default field="H_N2T360" expression=""/>
+        <default field="H_N5T360" expression=""/>
+        <default field="H_N10T360" expression=""/>
+        <default field="H_N20T360" expression=""/>
+        <default field="H_N50T360" expression=""/>
+        <default field="H_N100T360" expression=""/>
+        <default field="tvary" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
@@ -2699,26 +2805,29 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="shape_len">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_002_360">
+        <edittype widgetv2type="Hidden" name="H_N2T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N5T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N10T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N20T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="H_N50T360">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_005_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N100T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_010_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_020_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_050_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_100_360">
+        <edittype widgetv2type="TextEdit" name="tvary">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 attr="h_050_360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
+      <renderer-v2 attr="H_N50T360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
         <ranges>
           <range render="true" symbol="0" lower="48.368671924586103" upper="66.416719706488749" label=" 48.4 - 66.4 "/>
           <range render="true" symbol="1" lower="66.416719706488749" upper="84.464767488391402" label=" 66.4 - 84.5 "/>
@@ -2893,7 +3002,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
-        <property key="labeling/isExpression" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -3058,19 +3167,31 @@ def my_form_open(dialog, layer, feature):
         <alias field="rad_i" index="7" name=""/>
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
-        <alias field="h_002_360" index="10" name=""/>
-        <alias field="h_005_360" index="11" name=""/>
-        <alias field="h_010_360" index="12" name=""/>
-        <alias field="h_020_360" index="13" name=""/>
-        <alias field="h_050_360" index="14" name=""/>
-        <alias field="h_100_360" index="15" name=""/>
+        <alias field="H_N2T360" index="10" name=""/>
+        <alias field="H_N5T360" index="11" name=""/>
+        <alias field="H_N10T360" index="12" name=""/>
+        <alias field="H_N20T360" index="13" name=""/>
+        <alias field="H_N50T360" index="14" name=""/>
+        <alias field="H_N100T360" index="15" name=""/>
+        <alias field="tvary" index="16" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>H_N100T360</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N20T360</attribute>
+        <attribute>H_N10T360</attribute>
+        <attribute>H_N5T360</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS>
+        <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
         <attribute>shape_len</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N20T360</attribute>
+        <attribute>H_N10T360</attribute>
         <attribute>hlgp_char</attribute>
+        <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
@@ -3084,14 +3205,15 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="rad_i"/>
           <column width="-1" hidden="0" type="field" name="shape_area"/>
           <column width="-1" hidden="0" type="field" name="shape_len"/>
-          <column width="-1" hidden="0" type="field" name="h_002_360"/>
-          <column width="-1" hidden="0" type="field" name="h_005_360"/>
-          <column width="-1" hidden="0" type="field" name="h_010_360"/>
-          <column width="-1" hidden="0" type="field" name="h_020_360"/>
-          <column width="-1" hidden="0" type="field" name="h_050_360"/>
-          <column width="-1" hidden="0" type="field" name="h_100_360"/>
           <column width="-1" hidden="1" type="actions"/>
           <column width="-1" hidden="0" type="field" name="plocha"/>
+          <column width="-1" hidden="0" type="field" name="tvary"/>
+          <column width="-1" hidden="0" type="field" name="H_N2T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N5T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N10T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N20T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N50T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N100T360"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -3133,12 +3255,13 @@ def my_form_open(dialog, layer, feature):
         <default field="rad_i" expression=""/>
         <default field="shape_area" expression=""/>
         <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
+        <default field="H_N2T360" expression=""/>
+        <default field="H_N5T360" expression=""/>
+        <default field="H_N10T360" expression=""/>
+        <default field="H_N20T360" expression=""/>
+        <default field="H_N50T360" expression=""/>
+        <default field="H_N100T360" expression=""/>
+        <default field="tvary" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
@@ -3205,26 +3328,29 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="shape_len">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_002_360">
+        <edittype widgetv2type="Hidden" name="H_N2T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N5T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N10T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N20T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N50T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="H_N100T360">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_005_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_010_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_020_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_050_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_100_360">
+        <edittype widgetv2type="TextEdit" name="tvary">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 attr="h_100_360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
+      <renderer-v2 attr="H_N100T360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
         <ranges>
           <range render="true" symbol="0" lower="54.266552902773398" upper="74.635269529916670" label=" 54.3 - 74.6 "/>
           <range render="true" symbol="1" lower="74.635269529916670" upper="95.003986157059941" label=" 74.6 - 95.0 "/>
@@ -3399,7 +3525,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
-        <property key="labeling/isExpression" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -3564,19 +3690,31 @@ def my_form_open(dialog, layer, feature):
         <alias field="rad_i" index="7" name=""/>
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
-        <alias field="h_002_360" index="10" name=""/>
-        <alias field="h_005_360" index="11" name=""/>
-        <alias field="h_010_360" index="12" name=""/>
-        <alias field="h_020_360" index="13" name=""/>
-        <alias field="h_050_360" index="14" name=""/>
-        <alias field="h_100_360" index="15" name=""/>
+        <alias field="H_N2T360" index="10" name=""/>
+        <alias field="H_N5T360" index="11" name=""/>
+        <alias field="H_N10T360" index="12" name=""/>
+        <alias field="H_N20T360" index="13" name=""/>
+        <alias field="H_N50T360" index="14" name=""/>
+        <alias field="H_N100T360" index="15" name=""/>
+        <alias field="tvary" index="16" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>H_N50T360</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N20T360</attribute>
+        <attribute>H_N10T360</attribute>
+        <attribute>H_N5T360</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>shape_area</attribute>
         <attribute>shape_len</attribute>
+        <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N20T360</attribute>
+        <attribute>H_N10T360</attribute>
         <attribute>hlgp_char</attribute>
+        <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
@@ -3590,14 +3728,15 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="rad_i"/>
           <column width="-1" hidden="0" type="field" name="shape_area"/>
           <column width="-1" hidden="0" type="field" name="shape_len"/>
-          <column width="-1" hidden="0" type="field" name="h_002_360"/>
-          <column width="-1" hidden="0" type="field" name="h_005_360"/>
-          <column width="-1" hidden="0" type="field" name="h_010_360"/>
-          <column width="-1" hidden="0" type="field" name="h_020_360"/>
-          <column width="-1" hidden="0" type="field" name="h_050_360"/>
-          <column width="-1" hidden="0" type="field" name="h_100_360"/>
           <column width="-1" hidden="1" type="actions"/>
           <column width="-1" hidden="0" type="field" name="plocha"/>
+          <column width="-1" hidden="0" type="field" name="tvary"/>
+          <column width="-1" hidden="0" type="field" name="H_N2T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N5T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N10T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N20T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N50T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N100T360"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -3639,12 +3778,13 @@ def my_form_open(dialog, layer, feature):
         <default field="rad_i" expression=""/>
         <default field="shape_area" expression=""/>
         <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
+        <default field="H_N2T360" expression=""/>
+        <default field="H_N5T360" expression=""/>
+        <default field="H_N10T360" expression=""/>
+        <default field="H_N20T360" expression=""/>
+        <default field="H_N50T360" expression=""/>
+        <default field="H_N100T360" expression=""/>
+        <default field="tvary" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
@@ -3711,26 +3851,29 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="shape_len">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_002_360">
+        <edittype widgetv2type="Hidden" name="H_N2T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="Hidden" name="H_N5T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="H_N10T360">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_005_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N20T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_010_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N50T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_020_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="Hidden" name="H_N100T360">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="h_050_360">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="h_100_360">
+        <edittype widgetv2type="TextEdit" name="tvary">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 attr="h_010_360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
+      <renderer-v2 attr="H_N10T360" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
         <ranges>
           <range render="true" symbol="0" lower="34.107630850268400" upper="45.914281268046835" label=" 34.1 - 45.9 "/>
           <range render="true" symbol="1" lower="45.914281268046835" upper="57.720931685825271" label=" 45.9 - 57.7 "/>
@@ -3905,7 +4048,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
-        <property key="labeling/isExpression" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -4070,19 +4213,31 @@ def my_form_open(dialog, layer, feature):
         <alias field="rad_i" index="7" name=""/>
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
-        <alias field="h_002_360" index="10" name=""/>
-        <alias field="h_005_360" index="11" name=""/>
-        <alias field="h_010_360" index="12" name=""/>
-        <alias field="h_020_360" index="13" name=""/>
-        <alias field="h_050_360" index="14" name=""/>
-        <alias field="h_100_360" index="15" name=""/>
+        <alias field="H_N2T360" index="10" name=""/>
+        <alias field="H_N5T360" index="11" name=""/>
+        <alias field="H_N10T360" index="12" name=""/>
+        <alias field="H_N20T360" index="13" name=""/>
+        <alias field="H_N50T360" index="14" name=""/>
+        <alias field="H_N100T360" index="15" name=""/>
+        <alias field="tvary" index="16" name=""/>
       </aliases>
-      <excludeAttributesWMS/>
+      <excludeAttributesWMS>
+        <attribute>H_N100T360</attribute>
+        <attribute>H_N50T360</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N20T360</attribute>
+        <attribute>H_N5T360</attribute>
+      </excludeAttributesWMS>
       <excludeAttributesWFS>
+        <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
         <attribute>shape_len</attribute>
+        <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>H_N2T360</attribute>
+        <attribute>H_N20T360</attribute>
         <attribute>hlgp_char</attribute>
+        <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
@@ -4096,14 +4251,15 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="rad_i"/>
           <column width="-1" hidden="0" type="field" name="shape_area"/>
           <column width="-1" hidden="0" type="field" name="shape_len"/>
-          <column width="-1" hidden="0" type="field" name="h_002_360"/>
-          <column width="-1" hidden="0" type="field" name="h_005_360"/>
-          <column width="-1" hidden="0" type="field" name="h_010_360"/>
-          <column width="-1" hidden="0" type="field" name="h_020_360"/>
-          <column width="-1" hidden="0" type="field" name="h_050_360"/>
-          <column width="-1" hidden="0" type="field" name="h_100_360"/>
           <column width="-1" hidden="1" type="actions"/>
           <column width="-1" hidden="0" type="field" name="plocha"/>
+          <column width="-1" hidden="0" type="field" name="tvary"/>
+          <column width="-1" hidden="0" type="field" name="H_N2T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N5T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N10T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N20T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N50T360"/>
+          <column width="-1" hidden="0" type="field" name="H_N100T360"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -4145,14 +4301,15 @@ def my_form_open(dialog, layer, feature):
         <default field="rad_i" expression=""/>
         <default field="shape_area" expression=""/>
         <default field="shape_len" expression=""/>
-        <default field="h_002_360" expression=""/>
-        <default field="h_005_360" expression=""/>
-        <default field="h_010_360" expression=""/>
-        <default field="h_020_360" expression=""/>
-        <default field="h_050_360" expression=""/>
-        <default field="h_100_360" expression=""/>
+        <default field="H_N2T360" expression=""/>
+        <default field="H_N5T360" expression=""/>
+        <default field="H_N10T360" expression=""/>
+        <default field="H_N20T360" expression=""/>
+        <default field="H_N50T360" expression=""/>
+        <default field="H_N100T360" expression=""/>
+        <default field="tvary" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "hlgp_id", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
@@ -5226,8 +5383,8 @@ def my_form_open(dialog, layer, feature):
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
     <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
     <WMSServiceAbstract type="QString">Tato webová aplikace umožňuje prohlížet podkladové vrstvy (Základní mapu ČR a vrstvy maximálních denních úhrnů poskytovaných v rámci projektu veřejnou službou OGC WMS) a vrstvu povodí IV. řádu s vyčíslenými hodnotami návrhových srážek s délkou srážky 6 hodin. Na základě těchto hodnot je vrstva povodí IV. řádu stylována v jednotlivých tématech (topics) podle doby opakování (2 roky, 5, 10, 20, 50 a 100 let).</WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
@@ -5307,12 +5464,12 @@ def my_form_open(dialog, layer, feature):
       <data_povodi_ii_any20161206000220489 type="int">8</data_povodi_ii_any20161206000220489>
       <data_povodi_iii_any201612061020161206102709972474208324 type="int">8</data_povodi_iii_any201612061020161206102709972474208324>
       <data_povodi_iii_any201612061020161206102851363703148241 type="int">8</data_povodi_iii_any201612061020161206102851363703148241>
+      <typ420170613143510078 type="int">9</typ420170613143510078>
       <data_povodi_i20161120185216073 type="int">8</data_povodi_i20161120185216073>
       <data_povodi_i_any201612061024419191778778480 type="int">8</data_povodi_i_any201612061024419191778778480>
-      <typ420170613143510078 type="int">9</typ420170613143510078>
       <data_povodi_ii20161120185216076 type="int">8</data_povodi_ii20161120185216076>
-      <data_povodi_iv_any20161206000220509 type="int">8</data_povodi_iv_any20161206000220509>
       <typ520170613143510246 type="int">8</typ520170613143510246>
+      <data_povodi_iv_any20161206000220509 type="int">8</data_povodi_iv_any20161206000220509>
       <data_povodi_iii_any201612061002435591645868459 type="int">8</data_povodi_iii_any201612061002435591645868459>
       <data_povodi_iii_any201612061020161206103056055226064162 type="int">8</data_povodi_iii_any201612061020161206103056055226064162>
       <data_povodi_ii_any201612061024419201382046609 type="int">8</data_povodi_ii_any201612061024419201382046609>

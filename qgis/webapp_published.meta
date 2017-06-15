@@ -19,10 +19,10 @@
   ], 
   "abstract": "Tato webov\u00e1 aplikace umo\u017e\u0148uje prohl\u00ed\u017eet podkladov\u00e9 vrstvy (Z\u00e1kladn\u00ed mapu \u010cR a vrstvy maxim\u00e1ln\u00edch denn\u00edch \u00fahrn\u016f poskytovan\u00fdch v r\u00e1mci projektu ve\u0159ejnou slu\u017ebou OGC WMS) a vrstvu povod\u00ed IV. \u0159\u00e1du s vy\u010d\u00edslen\u00fdmi hodnotami n\u00e1vrhov\u00fdch sr\u00e1\u017eek s d\u00e9lkou sr\u00e1\u017eky 6 hodin. Na z\u00e1klad\u011b t\u011bchto hodnot je vrstva povod\u00ed IV. \u0159\u00e1du stylov\u00e1na v jednotliv\u00fdch t\u00e9matech (topics) podle doby opakov\u00e1n\u00ed (2 roky, 5, 10, 20, 50 a 100 let).", 
   "zoom_extent": [
-    -1043116.218, 
-    -1309873.094, 
-    -326530.925, 
-    -857464.211
+    -940454.789, 
+    -1252410.845, 
+    -409692.049, 
+    -917319.153
   ], 
   "fees": "conditions unknown", 
   "message": {
@@ -99,27 +99,11 @@
             }, 
             {
               "type": "DOUBLE", 
-              "name": "h_002_360"
+              "name": "H_N2T360"
             }, 
             {
-              "type": "DOUBLE", 
-              "name": "h_005_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_010_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_020_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_050_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_100_360"
+              "type": "TEXT", 
+              "name": "tvary"
             }
           ], 
           "hidden": false, 
@@ -180,27 +164,11 @@
             }, 
             {
               "type": "DOUBLE", 
-              "name": "h_002_360"
+              "name": "H_N5T360"
             }, 
             {
-              "type": "DOUBLE", 
-              "name": "h_005_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_010_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_020_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_050_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_100_360"
+              "type": "TEXT", 
+              "name": "tvary"
             }
           ], 
           "hidden": false, 
@@ -261,27 +229,11 @@
             }, 
             {
               "type": "DOUBLE", 
-              "name": "h_002_360"
+              "name": "H_N10T360"
             }, 
             {
-              "type": "DOUBLE", 
-              "name": "h_005_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_010_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_020_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_050_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_100_360"
+              "type": "TEXT", 
+              "name": "tvary"
             }
           ], 
           "hidden": false, 
@@ -342,27 +294,11 @@
             }, 
             {
               "type": "DOUBLE", 
-              "name": "h_002_360"
+              "name": "H_N20T360"
             }, 
             {
-              "type": "DOUBLE", 
-              "name": "h_005_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_010_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_020_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_050_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_100_360"
+              "type": "TEXT", 
+              "name": "tvary"
             }
           ], 
           "hidden": false, 
@@ -423,27 +359,11 @@
             }, 
             {
               "type": "DOUBLE", 
-              "name": "h_002_360"
+              "name": "H_N50T360"
             }, 
             {
-              "type": "DOUBLE", 
-              "name": "h_005_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_010_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_020_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_050_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_100_360"
+              "type": "TEXT", 
+              "name": "tvary"
             }
           ], 
           "hidden": false, 
@@ -504,27 +424,11 @@
             }, 
             {
               "type": "DOUBLE", 
-              "name": "h_002_360"
+              "name": "H_N100T360"
             }, 
             {
-              "type": "DOUBLE", 
-              "name": "h_005_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_010_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_020_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_050_360"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "h_100_360"
+              "type": "TEXT", 
+              "name": "tvary"
             }
           ], 
           "hidden": false, 
@@ -626,14 +530,14 @@
       "width": 297.0, 
       "map": {
         "name": "map0", 
-        "height": 139.46395705521473, 
-        "width": 204.37745398773006, 
+        "height": 139.464, 
+        "width": 204.377, 
         "grid": {
           "intervalX": 0.0, 
           "intervalY": 0.0
         }, 
-        "y": 16.737883435582816, 
-        "x": 10.65138036809816
+        "y": 16.7379, 
+        "x": 10.6514
       }, 
       "labels": [], 
       "name": "rain", 
@@ -642,8 +546,8 @@
   ], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1497506331, 
-  "publish_date": "Thu Jun 15 07:58:51 2017", 
+  "publish_date_unix": 1497511355, 
+  "publish_date": "Thu Jun 15 09:22:35 2017", 
   "expiration": "", 
   "contact_person": "Martin Landa", 
   "extent_buffer": 0.0, 
@@ -940,7 +844,7 @@
       ], 
       "provider_type": "wms", 
       "type": "wms", 
-      "dpi": 50, 
+      "dpi": 96, 
       "metadata": {
         "keyword_list": "", 
         "abstract": "", 
