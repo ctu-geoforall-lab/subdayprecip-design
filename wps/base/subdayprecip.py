@@ -54,6 +54,13 @@ class SubDayPrecipProcess(Process):
                     data_type='float')
                )
 
+          if 'value' in input_params:
+               inputs.append(LiteralInput(
+                    identifier="value",
+                    title=u"Hodnota navrhove srazky",
+                    data_type='float')
+               )
+
           if 'keycolumn' in input_params:
                inputs.append(LiteralInput(
                     identifier="keycolumn",
@@ -158,34 +165,36 @@ class SubDayPrecipProcess(Process):
                self.rainlength = request.inputs['rainlength'][0].data
           if 'type' in request.inputs.keys():
                self.shapetype = request.inputs['type'][0].data.split(',')
-               
-          # if 'input' in request.inputs.keys():
-          #      self.map_name = self.import_data()
-          # else:
-          #      self.map_name = self.copy()
-          self.map_name = self.import_data(request.inputs['input'][0].data)
+          if 'value' in request.inputs.keys():
+               self.value = request.inputs['value'][0].data
+
+          if 'input' in request.inputs.keys():
+               self.map_name = self.import_data(request.inputs['input'][0].data)
           
           if 'keycolumn' in request.inputs.keys():
                self.check_keycolumn(self.keycolumn)
 
           self.output_dir = os.path.join('/tmp', '{}_{}'.format(
-               self.map_name, os.getpid())
+               self.identifier, os.getpid())
           )
           if os.path.exists(self.output_dir):
                shutil.rmtree(self.output_dir)
           os.mkdir(self.output_dir)
 
-          Module('g.region', raster=self.return_period[0])
-          logging.debug("Subday computation started")
-          start = time.time()
-          Module('r.subdayprecip.design',
-                 map=self.map_name, return_period=self.return_period,
-                 rainlength=self.rainlength
-          )
-          logging.info("Subday computation finished: {} sec".format(time.time() - start))
-          logging.info("{}".format(Module(
-               'v.info', flags='c', map=self.map_name, stdout_=PIPE).outputs.stdout)
-          )
+          if 'input' in request.inputs.keys():
+               Module('g.region', raster=self.return_period[0])
+               logging.debug("Subday computation started")
+               start = time.time()
+               logging.info("R: {}".format(self.rainlength))
+               Module('r.subdayprecip.design',
+                      map=self.map_name, return_period=self.return_period,
+                      rainlength=self.rainlength
+               )
+               logging.info("Subday computation finished: {} sec".format(time.time() - start))
+               logging.info("{}".format(Module(
+                    'v.info', flags='c', map=self.map_name, stdout_=PIPE).outputs.stdout)
+               )
+
           response.outputs['output'].file = self.export()
 
           return response
@@ -248,5 +257,5 @@ class SubDayPrecipProcess(Process):
 
      #      return map_name
      
-     def export(self, inputs):
+     def export(self):
           pass
