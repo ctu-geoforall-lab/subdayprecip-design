@@ -6,6 +6,7 @@ RP="N2,N5,N100"
 RL="360"
 COL="RAD_I"
 STYP="1,2"
+VALUE="25"
 
 cd /tmp
 
@@ -54,6 +55,18 @@ grep '\<wps:Reference' | cut -d'"' -f2`
 
 wget -q $file
 echo "RESULT:"
-cat `basename $file` | head -n1
+cat `basename $file` | head -n2
+
+echo "**************************************************************"
+echo "* raintotal-timedist"
+echo "**************************************************************"
+
+file=`curl \
+"https://rain1.fsv.cvut.cz/services/wpspriv?service=wps&version=1.0.0&request=Execute&identifier=raintotal-timedist&datainputs=value=${VALUE};type=${STYP}" | \
+grep '\<wps:Reference' | cut -d'"' -f2`
+
+wget -q $file
+echo "RESULT:"
+cat `basename $file` | head -n2
 
 exit 0
