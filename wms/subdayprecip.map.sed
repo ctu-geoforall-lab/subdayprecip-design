@@ -27,7 +27,7 @@ MAP
       "wms_title"                        "Rain WMS server"
       "wms_onlineresource"               "#URL#"
       "wms_abstract"                     "WMS server projektu QJ1520265, vice informaci na http://rain.fsv.cvut.cz/webove-sluzby/ogc-wms"
-      "wms_srs"                          "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
+      "wms_srs"                          "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326 EPSG:32633"
       "wms_encoding"                     "UTF-8"
       "wms_contactelectronicmailaddress" "martin.landa@fsv.cvut.cz"
       "wms_contactperson"                "Martin Landa"
@@ -43,7 +43,7 @@ MAP
       "wms_title"           "2-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 2-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326 EPSG:32633"
       "wms_enable_request"  "*"
       "wms_extent"           "-907000 -1230000 -429000 -933000"
     END # METADATA
@@ -63,7 +63,7 @@ MAP
       "wms_title"           "5-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 5-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326 EPSG:32633"
       "wms_enable_request"  "*"
       "wms_extent"           "-907000 -1230000 -429000 -933000"
     END # METADATA
@@ -83,7 +83,7 @@ MAP
       "wms_title"           "10-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 10-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326 EPSG:32633"
       "wms_enable_request"  "*"
       "wms_extent"           "-907000 -1230000 -429000 -933000"
     END # METADATA
@@ -103,7 +103,7 @@ MAP
       "wms_title"           "20-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 20-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326 EPSG:32633"
       "wms_enable_request"  "*"
       "wms_extent"          "-907000 -1230000 -429000 -933000"
     END # METADATA
@@ -123,7 +123,7 @@ MAP
       "wms_title"           "50-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 50-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326 EPSG:32633"
       "wms_enable_request"  "*"
       "wms_extent"          "-907000 -1230000 -429000 -933000"
     END # METADATA
@@ -143,7 +143,7 @@ MAP
       "wms_title"           "100-leté maximální denní úhrny"
       "wms_abstract"        "Vrstva 100-letých maximálních denních úhrnů"
       "wms_onlineresource"  "#URL#"
-      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326"
+      "wms_srs"             "EPSG:5514 EPSG:2065 EPSG:102067 EPSG:4326 EPSG:32633"
       "wms_enable_request"  "*"
       "wms_extent"          "-907000 -1230000 -429000 -933000"
     END # METADATA
