@@ -36,7 +36,7 @@ class SubDayPrecipProcess(Process):
           if 'input' in input_params:
                inputs.append(ComplexInput(
                     identifier="input",
-                    title=u"Vstupni bodová nebo polygonova vektorova data",
+                    title=u"Vstupni bodova nebo polygonova vektorova data",
                     supported_formats=[Format('text/xml'), # requires QGIS WPS client
                                        Format('GML'),
                                        Format('application/zip; charset=binary')])
@@ -57,7 +57,7 @@ class SubDayPrecipProcess(Process):
           if 'value' in input_params:
                inputs.append(LiteralInput(
                     identifier="value",
-                    title=u"Hodnota navrhove srazky",
+                    title=u"Hodnota navrhove srazky v mm",
                     data_type='float')
                )
 
@@ -110,14 +110,14 @@ class SubDayPrecipProcess(Process):
           if 'output_value' in output_params:
                outputs.append(LiteralOutput(
                     identifier="output",
-                    title=u"Vycislena hodnota",
+                    title=u"Vycislena hodnota navrhove srazky v mm",
                     data_type='float')
                )
 
           if 'output_shapes' in output_params:
                outputs.append(ComplexOutput(
                     identifier="output",
-                    title=u"Hodnoty prubehu navrhovych srazek ve formatu CSV",
+                    title=u"Vysledne hodnoty prubehu navrhovych srazek ve formatu CSV",
                     supported_formats=[Format('application/csv')],
                     as_reference = True)
                )
@@ -126,8 +126,6 @@ class SubDayPrecipProcess(Process):
           #                                       title = "Tvar návrhových srážek jako graf ve formátu PNG",
           #                                       formats = [ {"mimeType":"image/png"} ],
           #                                       asReference = True)
-
-               
 
           super(SubDayPrecipProcess, self).__init__(
                self._handler,

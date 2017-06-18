@@ -26,7 +26,7 @@ class SubDayPrecipShapesTotal(SubDayPrecipShapesBase, SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
                identifier="raintotal-timedist",
-               description=u"Vraci tvary navrhovych srazek v tabulkove forme s pevne stanovenou delkou srazky 6 hodin. (TODO: zmenit)",
+               description=u"Vraci tvary zadane navrhove srazky v tabulkove forme s pevne stanovenou delkou srazky 6 hodin.",
                input_params=['value', 'type'],
                output_params=['output_shapes']
           )
