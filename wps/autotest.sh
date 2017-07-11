@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/sh -x
 # Test WPS processes
-DATA="https://rain1.fsv.cvut.cz/data/povodi_i.zip"
+DATA="@xlink:href=https://rain1.fsv.cvut.cz/data/povodi_i.zip"
 KEY="RAD_I"
 RP="N2,N5,N100"
 RL="360"
@@ -21,7 +21,7 @@ grep '\<wps:Reference' | cut -d'"' -f2`
 wget -q $file
 echo "RESULT:"
 ogrinfo -ro -so /vsizip/`basename $file` subdayprecip_output | grep 'H_N'
-
+exit 0
 echo "**************************************************************"
 echo "* d-rain-csv"
 echo "**************************************************************"
