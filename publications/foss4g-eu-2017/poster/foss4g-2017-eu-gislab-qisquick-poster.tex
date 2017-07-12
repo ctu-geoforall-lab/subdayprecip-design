@@ -56,29 +56,40 @@ manner.
 
 \section{GIS.lab as a Core Component}
 
-GIS.lab (\url{http://web.gislab.io}) has been originally designed with
-a goal to enable simple, unbreakable deployment of a complete,
-centrally managed, horizontally scalable GIS infrastructure in the
-local network area (LAN), data center or cloud in a few steps. GIS.lab
-is able to turn diverse open source GIS software packages into a
-seamlessly integrated easy-to-use system. As a result GIS.lab
-significantly decreases deployment of such complex GIS infrastructure
-to absolute minimum, but still keeping the whole technology under a
-full control of the system operator. 
+% KAO: Remove spacing before label: can cause reference to be wrong
+\begin{figure}[ht!]
+\begin{center}
+  \includegraphics[width=.15\columnwidth]{../paper/figures/gislab-logo.png}
+  \caption{GIS.lab logo (source: GIS.lab Documentation)}
+\label{fig:gislab_logo}
+\end{center}
+\end{figure}
+
+\noindent \textbf{GIS.lab} (\url{http://web.gislab.io}) has been
+originally designed with a goal to enable simple, unbreakable
+deployment of a complete, centrally managed, horizontally scalable GIS
+infrastructure in the local network area (LAN), data center or cloud
+in a few steps. GIS.lab is able to turn diverse open source GIS
+software packages into a seamlessly integrated easy-to-use system. As
+a result GIS.lab significantly decreases deployment of such complex
+GIS infrastructure to absolute minimum, but still keeping the whole
+technology under a full control of the system operator.
 
 \section{Gisquick as a Publication Platform}
 
-Gisquick (\url{http://gisquick.org}) is a separate project not
+\textbf{Gisquick} (\url{http://gisquick.org}) is a separate project not
 directly related to GIS.lab. It is a web application based on modern
 technologies as Django, Angular and OpenLayers 3 with fully responsive
 design optimized also for mobile devices. The main purpose of Gisquick
 is to provide the capability for easy publishing the QGIS projects on
 the web. 
 
+\vskip 0.25in
+
 % KAO: Remove spacing before label: can cause reference to be wrong
 \begin{figure}[ht!]
 \begin{center}
-  \includegraphics[width=0.9\columnwidth]{gisquick-example.png}
+  \includegraphics[width=0.85\columnwidth]{gisquick-example.png}
   \caption{Gisquick web application interface
     (source: author)}
 \label{fig:gislab_infrastructure}
@@ -102,7 +113,7 @@ desktop client components.
 
 \vskip 0.4in
 
-\noindent The procedure consists of three major steps:
+\noindent The procedure consists of \textbf{three major steps}:
 
 \vskip 0.1in
 
@@ -110,6 +121,8 @@ desktop client components.
 
 Master node (playing a role of a server) of geospatial cluster can be
 automatically deployed thanks to GIS.lab technology.
+
+\vskip 0.1in
 
 \textbf{2. Master Node Customization}
 
@@ -130,13 +143,16 @@ can be implemented a role for installing and configuring PyPWS4.
     mode: 0644
 \end{lstlisting}
 
+\vskip 0.1in
+
 \textbf{3. Gisquick integration}
 
 Gisquick project provides core Docker images needed for successful
 running of this publishing platform. It significantly simplifies
-Gisquick integration into GIS.lab infrastructure. These Docker images
-can be automatically composed on GIS.lab master node by running
-\textit{docker-compose} command.
+Gisquick integration into GIS.lab infrastructure. Docker images can be
+automatically composed on GIS.lab master node by
+\textit{docker-compose} command performed by customized provision
+roles.
 
 \section{Conclusions}
 
@@ -144,6 +160,11 @@ Combining GIS.lab and Gisquick technologies leads to a complete, seamlessly
 integrated platform capable to prepare the input data, perform geospatial
 analysis and publish results easily on the web in the sense of interactive
 web mapping application.
+
+{\footnotesize \textbf{Acknowledgements} This work has been supported by the research
+project QJ1520265 - "Variability of Short-term Precipitation and
+Runoff in Small Czech Drainage Basins and its Influence on Water
+Resources Management"}
 
 \end{document}
 % vim: tw=80:ts=2:sts=2:sw=2:et:fdm=marker:fmr=[[[,]]]

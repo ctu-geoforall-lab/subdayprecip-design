@@ -110,7 +110,8 @@
 \renewcommand{\scriptsize}{\fontsize{24.88}{30}\selectfont}
 \renewcommand{\footnotesize}{\fontsize{29.86}{37}\selectfont}
 \renewcommand{\small}{\fontsize{35.83}{45}\selectfont}
-\renewcommand{\normalsize}{\fontsize{43}{54}\selectfont}
+%\renewcommand{\normalsize}{\fontsize{43}{54}\selectfont}
+\renewcommand{\normalsize}{\fontsize{39}{49}\selectfont}
 \renewcommand{\large}{\fontsize{51.6}{64}\selectfont}
 \renewcommand{\Large}{\fontsize{61.92}{77}\selectfont}
 \renewcommand{\LARGE}{\fontsize{74.3}{93}\selectfont}
