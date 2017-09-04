@@ -19,10 +19,10 @@
   ], 
   "abstract": "Tato webov\u00e1 aplikace umo\u017e\u0148uje prohl\u00ed\u017eet podkladov\u00e9 vrstvy (Z\u00e1kladn\u00ed mapu \u010cR a vrstvy maxim\u00e1ln\u00edch denn\u00edch \u00fahrn\u016f poskytovan\u00fdch v r\u00e1mci projektu ve\u0159ejnou slu\u017ebou OGC WMS) a vrstvu povod\u00ed IV. \u0159\u00e1du s vy\u010d\u00edslen\u00fdmi hodnotami n\u00e1vrhov\u00fdch sr\u00e1\u017eek s d\u00e9lkou sr\u00e1\u017eky 6 hodin. Na z\u00e1klad\u011b t\u011bchto hodnot je vrstva povod\u00ed IV. \u0159\u00e1du stylov\u00e1na v jednotliv\u00fdch t\u00e9matech (topics) podle doby opakov\u00e1n\u00ed (2 roky, 5, 10, 20, 50 a 100 let).", 
   "zoom_extent": [
-    -940454.789, 
-    -1252410.845, 
-    -409692.049, 
-    -917319.153
+    -1000220.847, 
+    -1237425.0, 
+    -335779.153, 
+    -925575.0
   ], 
   "fees": "conditions unknown", 
   "message": {
@@ -525,29 +525,11 @@
   ], 
   "online_resource": "http://rain.fsv.cvut.cz/nastroje/webapp/", 
   "canvas_color": "#ffffffff", 
-  "composer_templates": [
-    {
-      "width": 297.0, 
-      "map": {
-        "name": "map0", 
-        "height": 139.464, 
-        "width": 204.377, 
-        "grid": {
-          "intervalX": 0.0, 
-          "intervalY": 0.0
-        }, 
-        "y": 16.7379, 
-        "x": 10.6514
-      }, 
-      "labels": [], 
-      "name": "rain", 
-      "height": 210.0
-    }
-  ], 
+  "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1497522162, 
-  "publish_date": "Thu Jun 15 12:22:42 2017", 
+  "publish_date_unix": 1504554665, 
+  "publish_date": "Mon Sep  4 21:51:05 2017", 
   "expiration": "", 
   "contact_person": "Martin Landa", 
   "extent_buffer": 0.0, 
@@ -818,10 +800,10 @@
       "format": "image/png", 
       "visible": true, 
       "extent": [
-        -972627.9104749712, 
-        -1299101.4543532392, 
-        -397019.23267440265, 
-        -868235.8510489388
+        -972628.0728206763, 
+        -1299101.4676202512, 
+        -397019.37817635364, 
+        -868235.8370191454
       ], 
       "resolutions": [
         2645.838625010583, 
@@ -837,7 +819,7 @@
         1.3229193125052916
       ], 
       "name": "Z\u00e1kladn\u00ed mapa 1:50 000", 
-      "url": "http://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx", 
+      "url": "https://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx", 
       "serverName": "", 
       "wms_layers": [
         "GR_ZM50"
