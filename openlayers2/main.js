@@ -99,7 +99,7 @@ $(document).ready(function() {
     var switcher = new OpenLayers.Control.LayerSwitcher();
     
     var options = { projection: new OpenLayers.Projection('EPSG:4326'), 
-                    units: 'm',
+                    units: 'deg',
                     controls: [ new OpenLayers.Control.Navigation(),
                                 new OpenLayers.Control.PanPanel(),
 				switcher],
@@ -109,10 +109,10 @@ $(document).ready(function() {
     switcher.maximizeControl();
     
     // base layer
-    zm10Layer = new OpenLayers.Layer.WMS("ZM 10 (CUZK)",
-                                         "https://geoportal.cuzk.cz/WMS_ZM10_PUB/WMService.aspx",
-                                         {layers: "GR_ZM10", srs: "EPSG:4326"});
-    zm10Layer.title = "ZM10";
+    zm50Layer = new OpenLayers.Layer.WMS("ZM 10 (CUZK)",
+                                         "https://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx",
+                                         {layers: "GR_ZM50", srs: "EPSG:4326"});
+    zm50Layer.title = "ZM50";
 
     h002Layer = new OpenLayers.Layer.WMS("2 roky",
                                          "https://rain1.fsv.cvut.cz/services/wms",
@@ -154,7 +154,7 @@ $(document).ready(function() {
     obsLayer.addFeatures([new OpenLayers.Feature.Vector(obsPoint, {icon: "./img/map-pointer.png"})]);
     
     // add everything to map
-    map.addLayers([h002Layer, h005Layer, h010Layer, h020Layer, h050Layer, h100Layer, zm10Layer, obsLayer]);
+    map.addLayers([h002Layer, h005Layer, h010Layer, h020Layer, h050Layer, h100Layer, zm50Layer, obsLayer]);
     map.setCenter(new OpenLayers.LonLat(15.474897, 49.803578), 8);
     
     // drag feature control here is where wps is called
