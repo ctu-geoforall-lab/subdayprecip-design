@@ -10,7 +10,7 @@ services:
 
   django:
     restart: always
-    image: gisquick/django:dev
+    image: gisquick/django:latest
     links:
       - qgisserver
     volumes:
@@ -29,6 +29,8 @@ services:
     volumes_from:
       - django:ro
     volumes:
-      - ./_data/etc/letsencrypt/:/etc/letsencrypt/
+      - /etc/letsencrypt/:/etc/letsencrypt/
     ports:
       - "4433:443"
+    environment:
+      - NGINX_HOST=rain1.fsv.cvut.cz
