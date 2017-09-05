@@ -94,10 +94,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-918950</xmin>
-      <ymin>-1237425</ymin>
-      <xmax>-417050</xmax>
-      <ymax>-925575</ymax>
+      <xmin>-940454.78879749798215926</xmin>
+      <ymin>-1244134.88833500002510846</ymin>
+      <xmax>-409692.04870250006206334</xmax>
+      <ymax>-925595.11006499803625047</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -1982,9 +1982,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -1997,23 +1997,34 @@ def my_form_open(dialog, layer, feature):
         <alias field="H_N20T360" index="13" name=""/>
         <alias field="H_N50T360" index="14" name=""/>
         <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>H_N100T360</attribute>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>

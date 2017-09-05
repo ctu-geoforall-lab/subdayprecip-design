@@ -19,10 +19,10 @@
   ], 
   "abstract": "Tato webov\u00e1 aplikace umo\u017e\u0148uje prohl\u00ed\u017eet podkladov\u00e9 vrstvy (Z\u00e1kladn\u00ed mapu \u010cR a vrstvy maxim\u00e1ln\u00edch denn\u00edch \u00fahrn\u016f poskytovan\u00fdch v r\u00e1mci projektu ve\u0159ejnou slu\u017ebou OGC WMS) a vrstvu povod\u00ed IV. \u0159\u00e1du s vy\u010d\u00edslen\u00fdmi hodnotami n\u00e1vrhov\u00fdch sr\u00e1\u017eek s d\u00e9lkou sr\u00e1\u017eky 6 hodin. Na z\u00e1klad\u011b t\u011bchto hodnot je vrstva povod\u00ed IV. \u0159\u00e1du stylov\u00e1na v jednotliv\u00fdch t\u00e9matech (topics) podle doby opakov\u00e1n\u00ed (2 roky, 5, 10, 20, 50 a 100 let).", 
   "zoom_extent": [
-    -1000220.847, 
-    -1237425.0, 
-    -335779.153, 
-    -925575.0
+    -1014421.037, 
+    -1244134.888, 
+    -335725.8, 
+    -925595.11
   ], 
   "fees": "conditions unknown", 
   "message": {
@@ -73,35 +73,21 @@
           "serverName": "", 
           "attributes": [
             {
+              "alias": "Povod\u00ed \u010d.", 
               "type": "INTEGER", 
               "name": "hlgp_id"
             }, 
             {
-              "type": "DOUBLE", 
-              "name": "utokh_id"
-            }, 
-            {
-              "alias": "vymera_km2", 
+              "alias": "V\u00fdm\u011bra (km2)", 
               "type": "DOUBLE", 
               "name": "plocha"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "rad_iii"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "rad_ii"
-            }, 
-            {
-              "type": "DOUBLE", 
-              "name": "rad_i"
             }, 
             {
               "type": "DOUBLE", 
               "name": "H_N2T360"
             }, 
             {
+              "alias": "Tvary sr\u00e1\u017eek", 
               "type": "TEXT", 
               "name": "tvary"
             }
@@ -528,8 +514,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1504554665, 
-  "publish_date": "Mon Sep  4 21:51:05 2017", 
+  "publish_date_unix": 1504595080, 
+  "publish_date": "Tue Sep  5 09:04:40 2017", 
   "expiration": "", 
   "contact_person": "Martin Landa", 
   "extent_buffer": 0.0, 
