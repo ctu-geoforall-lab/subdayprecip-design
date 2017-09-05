@@ -110,7 +110,7 @@ $(document).ready(function() {
     
     // base layer
     zm10Layer = new OpenLayers.Layer.WMS("ZM 10 (CUZK)",
-                                         "http://geoportal.cuzk.cz/WMS_ZM10_PUB/WMService.aspx",
+                                         "https://geoportal.cuzk.cz/WMS_ZM10_PUB/WMService.aspx",
                                          {layers: "GR_ZM10", srs: "EPSG:4326"});
     zm10Layer.title = "ZM10";
 
