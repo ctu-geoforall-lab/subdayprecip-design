@@ -19,10 +19,10 @@
   ], 
   "abstract": "Tato webov\u00e1 aplikace umo\u017e\u0148uje prohl\u00ed\u017eet podkladov\u00e9 vrstvy (Z\u00e1kladn\u00ed mapu \u010cR a vrstvy maxim\u00e1ln\u00edch denn\u00edch \u00fahrn\u016f poskytovan\u00fdch v r\u00e1mci projektu ve\u0159ejnou slu\u017ebou OGC WMS) a vrstvu povod\u00ed IV. \u0159\u00e1du s vy\u010d\u00edslen\u00fdmi hodnotami n\u00e1vrhov\u00fdch sr\u00e1\u017eek s d\u00e9lkou sr\u00e1\u017eky 6 hodin. Na z\u00e1klad\u011b t\u011bchto hodnot je vrstva povod\u00ed IV. \u0159\u00e1du stylov\u00e1na v jednotliv\u00fdch t\u00e9matech (topics) podle doby opakov\u00e1n\u00ed (2 roky, 5, 10, 20, 50 a 100 let).", 
   "zoom_extent": [
-    -1014421.037, 
-    -1244134.888, 
-    -335725.8, 
-    -925595.11
+    -1166785.155, 
+    -1309873.108, 
+    -202862.296, 
+    -857464.196
   ], 
   "fees": "conditions unknown", 
   "message": {
@@ -34,6 +34,30 @@
       "drawing_order": 0, 
       "projection": "EPSG:5514", 
       "labels": false, 
+      "visible": true, 
+      "extent": [
+        -904575.4355068649, 
+        -1227293.1597028326, 
+        -431723.50007173367, 
+        -935229.8831644732
+      ], 
+      "geom_type": "POLYGON", 
+      "name": "Statn\u00ed hranice \u010cR", 
+      "serverName": "hranice_cr", 
+      "hidden": false, 
+      "provider_type": "ogr", 
+      "type": "vector", 
+      "queryable": false, 
+      "metadata": {
+        "keyword_list": "", 
+        "abstract": "", 
+        "title": ""
+      }
+    }, 
+    {
+      "drawing_order": 1, 
+      "projection": "EPSG:5514", 
+      "labels": false, 
       "visible": false, 
       "extent": [
         -901459.5126953125, 
@@ -43,7 +67,7 @@
       ], 
       "geom_type": "POLYGON", 
       "name": "Klasifikovan\u00e1 povod\u00ed IV. \u0159\u00e1du", 
-      "serverName": "", 
+      "serverName": "povodi_klasifikovana", 
       "hidden": false, 
       "provider_type": "ogr", 
       "type": "vector", 
@@ -57,7 +81,7 @@
     {
       "layers": [
         {
-          "drawing_order": 1, 
+          "drawing_order": 2, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": true, 
@@ -70,7 +94,7 @@
           "geom_type": "POLYGON", 
           "name": "Povod\u00ed IV.\u0159\u00e1du 2-let\u00e9 6h", 
           "pk_attributes": [], 
-          "serverName": "", 
+          "serverName": "povodi_iv_2_6h", 
           "attributes": [
             {
               "alias": "Povod\u00ed \u010d.", 
@@ -108,7 +132,7 @@
     {
       "layers": [
         {
-          "drawing_order": 2, 
+          "drawing_order": 3, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -121,7 +145,7 @@
           "geom_type": "POLYGON", 
           "name": "Povod\u00ed IV.\u0159\u00e1du 5-let\u00e9 6h", 
           "pk_attributes": [], 
-          "serverName": "", 
+          "serverName": "povodi_iv_5_6h", 
           "attributes": [
             {
               "type": "INTEGER", 
@@ -173,7 +197,7 @@
     {
       "layers": [
         {
-          "drawing_order": 3, 
+          "drawing_order": 4, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -186,7 +210,7 @@
           "geom_type": "POLYGON", 
           "name": "Povod\u00ed IV.\u0159\u00e1du 10-let\u00e9 6h", 
           "pk_attributes": [], 
-          "serverName": "", 
+          "serverName": "povodi_iv_10_6h", 
           "attributes": [
             {
               "type": "INTEGER", 
@@ -238,7 +262,7 @@
     {
       "layers": [
         {
-          "drawing_order": 4, 
+          "drawing_order": 5, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -251,7 +275,7 @@
           "geom_type": "POLYGON", 
           "name": "Povod\u00ed IV.\u0159\u00e1du 20-let\u00e9 6h", 
           "pk_attributes": [], 
-          "serverName": "", 
+          "serverName": "povodi_iv_20_6h", 
           "attributes": [
             {
               "type": "INTEGER", 
@@ -303,7 +327,7 @@
     {
       "layers": [
         {
-          "drawing_order": 5, 
+          "drawing_order": 6, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -316,7 +340,7 @@
           "geom_type": "POLYGON", 
           "name": "Povod\u00ed IV.\u0159\u00e1du 50-let\u00e9 6h", 
           "pk_attributes": [], 
-          "serverName": "", 
+          "serverName": "povodi_iv_50_6h", 
           "attributes": [
             {
               "type": "INTEGER", 
@@ -368,7 +392,7 @@
     {
       "layers": [
         {
-          "drawing_order": 6, 
+          "drawing_order": 7, 
           "projection": "EPSG:5514", 
           "labels": true, 
           "visible": false, 
@@ -381,7 +405,7 @@
           "geom_type": "POLYGON", 
           "name": "Povod\u00ed IV.\u0159\u00e1du 100-let\u00e9 6h", 
           "pk_attributes": [], 
-          "serverName": "", 
+          "serverName": "povodi_iv_100_6h", 
           "attributes": [
             {
               "type": "INTEGER", 
@@ -514,8 +538,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1504595080, 
-  "publish_date": "Tue Sep  5 09:04:40 2017", 
+  "publish_date_unix": 1504686803, 
+  "publish_date": "Wed Sep  6 10:33:23 2017", 
   "expiration": "", 
   "contact_person": "Martin Landa", 
   "extent_buffer": 0.0, 
