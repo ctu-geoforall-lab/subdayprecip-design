@@ -19,9 +19,9 @@
   ], 
   "abstract": "Tato webov\u00e1 aplikace umo\u017e\u0148uje prohl\u00ed\u017eet podkladov\u00e9 vrstvy (Z\u00e1kladn\u00ed mapu \u010cR a vrstvy maxim\u00e1ln\u00edch denn\u00edch \u00fahrn\u016f poskytovan\u00fdch v r\u00e1mci projektu ve\u0159ejnou slu\u017ebou OGC WMS) a vrstvu povod\u00ed IV. \u0159\u00e1du s vy\u010d\u00edslen\u00fdmi hodnotami n\u00e1vrhov\u00fdch sr\u00e1\u017eek s d\u00e9lkou sr\u00e1\u017eky 6 hodin. Na z\u00e1klad\u011b t\u011bchto hodnot je vrstva povod\u00ed IV. \u0159\u00e1du stylov\u00e1na v jednotliv\u00fdch t\u00e9matech (topics) podle doby opakov\u00e1n\u00ed (2 roky, 5, 10, 20, 50 a 100 let).", 
   "zoom_extent": [
-    -1166785.155, 
+    -1087878.938, 
     -1309873.108, 
-    -202862.296, 
+    -281768.513, 
     -857464.196
   ], 
   "fees": "conditions unknown", 
@@ -84,7 +84,7 @@
           "drawing_order": 2, 
           "projection": "EPSG:5514", 
           "labels": true, 
-          "visible": true, 
+          "visible": false, 
           "extent": [
             -927817.580699998, 
             -1236550.6079, 
@@ -468,7 +468,7 @@
     2.645838625010583, 
     1.3229193125052916
   ], 
-  "gislab_user": "martin", 
+  "gislab_user": "landa", 
   "title": "Rain WebApp", 
   "authentication": "all", 
   "units": "meters", 
@@ -478,6 +478,7 @@
     {
       "abstract": "2-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
+        "Statn\u00ed hranice \u010cR", 
         "Povod\u00ed IV.\u0159\u00e1du 2-let\u00e9 6h"
       ], 
       "title": "2-let\u00e9 max. \u00fahrny za 6h "
@@ -485,6 +486,7 @@
     {
       "abstract": "5-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
+        "Statn\u00ed hranice \u010cR", 
         "Povod\u00ed IV.\u0159\u00e1du 5-let\u00e9 6h"
       ], 
       "title": "5-let\u00e9 max. \u00fahrny za 6h"
@@ -492,6 +494,7 @@
     {
       "abstract": "10-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
+        "Statn\u00ed hranice \u010cR", 
         "Povod\u00ed IV.\u0159\u00e1du 10-let\u00e9 6h"
       ], 
       "title": "10-let\u00e9 max. \u00fahrny za 6h"
@@ -499,6 +502,7 @@
     {
       "abstract": "20-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
+        "Statn\u00ed hranice \u010cR", 
         "Povod\u00ed IV.\u0159\u00e1du 20-let\u00e9 6h"
       ], 
       "title": "20-let\u00e9 max \u00fahrny za 6h"
@@ -506,6 +510,7 @@
     {
       "abstract": "50-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
+        "Statn\u00ed hranice \u010cR", 
         "Povod\u00ed IV.\u0159\u00e1du 50-let\u00e9 6h"
       ], 
       "title": "50-let\u00e9 max. \u00fahrny za 6h"
@@ -513,6 +518,7 @@
     {
       "abstract": "100-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
       "visible_overlays": [
+        "Statn\u00ed hranice \u010cR", 
         "Povod\u00ed IV.\u0159\u00e1du 100-let\u00e9 6h"
       ], 
       "title": "100-let\u00e9 max. \u00fahrny za 6h"
@@ -538,8 +544,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1504686803, 
-  "publish_date": "Wed Sep  6 10:33:23 2017", 
+  "publish_date_unix": 1504775134, 
+  "publish_date": "Thu Sep  7 11:05:34 2017", 
   "expiration": "", 
   "contact_person": "Martin Landa", 
   "extent_buffer": 0.0, 
@@ -810,10 +816,10 @@
       "format": "image/png", 
       "visible": true, 
       "extent": [
-        -972628.0728206763, 
-        -1299101.4676202512, 
-        -397019.37817635364, 
-        -868235.8370191454
+        -972628.0728206766, 
+        -1299101.467620251, 
+        -397019.3781763541, 
+        -868235.8370191448
       ], 
       "resolutions": [
         2645.838625010583, 
