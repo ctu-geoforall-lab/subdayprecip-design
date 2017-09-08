@@ -167,7 +167,7 @@ class SubDayPrecipProcess(Process):
                self.value = request.inputs['value'][0].data
 
           if 'input' in request.inputs.keys():
-               self.map_name = self.import_data(request.inputs['input'][0].data)
+               self.map_name = self.import_data(request.inputs['input'][0].file)
           
           if 'keycolumn' in request.inputs.keys():
                self.check_keycolumn(self.keycolumn)
@@ -210,14 +210,20 @@ class SubDayPrecipProcess(Process):
      def import_data(self, input_data, link_only=False):
           map_name = 'subdayprecip_output'
 
+          mime_type = magic.detect_from_filename(input_data).mime_type
+
           prefix = '/'
-          if input_data.endswith('gzip'):
-               prefix += 'vsigzip/' 
-          elif input_data.endswith('zip'):
+          ext = ''
+          if mime_type.endswith('gzip'):
+               prefix += 'vsigzip/'
+               ext = '.gz'
+          elif mime_type.endswith('zip'):
                prefix += 'vsizip/'
-          if input_data.startswith('http'):
-               prefix += 'vsicurl/'
-          input_data = prefix + input_data
+               ext = '.zip'
+          if ext:
+               # GDAL requires extension (why?)
+               os.rename(input_data, input_data + ext)
+          input_data = prefix + input_data + ext
 
           # link or import ?
           module_in_args = {}

@@ -1,49 +1,49 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="Rain WebApp" version="2.18.9">
+<qgis projectname="Rain WebApp" version="2.18.10">
   <title>Rain WebApp</title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="data20170905204801082" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=stat" name="Statní hranice ČR">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="data20170905204801082" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=stat" name="Statní hranice ČR">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layerid=4" name="Klasifikovaná povodí IV. řádu">
+    <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_klasifikace20161220152951973" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layerid=4" name="Klasifikovaná povodí IV. řádu">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="1" checked="Qt::Checked" mutually-exclusive="1" name="2-leté max. úhrny za 6h" mutually-exclusive-child="0">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="2-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="data_povodi_iv_any201612061002435591437399835" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 2-leté 6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061002435591437399835" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 2-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="5-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 5-leté 6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any20161206000220509" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 5-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="10-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 10-leté 6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any20161206102441921465245529" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 10-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="20-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 20-leté 6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102709972164818856" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 20-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="50-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 50-leté 6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206102851363649587533" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 50-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::Unchecked" mutually-exclusive="1" name="100-leté max. úhrny za 6h" mutually-exclusive-child="0">
       <customproperties/>
-      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 100-leté 6h">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="data_povodi_iv_any201612061020161206103056056323290986" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data.sqlite|layername=povodi_iv" name="Povodí IV.řádu 100-leté 6h">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -73,22 +73,22 @@
     </layer-tree-layer>
     <layer-tree-group expanded="1" checked="Qt::Unchecked" name="Tvary">
       <customproperties/>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ120170613143509511" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ1.csv" name="typ1">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ120170613143509511" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ1.csv" name="typ1">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ220170613143509739" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ2.csv" name="typ2">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ220170613143509739" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ2.csv" name="typ2">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ320170613143509909" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ3.csv" name="typ3">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ320170613143509909" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ3.csv" name="typ3">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ420170613143510078" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ4.csv" name="typ4">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ420170613143510078" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ4.csv" name="typ4">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ520170613143510246" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ5.csv" name="typ5">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ520170613143510246" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ5.csv" name="typ5">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ620170613143510414" source="/home/martin/dokumenty/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ6.csv" name="typ6">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="typ620170613143510414" source="/home/landa/git/ctu-geoforall-lab/subdayprecip-design/qgis/data/typ6.csv" name="typ6">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -97,10 +97,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-987018.29018678434658796</xmin>
-      <ymin>-1309873.10838527884334326</ymin>
-      <xmax>-382629.1608102455502376</xmax>
-      <ymax>-857464.19625411788001657</ymax>
+      <xmin>-940454.78879749798215926</xmin>
+      <ymin>-1244134.88833500002510846</ymin>
+      <xmax>-409692.04870250006206334</xmax>
+      <ymax>-925595.11006499803625047</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -173,10 +173,10 @@
         <legendlayerfile isInOverview="0" layerid="data_povodi_klasifikace20161220152951973" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="true" checked="Qt::Checked" name="2-leté max. úhrny za 6h">
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Povodí IV.řádu 2-leté 6h" showFeatureCount="0">
+    <legendgroup open="true" checked="Qt::Unchecked" name="2-leté max. úhrny za 6h">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Povodí IV.řádu 2-leté 6h" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061002435591437399835" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="data_povodi_iv_any201612061002435591437399835" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
@@ -1678,7 +1678,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -1694,7 +1694,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -1837,9 +1837,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -1847,29 +1847,40 @@ def my_form_open(dialog, layer, feature):
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
         <alias field="H_N2T360" index="10" name=""/>
-        <alias field="H_N5T360" index="11" name=""/>
+        <alias field="H_N5T360" index="11" name="H_N5T360 (mm)"/>
         <alias field="H_N10T360" index="12" name=""/>
         <alias field="H_N20T360" index="13" name=""/>
         <alias field="H_N50T360" index="14" name=""/>
         <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>H_N100T360</attribute>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
       </excludeAttributesWFS>
       <attributeactions default="-1"/>
@@ -1953,7 +1964,7 @@ def my_form_open(dialog, layer, feature):
       </extent>
       <id>data_povodi_iv_any201612061002435591437399835</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
-      <shortname>povodi_iv_2_6h</shortname>
+      <shortname>povodi_iv_2_lete_6h</shortname>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2202,7 +2213,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -2218,7 +2229,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -2370,7 +2381,7 @@ def my_form_open(dialog, layer, feature):
         <alias field="rad_i" index="7" name=""/>
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
-        <alias field="H_N2T360" index="10" name=""/>
+        <alias field="H_N2T360" index="10" name="H_N2T360 (mm)"/>
         <alias field="H_N5T360" index="11" name=""/>
         <alias field="H_N10T360" index="12" name=""/>
         <alias field="H_N20T360" index="13" name=""/>
@@ -2744,7 +2755,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -2760,7 +2771,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -2903,9 +2914,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -2915,26 +2926,37 @@ def my_form_open(dialog, layer, feature):
         <alias field="H_N2T360" index="10" name=""/>
         <alias field="H_N5T360" index="11" name=""/>
         <alias field="H_N10T360" index="12" name=""/>
-        <alias field="H_N20T360" index="13" name=""/>
+        <alias field="H_N20T360" index="13" name="H_N20T360 (mm)"/>
         <alias field="H_N50T360" index="14" name=""/>
         <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>H_N100T360</attribute>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
@@ -3268,7 +3290,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -3284,7 +3306,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -3427,9 +3449,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -3440,25 +3462,36 @@ def my_form_open(dialog, layer, feature):
         <alias field="H_N5T360" index="11" name=""/>
         <alias field="H_N10T360" index="12" name=""/>
         <alias field="H_N20T360" index="13" name=""/>
-        <alias field="H_N50T360" index="14" name=""/>
+        <alias field="H_N50T360" index="14" name="H_N50T360 (mm)"/>
         <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>H_N100T360</attribute>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
@@ -3792,7 +3825,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -3808,7 +3841,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -3951,9 +3984,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -3965,24 +3998,35 @@ def my_form_open(dialog, layer, feature):
         <alias field="H_N10T360" index="12" name=""/>
         <alias field="H_N20T360" index="13" name=""/>
         <alias field="H_N50T360" index="14" name=""/>
-        <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="H_N100T360" index="15" name="H_N100T360 (mm)"/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
@@ -4316,7 +4360,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -4332,7 +4376,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -4475,9 +4519,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -4486,27 +4530,38 @@ def my_form_open(dialog, layer, feature):
         <alias field="shape_len" index="9" name=""/>
         <alias field="H_N2T360" index="10" name=""/>
         <alias field="H_N5T360" index="11" name=""/>
-        <alias field="H_N10T360" index="12" name=""/>
+        <alias field="H_N10T360" index="12" name="H_N10T360 (mm)"/>
         <alias field="H_N20T360" index="13" name=""/>
         <alias field="H_N50T360" index="14" name=""/>
         <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>H_N100T360</attribute>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
