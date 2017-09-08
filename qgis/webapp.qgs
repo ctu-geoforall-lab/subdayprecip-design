@@ -97,10 +97,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-987018.29018678434658796</xmin>
-      <ymin>-1309873.10838527884334326</ymin>
-      <xmax>-382629.1608102455502376</xmax>
-      <ymax>-857464.19625411788001657</ymax>
+      <xmin>-940454.78879749798215926</xmin>
+      <ymin>-1244134.88833500002510846</ymin>
+      <xmax>-409692.04870250006206334</xmax>
+      <ymax>-925595.11006499803625047</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -1678,7 +1678,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -1694,7 +1694,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -1837,9 +1837,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -1847,29 +1847,40 @@ def my_form_open(dialog, layer, feature):
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
         <alias field="H_N2T360" index="10" name=""/>
-        <alias field="H_N5T360" index="11" name=""/>
+        <alias field="H_N5T360" index="11" name="H_N5T360 (mm)"/>
         <alias field="H_N10T360" index="12" name=""/>
         <alias field="H_N20T360" index="13" name=""/>
         <alias field="H_N50T360" index="14" name=""/>
         <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>H_N100T360</attribute>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
       </excludeAttributesWFS>
       <attributeactions default="-1"/>
@@ -1953,7 +1964,7 @@ def my_form_open(dialog, layer, feature):
       </extent>
       <id>data_povodi_iv_any201612061002435591437399835</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
-      <shortname>povodi_iv_2_6h</shortname>
+      <shortname>povodi_iv_2_lete_6h</shortname>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2202,7 +2213,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -2218,7 +2229,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -2370,7 +2381,7 @@ def my_form_open(dialog, layer, feature):
         <alias field="rad_i" index="7" name=""/>
         <alias field="shape_area" index="8" name=""/>
         <alias field="shape_len" index="9" name=""/>
-        <alias field="H_N2T360" index="10" name=""/>
+        <alias field="H_N2T360" index="10" name="H_N2T360 (mm)"/>
         <alias field="H_N5T360" index="11" name=""/>
         <alias field="H_N10T360" index="12" name=""/>
         <alias field="H_N20T360" index="13" name=""/>
@@ -2744,7 +2755,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -2760,7 +2771,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -2903,9 +2914,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -2915,26 +2926,37 @@ def my_form_open(dialog, layer, feature):
         <alias field="H_N2T360" index="10" name=""/>
         <alias field="H_N5T360" index="11" name=""/>
         <alias field="H_N10T360" index="12" name=""/>
-        <alias field="H_N20T360" index="13" name=""/>
+        <alias field="H_N20T360" index="13" name="H_N20T360 (mm)"/>
         <alias field="H_N50T360" index="14" name=""/>
         <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>H_N100T360</attribute>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
@@ -3268,7 +3290,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -3284,7 +3306,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -3427,9 +3449,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -3440,25 +3462,36 @@ def my_form_open(dialog, layer, feature):
         <alias field="H_N5T360" index="11" name=""/>
         <alias field="H_N10T360" index="12" name=""/>
         <alias field="H_N20T360" index="13" name=""/>
-        <alias field="H_N50T360" index="14" name=""/>
+        <alias field="H_N50T360" index="14" name="H_N50T360 (mm)"/>
         <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>H_N100T360</attribute>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
@@ -3792,7 +3825,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -3808,7 +3841,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -3951,9 +3984,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -3965,24 +3998,35 @@ def my_form_open(dialog, layer, feature):
         <alias field="H_N10T360" index="12" name=""/>
         <alias field="H_N20T360" index="13" name=""/>
         <alias field="H_N50T360" index="14" name=""/>
-        <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="H_N100T360" index="15" name="H_N100T360 (mm)"/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
         <attribute>H_N10T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
@@ -4316,7 +4360,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="true"/>
         <property key="labeling/isExpression" value="false"/>
@@ -4332,7 +4376,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="Bold"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -4475,9 +4519,9 @@ def my_form_open(dialog, layer, feature):
       <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
-        <alias field="hlgp_id" index="1" name=""/>
+        <alias field="hlgp_id" index="1" name="Povodí č."/>
         <alias field="utokh_id" index="2" name=""/>
-        <alias field="plocha" index="3" name="vymera_km2"/>
+        <alias field="plocha" index="3" name="Výměra (km2)"/>
         <alias field="hlgp_char" index="4" name=""/>
         <alias field="rad_iii" index="5" name=""/>
         <alias field="rad_ii" index="6" name=""/>
@@ -4486,27 +4530,38 @@ def my_form_open(dialog, layer, feature):
         <alias field="shape_len" index="9" name=""/>
         <alias field="H_N2T360" index="10" name=""/>
         <alias field="H_N5T360" index="11" name=""/>
-        <alias field="H_N10T360" index="12" name=""/>
+        <alias field="H_N10T360" index="12" name="H_N10T360 (mm)"/>
         <alias field="H_N20T360" index="13" name=""/>
         <alias field="H_N50T360" index="14" name=""/>
         <alias field="H_N100T360" index="15" name=""/>
-        <alias field="tvary" index="16" name=""/>
+        <alias field="tvary" index="16" name="Tvary srážek"/>
       </aliases>
       <excludeAttributesWMS>
         <attribute>H_N100T360</attribute>
+        <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
+        <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
+        <attribute>utokh_id</attribute>
+        <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
         <attribute>H_N100T360</attribute>
         <attribute>shape_area</attribute>
+        <attribute>rad_i</attribute>
         <attribute>shape_len</attribute>
         <attribute>H_N50T360</attribute>
         <attribute>ogc_fid</attribute>
+        <attribute>rad_iii</attribute>
+        <attribute>rad_ii</attribute>
         <attribute>H_N2T360</attribute>
         <attribute>H_N20T360</attribute>
+        <attribute>utokh_id</attribute>
         <attribute>hlgp_char</attribute>
         <attribute>H_N5T360</attribute>
       </excludeAttributesWFS>
