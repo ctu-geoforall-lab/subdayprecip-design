@@ -23,7 +23,6 @@
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
   function($scope, $element, gislabClient, projectProvider) {
-    console.log('DistrictsController')
 
     // Set the dimensions of the canvas / graph
     var margin = {top: 30, right: 20, bottom: 50, left: 50};
@@ -37,13 +36,35 @@
       .y(function(d) { return y(d.value); });
 
     // Adds the svg canvas
-    var svg = d3.select($element[0]).select('.graph')
+    var graph = d3.select($element[0]).select('.graph');
+    var svg = graph
       .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
         .attr("transform", 
               "translate(" + margin.left + "," + margin.top + ")");
+    svg.append("rect")
+      .attr("class", "overlay")
+      .attr("width", width)
+      .attr("height", height)
+      .on("mousemove", mousemove)
+      .on("mouseover", function() {
+        tooltip.transition()
+          .duration(200)
+          .style("opacity", .9);
+        mouseLine.transition()
+          .duration(200)
+          .style("opacity", 1);
+      })
+      .on("mouseleave", function() {
+        tooltip.transition()
+          .duration(200)
+          .style("opacity", 0);
+        mouseLine.transition()
+          .duration(200)
+          .style("opacity", 0);
+      })
 
     svg.append("text")      // text label for the x axis
       .attr("x", width/2)
@@ -83,6 +104,7 @@
       .call(yAxis);
 
 
+    var data = {};
     var LegendData = {
       1 : ["typ1", "rgb(0,112,192)"],
       2 : ["typ2", "rgb(146,208,80)"],
@@ -110,7 +132,7 @@
           .attr("width", 10)
           .attr("height", 10)
           .style("fill", LegendData[d][1]);
-        
+
         g.append("text")
           .attr("x", width - 40)
           .attr("y", i * 25 + 10)
@@ -120,7 +142,7 @@
           .text(LegendData[d][0]);
       });
 
-    function initializeGraph(id, data) {
+    function initializeGraph(id) {
       console.log('initializeGraph')
       // Scale the range of the data
       // x.domain(d3.extent(data, function(d) { return d.time; }));
@@ -130,7 +152,7 @@
       svg.append("path")
         .attr("class", "line")
         .attr("id", 'typ'+id)
-        .attr("d", valueline(data))
+        .attr("d", valueline(data[id]))
         .style("stroke", LegendData[id][1]);
     }
 
@@ -139,14 +161,14 @@
         'filter/?PROJECT={0}'.format(projectProvider.data.project),
         {'layer': 'typ'+id})
         .then(function(resp) {
-          var data = resp.features.map(function(f) {
+          data[id] = resp.features.map(function(f) {
             return {
               time: f.properties['T_(min)'],
               value: (f.properties['H5min_(%)'] / 100.0) * $scope.feature.get('H_N2T360')
             }
           });
           // console.log(JSON.stringify(data));
-          initializeGraph(id, data);
+          initializeGraph(id);
         });
     }
 
@@ -165,6 +187,66 @@
 
     showGraphs($scope.feature);
 
+
+    // this is the black vertical line to follow mouse
+    var mouseLine = svg.append("path")
+      .attr("class", "mouse-line")
+      .style("stroke", "#444")
+      .style("stroke-width", "1px")
+      .style("opacity", "0");
+
+    // Define the div for the tooltip
+    var tooltip = graph
+      .append("div") 
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+    tooltip.time = tooltip.append("h4");
+    tooltip.values = tooltip.append("div").attr("class", "values");
+
+    [1, 2, 3, 4, 5, 6].forEach(function(id) {
+      tooltip.values.append("div")
+        .attr("id", "g"+id)
+        .style("color", LegendData[id][1])
+        .html(id)
+    });
+
+    var bisectTime = d3.bisector(function(d) { return d.time; }).left
+    function mousemove(e) {
+      var mousePos = d3.mouse(this);
+      var x0 = x.invert(mousePos[0]);
+
+      Object.keys(data).forEach(function(id) {
+        var graphData = data[id];
+        
+        var i = bisectTime(graphData, x0, 1);
+        // console.log(x0+' / i = '+i)
+        var d0 = graphData[i - 1];
+        var d1 = graphData[i];
+        var d = x0 - d0.time > d1.time - x0 ? d1 : d0;
+
+        tooltip.values.select('#g'+id).html(d.value.toFixed(3));
+
+        // console.log(x0 - d0.time)
+        // console.log(d1.time - x0)
+        // console.log(id+': '+d.value);
+        // focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
+        // focus.select("text").text(formatCurrency(d.close));
+
+      });
+
+      tooltip.time.html(Math.round(x0)+' min.');
+      tooltip
+        .style("left", (margin.left+mousePos[0]+4) + "px")
+        .style("top", margin.top + "px");
+
+      mouseLine.attr("d", function() {
+        var d = "M" + mousePos[0] + "," + height;
+        d += " " + mousePos[0] + "," + 0;
+        return d;
+      });
+
+    }
+
     $scope.$on('featurechange', function(evt, feature) {
       console.log('featurechange')
       // y.domain([0, 16]);
@@ -180,9 +262,16 @@
     font-weight: 500;
     padding-right: 12px;
   }
+  .graph {
+    position: relative;
+  }
+  .graph svg {
+    pointer-events: none;
+  }
   .graph path { 
     stroke-width: 2;
     fill: none;
+    pointer-events: none;
   }
   .info-panel h3 {
     color: #333;
@@ -197,5 +286,25 @@
   }
   .graph .line.hide {
     display: none;
+  }
+
+  .graph .overlay {
+    fill: transparent;
+    pointer-events: all;
+  }
+  .graph .tooltip {
+    position: absolute;
+    background-color: #eee;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    text-align: center;
+    padding: 0 3px;
+  }
+  .graph .tooltip h4 {
+    margin: 0;
+    white-space: nowrap;
+    position: absolute;
+    transform: translate(-50%, -110%);
   }
 </style>
