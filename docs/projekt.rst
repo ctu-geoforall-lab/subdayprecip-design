@@ -182,6 +182,10 @@ nebo nastavit vhodnou barvu písma. Nastavení potvrdíme tlačítkem
    nastavíme pro vrstvu povodí vhodnou míru průhlednosti (a to v
    záložce ``Styl``).
 
+Vrstvě můžeme před publikací ještě nastavit vhodný název
+(:menuselection:`Vrstva --> Vlastnosti`, záložka ``Obecné``, *Název
+vrtsvy*).
+
 .. figure:: img/qgis-project-final.png
 
    Finální podoba projektu před publikací.
