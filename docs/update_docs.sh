@@ -9,7 +9,7 @@ cd docs
 make clean
 make html
 cd ..
-mv docs/build/html/* ./
+mv docs/_build/html/* ./
 rm -rf docs
 git add -A
 git commit -m "publishing updated docs..."
