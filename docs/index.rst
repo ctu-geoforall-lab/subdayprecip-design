@@ -21,3 +21,4 @@ GIS projektu, jeho publikaci a nahrání na publikační server.
    registrace
    projekt
    publikace
+   autori
