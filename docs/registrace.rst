@@ -43,3 +43,6 @@ otevře prázdná webové mapová aplikace.
 .. figure:: img/gisquick-new-account-4.png
 
    Po přihlášení se načte prázdná webová mapová aplikace.
+
+V následující kapitole si ukážeme jak připravit vlastní geografická
+data pro vytvoření nové webové aplikace.
