@@ -1,9 +1,0 @@
-- hosts: all
-  become: yes
-  gather_facts: false  # disable gathering Ansible facts until Python 2 is not
-                       # installed or Ansible comes with Python 3 support
-  
-  roles:
-    - { role: pywps4, tags: ['pywps4'] }
-    - { role: subdayprecip, tags: ['subdayprecip'] }
-    - { role: wpsprocess, tags: ['wpsprocess'] }
