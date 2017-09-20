@@ -25,7 +25,7 @@
   function($scope, $element, gislabClient, projectProvider) {
 
     // Set the dimensions of the canvas / graph
-    var margin = {top: 30, right: 20, bottom: 50, left: 50};
+    var margin = {top: 30, right: 50, bottom: 50, left: 50};
     var width = 500 - margin.left - margin.right;
     var height = 250 - margin.top - margin.bottom;
 
@@ -73,9 +73,12 @@
       .text("Čas (v minutách)");
 
       svg.append("text")      // text label for the y axis
-      .attr("x", -margin.left * .7)
-      .attr("y",  height/2)
+      // .attr("x", -margin.left * .7)
+      // .attr("y",  height/2)
       .style("text-anchor", "middle")
+      // .attr('dx', '-3em')
+      // .attr('dy', '-7em')
+      .attr('transform', 'translate('+(-margin.left * .7)+', '+(height/2)+') rotate(-90)')
       .text("mm");
 
     // Set the ranges
@@ -116,7 +119,7 @@
     // add legend   
     var legend = svg.append("g")
       .attr("class", "legend")
-      .attr("x", width - 55)
+      .attr("x", width - 15)
       .attr("y", 0)
       .attr("height", 100)
       .attr("width", 100);
@@ -127,14 +130,14 @@
       .each(function(d, i) {
         var g = d3.select(this);
         g.append("rect")
-          .attr("x", width - 55)
+          .attr("x", width - 15)
           .attr("y", i * 25)
           .attr("width", 10)
           .attr("height", 10)
           .style("fill", LegendData[d][1]);
 
         g.append("text")
-          .attr("x", width - 40)
+          .attr("x", width - 0)
           .attr("y", i * 25 + 10)
           .attr("height",20)
           .attr("width",100)
@@ -213,35 +216,29 @@
     var bisectTime = d3.bisector(function(d) { return d.time; }).left
     function mousemove(e) {
       var mousePos = d3.mouse(this);
-      var x0 = x.invert(mousePos[0]);
+      var xVal = x.invert(mousePos[0]);
 
+      var d;
       Object.keys(data).forEach(function(id) {
         var graphData = data[id];
         
-        var i = bisectTime(graphData, x0, 1);
-        // console.log(x0+' / i = '+i)
-        var d0 = graphData[i - 1];
-        var d1 = graphData[i];
-        var d = x0 - d0.time > d1.time - x0 ? d1 : d0;
+        var i = bisectTime(graphData, xVal, 0);
+        d = graphData[i];
 
         tooltip.values.select('#g'+id).html(d.value.toFixed(3));
-
-        // console.log(x0 - d0.time)
-        // console.log(d1.time - x0)
-        // console.log(id+': '+d.value);
-        // focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
-        // focus.select("text").text(formatCurrency(d.close));
-
       });
+      // console.log('mouse: '+xVal.toFixed(3) +'  D1 time: '+d.time);
 
-      tooltip.time.html(Math.round(x0)+' min.');
+      var lineX = x(d.time);
+
+      tooltip.time.html(d.time+' min.');
       tooltip
-        .style("left", (margin.left+mousePos[0]+4) + "px")
+        .style("left", (margin.left+lineX+4) + "px")
         .style("top", margin.top + "px");
 
       mouseLine.attr("d", function() {
-        var d = "M" + mousePos[0] + "," + height;
-        d += " " + mousePos[0] + "," + 0;
+        var d = "M" + lineX + "," + height;
+        d += " " + lineX + "," + 0;
         return d;
       });
 
