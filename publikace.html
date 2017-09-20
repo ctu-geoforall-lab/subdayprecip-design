@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Publikace projektu &mdash; Dokumentace pro Tvorba webové aplikace v projektu Rain 0.1</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Rejstřík"
+              href="genindex.html"/>
+        <link rel="search" title="Vyhledávání" href="search.html"/>
+    <link rel="top" title="Dokumentace pro Tvorba webové aplikace v projektu Rain 0.1" href="index.html"/>
+        <link rel="next" title="Autoři" href="autori.html"/>
+        <link rel="prev" title="Příprava projektu" href="projekt.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Tvorba webové aplikace v projektu Rain
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Obsah</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Úvod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registrace.html">Registrace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projekt.html">Příprava projektu</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Publikace projektu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nahrani-projektu-na-publikacni-server">Nahrání projektu na publikační server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autori.html">Autoři</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Tvorba webové aplikace v projektu Rain</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Publikace projektu</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/publikace.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="publikace-projektu">
+<h1>Publikace projektu<a class="headerlink" href="#publikace-projektu" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Pro publikaci je nutné do programu QGIS doinstalovat zásuvný modul
+<strong>Gisquick plugin</strong>. Podobně jako v případě WPS klienta jej
+nainstalujeme standardním způsobem (<span class="menuselection">Zásuvné moduly ‣
+Spravovat a instalovat zásuvné moduly</span>).</p>
+<div class="figure" id="id1">
+<img alt="_images/qgis-gisquick-plugin.svg" src="_images/qgis-gisquick-plugin.svg" /><p class="caption"><span class="caption-text">Instalace Gisquick zásuvného modulu.</span></p>
+</div>
+<p>Před publikací ještě nastavíme ve vlastnostech projektu
+(<span class="menuselection">Projekt ‣ Vlastnosti projektu</span>) v záložce
+<code class="docutils literal"><span class="pre">Obecné</span></code> <strong>Název projektu</strong>.</p>
+<div class="figure" id="id2">
+<img alt="_images/qgis-project-name.svg" src="_images/qgis-project-name.svg" /><p class="caption"><span class="caption-text">Nastavení názvu projektu před publikací.</span></p>
+</div>
+<p>Abychom mohli po publikaci jednotlivé prvky povodí identifikovat myší
+je ještě nutno v záložce <code class="docutils literal"><span class="pre">OWS</span> <span class="pre">Server</span></code> aktivovat <strong>WFS schopnosti</strong>.</p>
+<div class="figure" id="id3">
+<img alt="_images/qgis-project-wfs.svg" src="_images/qgis-project-wfs.svg" /><p class="caption"><span class="caption-text">Aktivace WFS pro identifikaci prvků povodí.</span></p>
+</div>
+<p>Změny v projektu uložíme a spustíme Gisquick plugin
+(<span class="menuselection">Web ‣ Gisquick ‣ Publish in Gisquick</span>). Pro
+nastavení publikace se otevře jednoduchý průvodce, kde můžeme nastavit
+vlastnosti projektu, podkladové vrstvy, témata a pod.</p>
+<div class="figure" id="id4">
+<img alt="_images/qgis-gisquick-publish-0.png" src="_images/qgis-gisquick-publish-0.png" />
+<p class="caption"><span class="caption-text">Nejprve nastavíme podkladové vrstvy, vlastnosti projektu.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Poznámka</p>
+<p>Pokud máte v projektu vrstvy s různým rozsahem (typicky
+např. WMS vrstvu), tak je vhodné nastavit výchozí rozsah
+publikovaného projektu podle zájmové vrstvy, v našem případě
+povodí IV. řádu.</p>
+<div class="last figure" id="id5">
+<img alt="img/qgis-gisquick-extent.svg" src="img/qgis-gisquick-extent.svg" /><p class="caption"><span class="caption-text">Nastavení výchozího rozsahu publikovaného projektu.</span></p>
+</div>
+</div>
+<div class="figure" id="id6">
+<img alt="_images/qgis-gisquick-publish-1.png" src="_images/qgis-gisquick-publish-1.png" />
+<p class="caption"><span class="caption-text">Na další stránce průvodce lze nastavit jednotlivá témata, seskupin
+vrstvy do logických skupin.</span></p>
+</div>
+<div class="figure" id="id7">
+<img alt="_images/qgis-gisquick-publish-2.png" src="_images/qgis-gisquick-publish-2.png" />
+<p class="caption"><span class="caption-text">Na další stránce průvodce můžeme nastavení publikace zkontrolovat.</span></p>
+</div>
+<div class="figure" id="id8">
+<img alt="_images/qgis-gisquick-publish-3.svg" src="_images/qgis-gisquick-publish-3.svg" /><p class="caption"><span class="caption-text">Na poslední stránce průvodce aktivujeme volbu <strong>Create project zip
+for upload</strong>.</span></p>
+</div>
+<p>Projekt publikujeme pomocí tlačítka <code class="docutils literal"><span class="pre">Publish</span></code>. Výsledkem bude nově
+vytvořený soubor ve formátu zip vytvořený v nadřazeném adresáři, kde
+je uložen projekt. Tento soubor v následujícím kroku nahrajeme na
+publikační server.</p>
+<div class="section" id="nahrani-projektu-na-publikacni-server">
+<h2>Nahrání projektu na publikační server<a class="headerlink" href="#nahrani-projektu-na-publikacni-server" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Předpokládáme, že máme vytvořen na publikační serveru <a class="reference internal" href="registrace.html"><span class="doc">vlastní
+učet</span></a> a otevřen prázdný projekt. Otevřeme <em>User menu</em>
+vpravo nahoře a vybereme položku <strong>My profile</strong>.</p>
+<div class="figure">
+<img alt="_images/gisquick-user-menu.svg" src="_images/gisquick-user-menu.svg" /></div>
+<p>V profilu uživatele vybereme <code class="docutils literal"><span class="pre">Upload</span> <span class="pre">project</span></code>. Vybereme zip soubor
+vytvořený zásuvným modulem Gisquick a pomocí tlačítka <code class="docutils literal"><span class="pre">Upload</span></code>
+nahrajeme na publikační server.</p>
+<div class="figure" id="id9">
+<img alt="_images/gisquick-upload-project.svg" src="_images/gisquick-upload-project.svg" /><p class="caption"><span class="caption-text">Nahraní projektu na publikační server.</span></p>
+</div>
+<p>Po nahrání projektu se přepneme do záložky <code class="docutils literal"><span class="pre">My</span> <span class="pre">Projects</span></code>, kde by se
+měl objevit nově nahraný projekt. Webovou mapovou aplikaci s tímto
+projektem otevřeme jednoduše poklikáním na název projektu.</p>
+<div class="figure" id="id10">
+<img alt="_images/gisquick-my-project.svg" src="_images/gisquick-my-project.svg" /><p class="caption"><span class="caption-text">Otevření publikovaného projektu.</span></p>
+</div>
+<p>Na následující stránce potvrdíme přihlašovací udaje pomocí tlačítka
+<code class="docutils literal"><span class="pre">CONTINUE</span></code>. Poté se otevře nově publikovaný projekt.</p>
+<div class="figure" id="id11">
+<img alt="_images/gisquick-project-final.png" src="_images/gisquick-project-final.png" />
+<p class="caption"><span class="caption-text">Ukázka testovacího publikovaného projektu.</span></p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Pro podrobný popis uživatelského rozhraní webové mapové
+aplikace Gisquick v <a class="reference external" href="http://gisquick.readthedocs.io/en/latest/user-interface.html">oficiální dokumentaci</a>.</p>
+</div>
+<p>Nezvývá nic jiného než otestovat Vaši první publikovaný projekt a
+sdílet vytvořenou webovou mapovou aplikaci s Vašimi kolegy.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="autori.html" class="btn btn-neutral float-right" title="Autoři" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="projekt.html" class="btn btn-neutral" title="Příprava projektu" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Rain Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
