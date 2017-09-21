@@ -45,7 +45,7 @@ vlastnosti projektu, podkladové vrstvy, témata a pod.
 	  
 .. figure:: img/qgis-gisquick-publish-1.png
 
-   Na další stránce průvodce lze nastavit jednotlivá témata, seskupin
+   Na další stránce průvodce lze nastavit jednotlivá témata, seskupit
    vrstvy do logických skupin.
 
 .. figure:: img/qgis-gisquick-publish-2.png
@@ -66,7 +66,7 @@ Nahrání projektu na publikační server
 -------------------------------------
 
 Předpokládáme, že máme vytvořen na publikační serveru :doc:`vlastní
-učet <registrace>` a otevřen prázdný projekt. Otevřeme *User menu*
+účet <registrace>` a otevřen prázdný projekt. Otevřeme *User menu*
 vpravo nahoře a vybereme položku **My profile**.
 
 .. figure:: img/gisquick-user-menu.svg
@@ -98,5 +98,5 @@ Na následující stránce potvrdíme přihlašovací udaje pomocí tlačítka
    aplikace Gisquick v `oficiální dokumentaci
    <http://gisquick.readthedocs.io/en/latest/user-interface.html>`__.
 
-Nezvývá nic jiného než otestovat Vaši první publikovaný projekt a
+Nezbývá nic jiného než otestovat Vaši první publikovaný projekt a
 sdílet vytvořenou webovou mapovou aplikaci s Vašimi kolegy.

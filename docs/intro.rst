@@ -63,7 +63,7 @@ informace ukazující průběhy návrhových srážek na základě jejich typů.
 
 Poté přiblížíme pohled na zájmové povodí IV. řádu a klikneme do jeho
 plochy. Ve spodní části se objeví popisné údaje související s tímto
-povodí včetně návrhové srážky v mm pro danou dobu opakování. Kliknene
+povodí včetně návrhové srážky v mm pro danou dobu opakování. Klikneme
 na ikonku *Info* (druhá ikonka v řádku záznamu). Poté se objeví v
 pravé části info panel ukazující podrobné informace včetně grafické
 reprezentace průběhu návrhových srážek pro jednotlivé typy v mm.

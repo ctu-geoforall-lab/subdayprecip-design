@@ -1,19 +1,19 @@
 Příprava projektu
 =================
 
-V této části dokumetace si popíšeme jakým způsobem připravit naše
+V této části dokumentace si popíšeme jakým způsobem připravit naše
 geografická data pro publikaci, a vypočítat pro ně návrhové srážky se
 zvolenou dobou opakování a délkou srážky.
 
 .. important:: Pro přípravu dat je nutné použít GIS nástroj `QGIS
    <http://qgis.org>`__. QGIS je open source software volně dostupný
    pro různé operační systémy včetně MS Windows. Stáhněte aktuální
-   verzi tohoto softwatu
+   verzi tohoto softwaru
    (http://qgis.org/en/site/forusers/download.html) a nainstalujte na
    Váš počítač.
 	       
 V rámci naší ukázky použijeme vektorovou vrstvu povodí IV. řádu
-veřejně dostupnou z databáze Dibavod (`link ke stažení dat
+veřejně dostupnou z databáze Dibavod (`odkaz ke stažení dat
 <http://www.dibavod.cz/download.php?id_souboru=1418>`__ ve formátu
 Esri Shapefile). Na disku vytvoříme nový adresář kam data stáhneme a
 rozbalíme.
@@ -46,7 +46,7 @@ Spustíme program QGIS a načteme vrstvu povodí IV. řádu.
    `skupiny GISMentors
    <http://training.gismentors.eu/qgis-zacatecnik/intro/import_export.html#vyber-souradnicoveho-systemu>`__.
 
-V učel demostrace celého postupu vybereme pouze několik málo
+V účel demonstrace celého postupu vybereme pouze několik málo
 povodí. Aktivuje nástroj pro výběr prvků (viz obr. níže) a tažením
 myši definujeme obdélník pro výběr. Vybraná povodí budou zvýrazněna
 žlutou barvou.
@@ -57,7 +57,7 @@ myši definujeme obdélník pro výběr. Vybraná povodí budou zvýrazněna
 
 .. tip:: Více k ovládaní programu QGIS najdete v `online materiálech
    <http://training.gismentors.eu/qgis-zacatecnik/>`__ pro školení
-   skupiny GISmentors.
+   skupiny GISMentors.
 
 .. note:: Namísto vrstvy povodí IV. řádu můžete přirozeně použít
    vlastní data. Pro výpočet návrhové srážky jsou ale podstatné dvě
@@ -79,7 +79,7 @@ instalaci **WPS Client**.
 
 .. figure:: img/qgis-wps-client-install.svg
 
-   Instalace zásuvného pluginu WPS klienta.
+   Instalace zásuvného modulu WPS klienta.
 
 V levém dolním rohu se objeví dialog WPS klienta. Klikneme na tlačítko
 ``Connect`` a následujícím dialogu vytvoříme pomocí tlačítka ``New``
@@ -110,20 +110,20 @@ V následujícím dialogu vyplníme vstupní parametry nástroje:
 * ``rainlength`` - délka srážky v min
 
 Podstatné je zaškrtnout **Process selected objects only** tak, aby
-výpočet probíhál pouze nad vybranými povodími.
+výpočet probíhal pouze nad vybranými povodími.
 
 .. figure:: img/qgis-wps-client-params.svg
 
-   Volba vstupních parametrů pro výpočet hodnot návhrhové srážky.
+   Volba vstupních parametrů pro výpočet hodnot návrhové srážky.
 
 Výpočet spustíme tlačítkem ``Run``. Po dokončení výpočtu (délka
-výpočtu je závislá na rychlosti připojejí k výpočetnímu serveru neboť
+výpočtu je závislá na rychlosti připojení k výpočetnímu serveru neboť
 WPS klient nejprve posílá vstupní data na výpočetní server a po
 dokončení výpočtu výsledná data stahuje ze serveru na stranu klienta,
 tj. programu QGIS) se do mapového okna přidá automaticky i výsledná
 vrstva vytvořená nástrojem ``d-rain-shp``.
 
-Vrstva vytvořená nástrojem ``d-rain-shp`` je přechodná, proto učel
+Vrstva vytvořená nástrojem ``d-rain-shp`` je přechodná, proto účel
 publikace je nutné ji uložit na disk. Vytvoříme nový adresář, kam tuto
 vrstvu uložíme. Tento adresář bude obsahovat veškerá data určená k
 publikaci.
@@ -135,8 +135,8 @@ publikaci.
 
 V dialogu pro uložení nové vrstvy zadáme cestu k výstupnímu souboru
 (formát ponecháme Esri Shapefile). Je také důležité zkontrolovat
-souřadnicový systém vrstvy. Především v připadě S-JTSK se může stát,
-že QGIS tento souřadnicový systém špatně detekuje. V tomto připadě
+souřadnicový systém vrstvy. Především v případě S-JTSK se může stát,
+že QGIS tento souřadnicový systém špatně detekuje. V tomto případe
 souřadnicový systém vrstvy nastavíme ručně, v případě S-JTSK jde o
 EPSG kód 5514.
 
@@ -152,7 +152,7 @@ pro publikaci.
 .. figure:: img/qgis-remove-vector.png
    :width: 50%
 		    
-   Původní vrstvu odstraníme z mapového okna. V projektu ponécháme
+   Původní vrstvu odstraníme z mapového okna. V projektu ponecháme
    pouze data zájmového území.
 
 Pohled okna přiblížíme na aktuální vrstvu (:menuselection:`Zobrazit
@@ -160,7 +160,7 @@ Pohled okna přiblížíme na aktuální vrstvu (:menuselection:`Zobrazit
 (:menuselection:`Vrstva --> Vlastnosti`) a nastavíme vhodný styl
 (záložka ``Style``). V našem případě *Odstupňovaný*, sloupec s
 hodnotami návrhových srážek v mm (v našem případě ``H_N2T120`` a
-barevný rozsah *Blues*. Barvnou škálu aktivujeme pomocí tlačítka
+barevný rozsah *Blues*. Barevnou škálu aktivujeme pomocí tlačítka
 ``Klasifikovat``.
 
 .. figure:: img/qgis-vector-style.svg
@@ -184,7 +184,7 @@ nebo nastavit vhodnou barvu písma. Nastavení potvrdíme tlačítkem
 
 Vrstvě můžeme před publikací ještě nastavit vhodný název
 (:menuselection:`Vrstva --> Vlastnosti`, záložka ``Obecné``, *Název
-vrtsvy*).
+vrstvy*).
 
 .. figure:: img/qgis-project-final.png
 

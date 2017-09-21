@@ -1,7 +1,7 @@
 Registrace
 ==========
 
-Nejprve si vytvoříme učet na publikačním serveru Rain. Formulář pro
+Nejprve si vytvoříme účet na publikačním serveru Rain. Formulář pro
 vytvoření účtu je dostupný na adrese
 https://rain1.fsv.cvut.cz:4433/accounts/register/.
 
@@ -24,7 +24,7 @@ Následně na to budete přesměrování na stránku, která Vás informuje o
 
 .. figure:: img/gisquick-new-account-2.svg
 
-   Nový účet byl uspěšně vytvořen.
+   Nový účet byl úspěšné vytvořen.
 
 Po kliknutí na tlačítko ``CONTINUE`` budete přesměrování na
 přihlašovací stránku publikačního serveru.
@@ -33,7 +33,7 @@ přihlašovací stránku publikačního serveru.
 
    Přihlašovací stránka publikačního serveru Rain.
    
-Po zadaní platných přihlašovacích udajů (uživatelské jméno a heslo) se
+Po zadaní platných přihlašovacích údajů (uživatelské jméno a heslo) se
 otevře prázdná webové mapová aplikace.
 
 .. note:: Webová aplikace není zcela prázdná. Obsahuje podkladovou
