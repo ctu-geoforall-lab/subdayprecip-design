@@ -1,8 +1,8 @@
 Publikace projektu
 ==================
 
-Pro publikaci je nutné do programu QGIS doinstalovat zásuvný modul
-**Gisquick plugin**. Podobně jako v případě WPS klienta jej
+Pro publikaci projektu je nutné do programu QGIS doinstalovat zásuvný
+modul **Gisquick plugin**. Podobně jako v případě WPS klienta jej
 nainstalujeme standardním způsobem (:menuselection:`Zásuvné moduly -->
 Spravovat a instalovat zásuvné moduly`).
 
@@ -27,51 +27,51 @@ je ještě nutno v záložce ``OWS Server`` aktivovat **WFS schopnosti**.
 
 Změny v projektu uložíme a spustíme Gisquick plugin
 (:menuselection:`Web --> Gisquick --> Publish in Gisquick`). Pro
-nastavení publikace se otevře jednoduchý průvodce, kde můžeme nastavit
-vlastnosti projektu, podkladové vrstvy, témata a pod.
+nastavení publikace se otevře jednoduchý průvodce, kde můžeme
+definovat vlastnosti projektu, podkladové vrstvy, témata a pod.
+
+Nejprve nastavíme podkladové vrstvy, vlastnosti projektu.
 
 .. figure:: img/qgis-gisquick-publish-0.png
-
-   Nejprve nastavíme podkladové vrstvy, vlastnosti projektu.
 
 .. note:: Pokud máte v projektu vrstvy s různým rozsahem (typicky
    např. WMS vrstvu), tak je vhodné nastavit výchozí rozsah
    publikovaného projektu podle zájmové vrstvy, v našem případě
    povodí IV. řádu.
 
-   .. figure:: img/qgis-gisquick-extent.svg
+   .. figure:: img/qgis-gisquick-publish-extent.svg
 
       Nastavení výchozího rozsahu publikovaného projektu.
-	  
+
+Na další stránce průvodce lze nastavit jednotlivá témata, seskupit
+vrstvy do logických skupin.
+
 .. figure:: img/qgis-gisquick-publish-1.png
 
-   Na další stránce průvodce lze nastavit jednotlivá témata, seskupit
-   vrstvy do logických skupin.
-
+Na následující stránce průvodce můžeme nastavení publikace zkontrolovat.
+   
 .. figure:: img/qgis-gisquick-publish-2.png
 
-   Na další stránce průvodce můžeme nastavení publikace zkontrolovat.
-   
+Na poslední stránce průvodce aktivujeme volbu **Create project zip for
+upload**.
+
 .. figure:: img/qgis-gisquick-publish-3.svg
 
-   Na poslední stránce průvodce aktivujeme volbu **Create project zip
-   for upload**.
-
-Projekt publikujeme pomocí tlačítka ``Publish``. Výsledkem bude nově
-vytvořený soubor ve formátu zip vytvořený v nadřazeném adresáři, kde
-je uložen projekt. Tento soubor v následujícím kroku nahrajeme na
+Projekt publikujeme pomocí tlačítka ``Publish``. Výsledkem publikace
+bude soubor ve formátu zip vytvořený v nadřazeném adresáři, kde je
+uložen projekt. Tento soubor v následujícím kroku nahrajeme na
 publikační server.
    
 Nahrání projektu na publikační server
 -------------------------------------
 
 Předpokládáme, že máme vytvořen na publikační serveru :doc:`vlastní
-účet <registrace>` a otevřen prázdný projekt. Otevřeme *User menu*
-vpravo nahoře a vybereme položku **My profile**.
+účet <registrace>` a otevřen prázdný projekt. V uživatelském menu
+vpravo nahoře vybereme položku **My profile**.
 
 .. figure:: img/gisquick-user-menu.svg
 
-V profilu uživatele vybereme ``Upload project``. Vybereme zip soubor
+V profilu uživatele zvolíme ``Upload project``. Vybereme zip soubor
 vytvořený zásuvným modulem Gisquick a pomocí tlačítka ``Upload``
 nahrajeme na publikační server.
 
@@ -80,23 +80,23 @@ nahrajeme na publikační server.
    Nahraní projektu na publikační server.
 
 Po nahrání projektu se přepneme do záložky ``My Projects``, kde by se
-měl objevit nově nahraný projekt. Webovou mapovou aplikaci s tímto
-projektem otevřeme jednoduše poklikáním na název projektu.
+měl objevit nový projekt. Webovou mapovou aplikaci s tímto projektem
+otevřeme jednoduše poklikáním na název projektu.
 
 .. figure:: img/gisquick-my-project.svg
 
    Otevření publikovaného projektu.
 
 Na následující stránce potvrdíme přihlašovací udaje pomocí tlačítka
-``CONTINUE``. Poté se otevře nově publikovaný projekt.
+``CONTINUE``. Poté se otevře námi publikovaný projekt.
 
 .. figure:: img/gisquick-project-final.png
 
    Ukázka testovacího publikovaného projektu.
 
-.. tip:: Pro podrobný popis uživatelského rozhraní webové mapové
-   aplikace Gisquick v `oficiální dokumentaci
+.. tip:: Podrobný popis uživatelského rozhraní webové mapové aplikace
+   Gisquick najdete v `oficiální dokumentaci
    <http://gisquick.readthedocs.io/en/latest/user-interface.html>`__.
 
-Nezbývá nic jiného než otestovat Vaši první publikovaný projekt a
-sdílet vytvořenou webovou mapovou aplikaci s Vašimi kolegy.
+*Nezbývá nic jiného než otestovat Vaš první publikovaný projekt a
+sdílet vytvořenou webovou mapovou aplikaci s kolegy:-)*

@@ -12,10 +12,10 @@ Poděkování vývojářům open source platformy `Gisquick
 <http://gisquick.org>`__ za její vývoj a pomoc při integraci do
 projektu Rain.
 
-Zvláštní poděkování **Ministerstvu zemědělství** za podpoření tohoto
-projektu ("Vliv variability krátkodobých srážek a následného odtoku v
-malých povodích České republiky na hospodaření s vodou v krajině")
-rámci grantové soutěže (QJ1520265) v období 1. 4. 2015 - 31. 12. 2017.
+Zvláštní poděkování **Ministerstvu zemědělství** za podpoření projektu
+"Vliv variability krátkodobých srážek a následného odtoku v malých
+povodích České republiky na hospodaření s vodou v krajině" rámci
+grantové soutěže (QJ1520265) v období 1. 4. 2015 - 31. 12. 2017.
 
 Licence
 -------

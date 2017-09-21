@@ -19,14 +19,14 @@ nutné pro úspěšné dokončení registrace odsouhlasit.
    Dokončení registrace provedete kliknutím na tlačítko ``ACTIVATE
    ACCOUNT``.
 
-Následně na to budete přesměrování na stránku, která Vás informuje o
+Následně na to budete přesměrováni na stránku, která Vás informuje o
 úspěšném dokončení registrace.
 
 .. figure:: img/gisquick-new-account-2.svg
 
    Nový účet byl úspěšné vytvořen.
 
-Po kliknutí na tlačítko ``CONTINUE`` budete přesměrování na
+Po kliknutí na tlačítko ``CONTINUE`` budete přesměrováni na
 přihlašovací stránku publikačního serveru.
 
 .. figure:: img/gisquick-new-account-3.svg
@@ -36,13 +36,13 @@ přihlašovací stránku publikačního serveru.
 Po zadaní platných přihlašovacích údajů (uživatelské jméno a heslo) se
 otevře prázdná webové mapová aplikace.
 
-.. note:: Webová aplikace není zcela prázdná. Obsahuje podkladovou
-          vrstvu projektu `OpenStreetMap
-          <http://openstreetmap.org>`__.
-
 .. figure:: img/gisquick-new-account-4.png
 
    Po přihlášení se načte prázdná webová mapová aplikace.
 
+.. note:: Webová aplikace není zcela prázdná. Obsahuje podkladovou
+          vrstvu projektu `OpenStreetMap
+          <http://openstreetmap.org>`__.
+
 V následující kapitole si ukážeme jak připravit vlastní geografická
-data pro vytvoření nové webové aplikace.
+data pro vytvoření nové webové mapové aplikace.
