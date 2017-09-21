@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Příprava projektu &mdash; Dokumentace pro Tvorba webové aplikace v projektu Rain 0.1</title>
+  <title>Příprava projektu &mdash; Dokumentace pro Tvorba webové mapové aplikace v projektu Rain 0.1</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Rejstřík"
               href="genindex.html"/>
         <link rel="search" title="Vyhledávání" href="search.html"/>
-    <link rel="top" title="Dokumentace pro Tvorba webové aplikace v projektu Rain 0.1" href="index.html"/>
+    <link rel="top" title="Dokumentace pro Tvorba webové mapové aplikace v projektu Rain 0.1" href="index.html"/>
         <link rel="next" title="Publikace projektu" href="publikace.html"/>
         <link rel="prev" title="Registrace" href="registrace.html"/> 
 
@@ -53,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Tvorba webové aplikace v projektu Rain
+            <a href="index.html" class="icon icon-home"> Tvorba webové mapové aplikace v projektu Rain
           
 
           
@@ -89,7 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Úvod</a></li>
 <li class="toctree-l1"><a class="reference internal" href="registrace.html">Registrace</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Příprava projektu</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#vypocet-hodnot-navrhovych-srazek">Výpočet hodnot návrhových srážek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vypocet-uhrnu-navrhovych-srazek">Výpočet úhrnu návrhových srážek</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="publikace.html">Publikace projektu</a></li>
@@ -107,7 +107,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Tvorba webové aplikace v projektu Rain</a>
+        <a href="index.html">Tvorba webové mapové aplikace v projektu Rain</a>
       </nav>
 
 
@@ -140,21 +140,27 @@
             
   <div class="section" id="priprava-projektu">
 <h1>Příprava projektu<a class="headerlink" href="#priprava-projektu" title="Trvalý odkaz na tento nadpis">¶</a></h1>
-<p>V této části dokumetace si popíšeme jakým způsobem připravit naše
+<p>V této části dokumentace si popíšeme jakým způsobem připravit naše
 geografická data pro publikaci, a vypočítat pro ně návrhové srážky se
 zvolenou dobou opakování a délkou srážky.</p>
 <div class="admonition important">
 <p class="first admonition-title">Důležité</p>
-<p class="last">Pro přípravu dat je nutné použít GIS nástroj <a class="reference external" href="http://qgis.org">QGIS</a>. QGIS je open source software volně dostupný
-pro různé operační systémy včetně MS Windows. Stáhněte aktuální
-verzi tohoto softwatu
-(<a class="reference external" href="http://qgis.org/en/site/forusers/download.html">http://qgis.org/en/site/forusers/download.html</a>) a nainstalujte na
-Váš počítač.</p>
+<p class="last">Pro přípravu dat je nutné použít GIS nástroj <a class="reference external" href="http://qgis.org">QGIS</a>. <strong>QGIS</strong> je open source software volně dostupný
+pro různé operační systémy včetně MS Windows. <a class="reference external" href="http://qgis.org/en/site/forusers/download.html">Stáhněte aktuální
+verzi</a> tohoto
+softwaru a nainstalujte na Váš počítač.</p>
 </div>
 <p>V rámci naší ukázky použijeme vektorovou vrstvu povodí IV. řádu
-veřejně dostupnou z databáze Dibavod (<a class="reference external" href="http://www.dibavod.cz/download.php?id_souboru=1418">link ke stažení dat</a> ve formátu
+veřejně dostupnou z databáze Dibavod (<a class="reference external" href="http://www.dibavod.cz/download.php?id_souboru=1418">odkaz ke stažení dat</a> ve formátu
 Esri Shapefile). Na disku vytvoříme nový adresář kam data stáhneme a
 rozbalíme.</p>
+<div class="admonition note">
+<p class="first admonition-title">Poznámka</p>
+<p class="last">Namísto vrstvy povodí IV. řádu můžete přirozeně použít svoje
+vlastní data. Pro výpočet návrhové srážky jsou ale podstatné dvě
+věci. Vstupní vrstva musí být bodová nebo polygonová. Velikost
+souboru se vstupními daty musí být <strong>menší než 10MB</strong>.</p>
+</div>
 <p>Spustíme program QGIS a načteme vrstvu povodí IV. řádu.</p>
 <div class="figure" id="id1">
 <img alt="_images/qgis-add-vector.svg" src="_images/qgis-add-vector.svg" /><p class="caption"><span class="caption-text">Soubor s povodím IV. řádu najdeme v Panelu prohlížeče a do mapového
@@ -165,126 +171,118 @@ okna přidáme tažením myši (Drag-And-Drop).</span></p>
 <p>U případě dat v souřadnicovém systému S-JTSK se může
 stát, že jej QGIS nekorektně identifikuje (v našem případě jako
 uživatelský souřadnicový systém 100000). Tento problém je třeba
-opravit, jinak nebude možné projekt publikovat. Souřadnicový systém
+opravit, jinak <em>nebude možné projekt publikovat</em>! Souřadnicový systém
 nastavíme v dialogu vlastnostech vrstvy (<span class="menuselection">Vrstva ‣
 Vlastnosti</span>). V případě S-JTSK použijeme EPSG kód 5514.</p>
 <div class="figure">
 <img alt="_images/qgis-vector-props.svg" src="_images/qgis-vector-props.svg" /></div>
 <p>Zároveň nastavíme stejný souřadnicový systém i pro mapové okno, viz
 obr. níže.</p>
-<div class="figure" id="id2">
-<img alt="_images/qgis-statusbar-srs.svg" src="_images/qgis-statusbar-srs.svg" /><p class="caption"><span class="caption-text">Změna souřadnicového systému uživatelského okna z
+<div class="last figure" id="id2">
+<img alt="_images/qgis-statusbar-srs.svg" src="_images/qgis-statusbar-srs.svg" /><p class="caption"><span class="caption-text">Změna souřadnicového systému mapového okna z
 uživatelského (100000) na S-JTSK (5514).</span></p>
 </div>
-<p class="last">Více o souřadnicových systémech v programu QGIS v materiálech
-<a class="reference external" href="http://training.gismentors.eu/qgis-zacatecnik/intro/import_export.html#vyber-souradnicoveho-systemu">skupiny GISMentors</a>.</p>
 </div>
-<p>V učel demostrace celého postupu vybereme pouze několik málo
-povodí. Aktivuje nástroj pro výběr prvků (viz obr. níže) a tažením
-myši definujeme obdélník pro výběr. Vybraná povodí budou zvýrazněna
-žlutou barvou.</p>
+<p>Pro účel demonstrace celého postupu publikace vybereme pouze několik
+málo povodí. Aktivujeme nástroj pro výběr prvků (viz obr. níže) a
+tažením myši definujeme obdélník pro výběr. Vybraná povodí budou
+zvýrazněna žlutou barvou.</p>
 <div class="figure" id="id3">
-<img alt="_images/qgis-select.svg" src="_images/qgis-select.svg" /><p class="caption"><span class="caption-text">Výběr zájmových povodí.</span></p>
+<img alt="_images/qgis-select.svg" src="_images/qgis-select.svg" /><p class="caption"><span class="caption-text">Výběr zájmových povodí pro publikaci.</span></p>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">Více k ovládaní programu QGIS najdete v <a class="reference external" href="http://training.gismentors.eu/qgis-zacatecnik/">online materiálech</a> pro školení
-skupiny GISmentors.</p>
+skupiny GISMentors.</p>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Poznámka</p>
-<p class="last">Namísto vrstvy povodí IV. řádu můžete přirozeně použít
-vlastní data. Pro výpočet návrhové srážky jsou ale podstatné dvě
-věci. Vstupní vrstva musí být bodová nebo polygonová. A velikost
-souboru se vstupními daty musí být <strong>menší než 10MB</strong>.</p>
-</div>
-<div class="section" id="vypocet-hodnot-navrhovych-srazek">
-<h2>Výpočet hodnot návrhových srážek<a class="headerlink" href="#vypocet-hodnot-navrhovych-srazek" title="Trvalý odkaz na tento nadpis">¶</a></h2>
-<p>Pro vybraná povodí vypočítáme hodnoty návrhových srážek s danou dobou
+<div class="section" id="vypocet-uhrnu-navrhovych-srazek">
+<h2>Výpočet úhrnu návrhových srážek<a class="headerlink" href="#vypocet-uhrnu-navrhovych-srazek" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Pro vybraná povodí vypočítáme úhrny návrhových srážek s danou dobou
 opakování a délkou srážky. Využijeme nástroj <code class="docutils literal"><span class="pre">d-rain-shp</span></code>
-poskytovaný <a class="reference external" href="http://rain.fsv.cvut.cz/webapp/webove-sluzby/ogc-wps/">v rámci projektu Rain jako WPS služba</a>. Abychom
+poskytovaný v rámci projektu Rain jako <a class="reference external" href="http://rain.fsv.cvut.cz/webapp/webove-sluzby/ogc-wps/">WPS služba</a>. Abychom
 mohli tento nástroj v programu QGIS použít, je nutné doinstalovat
 zásuvný modul WPS klienta. Spustíme dialog pro správu zásuvných modulu
 (<span class="menuselection">Zásuvné moduly ‣ Spravovat a instalovat zásuvné
 moduly</span>). Do vyhledávacího pole zadáme klíčové slovo &#8220;wps&#8221; a zvolíme k
 instalaci <strong>WPS Client</strong>.</p>
 <div class="figure" id="id4">
-<img alt="_images/qgis-wps-client-install.svg" src="_images/qgis-wps-client-install.svg" /><p class="caption"><span class="caption-text">Instalace zásuvného pluginu WPS klienta.</span></p>
+<img alt="_images/qgis-wps-client-install.svg" src="_images/qgis-wps-client-install.svg" /><p class="caption"><span class="caption-text">Instalace zásuvného modulu WPS klienta.</span></p>
 </div>
 <p>V levém dolním rohu se objeví dialog WPS klienta. Klikneme na tlačítko
 <code class="docutils literal"><span class="pre">Connect</span></code> a následujícím dialogu vytvoříme pomocí tlačítka <code class="docutils literal"><span class="pre">New</span></code>
 nové připojení.</p>
 <div class="figure" id="id5">
-<img alt="_images/qgis-wps-client-connect.svg" src="_images/qgis-wps-client-connect.svg" /><p class="caption"><span class="caption-text">Dialog WPS klienta.</span></p>
+<img alt="_images/qgis-wps-client-connect.svg" src="_images/qgis-wps-client-connect.svg" /><p class="caption"><span class="caption-text">Dialog WPS klienta a přidání nové služby.</span></p>
 </div>
-<p>Zvolíme název připojení a zadáme její URL. WPS služba projektu Rain je
-dostupná na adrese <a class="reference external" href="https://rain1.fsv.cvut.cz/services/wps">https://rain1.fsv.cvut.cz/services/wps</a></p>
+<p>Zvolíme název připojení a zadáme URL služby. WPS služba projektu Rain
+je dostupná na adrese <a class="reference external" href="https://rain1.fsv.cvut.cz/services/wps">https://rain1.fsv.cvut.cz/services/wps</a></p>
 <div class="figure" id="id6">
 <a class="reference internal image-reference" href="_images/qgis-wps-client-new.png"><img alt="_images/qgis-wps-client-new.png" src="_images/qgis-wps-client-new.png" style="width: 65%;" /></a>
 <p class="caption"><span class="caption-text">Údaje pro přidání WPS služby.</span></p>
 </div>
-<p>Poté se ke službě připojíme (tlačítko <code class="docutils literal"><span class="pre">Connect</span></code>) zvolíme z nabídky
-nástroj <code class="docutils literal"><span class="pre">d-rain-shp</span></code> a spustíme jej pomocí tlačítka <code class="docutils literal"><span class="pre">OK</span></code>.</p>
+<p>Poté se ke službě připojíme (tlačítko <code class="docutils literal"><span class="pre">Connect</span></code>), zvolíme z nabídky
+nástroj <code class="docutils literal"><span class="pre">d-rain-shp</span></code> a otevřeme jeho dialog pomocí tlačítka <code class="docutils literal"><span class="pre">OK</span></code>.</p>
 <div class="figure" id="id7">
-<img alt="_images/qgis-wps-client-select.svg" src="_images/qgis-wps-client-select.svg" /><p class="caption"><span class="caption-text">Výběr WPS nástroje <code class="docutils literal"><span class="pre">d-rain-shp</span></code> a jeho spuštění.</span></p>
+<img alt="_images/qgis-wps-client-select.svg" src="_images/qgis-wps-client-select.svg" /><p class="caption"><span class="caption-text">Výběr WPS nástroje <code class="docutils literal"><span class="pre">d-rain-shp</span></code> a jeho otevření.</span></p>
 </div>
 <p>V následujícím dialogu vyplníme vstupní parametry nástroje:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">return_period</span></code> - v našem případě jsme zvolili pouze dobu opakování 2 roky (N2)</li>
+<li><code class="docutils literal"><span class="pre">return_period</span></code> - v našem případě jsme zvolili pouze dobu opakování 2 roky (<em>N2</em>)</li>
 <li><code class="docutils literal"><span class="pre">rainlength</span></code> - délka srážky v min</li>
 </ul>
 <p>Podstatné je zaškrtnout <strong>Process selected objects only</strong> tak, aby
-výpočet probíhál pouze nad vybranými povodími.</p>
+výpočet probíhal pouze nad vybranými povodími.</p>
 <div class="figure" id="id8">
-<img alt="_images/qgis-wps-client-params.svg" src="_images/qgis-wps-client-params.svg" /><p class="caption"><span class="caption-text">Volba vstupních parametrů pro výpočet hodnot návhrhové srážky.</span></p>
+<img alt="_images/qgis-wps-client-params.svg" src="_images/qgis-wps-client-params.svg" /><p class="caption"><span class="caption-text">Volba vstupních parametrů pro výpočet úhrnu návrhové srážky.</span></p>
 </div>
 <p>Výpočet spustíme tlačítkem <code class="docutils literal"><span class="pre">Run</span></code>. Po dokončení výpočtu (délka
-výpočtu je závislá na rychlosti připojejí k výpočetnímu serveru neboť
+výpočtu je závislá na rychlosti připojení k výpočetnímu serveru neboť
 WPS klient nejprve posílá vstupní data na výpočetní server a po
 dokončení výpočtu výsledná data stahuje ze serveru na stranu klienta,
-tj. programu QGIS) se do mapového okna přidá automaticky i výsledná
+tj. do programu QGIS) se do mapového okna přidá automaticky i výsledná
 vrstva vytvořená nástrojem <code class="docutils literal"><span class="pre">d-rain-shp</span></code>.</p>
-<p>Vrstva vytvořená nástrojem <code class="docutils literal"><span class="pre">d-rain-shp</span></code> je přechodná, proto učel
+<p>Vrstva vytvořená nástrojem <code class="docutils literal"><span class="pre">d-rain-shp</span></code> je <em>přechodná</em>, proto účel
 publikace je nutné ji uložit na disk. Vytvoříme nový adresář, kam tuto
 vrstvu uložíme. Tento adresář bude obsahovat veškerá data určená k
 publikaci.</p>
 <div class="figure" id="id9">
 <a class="reference internal image-reference" href="_images/qgis-save-as.png"><img alt="_images/qgis-save-as.png" src="_images/qgis-save-as.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-text">Uložení výstupní vrstvy na disk.</span></p>
+<p class="caption"><span class="caption-text">Uložení výsledné vrstvy s úhrnem návrhových srážek na disk.</span></p>
 </div>
 <p>V dialogu pro uložení nové vrstvy zadáme cestu k výstupnímu souboru
 (formát ponecháme Esri Shapefile). Je také důležité zkontrolovat
-souřadnicový systém vrstvy. Především v připadě S-JTSK se může stát,
-že QGIS tento souřadnicový systém špatně detekuje. V tomto připadě
+souřadnicový systém vrstvy. Především v případě S-JTSK se může stát,
+že QGIS tento souřadnicový systém špatně detekuje. V tomto případe
 souřadnicový systém vrstvy nastavíme ručně, v případě S-JTSK jde o
 EPSG kód 5514.</p>
 <div class="figure" id="id10">
 <a class="reference internal image-reference" href="_images/qgis-save-as-dialog.svg"><img alt="_images/qgis-save-as-dialog.svg" src="_images/qgis-save-as-dialog.svg" width="75%" /></a>
-<p class="caption"><span class="caption-text">Uložení zájmových povodí IV. řádu do nové vrstvy.</span></p>
+<p class="caption"><span class="caption-text">Uložení zájmových povodí IV. řádu včetně vypočítaných úhrnů
+návrhových srážek do nové vrstvy.</span></p>
 </div>
 <p>Následně nato můžeme původní a přechodnou vrstvu z mapového okna
-odstranit. Ponecháme pouze nově uloženou vrstvu uloženou v adresáři
-pro publikaci.</p>
+odstranit. Ponecháme pouze nově uloženou vrstvu v adresáři pro
+publikaci.</p>
 <div class="figure" id="id11">
 <a class="reference internal image-reference" href="_images/qgis-remove-vector.png"><img alt="_images/qgis-remove-vector.png" src="_images/qgis-remove-vector.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">Původní vrstvu odstraníme z mapového okna. V projektu ponécháme
-pouze data zájmového území.</span></p>
+<p class="caption"><span class="caption-text">Původní a přechodnou vrstvu odstraníme z mapového okna. V projektu
+ponecháme pouze data zájmového území.</span></p>
 </div>
 <p>Pohled okna přiblížíme na aktuální vrstvu (<span class="menuselection">Zobrazit
 ‣ Přiblížit na rozměry okna</span>). Otevřeme vlastnosti vrstvy
 (<span class="menuselection">Vrstva ‣ Vlastnosti</span>) a nastavíme vhodný styl
 (záložka <code class="docutils literal"><span class="pre">Style</span></code>). V našem případě <em>Odstupňovaný</em>, sloupec s
-hodnotami návrhových srážek v mm (v našem případě <code class="docutils literal"><span class="pre">H_N2T120</span></code> a
-barevný rozsah <em>Blues</em>. Barvnou škálu aktivujeme pomocí tlačítka
+hodnotami návrhových srážek v mm (v našem případě <code class="docutils literal"><span class="pre">H_N2T120</span></code>) a
+barevný rozsah <em>Blues</em>. Barevnou škálu aktivujeme pomocí tlačítka
 <code class="docutils literal"><span class="pre">Klasifikovat</span></code>.</p>
 <div class="figure" id="id12">
-<img alt="_images/qgis-vector-style.svg" src="_images/qgis-vector-style.svg" /><p class="caption"><span class="caption-text">Nastavení stylu povodí dle hodnot návrhových srážek.</span></p>
+<img alt="_images/qgis-vector-style.svg" src="_images/qgis-vector-style.svg" /><p class="caption"><span class="caption-text">Nastavení stylu povodí dle úhrnu návrhových srážek.</span></p>
 </div>
 <p>Dále aktivujeme popisky (záložka <code class="docutils literal"><span class="pre">Popisky</span></code>) a nastavíme je na
-sloupec s hodnotami návrhových srážek. Formátování čísel nastavíme na
-jedno desetinné číslo. Vhodné je též aktivovat pro popisky <em>pozadí</em>
-nebo nastavit vhodnou barvu písma. Nastavení potvrdíme tlačítkem
-<code class="docutils literal"><span class="pre">OK</span></code>.</p>
+sloupec s hodnotami návrhových srážek (<code class="docutils literal"><span class="pre">H_N2T120</span></code>). Formátování
+čísel nastavíme na jedno desetinné číslo. Vhodné je též aktivovat pro
+popisky pozadí nebo nastavit vhodnou barvu písma. Nastavení potvrdíme
+tlačítkem <code class="docutils literal"><span class="pre">OK</span></code>.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">Jako podkladovou vrstvu lze použít veřejně dostupné WMS
@@ -296,14 +294,13 @@ záložce <code class="docutils literal"><span class="pre">Styl</span></code>).<
 </div>
 <p>Vrstvě můžeme před publikací ještě nastavit vhodný název
 (<span class="menuselection">Vrstva ‣ Vlastnosti</span>, záložka <code class="docutils literal"><span class="pre">Obecné</span></code>, <em>Název
-vrtsvy</em>).</p>
+vrstvy</em>).</p>
 <div class="figure" id="id13">
 <img alt="_images/qgis-project-final.png" src="_images/qgis-project-final.png" />
 <p class="caption"><span class="caption-text">Finální podoba projektu před publikací.</span></p>
 </div>
 <p>Projekt uložíme (<span class="menuselection">Projekt ‣ Uložit</span>) do stejného
-adresáře jako vektorovou vrstvu s vypočtenými hodnotami návrhových
-srážek.</p>
+adresáře jako vektorovou vrstvu s vypočtenými úhrny návrhových srážek.</p>
 </div>
 </div>
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Publikace projektu &mdash; Dokumentace pro Tvorba webové aplikace v projektu Rain 0.1</title>
+  <title>Publikace projektu &mdash; Dokumentace pro Tvorba webové mapové aplikace v projektu Rain 0.1</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Rejstřík"
               href="genindex.html"/>
         <link rel="search" title="Vyhledávání" href="search.html"/>
-    <link rel="top" title="Dokumentace pro Tvorba webové aplikace v projektu Rain 0.1" href="index.html"/>
+    <link rel="top" title="Dokumentace pro Tvorba webové mapové aplikace v projektu Rain 0.1" href="index.html"/>
         <link rel="next" title="Autoři" href="autori.html"/>
         <link rel="prev" title="Příprava projektu" href="projekt.html"/> 
 
@@ -53,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Tvorba webové aplikace v projektu Rain
+            <a href="index.html" class="icon icon-home"> Tvorba webové mapové aplikace v projektu Rain
           
 
           
@@ -107,7 +107,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Tvorba webové aplikace v projektu Rain</a>
+        <a href="index.html">Tvorba webové mapové aplikace v projektu Rain</a>
       </nav>
 
 
@@ -140,8 +140,8 @@
             
   <div class="section" id="publikace-projektu">
 <h1>Publikace projektu<a class="headerlink" href="#publikace-projektu" title="Trvalý odkaz na tento nadpis">¶</a></h1>
-<p>Pro publikaci je nutné do programu QGIS doinstalovat zásuvný modul
-<strong>Gisquick plugin</strong>. Podobně jako v případě WPS klienta jej
+<p>Pro publikaci projektu je nutné do programu QGIS doinstalovat zásuvný
+modul <strong>Gisquick plugin</strong>. Podobně jako v případě WPS klienta jej
 nainstalujeme standardním způsobem (<span class="menuselection">Zásuvné moduly ‣
 Spravovat a instalovat zásuvné moduly</span>).</p>
 <div class="figure" id="id1">
@@ -160,11 +160,11 @@ je ještě nutno v záložce <code class="docutils literal"><span class="pre">OW
 </div>
 <p>Změny v projektu uložíme a spustíme Gisquick plugin
 (<span class="menuselection">Web ‣ Gisquick ‣ Publish in Gisquick</span>). Pro
-nastavení publikace se otevře jednoduchý průvodce, kde můžeme nastavit
-vlastnosti projektu, podkladové vrstvy, témata a pod.</p>
-<div class="figure" id="id4">
+nastavení publikace se otevře jednoduchý průvodce, kde můžeme
+definovat vlastnosti projektu, podkladové vrstvy, témata a pod.</p>
+<p>Nejprve nastavíme podkladové vrstvy, vlastnosti projektu.</p>
+<div class="figure">
 <img alt="_images/qgis-gisquick-publish-0.png" src="_images/qgis-gisquick-publish-0.png" />
-<p class="caption"><span class="caption-text">Nejprve nastavíme podkladové vrstvy, vlastnosti projektu.</span></p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Poznámka</p>
@@ -172,59 +172,59 @@ vlastnosti projektu, podkladové vrstvy, témata a pod.</p>
 např. WMS vrstvu), tak je vhodné nastavit výchozí rozsah
 publikovaného projektu podle zájmové vrstvy, v našem případě
 povodí IV. řádu.</p>
-<div class="last figure" id="id5">
-<img alt="img/qgis-gisquick-extent.svg" src="img/qgis-gisquick-extent.svg" /><p class="caption"><span class="caption-text">Nastavení výchozího rozsahu publikovaného projektu.</span></p>
+<div class="last figure" id="id4">
+<img alt="_images/qgis-gisquick-publish-extent.svg" src="_images/qgis-gisquick-publish-extent.svg" /><p class="caption"><span class="caption-text">Nastavení výchozího rozsahu publikovaného projektu.</span></p>
 </div>
 </div>
-<div class="figure" id="id6">
+<p>Na další stránce průvodce lze nastavit jednotlivá témata, seskupit
+vrstvy do logických skupin.</p>
+<div class="figure">
 <img alt="_images/qgis-gisquick-publish-1.png" src="_images/qgis-gisquick-publish-1.png" />
-<p class="caption"><span class="caption-text">Na další stránce průvodce lze nastavit jednotlivá témata, seskupin
-vrstvy do logických skupin.</span></p>
 </div>
-<div class="figure" id="id7">
+<p>Na následující stránce průvodce můžeme nastavení publikace zkontrolovat.</p>
+<div class="figure">
 <img alt="_images/qgis-gisquick-publish-2.png" src="_images/qgis-gisquick-publish-2.png" />
-<p class="caption"><span class="caption-text">Na další stránce průvodce můžeme nastavení publikace zkontrolovat.</span></p>
 </div>
-<div class="figure" id="id8">
-<img alt="_images/qgis-gisquick-publish-3.svg" src="_images/qgis-gisquick-publish-3.svg" /><p class="caption"><span class="caption-text">Na poslední stránce průvodce aktivujeme volbu <strong>Create project zip
-for upload</strong>.</span></p>
-</div>
-<p>Projekt publikujeme pomocí tlačítka <code class="docutils literal"><span class="pre">Publish</span></code>. Výsledkem bude nově
-vytvořený soubor ve formátu zip vytvořený v nadřazeném adresáři, kde
-je uložen projekt. Tento soubor v následujícím kroku nahrajeme na
+<p>Na poslední stránce průvodce aktivujeme volbu <strong>Create project zip for
+upload</strong>.</p>
+<div class="figure">
+<img alt="_images/qgis-gisquick-publish-3.svg" src="_images/qgis-gisquick-publish-3.svg" /></div>
+<p>Projekt publikujeme pomocí tlačítka <code class="docutils literal"><span class="pre">Publish</span></code>. Výsledkem publikace
+bude soubor ve formátu zip vytvořený v nadřazeném adresáři, kde je
+uložen projekt. Tento soubor v následujícím kroku nahrajeme na
 publikační server.</p>
 <div class="section" id="nahrani-projektu-na-publikacni-server">
 <h2>Nahrání projektu na publikační server<a class="headerlink" href="#nahrani-projektu-na-publikacni-server" title="Trvalý odkaz na tento nadpis">¶</a></h2>
 <p>Předpokládáme, že máme vytvořen na publikační serveru <a class="reference internal" href="registrace.html"><span class="doc">vlastní
-učet</span></a> a otevřen prázdný projekt. Otevřeme <em>User menu</em>
-vpravo nahoře a vybereme položku <strong>My profile</strong>.</p>
+účet</span></a> a otevřen prázdný projekt. V uživatelském menu
+vpravo nahoře vybereme položku <strong>My profile</strong>.</p>
 <div class="figure">
 <img alt="_images/gisquick-user-menu.svg" src="_images/gisquick-user-menu.svg" /></div>
-<p>V profilu uživatele vybereme <code class="docutils literal"><span class="pre">Upload</span> <span class="pre">project</span></code>. Vybereme zip soubor
+<p>V profilu uživatele zvolíme <code class="docutils literal"><span class="pre">Upload</span> <span class="pre">project</span></code>. Vybereme zip soubor
 vytvořený zásuvným modulem Gisquick a pomocí tlačítka <code class="docutils literal"><span class="pre">Upload</span></code>
 nahrajeme na publikační server.</p>
-<div class="figure" id="id9">
+<div class="figure" id="id5">
 <img alt="_images/gisquick-upload-project.svg" src="_images/gisquick-upload-project.svg" /><p class="caption"><span class="caption-text">Nahraní projektu na publikační server.</span></p>
 </div>
 <p>Po nahrání projektu se přepneme do záložky <code class="docutils literal"><span class="pre">My</span> <span class="pre">Projects</span></code>, kde by se
-měl objevit nově nahraný projekt. Webovou mapovou aplikaci s tímto
-projektem otevřeme jednoduše poklikáním na název projektu.</p>
-<div class="figure" id="id10">
+měl objevit nový projekt. Webovou mapovou aplikaci s tímto projektem
+otevřeme jednoduše poklikáním na název projektu.</p>
+<div class="figure" id="id6">
 <img alt="_images/gisquick-my-project.svg" src="_images/gisquick-my-project.svg" /><p class="caption"><span class="caption-text">Otevření publikovaného projektu.</span></p>
 </div>
 <p>Na následující stránce potvrdíme přihlašovací udaje pomocí tlačítka
-<code class="docutils literal"><span class="pre">CONTINUE</span></code>. Poté se otevře nově publikovaný projekt.</p>
-<div class="figure" id="id11">
+<code class="docutils literal"><span class="pre">CONTINUE</span></code>. Poté se otevře námi publikovaný projekt.</p>
+<div class="figure" id="id7">
 <img alt="_images/gisquick-project-final.png" src="_images/gisquick-project-final.png" />
 <p class="caption"><span class="caption-text">Ukázka testovacího publikovaného projektu.</span></p>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">Pro podrobný popis uživatelského rozhraní webové mapové
-aplikace Gisquick v <a class="reference external" href="http://gisquick.readthedocs.io/en/latest/user-interface.html">oficiální dokumentaci</a>.</p>
+<p class="last">Podrobný popis uživatelského rozhraní webové mapové aplikace
+Gisquick najdete v <a class="reference external" href="http://gisquick.readthedocs.io/en/latest/user-interface.html">oficiální dokumentaci</a>.</p>
 </div>
-<p>Nezvývá nic jiného než otestovat Vaši první publikovaný projekt a
-sdílet vytvořenou webovou mapovou aplikaci s Vašimi kolegy.</p>
+<p><em>Nezbývá nic jiného než otestovat Vaš první publikovaný projekt a
+sdílet vytvořenou webovou mapovou aplikaci s kolegy:-)</em></p>
 </div>
 </div>
 
