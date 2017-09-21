@@ -1,5 +1,5 @@
-Tvorba webové aplikace v projektu Rain
-======================================
+Tvorba webové mapové aplikace v projektu Rain
+=============================================
 
 Tato dokumentace popisuje postup vytvoření vlastní webové mapové
 aplikace v rámci projektu Rain (http://rain.fsv.cvut.cz). Postup

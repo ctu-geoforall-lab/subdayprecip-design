@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Tvorba webové aplikace v projektu Rain'
+project = u'Tvorba webové mapové aplikace v projektu Rain'
 copyright = u'2017, Rain Team'
 author = u'Rain Team'
 
