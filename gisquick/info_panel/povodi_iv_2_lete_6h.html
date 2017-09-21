@@ -18,6 +18,7 @@
 
   <h3>Průběh návrhových srážek [mm]</h3>
   <div class="graph"></div>
+  <a href="#" ng-click="downloadData($event)">Data CSV</a>
 </template>
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -250,7 +251,28 @@
       // svg.select(".y.axis").call(yAxis); // change the y axis
 
       showGraphs(feature);
-    })
+    });
+
+    $scope.downloadData = function(evt) {
+      var link = evt.target;
+      link.download = 'data.csv';
+      csv = ['T_(min);H5_min_typ_1_(mm);H5_min_typ_2_(mm);H5_min_typ_3_(mm);H5_min_typ_4_(mm);H5_min_typ_5_(mm);H5_min_typ_6_(mm)'];
+
+      var types = Object.keys(data);
+      data[types[0]].forEach(function(d, index) {
+        var rowData = [d.time];
+        types.forEach(function(type) {
+          rowData.push(data[type][index].value);
+        });
+        csv.push(rowData.join(';'));
+      })
+
+      var blob = new Blob(
+        [csv.join('\n')],
+        {type: "text/csv;charset=utf-8"}
+      );
+      link.href = URL.createObjectURL(blob);
+    }
   }
 </script>
 
