@@ -18,7 +18,9 @@
 
   <h3>Průběh návrhových srážek [mm]</h3>
   <div class="graph"></div>
-  <a href="#" ng-click="downloadData($event)">Data CSV</a>
+  <div style="text-align:center; margin-top: 1em">
+    <a href="#" ng-click="downloadData($event)">Data CSV</a>
+  </div>
 </template>
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -80,7 +82,7 @@
       // .attr('dx', '-3em')
       // .attr('dy', '-7em')
       .attr('transform', 'translate('+(-margin.left * .7)+', '+(height/2)+') rotate(-90)')
-      .text("mm");
+      .text("mm/5min");
 
     // Set the ranges
     var x = d3.scale.linear().range([0, width]);
