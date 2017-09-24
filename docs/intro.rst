@@ -35,7 +35,9 @@ aplikace je umožněn i bez přihlašovacích údajů uživateli *Guest*.
 
    Vstup do ukázkové webové aplikace jako uživatel Guest.
 
-Po načtení aplikace zvolíme téma (Topic) z nabízených vrstev povodí IV. řádu s vyčíslenými úhrny srážek délky 6 hod a dobou opakování 2 roky, 5, 10, 20, 50 nebo 100 let.
+Po načtení aplikace zvolíme téma (Topic) z nabízených vrstev
+povodí IV. řádu s vyčíslenými úhrny srážek délky 6 hod a dobou
+opakování 2 roky, 5, 10, 20, 50 nebo 100 let.
 
 .. figure:: img/gisquick-topics.svg
 
@@ -48,16 +50,20 @@ informace, zejména typické časové průběhy návrhové srážky.
 
    Nejprve aktivujeme nástroj identify.
 
-S aktivním nástrojem identify přiblížíme pohled na zájmové povodí a klikneme do jeho
-plochy. Ve spodní části obrazovky se objeví popisné údaje související s tímto
-povodím včetně úhrnu šestihodinové návrhové srážky v mm pro danou dobu
-opakování. 
+S aktivním nástrojem *Identify* přiblížíme pohled na zájmové povodí a
+klikneme do jeho plochy. Ve spodní části obrazovky se objeví popisné
+údaje související s tímto povodím včetně úhrnu šestihodinové návrhové
+srážky v mm pro danou dobu opakování.
 
 .. figure:: img/gisquick-info.svg
 
    Panel zobrazující detailní informace k danému povodí IV. řádu.
 
-Aktivujeme ikonku *Info* v panelu s detailními informacemi (druhá ikonka v řádku záznamu). Tím je vyvolán v pravé části obrazovky info panel s podrobnými informacemi o návrhové srážce, konkrétně grafická reprezentace šesti typických průběhů návrhové srážky. Zobrazené hodnoty vyjadřují pětiminutové úhrny v milimetrech (mm/5min).
+Aktivujeme ikonku *Info* v panelu s detailními informacemi (druhá
+ikonka v řádku záznamu). Tím je vyvolán v pravé části obrazovky info
+panel s podrobnými informacemi o návrhové srážce, konkrétně grafická
+reprezentace šesti typických průběhů návrhové srážky. Zobrazené
+hodnoty vyjadřují pětiminutové úhrny v milimetrech (mm/5min).
 
 .. tip:: Podrobné informace o uživatelském rozhraní webové mapové
    aplikace Gisquick najdete v jeho `dokumentaci
@@ -66,4 +72,3 @@ Aktivujeme ikonku *Info* v panelu s detailními informacemi (druhá ikonka v ř�
 Další kapitoly této dokumentace popisují postup vytvoření nové webové
 mapové aplikace s využitím vlastních dat a parametrů návrhových
 srážek.
-
