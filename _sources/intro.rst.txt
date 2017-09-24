@@ -35,39 +35,35 @@ aplikace je umožněn i bez přihlašovacích údajů uživateli *Guest*.
 
    Vstup do ukázkové webové aplikace jako uživatel Guest.
 
-Po načtení aplikace zvolíme téma (Topic) s dobou opakování 2 roky, 5,
-10, 20, 50 nebo 100 let.
+Po načtení aplikace zvolíme téma (Topic) z nabízených vrstev
+povodí IV. řádu s vyčíslenými úhrny srážek délky 6 hod a dobou
+opakování 2 roky, 5, 10, 20, 50 nebo 100 let.
 
 .. figure:: img/gisquick-topics.svg
 
    Volba tématu s dobou opakování 2 roky.
 
-Aplikace umožňuje pro dané povodí IV. řádu zobrazit i podrobnější
-informace ukazující průběhy návrhových srážek na základě jejich typů.
-
-.. todo:: Přeformulovat.
+Aplikace umožňuje pro zvolené povodí IV. řádu zobrazit podrobnější
+informace, zejména typické časové průběhy návrhové srážky.
 
 .. figure:: img/gisquick-identify.svg
 
    Nejprve aktivujeme nástroj identify.
 
-Poté přiblížíme pohled na zájmové povodí IV. řádu a klikneme do jeho
-plochy. Ve spodní části se objeví popisné údaje související s tímto
-povodí včetně úhrnu návrhové srážky v mm pro danou dobu
-opakování. 
-
-.. todo:: Přeformulovat.
+S aktivním nástrojem *Identify* přiblížíme pohled na zájmové povodí a
+klikneme do jeho plochy. Ve spodní části obrazovky se objeví popisné
+údaje související s tímto povodím včetně úhrnu šestihodinové návrhové
+srážky v mm pro danou dobu opakování.
 
 .. figure:: img/gisquick-info.svg
 
    Panel zobrazující detailní informace k danému povodí IV. řádu.
 
-Klikneme na ikonku *Info* (druhá ikonka v řádku záznamu). Poté se
-objeví v pravé části info panel ukazující podrobné informace včetně
-grafické reprezentace průběhu návrhových srážek pro jednotlivé typy
-v mm.
-
-.. todo:: Přeformulovat.
+Aktivujeme ikonku *Info* v panelu s detailními informacemi (druhá
+ikonka v řádku záznamu). Tím je vyvolán v pravé části obrazovky info
+panel s podrobnými informacemi o návrhové srážce, konkrétně grafická
+reprezentace šesti typických průběhů návrhové srážky. Zobrazené
+hodnoty vyjadřují pětiminutové úhrny v milimetrech (mm/5min).
 
 .. tip:: Podrobné informace o uživatelském rozhraní webové mapové
    aplikace Gisquick najdete v jeho `dokumentaci
@@ -76,4 +72,3 @@ v mm.
 Další kapitoly této dokumentace popisují postup vytvoření nové webové
 mapové aplikace s využitím vlastních dat a parametrů návrhových
 srážek.
-
