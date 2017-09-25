@@ -1429,7 +1429,7 @@ def my_form_open(dialog, layer, feature):
       </extent>
       <id>data_povodi_iv_any20161206000220509</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
-      <shortname>povodi_iv_5_6h</shortname>
+      <shortname>povodi_iv_5_lete_6h</shortname>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2506,7 +2506,7 @@ def my_form_open(dialog, layer, feature):
       </extent>
       <id>data_povodi_iv_any201612061020161206102709972164818856</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
-      <shortname>povodi_iv_20_6h</shortname>
+      <shortname>povodi_iv_20_lete_6h</shortname>
       <keywordList>
         <value></value>
       </keywordList>
@@ -3041,7 +3041,7 @@ def my_form_open(dialog, layer, feature):
       </extent>
       <id>data_povodi_iv_any201612061020161206102851363649587533</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
-      <shortname>povodi_iv_50_6h</shortname>
+      <shortname>povodi_iv_50_lete_6h</shortname>
       <keywordList>
         <value></value>
       </keywordList>
@@ -3576,7 +3576,7 @@ def my_form_open(dialog, layer, feature):
       </extent>
       <id>data_povodi_iv_any201612061020161206103056056323290986</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
-      <shortname>povodi_iv_100_6h</shortname>
+      <shortname>povodi_iv_100_lete_6h</shortname>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4111,7 +4111,7 @@ def my_form_open(dialog, layer, feature):
       </extent>
       <id>data_povodi_iv_any20161206102441921465245529</id>
       <datasource>./data.sqlite|layername=povodi_iv</datasource>
-      <shortname>povodi_iv_10_6h</shortname>
+      <shortname>povodi_iv_10_lete_6h</shortname>
       <keywordList>
         <value></value>
       </keywordList>
