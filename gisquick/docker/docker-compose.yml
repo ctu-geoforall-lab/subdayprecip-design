@@ -10,7 +10,7 @@ services:
 
   django:
     restart: always
-    image: gisquick/django:latest
+    image: gisquick/django:aws
     links:
       - qgisserver
     volumes:
@@ -20,6 +20,13 @@ services:
     environment:
       - GUNICORN_ERRORLOG=-
       - GUNICORN_ACCESSLOG=-
+      - DJANGO_EMAIL_USE_SSL=False
+      - DJANGO_EMAIL_USE_TLS=True
+      - DJANGO_EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+      - DJANGO_EMAIL_HOST='smtp.gmail.com'
+      - DJANGO_EMAIL_PORT=587
+      - DJANGO_EMAIL_HOST_USER='your@mail.com'
+      - DJANGO_EMAIL_HOST_PASSWORD='verysecret'
 
   nginx:
     restart: unless-stopped
