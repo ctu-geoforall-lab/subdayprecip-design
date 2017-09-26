@@ -109,7 +109,7 @@ $(document).ready(function() {
     switcher.maximizeControl();
     
     // base layer
-    zm50Layer = new OpenLayers.Layer.WMS("ZM 10 (CUZK)",
+    zm50Layer = new OpenLayers.Layer.WMS("ZM 50 (CUZK)",
                                          "https://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx",
                                          {layers: "GR_ZM50", srs: "EPSG:4326"});
     zm50Layer.title = "ZM50";
@@ -154,7 +154,7 @@ $(document).ready(function() {
     obsLayer.addFeatures([new OpenLayers.Feature.Vector(obsPoint, {icon: "./img/map-pointer.png"})]);
     
     // add everything to map
-    map.addLayers([h002Layer, h005Layer, h010Layer, h020Layer, h050Layer, h100Layer, zm50Layer, obsLayer]);
+    map.addLayers([zm50Layer, h002Layer, h005Layer, h010Layer, h020Layer, h050Layer, h100Layer, obsLayer]);
     map.setCenter(new OpenLayers.LonLat(15.474897, 49.803578), 8);
     
     // drag feature control here is where wps is called
