@@ -118,6 +118,11 @@ dokončení výpočtu výsledná data stahuje ze serveru na stranu klienta,
 tj. do programu QGIS) se do mapového okna přidá automaticky i výsledná
 vrstva vytvořená nástrojem ``d-rain-shp``.
 
+.. figure:: img/qgis-wps-result.svg
+
+   Výsledná vrstva vrácená WPS nástrojem s atributovým sloupcem úhrnu
+   návrhové srážky (H_N2_T120).
+   
 Vrstva vytvořená nástrojem ``d-rain-shp`` je *přechodná*, proto účel
 publikace je nutné ji uložit na disk. Vytvoříme nový adresář, kam tuto
 vrstvu uložíme. Tento adresář bude obsahovat veškerá data určená k
