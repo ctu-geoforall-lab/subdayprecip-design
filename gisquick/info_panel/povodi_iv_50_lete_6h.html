@@ -11,7 +11,7 @@
       </tr>
       <tr>
         <td class="label">Hodnota návrhové srážky:</td>
-        <td>{{ feature.get('H_N50T360').toFixed(1) }} mm</td>
+        <td>{{ feature.get('H_N50T360').toFixed(2) }} mm</td>
       </tr>
     </tbody>
   </table>
@@ -228,7 +228,7 @@
         var i = bisectTime(graphData, xVal, 0);
         d = graphData[i];
 
-        tooltip.values.select('#g'+id).html(d.value.toFixed(3));
+        tooltip.values.select('#g'+id).html(d.value.toFixed(2));
       });
       // console.log('mouse: '+xVal.toFixed(3) +'  D1 time: '+d.time);
 
@@ -264,7 +264,7 @@
       data[types[0]].forEach(function(d, index) {
         var rowData = [d.time];
         types.forEach(function(type) {
-          rowData.push(data[type][index].value);
+          rowData.push(data[type][index].value.toFixed(2));
         });
         csv.push(rowData.join(';'));
       })
