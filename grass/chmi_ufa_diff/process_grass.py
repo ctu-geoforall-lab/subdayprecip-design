@@ -6,7 +6,7 @@ import glob
 import subprocess
 import tempfile
 
-SAMPLE = True
+SAMPLE = False
 
 def find_grass():
     """Find GRASS installation.
@@ -81,6 +81,7 @@ def compute_utm(datadir, outdir):
 def compute_wgs84(datadir, outdir):
     location = 'location-4326'
     init(gisbase=os.environ['GISBASE'], dbase=datadir, location=location)
+    print os.path.join(datadir, location)
     if not os.path.exists(os.path.join(datadir, location)):
         create_location(dbase=datadir, location=location, epsg=4326)
     
@@ -91,10 +92,11 @@ def compute_wgs84(datadir, outdir):
             run_command('v.import', input=f, output=mapname)
         run_command('v.out.ogr', input=mapname, output=os.path.join(outdir, 'wgs84_{}.gpkg'.format(mapname)),
                     flags='se', format='GPKG')
-
+    
 def compute_sjtsk(datadir, outdir):
     location = 'location-5514'
     init(gisbase=os.environ['GISBASE'], dbase=datadir, location=location)
+    print os.path.join(datadir, location)
     if not os.path.exists(os.path.join(datadir, location)):
         create_location(dbase=datadir, location=location, epsg=5514, datum_trans=2)
     
@@ -122,26 +124,22 @@ if __name__ == "__main__":
     os.environ['GRASS_OVERWRITE'] = '1'
 
     # datadir = tempfile.mkdtemp()
-    datadir = './datadir'
+    datadir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'datadir')
     if not os.path.exists(datadir):
         sys.exit("Input dir not found")
     
     # outdir = tempfile.mkdtemp()
-    outdir = './outdir'
-    if not os.path.exists(outdir):
-        os.makedirs(outdir)
+    outdir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'outdir')
+    if os.path.exists(outdir):
+        import shutil
+        shutil.rmtree(outdir)
+    os.makedirs(outdir)
+        
+    compute_utm(datadir, outdir)
 
-    compute_utm(os.path.abspath(datadir),
-                os.path.abspath(outdir)
-    )
+    compute_wgs84(datadir, outdir)
 
-    compute_wgs84(os.path.abspath(datadir),
-                  os.path.abspath(outdir)
-    )
-
-    compute_sjtsk(os.path.abspath(datadir),
-                  os.path.abspath(outdir)
-    )
+    compute_sjtsk(datadir, outdir)
 
     print('DATADIR: {}'.format(datadir))
     print('OUTDIR: {}'.format(outdir))
