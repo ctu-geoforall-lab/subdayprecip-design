@@ -6,6 +6,8 @@ import glob
 import subprocess
 import tempfile
 
+SAMPLE = True
+
 def find_grass():
     """Find GRASS installation.
     """
@@ -22,36 +24,35 @@ def create_raster(input_map, column, outdir):
     run_command('r.vect.stats', input=input_map, column=column,
                  output=map_name)
     run_command('r.colors', map=map_name, raster='chmi_1d')
-    # vyplneni der
+    # fill gaps
     run_command('r.fill.gaps', input=map_name, output=map_name + '_f_tmp',
                  flags='p',
                  uncertainty=map_name + '_f_unc')
-    # r.fill.gaps provadi extrapolaci, to chceme zamezit
+    # r.fill.gaps - avoid extrapolation
     run_command('r.mapcalc',
                 expression='{m}_f = if(isnull({m}),if({m}_f_unc < 0.25,{m}_f_tmp,null()),{m})'.format(m=map_name)
     )
     run_command('r.colors', map='{}_f'.format(map_name), raster='chmi_1d')
     run_command('r.out.gdal', input='{}_f'.format(map_name),
-                output=os.path.join(outdir, '{}.tiff'.format(map_name)))
+                output=os.path.join(outdir, 'utm_{}.tiff'.format(map_name)))
 
-def compute_utm():
-    # GRASS lokace v S-JTSK
-    # datadir = tempfile.mkdtemp()
-    datadir = '/opt/grassdata'
+def compute_utm(datadir, outdir):
     location = 'location-32633'
     init(gisbase=os.environ['GISBASE'], dbase=datadir, location=location)
     if not os.path.exists(os.path.join(datadir, location)):
-        create_location(dbase=datadir, location=location, epsg=32633) #, datum_trans=2)
+        create_location(dbase=datadir, location=location, epsg=32633)
 
-    # vytvoreni bodovych vrstev v S-JTSK (SHP)
+    os.chdir(datadir)
     for f in glob.glob('*.vrt'):
         mapname = os.path.splitext(os.path.basename(f))[0]
-        run_command('v.import', input=f, output=mapname)
-        #run_command('v.out.ogr', input=mapname, output=os.path.join(outdir, mapname + '.gpkg'),
-        #            flags='se', format='GPKG')
+        if not find_file(mapname, element='vector')['fullname']:
+            run_command('v.import', input=f, output=mapname)
+        run_command('v.out.ogr', input=mapname, output=os.path.join(outdir, 'utm_{}.gpkg'.format(mapname)),
+                    flags='se', format='GPKG')
 
     # import CHMI
-    run_command('r.in.gdal', input='p100_1d1/w001001.adf', output='chmi_1d', flags='o')
+    run_command('r.in.gdal', input=os.path.join(datadir, 'p100_1d1', 'w001001.adf'),
+                output='chmi_1d', flags='o')
     run_command('r.colors', map='chmi_1d', rules='myblues.txt')
 
     # install dependencies
@@ -62,21 +63,56 @@ def compute_utm():
 
     # set region
     run_command('g.region', raster='chmi_1d')
-    run_command('v.proj', location='gismentors', mapset='ruian', input='staty', output='stat')
+    if not find_file('stat', element='vector')['fullname']:
+        run_command('v.import', input=os.path.join(datadir, 'stat.gpkg'), output='stat')
     run_command('r.mask', vector='stat')
 
     for map_name in list_grouped('vector', exclude='^stat')['PERMANENT']:
         for col in vector_columns(map_name).keys():
             if col in ('cat', 'Pixel', 'Lat', 'Lon', 'Alt'):
                 continue
+            message("Processing <{}> column '{}' writing to '{}'...".format(
+                map_name, col, outdir
+            ))
             create_raster(map_name, col, outdir)
+            if SAMPLE == True:
+                return
+
+def compute_wgs84(datadir, outdir):
+    location = 'location-4326'
+    init(gisbase=os.environ['GISBASE'], dbase=datadir, location=location)
+    if not os.path.exists(os.path.join(datadir, location)):
+        create_location(dbase=datadir, location=location, epsg=4326)
+    
+    os.chdir(datadir)
+    for f in glob.glob('*.vrt'):
+        mapname = os.path.splitext(os.path.basename(f))[0]
+        if not find_file(mapname, element='vector')['fullname']:
+            run_command('v.import', input=f, output=mapname)
+        run_command('v.out.ogr', input=mapname, output=os.path.join(outdir, 'wgs84_{}.gpkg'.format(mapname)),
+                    flags='se', format='GPKG')
+
+def compute_sjtsk(datadir, outdir):
+    location = 'location-5514'
+    init(gisbase=os.environ['GISBASE'], dbase=datadir, location=location)
+    if not os.path.exists(os.path.join(datadir, location)):
+        create_location(dbase=datadir, location=location, epsg=5514, datum_trans=2)
+    
+    os.chdir(datadir)
+    for f in glob.glob('*.vrt'):
+        mapname = os.path.splitext(os.path.basename(f))[0]
+        if not find_file(mapname, element='vector')['fullname']:
+            run_command('v.import', input=f, output=mapname)
+        run_command('v.out.ogr', input=mapname, output=os.path.join(outdir, 'sjtsk_{}.gpkg'.format(mapname)),
+                    flags='se', format='GPKG')
 
 if __name__ == "__main__":
     # add GRASS libraries to path
     sys.path.append(os.path.join(find_grass(), 'etc', 'python'))
     
     # import GRASS libraries
-    from grass.script.core import create_location, run_command, gisenv, list_grouped, find_program
+    from grass.script.core import create_location, run_command, gisenv, list_grouped, \
+        find_program, message, find_file
     from grass.script.vector import vector_columns
     from grass.script.setup import init
 
@@ -84,13 +120,28 @@ if __name__ == "__main__":
     os.environ['PATH'] += os.pathsep + os.path.join(os.environ['HOME'], '.grass7', 'addons', 'bin')
     
     os.environ['GRASS_OVERWRITE'] = '1'
+
+    # datadir = tempfile.mkdtemp()
+    datadir = './datadir'
+    if not os.path.exists(datadir):
+        sys.exit("Input dir not found")
     
     # outdir = tempfile.mkdtemp()
-    outdir = '/tmp/data'
+    outdir = './outdir'
     if not os.path.exists(outdir):
         os.makedirs(outdir)
 
-    compute_utm()
+    compute_utm(os.path.abspath(datadir),
+                os.path.abspath(outdir)
+    )
 
-print('grass --text {}'.format(os.path.join(datadir, location, 'PERMANENT')))
-print('OUTDIR: {}'.format(outdir))
+    compute_wgs84(os.path.abspath(datadir),
+                  os.path.abspath(outdir)
+    )
+
+    compute_sjtsk(os.path.abspath(datadir),
+                  os.path.abspath(outdir)
+    )
+
+    print('DATADIR: {}'.format(datadir))
+    print('OUTDIR: {}'.format(outdir))
