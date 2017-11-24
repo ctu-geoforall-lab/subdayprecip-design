@@ -27,6 +27,8 @@ from grass.exceptions import CalledModuleError
 
 from pywps import Process, ComplexInput, LiteralInput, Format, ComplexOutput, LiteralOutput
 
+LOGGER = logging.getLogger('PYWPS')
+
 class SubDayPrecipProcess(Process):
      def __init__(self, identifier, description,
                   location='/opt/grassdata/subdayprecip',
