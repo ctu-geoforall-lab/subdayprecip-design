@@ -84,7 +84,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           fd.write('{key}{sep}CAS_min'.format(key=self.keycolumn, sep=self.sep))
           for stype in self.shapetype:
                for rp in self.return_period:
-                    fd.write('{sep}H_{rast}T{rl}TYP{stype}'.format(
+                    fd.write('{sep}H_{rast}T{rl}TYP{stype}_mm'.format(
                               sep=self.sep, stype=stype, rast=rp, rl=self.rainlength)
                     ) 
           fd.write('\r\n')
