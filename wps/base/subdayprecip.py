@@ -16,17 +16,18 @@ import time
 import types
 import shutil
 import magic
+import logging
 from subprocess import PIPE
 
 os.environ['GISBASE'] = '/opt/grass/dist.x86_64-pc-linux-gnu'
 sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
-LOGGER.info(sys.path)
+
 from grass.pygrass.modules import Module
 from grass.exceptions import CalledModuleError
 
 from pywps import Process, ComplexInput, LiteralInput, Format, ComplexOutput, LiteralOutput
 
-LOGGER = LOGGER.getLogger('PYWPS')
+LOGGER = logging.getLogger('PYWPS')
 
 class SubDayPrecipProcess(Process):
      def __init__(self, identifier, description,
@@ -190,9 +191,6 @@ class SubDayPrecipProcess(Process):
                       rainlength=self.rainlength
                )
                LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
-               LOGGER.info("{}".format(Module(
-                    'v.info', flags='c', map=self.map_name, stdout_=PIPE).outputs.stdout)
-               )
 
           response.outputs['output'].file = self.export()
 

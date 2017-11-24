@@ -1,4 +1,4 @@
-\# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 ####################################################################
 # QJ1520265 project - source code and support files for OGC WMS and
