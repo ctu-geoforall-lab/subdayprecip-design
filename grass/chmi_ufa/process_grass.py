@@ -36,7 +36,7 @@ def create_raster(input_map, column, outdir):
     # )
     run_command('r.colors', map='{}_f'.format(map_name), raster='chmi_1d')
     run_command('r.out.gdal', input='{}_f'.format(map_name),
-                output=os.path.join(outdir, 'utm_{}.tiff'.format(map_name)))
+                output=os.path.join(outdir, 'sjtsk_{}.tiff'.format(map_name)))
 
 def compute_utm(datadir, outdir):
     location = 'location-32633'
