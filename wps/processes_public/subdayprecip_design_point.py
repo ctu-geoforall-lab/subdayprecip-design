@@ -10,11 +10,10 @@
 ####################################################################
 
 import sys
-import logging
 from subprocess import PIPE
 
 sys.path.insert(0, '..')
-from base.subdayprecip import SubDayPrecipProcess
+from base.subdayprecip import SubDayPrecipProcess, LOGGER
 from grass.pygrass.modules import Module
 
 class SubDayPrecipPoint(SubDayPrecipProcess):
@@ -38,18 +37,18 @@ class SubDayPrecipPoint(SubDayPrecipProcess):
                      proj_in='+init=epsg:4326', proj_out='+init=epsg:5514', stdout_=PIPE)
           x, y, z = p.outputs.stdout.split('|')
           vector_input="1|{}|{}".format(x, y)
-          logging.info(vector_input)
+          LOGGER.info(vector_input)
           Module('v.in.ascii', input='-', output=map_name,
                  cat=1, x=2, y=3, stdin_=vector_input)
           Module('v.db.addtable', map=map_name)
-          logging.debug("Subday computation started")
+          LOGGER.debug("Subday computation started")
           Module('r.subdayprecip.design',
                  map=map_name, return_period=self.rasters,
                  rainlength=request.inputs['rainlength'][0].data)
-          logging.debug("Subday computation finished")
+          LOGGER.debug("Subday computation finished")
 
           p = Module('v.db.select', map=map_name, flags='c', stdout_=PIPE)
-          logging.info(p.outputs.stdout)
+          LOGGER.info(p.outputs.stdout)
           response.outputs['output'].data = p.outputs.stdout.split('|')[1].rstrip()
 
           return response

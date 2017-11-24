@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+\# -*- coding: utf-8 -*-
 
 ####################################################################
 # QJ1520265 project - source code and support files for OGC WMS and
@@ -11,13 +11,12 @@
 
 import os
 import sys
-import logging
 import types
 import time
 from zipfile import ZipFile
 
 sys.path.insert(0, '..')
-from base.subdayprecip import SubDayPrecipProcess
+from base.subdayprecip import SubDayPrecipProcess, LOGGER
 from subdayprecip_design_shapes import SubDayPrecipShapesBase
 
 import grass.script as gscript # TODO: replace by pyGRASS

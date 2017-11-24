@@ -13,11 +13,10 @@ __author__ = "Martin Landa"
 
 import os
 import sys
-import logging
 from zipfile import ZipFile
 
 sys.path.insert(0, '..')
-from base.subdayprecip import SubDayPrecipProcess
+from base.subdayprecip import SubDayPrecipProcess, LOGGER
 from grass.pygrass.modules import Module
 
 class SubDayPrecipShp(SubDayPrecipProcess):
@@ -32,7 +31,7 @@ class SubDayPrecipShp(SubDayPrecipProcess):
      def export(self):
           self.output_file = '{}/{}.zip'.format(self.output_dir, self.map_name)
           
-          logging.debug("Export started")          
+          LOGGER.debug("Export started")
           Module('v.out.ogr',
                  input=self.map_name,
                  flags='sme',
@@ -45,6 +44,6 @@ class SubDayPrecipShp(SubDayPrecipProcess):
                shpzip.write('{}.shp'.format(self.map_name))
                shpzip.write('{}.shx'.format(self.map_name))
                shpzip.write('{}.prj'.format(self.map_name))
-          logging.debug("Export finished")
+          LOGGER.debug("Export finished")
 
           return self.output_file

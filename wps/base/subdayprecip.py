@@ -15,19 +15,18 @@ import sys
 import time
 import types
 import shutil
-import logging
 import magic
 from subprocess import PIPE
 
 os.environ['GISBASE'] = '/opt/grass/dist.x86_64-pc-linux-gnu'
 sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
-logging.info(sys.path)
+LOGGER.info(sys.path)
 from grass.pygrass.modules import Module
 from grass.exceptions import CalledModuleError
 
 from pywps import Process, ComplexInput, LiteralInput, Format, ComplexOutput, LiteralOutput
 
-LOGGER = logging.getLogger('PYWPS')
+LOGGER = LOGGER.getLogger('PYWPS')
 
 class SubDayPrecipProcess(Process):
      def __init__(self, identifier, description,
@@ -183,15 +182,15 @@ class SubDayPrecipProcess(Process):
 
           if 'input' in request.inputs.keys():
                Module('g.region', raster=self.return_period[0])
-               logging.debug("Subday computation started")
+               LOGGER.debug("Subday computation started")
                start = time.time()
-               logging.info("R: {}".format(self.rainlength))
+               LOGGER.info("R: {}".format(self.rainlength))
                Module('r.subdayprecip.design',
                       map=self.map_name, return_period=self.return_period,
                       rainlength=self.rainlength
                )
-               logging.info("Subday computation finished: {} sec".format(time.time() - start))
-               logging.info("{}".format(Module(
+               LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
+               LOGGER.info("{}".format(Module(
                     'v.info', flags='c', map=self.map_name, stdout_=PIPE).outputs.stdout)
                )
 
@@ -238,7 +237,7 @@ class SubDayPrecipProcess(Process):
                module_in_args['input'] = input_data
                # skip projection check
                module_in_args['flags'] = 'o'
-          logging.debug("Import started ({})".format(input_data))
+          LOGGER.debug("Import started ({})".format(input_data))
           start = time.time()
           try:
                Module(module_in,
@@ -249,7 +248,7 @@ class SubDayPrecipProcess(Process):
           except CalledModuleError as e:
                raise Exception("Unable to import input vector data: {}".format(e))
           
-          logging.info("Input data imported ({}): {} sec".format(
+          LOGGER.info("Input data imported ({}): {} sec".format(
                module_in, time.time() - start)
           )
           

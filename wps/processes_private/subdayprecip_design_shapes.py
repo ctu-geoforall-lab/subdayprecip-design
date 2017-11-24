@@ -11,7 +11,6 @@
 
 import os
 import sys
-import logging
 import types
 import time
 from zipfile import ZipFile
@@ -27,7 +26,7 @@ class SubDayPrecipShapesBase(object):
           self.rainlength = '360'
 
      def export(self):
-          logging.debug("Shapes computation started")
+          LOGGER.debug("Shapes computation started")
           start = time.time()
 
           gisenv = gscript.gisenv()
@@ -61,10 +60,7 @@ class SubDayPrecipShapesBase(object):
           #      fzip.write('{}'.format(os.path.basename(self.output_file)))
           # self.output_csv.setValue(output_zfile)
 
-          # export png (graph)
-          ### TODO
-
-          logging.info("Shapes calculated successfully: {} sec".format(time.time() - start))
+          LOGGER.info("Shapes calculated successfully: {} sec".format(time.time() - start))
           
           return self.output_file
      
