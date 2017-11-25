@@ -85,6 +85,15 @@ class SubDayPrecipProcess(Process):
                     data_type='integer')
                )
 
+          if 'area_size' in input_params:
+               inputs.append(LiteralInput(
+                    identifier="area_size",
+                    title=u"Maximalni vymera plochy v km2 pro kterou bude navrhova srazka vypoctena (-1 pro zadny limit)",
+                    data_type='float',
+                    default='20',
+                    min_occurs=0)
+               )
+
           if 'type' in input_params:
                inputs.append(LiteralInput(
                     identifier="type",
@@ -167,6 +176,10 @@ class SubDayPrecipProcess(Process):
                self.shapetype = request.inputs['type'][0].data.split(',')
           if 'value' in request.inputs.keys():
                self.value = request.inputs['value'][0].data
+          if 'area_size' in request.inputs.keys():
+               self.area_size = request.inputs['area_size'][0].data
+          else:
+               self.area_size = 20
 
           if 'input' in request.inputs.keys():
                self.map_name = self.import_data(request.inputs['input'][0].file)
@@ -188,7 +201,7 @@ class SubDayPrecipProcess(Process):
                LOGGER.info("R: {}".format(self.rainlength))
                Module('r.subdayprecip.design',
                       map=self.map_name, return_period=self.return_period,
-                      rainlength=self.rainlength
+                      rainlength=self.rainlength, area_size=self.area_size
                )
                LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
 

@@ -24,7 +24,7 @@ class SubDayPrecipShp(SubDayPrecipProcess):
           super(SubDayPrecipShp, self).__init__(
                identifier="d-rain-shp",
                description="Vraci vycislene navrhove srazky jako vektorova data ve formatu Esri Shapefile.",
-               input_params=['input', 'return_period', 'rainlength'],
+               input_params=['input', 'return_period', 'rainlength', 'area_size'],
                output_params=['output_shp']
           )
           
