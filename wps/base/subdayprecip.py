@@ -99,7 +99,7 @@ class SubDayPrecipProcess(Process):
                     identifier="type",
                     title=u"Typy rozlozeni srazky",
                     data_type='string',
-                    default='1,2,3,4,5,6')
+                    default='A,B,C,D,E,F')
                )
 
           if 'output_shp' in output_params:
@@ -179,7 +179,10 @@ class SubDayPrecipProcess(Process):
           if 'area_size' in request.inputs.keys():
                self.area_size = request.inputs['area_size'][0].data
           else:
-               self.area_size = 20
+               if self.identifier == 'd-rain6h-timedist':
+                    self.area_size = -1
+               else:
+                    self.area_size = 20
 
           if 'input' in request.inputs.keys():
                self.map_name = self.import_data(request.inputs['input'][0].file)
@@ -195,14 +198,31 @@ class SubDayPrecipProcess(Process):
           os.mkdir(self.output_dir)
 
           if 'input' in request.inputs.keys():
-               Module('g.region', raster=self.return_period[0])
                LOGGER.debug("Subday computation started")
                start = time.time()
                LOGGER.info("R: {}".format(self.rainlength))
-               Module('r.subdayprecip.design',
-                      map=self.map_name, return_period=self.return_period,
-                      rainlength=self.rainlength, area_size=self.area_size
-               )
+               if self.identifier == 'd-rain6h-timedist':
+                    LOGGER.info('Using v.rast.stats')
+                    columns = []
+                    for rp in self.return_period:
+                         n = rp.lstrip('N')
+                         col_name = 'H_N{n}T360'.format(n=n)
+                         map_name = 'sjtsk_navrhove_srazky_6h_P_{n}yr_6h_mm@{ms}'.format(
+                              n=n, ms=self.mapset
+                         )
+                         Module('v.rast.stats', map=self.map_name, raster=map_name,
+                                method='average', column_prefix=col_name
+                         )
+                         Module('v.db.renamecolumn', map=self.map_name,
+                                column=[col_name + '_average', col_name]
+                         )
+               else:
+                    LOGGER.info('Using r.subdayprecip.design')
+                    Module('g.region', raster=self.return_period[0])
+                    Module('r.subdayprecip.design',
+                           map=self.map_name, return_period=self.return_period,
+                           rainlength=self.rainlength, area_size=self.area_size
+                    )
                LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
 
           response.outputs['output'].file = self.export()
