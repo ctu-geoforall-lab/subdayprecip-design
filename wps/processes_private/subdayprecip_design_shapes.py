@@ -42,7 +42,7 @@ class SubDayPrecipShapesBase(object):
                                           self.mapset, 'sqlite/sqlite.db')
           )
 
-          if self.identifier == 'd-rain-timedist':
+          if self.identifier == 'd-rain6h-timedist':
                # query map attributes
                columns = map(lambda x: 'H_{}T{}'.format(x, self.rainlength), self.return_period)
                columns.insert(0, self.keycolumn)
@@ -67,7 +67,7 @@ class SubDayPrecipShapesBase(object):
 class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
-               identifier="d-rain-timedist",
+               identifier="d-rain6h-timedist",
                description=u"Vraci tvary navrhovych srazek v tabulkove forme s pevne stanovenou delkou srazky 6 hodin.",
                input_params=['input', 'keycolumn', 'return_period', 'type'],
                output_params=['output_shapes']
@@ -75,27 +75,16 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           SubDayPrecipShapesBase.__init__(self)
 
      def _compute_timeshapes_perc(self):
-          def type_convert(type_num):
-               _types = { '1' : 'F',
-                          '2' : 'E',
-                          '3' : 'D',
-                          '4' : 'C',
-                          '5' : 'B',
-                          '6' : 'A'
-               }
-               return _types[type_num]
-
           # filename syntax: sjtsk_zastoupeni_shluku_cA_100yr_perc
           columns = []
           for stype in self.shapetype:
-               type_string = type_convert(stype)
                for rp in self.return_period:
                     n = rp.lstrip('N')
                     columns.append('c{types}_{n}yr_perc'.format(
-                         types=type_string, n=n
+                         types=stype, n=n
                     ))
                     map_name = 'sjtsk_zastoupeni_shluku_c{types}_{n}yr_perc@{ms}'.format(
-                         types=type_string, n=n, ms=self.mapset
+                         types=stype, n=n, ms=self.mapset
                     )
                     gscript.run_command('v.rast.stats', map=self.map_name, raster=map_name,
                                         method='average', column_prefix=columns[-1]
@@ -112,13 +101,13 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           fd.write('{key}{sep}CAS_min'.format(key=self.keycolumn, sep=self.sep))
           for stype in self.shapetype:
                for rp in self.return_period:
-                    fd.write('{sep}H_{rast}T{rl}TYP{stype}_mm'.format(
-                              sep=self.sep, stype=stype, rast=rp, rl=self.rainlength)
+                    fd.write('{sep}H_{rast}typ{stype}_mm'.format(
+                              sep=self.sep, stype=stype, rast=rp)
                     )
           for stype in self.shapetype:
                for rp in self.return_period:
-                    fd.write('{sep}H_{rast}T{rl}TYP{stype}_%'.format(
-                         sep=self.sep, stype=stype, rast=rp, rl=self.rainlength)
+                    fd.write('{sep}P_{rast}typ{stype}_%'.format(
+                         sep=self.sep, stype=stype, rast=rp)
                     )
           fd.write(nl)
 

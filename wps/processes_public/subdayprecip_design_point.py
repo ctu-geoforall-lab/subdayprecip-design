@@ -37,7 +37,7 @@ class SubDayPrecipPoint(SubDayPrecipProcess):
                      proj_in='+init=epsg:4326', proj_out='+init=epsg:5514', stdout_=PIPE)
           x, y, z = p.outputs.stdout.split('|')
           vector_input="1|{}|{}".format(x, y)
-          LOGGER.info(vector_input)
+          LOGGER.debug('Input: {}'.format(vector_input))
           Module('v.in.ascii', input='-', output=map_name,
                  cat=1, x=2, y=3, stdin_=vector_input)
           Module('v.db.addtable', map=map_name)
@@ -48,7 +48,7 @@ class SubDayPrecipPoint(SubDayPrecipProcess):
           LOGGER.debug("Subday computation finished")
 
           p = Module('v.db.select', map=map_name, flags='c', stdout_=PIPE)
-          LOGGER.info(p.outputs.stdout)
+          LOGGER.debug('Result: {}'.format(p.outputs.stdout))
           response.outputs['output'].data = p.outputs.stdout.split('|')[1].rstrip()
 
           return response

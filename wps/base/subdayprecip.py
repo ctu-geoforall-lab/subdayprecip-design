@@ -16,17 +16,18 @@ import time
 import types
 import shutil
 import magic
+import logging
 from subprocess import PIPE
 
 os.environ['GISBASE'] = '/opt/grass/dist.x86_64-pc-linux-gnu'
 sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
-LOGGER.info(sys.path)
+
 from grass.pygrass.modules import Module
 from grass.exceptions import CalledModuleError
 
 from pywps import Process, ComplexInput, LiteralInput, Format, ComplexOutput, LiteralOutput
 
-LOGGER = LOGGER.getLogger('PYWPS')
+LOGGER = logging.getLogger('PYWPS')
 
 class SubDayPrecipProcess(Process):
      def __init__(self, identifier, description,
@@ -84,12 +85,21 @@ class SubDayPrecipProcess(Process):
                     data_type='integer')
                )
 
+          if 'area_size' in input_params:
+               inputs.append(LiteralInput(
+                    identifier="area_size",
+                    title=u"Maximalni vymera plochy v km2 pro kterou bude navrhova srazka vypoctena (-1 pro zadny limit)",
+                    data_type='float',
+                    default='20',
+                    min_occurs=0)
+               )
+
           if 'type' in input_params:
                inputs.append(LiteralInput(
                     identifier="type",
                     title=u"Typy rozlozeni srazky",
                     data_type='string',
-                    default='1,2,3,4,5,6')
+                    default='A,B,C,D,E,F')
                )
 
           if 'output_shp' in output_params:
@@ -166,6 +176,13 @@ class SubDayPrecipProcess(Process):
                self.shapetype = request.inputs['type'][0].data.split(',')
           if 'value' in request.inputs.keys():
                self.value = request.inputs['value'][0].data
+          if 'area_size' in request.inputs.keys():
+               self.area_size = request.inputs['area_size'][0].data
+          else:
+               if self.identifier == 'd-rain6h-timedist':
+                    self.area_size = -1
+               else:
+                    self.area_size = 20
 
           if 'input' in request.inputs.keys():
                self.map_name = self.import_data(request.inputs['input'][0].file)
@@ -181,18 +198,32 @@ class SubDayPrecipProcess(Process):
           os.mkdir(self.output_dir)
 
           if 'input' in request.inputs.keys():
-               Module('g.region', raster=self.return_period[0])
                LOGGER.debug("Subday computation started")
                start = time.time()
                LOGGER.info("R: {}".format(self.rainlength))
-               Module('r.subdayprecip.design',
-                      map=self.map_name, return_period=self.return_period,
-                      rainlength=self.rainlength
-               )
+               if self.identifier == 'd-rain6h-timedist':
+                    LOGGER.info('Using v.rast.stats')
+                    columns = []
+                    for rp in self.return_period:
+                         n = rp.lstrip('N')
+                         col_name = 'H_N{n}T360'.format(n=n)
+                         map_name = 'sjtsk_navrhove_srazky_6h_P_{n}yr_6h_mm@{ms}'.format(
+                              n=n, ms=self.mapset
+                         )
+                         Module('v.rast.stats', map=self.map_name, raster=map_name,
+                                method='average', column_prefix=col_name
+                         )
+                         Module('v.db.renamecolumn', map=self.map_name,
+                                column=[col_name + '_average', col_name]
+                         )
+               else:
+                    LOGGER.info('Using r.subdayprecip.design')
+                    Module('g.region', raster=self.return_period[0])
+                    Module('r.subdayprecip.design',
+                           map=self.map_name, return_period=self.return_period,
+                           rainlength=self.rainlength, area_size=self.area_size
+                    )
                LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
-               LOGGER.info("{}".format(Module(
-                    'v.info', flags='c', map=self.map_name, stdout_=PIPE).outputs.stdout)
-               )
 
           response.outputs['output'].file = self.export()
 

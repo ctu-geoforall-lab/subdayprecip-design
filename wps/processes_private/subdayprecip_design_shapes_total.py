@@ -1,4 +1,4 @@
-\# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 ####################################################################
 # QJ1520265 project - source code and support files for OGC WMS and
@@ -24,7 +24,7 @@ import grass.script as gscript # TODO: replace by pyGRASS
 class SubDayPrecipShapesTotal(SubDayPrecipShapesBase, SubDayPrecipProcess):
      def __init__(self):
           SubDayPrecipProcess.__init__(self,
-               identifier="raintotal-timedist",
+               identifier="raintotal6h-timedist",
                description=u"Vraci tvary uzivatelem zadane hodnoty srazky v tabulkove forme s pevne stanovenou delkou srazky 6 hodin.",
                input_params=['value', 'type'],
                output_params=['output_shapes']
@@ -35,8 +35,8 @@ class SubDayPrecipShapesTotal(SubDayPrecipShapesBase, SubDayPrecipProcess):
           # write header
           fd.write('CAS_min')
           for stype in self.shapetype:
-               fd.write('{sep}T{rl}TYP{stype}'.format(
-                    sep=self.sep, stype=stype, rl=self.rainlength)
+               fd.write('{sep}H_typ{stype}_mm'.format(
+                    sep=self.sep, stype=stype)
                )
           fd.write('\r\n')
 
@@ -46,7 +46,7 @@ class SubDayPrecipShapesTotal(SubDayPrecipShapesBase, SubDayPrecipProcess):
                timeshapes = s[1:]
                fd.write('{time}'.format(time=time, sep=self.sep))
                for shape in timeshapes:
-                    fd.write('{sep}{val}'.format(sep=self.sep,
+                    fd.write('{sep}{val:.2f}'.format(sep=self.sep,
                                                  val=(float(self.value)*float(shape))/100)
                     )
                fd.write('\r\n')
