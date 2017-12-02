@@ -9,10 +9,12 @@
 # Licence: see LICENCE file for details
 ####################################################################
 
+import os
 import sys
+from subprocess import PIPE
 
 sys.path.insert(0, '..')
-from base.subdayprecip import SubDayPrecipProcess
+from base.subdayprecip import SubDayPrecipProcess, LOGGER
 from grass.pygrass.modules import Module
 
 class SubDayPrecipCsv(SubDayPrecipProcess):
@@ -20,7 +22,7 @@ class SubDayPrecipCsv(SubDayPrecipProcess):
           super(SubDayPrecipCsv, self).__init__(
                identifier="d-rain-csv",
                description=u"Vraci vycislene navrhove srazky jako atributova data ve formatu CSV.",
-               input_params=['input', 'keycolumn', 'return_period', 'rainlength'],
+               input_params=['input', 'keycolumn', 'return_period', 'rainlength', 'area_size'],
                output_params=['output_csv']
           )
           
@@ -31,15 +33,27 @@ class SubDayPrecipCsv(SubDayPrecipProcess):
           for rp in self.return_period:
                cols.append('H_{}T{}'.format(rp, self.rainlength))
 
-          Module('v.db.select',
-                 map=self.map_name,
-                 separator='comma',
-                 columns=cols,
-                 file=self.output_file)
-          # Module('v.out.ogr',
-          #        flags='sm',
-          #        input=self.map_name,
-          #        output=self.output_file,
-          #        overwrite=True, format='CSV')
+          data = Module('v.db.select',
+                        map=self.map_name,
+                        separator='comma',
+                        flags='c',
+                        columns=cols,
+                        stdout_=PIPE)
+
+          sep = ','
+          with open(self.output_file, 'w') as fd:
+               fd.write(sep.join(
+                    map(lambda x: x + '_mm' if x.startswith('H_') else x, cols)
+               ))
+               fd.write(os.linesep)
+               for line in data.outputs.stdout.splitlines():
+                    idx = 0
+                    for val in line.split(','):
+                         if idx == 0:
+                              fd.write('{}'.format(val))
+                         else:
+                              fd.write('{0}{1:.2f}'.format(sep, float(val)))
+                         idx += 1
+                    fd.write(os.linesep)
 
           return self.output_file
