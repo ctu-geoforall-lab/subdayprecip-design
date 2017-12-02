@@ -77,8 +77,8 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
      def _compute_timeshapes_perc(self):
           # filename syntax: sjtsk_zastoupeni_shluku_cA_100yr_perc
           columns = []
-          for stype in self.shapetype:
-               for rp in self.return_period:
+          for rp in self.return_period:
+               for stype in self.shapetype:
                     n = rp.lstrip('N')
                     columns.append('c{types}_{n}yr_perc'.format(
                          types=stype, n=n
@@ -99,13 +99,13 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           nl = '\r\n'
           # write header
           fd.write('{key}{sep}CAS_min'.format(key=self.keycolumn, sep=self.sep))
-          for stype in self.shapetype:
-               for rp in self.return_period:
+          for rp in self.return_period:
+               for stype in self.shapetype:
                     fd.write('{sep}H_{rast}typ{stype}_mm'.format(
                               sep=self.sep, stype=stype, rast=rp)
                     )
-          for stype in self.shapetype:
-               for rp in self.return_period:
+          for rp in self.return_period:
+               for stype in self.shapetype:
                     fd.write('{sep}P_{rast}typ{stype}_%'.format(
                          sep=self.sep, stype=stype, rast=rp)
                     )
@@ -116,6 +116,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
 
           # process features
           for fid, attrib in data['values'].iteritems():
+               # write first line (percentage values)
                fd.write('{fid}{sep}0{seps}'.format(
                     fid=attrib[0], sep=self.sep,
                     seps=self.sep * len(attrib[1:] * len(self.shapetype))
