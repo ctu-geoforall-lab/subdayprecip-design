@@ -69,7 +69,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           SubDayPrecipProcess.__init__(self,
                identifier="d-rain6h-timedist",
                description=u"Vraci tvary navrhovych srazek v tabulkove forme s pevne stanovenou delkou srazky 6 hodin.",
-               input_params=['input', 'keycolumn', 'return_period', 'type'],
+               input_params=['input', 'keycolumn', 'return_period', 'type', 'area_size'],
                output_params=['output_shapes']
           )
           SubDayPrecipShapesBase.__init__(self)
@@ -116,14 +116,19 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
 
           # process features
           for fid, attrib in data['values'].iteritems():
+               valid = True if float(attrib[1]) > 0 else False
                # write first line (percentage values)
                fd.write('{fid}{sep}0{seps}'.format(
                     fid=attrib[0], sep=self.sep,
                     seps=self.sep * len(attrib[1:] * len(self.shapetype))
                ))
                for val in data_perc['values'][fid]:
+                    if valid:
+                         val = float(val)
+                    else:
+                         val = -1
                     fd.write('{sep}{val:.1f}'.format(
-                         sep=self.sep, val=float(val)
+                         sep=self.sep, val=val
                     ))
                fd.write(nl)
                for s in shapes:
@@ -131,9 +136,13 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
                     timeshapes = s[1:]
                     fd.write('{fid}{sep}{time}'.format(fid=attrib[0], time=time, sep=self.sep))
                     for val in attrib[1:]:
+                         val = float(val)
                          for shape in timeshapes:
-                              fd.write('{sep}{val:.2f}'.format(sep=self.sep,
-                                                           val=(float(val)*float(shape))/100
+                              if valid:
+                                   val = (val * float(shape)) / 100.0
+                              fd.write('{sep}{val:.2f}'.format(
+                                   sep=self.sep,
+                                   val=val
                               ))
                     fd.write(nl)
 

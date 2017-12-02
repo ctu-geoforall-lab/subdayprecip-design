@@ -204,6 +204,15 @@ class SubDayPrecipProcess(Process):
                if self.identifier == 'd-rain6h-timedist':
                     LOGGER.info('Using v.rast.stats')
                     columns = []
+
+                    # check area size limit
+                    Module('v.db.addcolumn', map=self.map_name,
+                           columns='area double precision'
+                    )
+                    Module('v.to.db', map=self.map_name, option='area',
+                           columns='area', units='kilometers'
+                    )
+
                     for rp in self.return_period:
                          n = rp.lstrip('N')
                          col_name = 'H_N{n}T360'.format(n=n)
@@ -216,6 +225,15 @@ class SubDayPrecipProcess(Process):
                          Module('v.db.renamecolumn', map=self.map_name,
                                 column=[col_name + '_average', col_name]
                          )
+                         Module('v.db.update', map=self.map_name,
+                                column=col_name, value='-1',
+                                where='area > {}'.format(self.area_size)
+                         )
+
+                    # cleanup
+                    Module('v.db.dropcolumn', map=self.map_name,
+                           columns='area'
+                    )
                else:
                     LOGGER.info('Using r.subdayprecip.design')
                     Module('g.region', raster=self.return_period[0])
