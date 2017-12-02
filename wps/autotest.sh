@@ -5,8 +5,9 @@ KEY="RAD_I"
 RP="N2,N5,N100"
 RL="360"
 COL="RAD_I"
-STYP="1,2"
+STYP="F,E"
 VALUE="25"
+LIMIT="20000"
 
 cd /tmp
 
@@ -15,7 +16,7 @@ echo "* d-rain-shp"
 echo "**************************************************************"
 
 file=`curl \
-"https://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-shp&datainputs=input=${DATA};return_period=${RP};rainlength=${RL}" | \
+"https://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-shp&datainputs=input=${DATA};return_period=${RP};rainlength=${RL};area_size=${LIMIT}" | \
 grep '\<wps:Reference' | cut -d'"' -f2`
 
 wget -q $file
@@ -27,12 +28,12 @@ echo "* d-rain-csv"
 echo "**************************************************************"
 
 file=`curl \
-"https://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-csv&datainputs=input=${DATA};return_period=${RP};rainlength=${RL};keycolumn=$COL" | \
+"https://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-csv&datainputs=input=${DATA};return_period=${RP};rainlength=${RL};keycolumn=$COL;area_size=${LIMIT}" | \
 grep '\<wps:Reference' | cut -d'"' -f2`
 
 wget -q $file
 echo "RESULT:"
-cat `basename $file` | head -n1
+cat `basename $file`
 
 echo "**************************************************************"
 echo "* d-rain-point"
@@ -46,23 +47,23 @@ echo "RESULT:"
 echo $value
 
 echo "**************************************************************"
-echo "* d-rain-timedist"
+echo "* d-rain6h-timedist"
 echo "**************************************************************"
 
 file=`curl \
-"https://rain1.fsv.cvut.cz/services/wpspriv?service=wps&version=1.0.0&request=Execute&identifier=d-rain-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP}" | \
+"https://rain1.fsv.cvut.cz/services/wpspriv?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP}" | \
 grep '\<wps:Reference' | cut -d'"' -f2`
 
 wget -q $file
 echo "RESULT:"
-cat `basename $file` | head -n2
+cat `basename $file` | head -n3
 
 echo "**************************************************************"
-echo "* raintotal-timedist"
+echo "* raintotal6h-timedist"
 echo "**************************************************************"
 
 file=`curl \
-"https://rain1.fsv.cvut.cz/services/wpspriv?service=wps&version=1.0.0&request=Execute&identifier=raintotal-timedist&datainputs=value=${VALUE};type=${STYP}" | \
+"https://rain1.fsv.cvut.cz/services/wpspriv?service=wps&version=1.0.0&request=Execute&identifier=raintotal6h-timedist&datainputs=value=${VALUE};type=${STYP}" | \
 grep '\<wps:Reference' | cut -d'"' -f2`
 
 wget -q $file
