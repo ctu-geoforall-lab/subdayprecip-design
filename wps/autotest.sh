@@ -5,9 +5,9 @@ KEY="RAD_I"
 RP="N2,N5,N100"
 RL="360"
 COL="RAD_I"
-STYP="F,E"
+STYP="E,F"
 VALUE="25"
-LIMIT="20000"
+LIMIT="10000"
 
 cd /tmp
 
@@ -51,19 +51,19 @@ echo "* d-rain6h-timedist"
 echo "**************************************************************"
 
 file=`curl \
-"https://rain1.fsv.cvut.cz/services/wpspriv?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP}" | \
+"https://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP};area_size=${LIMIT}" | \
 grep '\<wps:Reference' | cut -d'"' -f2`
 
 wget -q $file
 echo "RESULT:"
-cat `basename $file` | head -n3
+cat `basename $file` |  grep -E '[0-9],[05],'
 
 echo "**************************************************************"
 echo "* raintotal6h-timedist"
 echo "**************************************************************"
 
 file=`curl \
-"https://rain1.fsv.cvut.cz/services/wpspriv?service=wps&version=1.0.0&request=Execute&identifier=raintotal6h-timedist&datainputs=value=${VALUE};type=${STYP}" | \
+"https://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=raintotal6h-timedist&datainputs=value=${VALUE};type=${STYP}" | \
 grep '\<wps:Reference' | cut -d'"' -f2`
 
 wget -q $file
