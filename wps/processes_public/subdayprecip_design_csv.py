@@ -52,7 +52,7 @@ class SubDayPrecipCsv(SubDayPrecipProcess):
                          if idx == 0:
                               fd.write('{}'.format(val))
                          else:
-                              fd.write('{0}{1:.2f}'.format(sep, float(val)))
+                              fd.write('{0}{1:.1f}'.format(sep, float(val)))
                          idx += 1
                     fd.write(os.linesep)
 

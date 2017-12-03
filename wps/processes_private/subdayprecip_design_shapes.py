@@ -140,7 +140,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
                          for shape in timeshapes:
                               if valid:
                                    val = (val * float(shape)) / 100.0
-                              fd.write('{sep}{val:.2f}'.format(
+                              fd.write('{sep}{val:.3f}'.format(
                                    sep=self.sep,
                                    val=val
                               ))

@@ -46,7 +46,7 @@ class SubDayPrecipShapesTotal(SubDayPrecipShapesBase, SubDayPrecipProcess):
                timeshapes = s[1:]
                fd.write('{time}'.format(time=time, sep=self.sep))
                for shape in timeshapes:
-                    fd.write('{sep}{val:.2f}'.format(sep=self.sep,
+                    fd.write('{sep}{val:.3f}'.format(sep=self.sep,
                                                  val=(float(self.value)*float(shape))/100)
                     )
                fd.write('\r\n')
