@@ -29,6 +29,15 @@
     <p>Nástroj vyčíslí návrhovou srážku pro lokalitu zadanou uživatelem v podobě bodu.</p>
     <table>
       <tr>
+	<td>Souřadnice GPS:</td>
+	<td><input type="text" id="lat" type="number" value="15.474897" min="12.09" max="18.86" size="9>" /></td>
+	<td><input type="text" id="lon" type="number" value="49.803578" min="48.55" max="51.06" size="9>" /></td>
+        <td style="text-align: right"><button onclick="setPoint()">Mapa</button></td>
+	<td>
+	</td>
+	<td></td>
+      </tr>
+      <tr>
 	<td>Doba opakování:</td>
 	<td>
 	  <select name="raster" id="raster">
@@ -45,7 +54,8 @@
       <tr>
 	<td>Délka srážky (v minutách):</td>
 	<td><input type="text" id="rainlength" type="number" value="60" min="1" max="1439" size="5>" /></td>
-	<td><button onclick="callWPS()">Spustit</button></td>
+	<td></td>
+	<td style="text-align: right"><button onclick="callWPS()">Spustit</button></td>
       </tr>
     </table>
     <p><a href="http://rain.fsv.cvut.cz">http://rain.fsv.cvut.cz</a></p>

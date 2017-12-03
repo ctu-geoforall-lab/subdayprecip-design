@@ -16,6 +16,8 @@ function callWPS(){
     // Creation of WPS object
     // EVENTS: onSucceed and onFailed
     // EVENT LIST: "ProcessAccepted", "ProcessSucceeded", "ProcessFailed", "ProcessStarted", "ProcessPaused"
+    triggerGritter("Spouštím výpočet");
+
     wpsObj = new OpenLayers.WPS(urlWPS, {onSucceeded: onExecuted, onFailed: onError});
     
     // Setting inputs
@@ -86,9 +88,26 @@ function showResult(text){
     div.innerHTML = '<div align="center">Výsledek</div>';
     div.innerHTML += '<table><tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
 	'</td></tr><tr><td>Doba opakování:</td><td>' + String(raster) +
-	'</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + ' (minuty)' +
-	'</td></tr><tr><td>Hodnota návrhové srážky:</td><td><font color="red">' + parseFloat(text).toFixed(1) +
-	'</font> (milimetry)</td></tr></table>';
+	'</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + ' min' +
+	'</td></tr><tr><td>Hodnota návrhové srážky:</td><td><font size=+1 color="red">' + parseFloat(text).toFixed(1) +
+	'</font> mm</td></tr></table>';
+};
+
+function setCoord(){
+    document.getElementById('lat').value = obsPoint.x;
+    document.getElementById('lon').value = obsPoint.y;
+};
+
+function setPoint(){
+    var lat = document.getElementById('lat').value;
+    var lon = document.getElementById('lon').value;
+
+    obsPoint = new OpenLayers.Geometry.Point(lat, lon);
+
+    obsLayer.removeAllFeatures();
+    obsLayer.addFeatures([new OpenLayers.Feature.Vector(obsPoint, {icon: "./img/map-pointer.png"})]);
+    
+    map.setCenter(new OpenLayers.LonLat(lat, lon), 14);
 };
 
 /*
@@ -106,7 +125,7 @@ $(document).ready(function() {
                   };
     
     map = new OpenLayers.Map('map1', options);
-    switcher.maximizeControl();
+    //switcher.maximizeControl();
     
     // base layer
     zm50Layer = new OpenLayers.Layer.WMS("ZM 50 (CUZK)",
@@ -158,15 +177,12 @@ $(document).ready(function() {
     map.setCenter(new OpenLayers.LonLat(15.474897, 49.803578), 8);
     
     // drag feature control here is where wps is called
-    controlDrag = new OpenLayers.Control.DragFeature(obsLayer);
-						     /*
+    controlDrag = new OpenLayers.Control.DragFeature(obsLayer,
                                                      {onComplete: function(featureObj, pixelObj) {
-	                                                 triggerGritter("Spouštím WPS proces");
-	                                                 callWPS();
-	                                             } // end function
+	                                                 setCoord();
+	                                              } // end function
 	                                             } // end onComplete
 	                                            ); //end controlDrag
-						    */
     
     // add control to map 
     map.addControl(controlDrag);
