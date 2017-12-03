@@ -28,6 +28,8 @@ class SubDayPrecipPoint(SubDayPrecipProcess):
 
      def _handler(self, request, response):
           self.rasters = request.inputs['return_period'][0].data.split(',')
+          self.rainlength = request.inputs['rainlength'][0].data
+
           Module('g.region', raster=self.rasters[0])
 
           map_name = 'obs'
@@ -44,11 +46,18 @@ class SubDayPrecipPoint(SubDayPrecipProcess):
           LOGGER.debug("Subday computation started")
           Module('r.subdayprecip.design',
                  map=map_name, return_period=self.rasters,
-                 rainlength=request.inputs['rainlength'][0].data)
+                 rainlength=self.rainlength)
           LOGGER.debug("Subday computation finished")
 
-          p = Module('v.db.select', map=map_name, flags='c', stdout_=PIPE)
+          cols = []
+          for r in self.rasters:
+               cols.append('H_{}T{}'.format(r, self.rainlength))
+          p = Module('v.db.select', map=map_name, flags='c',
+                     columns=cols,
+                     stdout_=PIPE)
           LOGGER.debug('Result: {}'.format(p.outputs.stdout))
-          response.outputs['output'].data = p.outputs.stdout.split('|')[1].rstrip()
+          response.outputs['output'].data = '{}'.format(
+               ','.join('%.1f' % float(v) for v in p.outputs.stdout.rstrip().split('|'))
+          )
 
           return response
