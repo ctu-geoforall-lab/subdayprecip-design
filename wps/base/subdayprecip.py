@@ -122,7 +122,7 @@ class SubDayPrecipProcess(Process):
                outputs.append(LiteralOutput(
                     identifier="output",
                     title=u"Vycislena hodnota navrhove srazky v mm",
-                    data_type='float')
+                    data_type='string')
                )
 
           if 'output_shapes' in output_params:
