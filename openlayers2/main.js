@@ -18,16 +18,19 @@ function callWPS(){
     // EVENT LIST: "ProcessAccepted", "ProcessSucceeded", "ProcessFailed", "ProcessStarted", "ProcessPaused"
     triggerGritter("Spouštím výpočet");
 
+    var lat = document.getElementById('lat').value;
+    var lon = document.getElementById('lon').value;
+
     wpsObj = new OpenLayers.WPS(urlWPS, {onSucceeded: onExecuted, onFailed: onError});
     
     // Setting inputs
     var obsXInput = new OpenLayers.WPS.LiteralPut({
         identifier : "obs_x",
-        value: obsPoint.x 
+        value: lat // obsPoint.x 
     });
     var obsYInput = new OpenLayers.WPS.LiteralPut({
         identifier : "obs_y",
-        value: obsPoint.y
+        value: lon // obsPoint.y
     });
     var layers = map.getLayersBy("visibility", true);
     var raster = new OpenLayers.WPS.LiteralPut({
@@ -84,9 +87,12 @@ function showResult(text){
     var raster = document.getElementById('raster').value;
     var rainLength = document.getElementById('rainlength').value;
     var layers = map.getLayersBy("visibility", true);
+    var lat = document.getElementById('lat').value;
+    var lon = document.getElementById('lon').value;
     
     div.innerHTML = '<div align="center">Výsledek</div>';
-    div.innerHTML += '<table><tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
+    // '<table><tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
+    div.innerHTML += '<table><tr><td>GPS:</td><td>' + parseFloat(lat).toFixed(5) + ', ' + parseFloat(lon).toFixed(5) +
 	'</td></tr><tr><td>Doba opakování:</td><td>' + String(raster) +
 	'</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + ' min' +
 	'</td></tr><tr><td>Hodnota návrhové srážky:</td><td><font size=+1 color="red">' + parseFloat(text).toFixed(1) +
