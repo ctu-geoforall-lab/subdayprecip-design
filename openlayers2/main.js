@@ -5,7 +5,7 @@ var map, wpsObj, urlWPS, obsPoint;
 var urlWPS="https://rain1.fsv.cvut.cz/services/wps";
 
 // OPTION GRITTER
-$.extend($.gritter.options,{position:'top-left',fade_in_speed:'medium',fade_out_speed:2000,time:2000});
+$.extend($.gritter.options,{position:'top-left',fade_in_speed:'medium',fade_out_speed:2000,time:3000});
 
 /*
  * CREATION OF WPS OBJECT, CALL OF WPS OBJECT
@@ -73,6 +73,8 @@ function onExecuted(process) {
 function onError(process){
     textData="Error Code:" + process.exception.code + "<br />" + "Text:" + process.exception.text;
     triggerGritter(textData);
+
+    showResult(undefined);
 };
 
 /*
@@ -89,14 +91,19 @@ function showResult(text){
     var layers = map.getLayersBy("visibility", true);
     var lat = document.getElementById('lat').value;
     var lon = document.getElementById('lon').value;
-    
-    div.innerHTML = '<div align="center">Výsledek</div>';
-    // '<table><tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
-    div.innerHTML += '<table><tr><td>GPS:</td><td>' + parseFloat(lat).toFixed(5) + ', ' + parseFloat(lon).toFixed(5) +
-	'</td></tr><tr><td>Doba opakování:</td><td>' + String(raster) +
-	'</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + ' min' +
-	'</td></tr><tr><td>Hodnota návrhové srážky:</td><td><font size=+1 color="red">' + parseFloat(text).toFixed(1) +
-	'</font> mm</td></tr></table>';
+
+    if (text == undefined) {
+	div.innerHTML = 'Chyba ve výpočtu';
+    }
+    else {
+	div.innerHTML = '<div align="center">Výsledek</div>';
+	// '<table><tr><td>GPS:</td><td>' + obsPoint.x.toFixed(5) + ', ' + obsPoint.y.toFixed(5) +
+	div.innerHTML += '<table><tr><td>GPS:</td><td>' + parseFloat(lat).toFixed(5) + ', ' + parseFloat(lon).toFixed(5) +
+	    '</td></tr><tr><td>Doba opakování:</td><td>' + String(raster) +
+	    '</td></tr><tr><td>Délka návrhové srážky:</td><td>' + parseFloat(rainLength).toFixed(0) + ' min' +
+	    '</td></tr><tr><td>Hodnota návrhové srážky:</td><td><font size=+1 color="red">' + parseFloat(text).toFixed(1) +
+	    '</font> mm</td></tr></table>';
+    }
 };
 
 function setCoord(){
