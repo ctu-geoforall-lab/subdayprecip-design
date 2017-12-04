@@ -56,8 +56,18 @@ class SubDayPrecipPoint(SubDayPrecipProcess):
                      columns=cols,
                      stdout_=PIPE)
           LOGGER.debug('Result: {}'.format(p.outputs.stdout))
+
+          values = []
+          for v in p.outputs.stdout.rstrip().split('|'):
+               if len(v) == 0:
+                    raise Exception("Bod '{0},{1}' nelezi na uzemi CR".format(
+                         request.inputs['obs_x'][0].data,
+                         request.inputs['obs_y'][0].data
+                    ))
+               values.append(float(v))
+
           response.outputs['output'].data = '{}'.format(
-               ','.join('%.1f' % float(v) for v in p.outputs.stdout.rstrip().split('|'))
+               ','.join('%.1f' % v for v in values)
           )
 
           return response
