@@ -11,7 +11,7 @@
       </tr>
       <tr>
         <td class="label">Hodnota návrhové srážky:</td>
-        <td>{{ feature.get('H_N50T360').toFixed(2) }} mm</td>
+        <td>{{ feature.get('H_N50T360').toFixed(1) }} mm</td>
       </tr>
     </tbody>
   </table>
@@ -112,12 +112,12 @@
 
     var data = {};
     var LegendData = {
-      1 : ["typ1", "rgb(0,112,192)"],
-      2 : ["typ2", "rgb(146,208,80)"],
-      3 : ["typ3", "rgb(25,255,0)"],
-      4 : ["typ4", "rgb(255,192,0)"],
-      5 : ["typ5", "rgb(255,124,128)"],
-      6 : ["typ6", "rgb(255,0,0)"]
+        1 : ["typF", "rgb(0,112,192)"],
+        2 : ["typE", "rgb(146,208,80)"],
+        3 : ["typD", "rgb(25,255,0)"],
+        4 : ["typC", "rgb(255,192,0)"],
+        5 : ["typB", "rgb(255,124,128)"],
+        6 : ["typA", "rgb(255,0,0)"]
     }
     // add legend   
     var legend = svg.append("g")
@@ -127,7 +127,7 @@
       .attr("height", 100)
       .attr("width", 100);
 
-    legend.selectAll('g').data([1, 2, 3, 4, 5, 6])
+    legend.selectAll('g').data([6, 5, 4, 3, 2, 1])
       .enter()
       .append('g')
       .each(function(d, i) {
@@ -209,7 +209,7 @@
     tooltip.time = tooltip.append("h4");
     tooltip.values = tooltip.append("div").attr("class", "values");
 
-    [1, 2, 3, 4, 5, 6].forEach(function(id) {
+    [6, 5, 4, 3, 2, 1].forEach(function(id) {
       tooltip.values.append("div")
         .attr("id", "g"+id)
         .style("color", LegendData[id][1])
@@ -228,7 +228,7 @@
         var i = bisectTime(graphData, xVal, 0);
         d = graphData[i];
 
-        tooltip.values.select('#g'+id).html(d.value.toFixed(2));
+        tooltip.values.select('#g'+id).html(d.value.toFixed(3));
       });
       // console.log('mouse: '+xVal.toFixed(3) +'  D1 time: '+d.time);
 
@@ -258,13 +258,13 @@
     $scope.downloadData = function(evt) {
       var link = evt.target;
       link.download = 'data.csv';
-      csv = ['T_(min);H5_min_typ_1_(mm);H5_min_typ_2_(mm);H5_min_typ_3_(mm);H5_min_typ_4_(mm);H5_min_typ_5_(mm);H5_min_typ_6_(mm)'];
+      csv = ['CAS_min;H_N50typA_mm;H_N50typB_mm;H_N50typC_mm;H_N50typD_mm;H_N50typE_mm;H_N50typF_mm'];
 
       var types = Object.keys(data);
       data[types[0]].forEach(function(d, index) {
         var rowData = [d.time];
         types.forEach(function(type) {
-          rowData.push(data[type][index].value.toFixed(2));
+          rowData.push(data[type][index].value.toFixed(3));
         });
         csv.push(rowData.join(';'));
       })
