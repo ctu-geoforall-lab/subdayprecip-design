@@ -97,10 +97,10 @@ def compute_sjtsk(datadir, outdir):
     run_command('r.colors', map='chmi_1d', rules='myblues.txt')
 
     # install dependencies
-    # for prog in ('r.vect.stats', 'r.fill.gaps'):
-    #     if find_program(prog):
-    #         continue
-    #     run_command('g.extension', extension=prog)
+    for prog in ('r.vect.stats', 'r.fill.gaps'):
+        if find_program(prog):
+            continue
+        run_command('g.extension', extension=prog)
 
     # set region
     run_command('g.region', raster='chmi_1d')
