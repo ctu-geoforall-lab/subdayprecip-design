@@ -3,15 +3,15 @@
     <tbody>
       <tr>
         <td class="label">Číslo povodí:</td>
-        <td>{{ feature.get('hlgp_id') }}</td>
+        <td>{{ feature.get('chp') }}</td>
       </tr>
       <tr>
         <td class="label">Výměra</td>
-        <td>{{ feature.get('plocha').toFixed(1) }} km<sup>2</sup></td>
+        <td>{{ feature.get('a_km2').toFixed(2) }} km<sup>2</sup></td>
       </tr>
       <tr>
         <td class="label">Hodnota návrhové srážky:</td>
-        <td>{{ feature.get('H_N10T360').toFixed(1) }} mm</td>
+        <td>{{ feature.get('h_n10t360').toFixed(1) }} mm</td>
       </tr>
     </tbody>
   </table>
@@ -96,7 +96,7 @@
       .orient("left").ticks(9);
 
     x.domain([0, 360]);
-    y.domain([0, 16.2]);
+    y.domain([0, 12.8]);
 
     // Add the X Axis
     svg.append("g")
@@ -112,12 +112,12 @@
 
     var data = {};
     var LegendData = {
-        1 : ["typF", "rgb(0,112,192)"],
-        2 : ["typE", "rgb(146,208,80)"],
-        3 : ["typD", "rgb(25,255,0)"],
-        4 : ["typC", "rgb(255,192,0)"],
-        5 : ["typB", "rgb(255,124,128)"],
-        6 : ["typA", "rgb(255,0,0)"]
+        'A' : ["typA", "rgb(255,0,0)"],
+        'B' : ["typB", "rgb(255,124,128)"],
+        'C' : ["typC", "rgb(255,192,0)"],
+        'D' : ["typD", "rgb(25,255,0)"],
+        'E' : ["typE", "rgb(146,208,80)"],
+        'F' : ["typF", "rgb(0,112,192)"],
     }
     // add legend   
     var legend = svg.append("g")
@@ -127,7 +127,7 @@
       .attr("height", 100)
       .attr("width", 100);
 
-    legend.selectAll('g').data([6, 5, 4, 3, 2, 1])
+    legend.selectAll('g').data(['A', 'B', 'C', 'D', 'E', 'F'])
       .enter()
       .append('g')
       .each(function(d, i) {
@@ -170,7 +170,7 @@
           data[id] = resp.features.map(function(f) {
             return {
               time: f.properties['T_(min)'],
-              value: (f.properties['H5min_(%)'] / 100.0) * $scope.feature.get('H_N10T360')
+              value: (f.properties['H5min_(%)'] / 100.0) * $scope.feature.get('h_n10t360')
             }
           });
           // console.log(JSON.stringify(data));
@@ -179,7 +179,7 @@
     }
 
     function showGraphs(feature) {
-      var ids = feature.get('tvary').split('');
+      var ids = ['A', 'B', 'C', 'D', 'E', 'F'];
       svg.selectAll('.line').classed('hide', true);
       ids.forEach(function(id) {
         //var line = svg.select('#typ{0}.line'.format(id));
@@ -209,7 +209,7 @@
     tooltip.time = tooltip.append("h4");
     tooltip.values = tooltip.append("div").attr("class", "values");
 
-    [6, 5, 4, 3, 2, 1].forEach(function(id) {
+    ['A', 'B', 'C', 'D', 'E', 'F'].forEach(function(id) {
       tooltip.values.append("div")
         .attr("id", "g"+id)
         .style("color", LegendData[id][1])
