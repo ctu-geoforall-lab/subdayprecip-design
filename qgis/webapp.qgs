@@ -611,7 +611,7 @@
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-904575.43550686491653323</xmin>
         <ymin>-1227293.15970283257775009</ymin>
@@ -916,7 +916,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -1422,18 +1422,100 @@ def my_form_open(dialog, layer, feature):
         <alias field="a_km2" index="5" name="Výměra (km2)"/>
         <alias field="chp" index="0" name="Povodí č."/>
         <alias field="h_n5t360" index="16" name="Návrhová srážka (mm)"/>
+        <alias field="p_n5typa" index="17" name="Typ A (%)"/>
+        <alias field="p_n5typb" index="18" name="Typ B (%)"/>
+        <alias field="p_n5typc" index="19" name="Typ C (%)"/>
+        <alias field="p_n5typd" index="20" name="Typ D (%)"/>
+        <alias field="p_n5type" index="21" name="Typ E (%)"/>
+        <alias field="p_n5typf" index="22" name="Typ F (%)"/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>h_n50t360</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>p_n20typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n100t360</attribute>
+        <attribute>p_n10typa</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>naz_tok</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>h_n50t360</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>p_n20typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n100t360</attribute>
+        <attribute>p_n10typa</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>naz_tok</attribute>
       </excludeAttributesWFS>
       <attributeactions/>
       <editform>.</editform>
@@ -1465,7 +1547,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -1971,24 +2053,100 @@ def my_form_open(dialog, layer, feature):
         <alias field="a_km2" index="5" name="Výměra (km2)"/>
         <alias field="chp" index="0" name="Povodí č."/>
         <alias field="h_n2t360" index="9" name="Návrhová srážka (mm)"/>
+        <alias field="p_n2typa" index="10" name="Typ A (%)"/>
+        <alias field="p_n2typb" index="11" name="Typ B (%)"/>
+        <alias field="p_n2typc" index="12" name="Typ C (%)"/>
+        <alias field="p_n2typd" index="13" name="Typ D (%)"/>
+        <alias field="p_n2type" index="14" name="Typ E (%)"/>
+        <alias field="p_n2typf" index="15" name="Typ F (%)"/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>naz_tok</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
+        <attribute>h_n50t360</attribute>
+        <attribute>chp_u</attribute>
         <attribute>trida</attribute>
         <attribute>naz_tok_2</attribute>
-        <attribute>aa_km2</attribute>
-        <attribute>chp_u</attribute>
-        <attribute>chp_d</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>p_n20typf</attribute>
         <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>h_n100t360</attribute>
+        <attribute>p_n10typa</attribute>
+        <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>naz_tok</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
+        <attribute>h_n50t360</attribute>
+        <attribute>chp_u</attribute>
         <attribute>trida</attribute>
         <attribute>naz_tok_2</attribute>
-        <attribute>aa_km2</attribute>
-        <attribute>chp_u</attribute>
-        <attribute>chp_d</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>p_n20typf</attribute>
         <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>h_n100t360</attribute>
+        <attribute>p_n10typa</attribute>
+        <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWFS>
       <attributeactions/>
       <editform>.</editform>
@@ -2027,7 +2185,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -2533,18 +2691,100 @@ def my_form_open(dialog, layer, feature):
         <alias field="a_km2" index="5" name="Výměra (km2)"/>
         <alias field="chp" index="0" name="Povodí č."/>
         <alias field="h_n20t360" index="30" name="Návrhová srážka (mm)"/>
+        <alias field="p_n20typa" index="31" name="Typ A (%)"/>
+        <alias field="p_n20typb" index="32" name="Typ B (%)"/>
+        <alias field="p_n20typc" index="33" name="Typ C (%)"/>
+        <alias field="p_n20typd" index="34" name="Typ D (%)"/>
+        <alias field="p_n20type" index="35" name="Typ E (%)"/>
+        <alias field="p_n20typf" index="36" name="Typ F (%)"/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
+        <attribute>h_n50t360</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>h_n100t360</attribute>
+        <attribute>p_n10typa</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
+        <attribute>h_n50t360</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>h_n100t360</attribute>
+        <attribute>p_n10typa</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWFS>
       <attributeactions/>
       <editform>.</editform>
@@ -2576,7 +2816,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -3082,18 +3322,100 @@ def my_form_open(dialog, layer, feature):
         <alias field="a_km2" index="5" name="Výměra (km2)"/>
         <alias field="chp" index="0" name="Povodí č."/>
         <alias field="h_n50t360" index="37" name="Návrhová srážka (mm)"/>
+        <alias field="p_n50typa" index="38" name="Typ A (%)"/>
+        <alias field="p_n50typb" index="39" name="Typ B (%)"/>
+        <alias field="p_n50typc" index="40" name="Typ C (%)"/>
+        <alias field="p_n50typd" index="41" name="Typ D (%)"/>
+        <alias field="p_n50type" index="42" name="Typ E (%)"/>
+        <alias field="p_n50typf" index="43" name="Typ F (%)"/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>p_n20typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>h_n100t360</attribute>
+        <attribute>p_n10typa</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>p_n20typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>h_n100t360</attribute>
+        <attribute>p_n10typa</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWFS>
       <attributeactions/>
       <editform>.</editform>
@@ -3125,7 +3447,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -3631,18 +3953,100 @@ def my_form_open(dialog, layer, feature):
         <alias field="a_km2" index="5" name="Výměra (km2)"/>
         <alias field="chp" index="0" name="Povodí č."/>
         <alias field="h_n100t360" index="44" name="Návrhová srážka (mm)"/>
+        <alias field="p_n100typa" index="45" name="Typ A (%)"/>
+        <alias field="p_n100typb" index="46" name="Typ B (%)"/>
+        <alias field="p_n100typc" index="47" name="Typ C (%)"/>
+        <alias field="p_n100typd" index="48" name="Typ D (%)"/>
+        <alias field="p_n100type" index="49" name="Typ E (%)"/>
+        <alias field="p_n100typf" index="50" name="Typ F (%)"/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
+        <attribute>h_n50t360</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n20typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>p_n10typa</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
+        <attribute>h_n50t360</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n20typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>h_n10t360</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>p_n10typa</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n10typb</attribute>
+        <attribute>p_n10typc</attribute>
+        <attribute>p_n10typd</attribute>
+        <attribute>p_n10type</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>p_n10typf</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWFS>
       <attributeactions/>
       <editform>.</editform>
@@ -3674,7 +4078,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-927817.58069999795407057</xmin>
         <ymin>-1236550.60789999994449317</ymin>
@@ -4180,18 +4584,100 @@ def my_form_open(dialog, layer, feature):
         <alias field="a_km2" index="5" name="Výměra (km2)"/>
         <alias field="chp" index="0" name="Povodí č."/>
         <alias field="h_n10t360" index="23" name="Návrhová srážka (mm)"/>
+        <alias field="p_n10typa" index="24" name="Typ A (%)"/>
+        <alias field="p_n10typb" index="25" name="Typ B (%)"/>
+        <alias field="p_n10typc" index="26" name="Typ C (%)"/>
+        <alias field="p_n10typd" index="27" name="Typ D (%)"/>
+        <alias field="p_n10type" index="28" name="Typ E (%)"/>
+        <alias field="p_n10typf" index="29" name="Typ F (%)"/>
       </aliases>
       <excludeAttributesWMS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
+        <attribute>h_n50t360</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>p_n20typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>h_n100t360</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWMS>
       <excludeAttributesWFS>
-        <attribute>naz_tok</attribute>
-        <attribute>naz_tok_2</attribute>
+        <attribute>p_n5type</attribute>
+        <attribute>p_n5typf</attribute>
+        <attribute>h_n50t360</attribute>
         <attribute>chp_u</attribute>
+        <attribute>trida</attribute>
+        <attribute>h_n2t360</attribute>
+        <attribute>naz_tok_2</attribute>
+        <attribute>p_n100typa</attribute>
+        <attribute>p_n20typa</attribute>
+        <attribute>p_n100typb</attribute>
+        <attribute>p_n20typb</attribute>
+        <attribute>p_n100typc</attribute>
+        <attribute>p_n20typc</attribute>
+        <attribute>p_n100typd</attribute>
+        <attribute>p_n20typd</attribute>
+        <attribute>p_n100type</attribute>
+        <attribute>p_n20type</attribute>
+        <attribute>p_n100typf</attribute>
+        <attribute>p_n20typf</attribute>
+        <attribute>asum_km2</attribute>
+        <attribute>p_n50typa</attribute>
+        <attribute>p_n50typb</attribute>
+        <attribute>p_n50typc</attribute>
+        <attribute>p_n50typd</attribute>
+        <attribute>p_n50type</attribute>
+        <attribute>p_n2typa</attribute>
+        <attribute>aa_km2</attribute>
+        <attribute>p_n50typf</attribute>
+        <attribute>p_n2typb</attribute>
+        <attribute>p_n2typc</attribute>
+        <attribute>p_n2typd</attribute>
+        <attribute>p_n2type</attribute>
+        <attribute>p_n2typf</attribute>
+        <attribute>h_n5t360</attribute>
+        <attribute>h_n100t360</attribute>
         <attribute>chp_d</attribute>
+        <attribute>p_n5typa</attribute>
+        <attribute>h_n20t360</attribute>
+        <attribute>p_n5typb</attribute>
+        <attribute>naz_tok</attribute>
+        <attribute>p_n5typc</attribute>
+        <attribute>p_n5typd</attribute>
       </excludeAttributesWFS>
       <attributeactions/>
       <editform>.</editform>
@@ -4223,7 +4709,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>-901459.5126953125</xmin>
         <ymin>-1227368.17999267578125</ymin>
@@ -4581,9 +5067,9 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/dist" value="0"/>
         <property key="labeling/distInMapUnits" value="false"/>
         <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/drawLabels" value="false"/>
-        <property key="labeling/enabled" value="false"/>
-        <property key="labeling/fieldName" value=""/>
+        <property key="labeling/drawLabels" value="true"/>
+        <property key="labeling/enabled" value="true"/>
+        <property key="labeling/fieldName" value="trida"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
         <property key="labeling/fontFamily" value="Cantarell"/>
@@ -4600,7 +5086,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="false"/>
-        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/isExpression" value="false"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -4632,9 +5118,9 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/repeatDistanceUnit" value="1"/>
         <property key="labeling/reverseDirectionSymbol" value="false"/>
         <property key="labeling/rightDirectionSymbol" value=">"/>
-        <property key="labeling/scaleMax" value="10000000"/>
-        <property key="labeling/scaleMin" value="1"/>
-        <property key="labeling/scaleVisibility" value="false"/>
+        <property key="labeling/scaleMax" value="300000"/>
+        <property key="labeling/scaleMin" value="25000"/>
+        <property key="labeling/scaleVisibility" value="true"/>
         <property key="labeling/shadowBlendMode" value="6"/>
         <property key="labeling/shadowColorB" value="0"/>
         <property key="labeling/shadowColorG" value="0"/>
@@ -4660,7 +5146,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/shapeBorderWidth" value="0"/>
         <property key="labeling/shapeBorderWidthMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/shapeBorderWidthUnits" value="1"/>
-        <property key="labeling/shapeDraw" value="false"/>
+        <property key="labeling/shapeDraw" value="true"/>
         <property key="labeling/shapeFillColorA" value="255"/>
         <property key="labeling/shapeFillColorB" value="255"/>
         <property key="labeling/shapeFillColorG" value="255"/>
@@ -5372,13 +5858,13 @@ def my_form_open(dialog, layer, feature):
     </Paths>
     <WMSServiceTitle type="QString">Pilotní webová aplikace projektu QJ1520265</WMSServiceTitle>
     <WFSLayers type="QStringList">
-      <value>data_povodi_ii_any20161205232607753</value>
       <value>data_povodi_iv_any20161206000220509</value>
       <value>data_povodi_iv_any201612061002435591437399835</value>
       <value>data_povodi_iv_any201612061020161206102709972164818856</value>
       <value>data_povodi_iv_any201612061020161206102851363649587533</value>
       <value>data_povodi_iv_any201612061020161206103056056323290986</value>
       <value>data_povodi_iv_any20161206102441921465245529</value>
+      <value>data_povodi_klasifikace20161220152951973</value>
       <value>typ120170613143509511</value>
       <value>typ220170613143509739</value>
       <value>typ320170613143509909</value>
@@ -5401,8 +5887,8 @@ def my_form_open(dialog, layer, feature):
     <Measure>
       <Ellipsoid type="QString">NONE</Ellipsoid>
     </Measure>
-    <WMSPrecision type="QString">8</WMSPrecision>
     <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
+    <WMSPrecision type="QString">8</WMSPrecision>
     <WFSTLayers>
       <Insert type="QStringList"/>
       <Update type="QStringList"/>
@@ -5493,6 +5979,7 @@ def my_form_open(dialog, layer, feature):
       <data_povodi_iv20161120185216081 type="int">8</data_povodi_iv20161120185216081>
       <data_povodi_iv_any201612061020161206102851363649587533 type="int">8</data_povodi_iv_any201612061020161206102851363649587533>
       <data_povodi_ii_any20161205232607753 type="int">8</data_povodi_ii_any20161205232607753>
+      <data_povodi_klasifikace20161220152951973 type="int">8</data_povodi_klasifikace20161220152951973>
       <data_povodi_i_any20161206100243558410427724 type="int">8</data_povodi_i_any20161206100243558410427724>
       <data_povodi_iii20161120185216078 type="int">8</data_povodi_iii20161120185216078>
       <data_povodi_i_any201612061201612061028513611657366423 type="int">8</data_povodi_i_any201612061201612061028513611657366423>

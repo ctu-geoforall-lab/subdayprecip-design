@@ -15,20 +15,20 @@
     50000, 
     25000, 
     10000, 
-    5000
+    5000, 
+    2500, 
+    1000, 
+    500
   ], 
   "abstract": "Tato webov\u00e1 aplikace umo\u017e\u0148uje prohl\u00ed\u017eet podkladov\u00e9 vrstvy (Z\u00e1kladn\u00ed mapu \u010cR a vrstvy maxim\u00e1ln\u00edch denn\u00edch \u00fahrn\u016f poskytovan\u00fdch v r\u00e1mci projektu ve\u0159ejnou slu\u017ebou OGC WMS) a vrstvu povod\u00ed IV. \u0159\u00e1du s vy\u010d\u00edslen\u00fdmi hodnotami n\u00e1vrhov\u00fdch sr\u00e1\u017eek s d\u00e9lkou sr\u00e1\u017eky 6 hodin. Na z\u00e1klad\u011b t\u011bchto hodnot je vrstva povod\u00ed IV. \u0159\u00e1du stylov\u00e1na v jednotliv\u00fdch t\u00e9matech (topics) podle doby opakov\u00e1n\u00ed (2 roky, 5, 10, 20, 50 a 100 let).", 
   "zoom_extent": [
     -940454.789, 
-    -1268104.517, 
+    -1248026.839, 
     -409692.049, 
-    -901625.482
+    -921703.159
   ], 
   "fees": "conditions unknown", 
-  "message": {
-    "valid_until": "24.12.2017", 
-    "text": "Pilotn\u00ed webov\u00e1 aplikace projektu QJ1520265, v\u00edce informac\u00ed na http://rain.fsv.cvut.cz"
-  }, 
+  "message": null, 
   "overlays": [
     {
       "drawing_order": 0, 
@@ -57,7 +57,7 @@
     {
       "drawing_order": 1, 
       "projection": "EPSG:5514", 
-      "labels": false, 
+      "labels": true, 
       "visible": false, 
       "extent": [
         -901459.5126953125, 
@@ -67,11 +67,29 @@
       ], 
       "geom_type": "POLYGON", 
       "name": "Klasifikovan\u00e1 povod\u00ed IV. \u0159\u00e1du", 
+      "pk_attributes": [], 
       "serverName": "povodi_klasifikovana", 
+      "attributes": [
+        {
+          "alias": "Povod\u00ed \u010d.", 
+          "type": "TEXT", 
+          "name": "chp"
+        }, 
+        {
+          "alias": "V\u00fdm\u011bra (km2)", 
+          "type": "DOUBLE", 
+          "name": "a_km2"
+        }, 
+        {
+          "alias": "T\u0159\u00edda", 
+          "type": "INTEGER", 
+          "name": "trida"
+        }
+      ], 
       "hidden": false, 
       "provider_type": "ogr", 
       "type": "vector", 
-      "queryable": false, 
+      "queryable": true, 
       "metadata": {
         "keyword_list": "", 
         "abstract": "0) Povod\u00ed s extr\u00e9my parametr\u016f ovlivn\u011bn\u00fdmi malou rozlohou a specifickou geometri\u00ed nebo v\u011bt\u0161\u00ed povod\u00ed s vysokou hustotou odvod\u0148ovac\u00edch kan\u00e1l\u016f.\n1) Povod\u00ed v\u011bj\u00ed\u0159ovit\u00e1, st\u0159edn\u00ed hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b a odtokov\u00fdch drah. Sm\u00ed\u0161en\u00fd p\u016fdn\u00ed pokryv.\n2) Prot\u00e1hl\u00e1 povod\u00ed, vysok\u00e1 hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b, kr\u00e1tk\u00e9 odtokov\u00e9 dr\u00e1hy. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s n\u00edzkou retenc\u00ed.\n3) P\u0159echodn\u00fd tvar povod\u00ed, vy\u0161\u0161\u00ed hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b a st\u0159edn\u00ed odtokov\u00e9 dr\u00e1hy. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s vysokou retenc\u00ed.\n4) Prot\u00e1hl\u00e1 povod\u00ed, n\u00edzk\u00e1 hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b a del\u0161\u00ed odtokov\u00e9 dr\u00e1hy. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s n\u00edzkou retenc\u00ed.\n5) P\u0159echodn\u00fd a\u017e v\u011bj\u00ed\u0159ovit\u00fd tvar povod\u00ed, velmi dlouh\u00e9 dr\u00e1hy odtoku. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s vysokou retenc\u00ed.", 
@@ -98,23 +116,48 @@
           "attributes": [
             {
               "alias": "Povod\u00ed \u010d.", 
-              "type": "INTEGER", 
-              "name": "hlgp_id"
+              "type": "TEXT", 
+              "name": "chp"
             }, 
             {
               "alias": "V\u00fdm\u011bra (km2)", 
               "type": "DOUBLE", 
-              "name": "plocha"
+              "name": "a_km2"
             }, 
             {
-              "alias": "H_N2T360 (mm)", 
+              "alias": "N\u00e1vrhov\u00e1 sr\u00e1\u017eka (mm)", 
               "type": "DOUBLE", 
-              "name": "H_N2T360"
+              "name": "h_n2t360"
             }, 
             {
-              "alias": "Tvary sr\u00e1\u017eek", 
-              "type": "TEXT", 
-              "name": "tvary"
+              "alias": "Typ A (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n2typa"
+            }, 
+            {
+              "alias": "Typ B (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n2typb"
+            }, 
+            {
+              "alias": "Typ C (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n2typc"
+            }, 
+            {
+              "alias": "Typ D (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n2typd"
+            }, 
+            {
+              "alias": "Typ E (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n2type"
+            }, 
+            {
+              "alias": "Typ F (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n2typf"
             }
           ], 
           "hidden": false, 
@@ -150,23 +193,48 @@
           "attributes": [
             {
               "alias": "Povod\u00ed \u010d.", 
-              "type": "INTEGER", 
-              "name": "hlgp_id"
+              "type": "TEXT", 
+              "name": "chp"
             }, 
             {
               "alias": "V\u00fdm\u011bra (km2)", 
               "type": "DOUBLE", 
-              "name": "plocha"
+              "name": "a_km2"
             }, 
             {
-              "alias": "H_N5T360 (mm)", 
+              "alias": "N\u00e1vrhov\u00e1 sr\u00e1\u017eka (mm)", 
               "type": "DOUBLE", 
-              "name": "H_N5T360"
+              "name": "h_n5t360"
             }, 
             {
-              "alias": "Tvary sr\u00e1\u017eek", 
-              "type": "TEXT", 
-              "name": "tvary"
+              "alias": "Typ A (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n5typa"
+            }, 
+            {
+              "alias": "Typ B (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n5typb"
+            }, 
+            {
+              "alias": "Typ C (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n5typc"
+            }, 
+            {
+              "alias": "Typ D (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n5typd"
+            }, 
+            {
+              "alias": "Typ E (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n5type"
+            }, 
+            {
+              "alias": "Typ F (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n5typf"
             }
           ], 
           "hidden": false, 
@@ -202,23 +270,48 @@
           "attributes": [
             {
               "alias": "Povod\u00ed \u010d.", 
-              "type": "INTEGER", 
-              "name": "hlgp_id"
+              "type": "TEXT", 
+              "name": "chp"
             }, 
             {
               "alias": "V\u00fdm\u011bra (km2)", 
               "type": "DOUBLE", 
-              "name": "plocha"
+              "name": "a_km2"
             }, 
             {
-              "alias": "H_N10T360 (mm)", 
+              "alias": "N\u00e1vrhov\u00e1 sr\u00e1\u017eka (mm)", 
               "type": "DOUBLE", 
-              "name": "H_N10T360"
+              "name": "h_n10t360"
             }, 
             {
-              "alias": "Tvary sr\u00e1\u017eek", 
-              "type": "TEXT", 
-              "name": "tvary"
+              "alias": "Typ A (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n10typa"
+            }, 
+            {
+              "alias": "Typ B (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n10typb"
+            }, 
+            {
+              "alias": "Typ C (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n10typc"
+            }, 
+            {
+              "alias": "Typ D (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n10typd"
+            }, 
+            {
+              "alias": "Typ E (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n10type"
+            }, 
+            {
+              "alias": "Typ F (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n10typf"
             }
           ], 
           "hidden": false, 
@@ -254,23 +347,48 @@
           "attributes": [
             {
               "alias": "Povod\u00ed \u010d.", 
-              "type": "INTEGER", 
-              "name": "hlgp_id"
+              "type": "TEXT", 
+              "name": "chp"
             }, 
             {
               "alias": "V\u00fdm\u011bra (km2)", 
               "type": "DOUBLE", 
-              "name": "plocha"
+              "name": "a_km2"
             }, 
             {
-              "alias": "H_N20T360 (mm)", 
+              "alias": "N\u00e1vrhov\u00e1 sr\u00e1\u017eka (mm)", 
               "type": "DOUBLE", 
-              "name": "H_N20T360"
+              "name": "h_n20t360"
             }, 
             {
-              "alias": "Tvary sr\u00e1\u017eek", 
-              "type": "TEXT", 
-              "name": "tvary"
+              "alias": "Typ A (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n20typa"
+            }, 
+            {
+              "alias": "Typ B (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n20typb"
+            }, 
+            {
+              "alias": "Typ C (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n20typc"
+            }, 
+            {
+              "alias": "Typ D (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n20typd"
+            }, 
+            {
+              "alias": "Typ E (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n20type"
+            }, 
+            {
+              "alias": "Typ F (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n20typf"
             }
           ], 
           "hidden": false, 
@@ -306,23 +424,48 @@
           "attributes": [
             {
               "alias": "Povod\u00ed \u010d.", 
-              "type": "INTEGER", 
-              "name": "hlgp_id"
+              "type": "TEXT", 
+              "name": "chp"
             }, 
             {
               "alias": "V\u00fdm\u011bra (km2)", 
               "type": "DOUBLE", 
-              "name": "plocha"
+              "name": "a_km2"
             }, 
             {
-              "alias": "H_N50T360 (mm)", 
+              "alias": "N\u00e1vrhov\u00e1 sr\u00e1\u017eka (mm)", 
               "type": "DOUBLE", 
-              "name": "H_N50T360"
+              "name": "h_n50t360"
             }, 
             {
-              "alias": "Tvary sr\u00e1\u017eek", 
-              "type": "TEXT", 
-              "name": "tvary"
+              "alias": "Typ A (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n50typa"
+            }, 
+            {
+              "alias": "Typ B (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n50typb"
+            }, 
+            {
+              "alias": "Typ C (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n50typc"
+            }, 
+            {
+              "alias": "Typ D (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n50typd"
+            }, 
+            {
+              "alias": "Typ E (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n50type"
+            }, 
+            {
+              "alias": "Typ F (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n50typf"
             }
           ], 
           "hidden": false, 
@@ -358,23 +501,48 @@
           "attributes": [
             {
               "alias": "Povod\u00ed \u010d.", 
-              "type": "INTEGER", 
-              "name": "hlgp_id"
+              "type": "TEXT", 
+              "name": "chp"
             }, 
             {
               "alias": "V\u00fdm\u011bra (km2)", 
               "type": "DOUBLE", 
-              "name": "plocha"
+              "name": "a_km2"
             }, 
             {
-              "alias": "H_N100T360 (mm)", 
+              "alias": "N\u00e1vrhov\u00e1 sr\u00e1\u017eka (mm)", 
               "type": "DOUBLE", 
-              "name": "H_N100T360"
+              "name": "h_n100t360"
             }, 
             {
-              "alias": "Tvary sr\u00e1\u017eek", 
-              "type": "TEXT", 
-              "name": "tvary"
+              "alias": "Typ A (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n100typa"
+            }, 
+            {
+              "alias": "Typ B (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n100typb"
+            }, 
+            {
+              "alias": "Typ C (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n100typc"
+            }, 
+            {
+              "alias": "Typ D (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n100typd"
+            }, 
+            {
+              "alias": "Typ E (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n100type"
+            }, 
+            {
+              "alias": "Typ F (%)", 
+              "type": "DOUBLE", 
+              "name": "p_n100typf"
             }
           ], 
           "hidden": false, 
@@ -402,9 +570,12 @@
     13.229193125052916, 
     6.614596562526458, 
     2.645838625010583, 
-    1.3229193125052916
+    1.3229193125052916, 
+    0.6614596562526458, 
+    0.2645838625010583, 
+    0.13229193125052915
   ], 
-  "gislab_user": "landa", 
+  "gislab_user": "martin", 
   "title": "Rain WebApp", 
   "authentication": "all", 
   "units": "meters", 
@@ -417,7 +588,7 @@
         "Statn\u00ed hranice \u010cR", 
         "Povod\u00ed IV.\u0159\u00e1du 2-let\u00e9 6h"
       ], 
-      "title": "2-let\u00e9 max. \u00fahrny za 6h "
+      "title": "2-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
       "abstract": "5-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
@@ -441,7 +612,7 @@
         "Statn\u00ed hranice \u010cR", 
         "Povod\u00ed IV.\u0159\u00e1du 20-let\u00e9 6h"
       ], 
-      "title": "20-let\u00e9 max \u00fahrny za 6h"
+      "title": "20-let\u00e9 max. \u00fahrny za 6h"
     }, 
     {
       "abstract": "50-let\u00e9 maxim\u00e1ln\u00ed \u00fahrny s d\u00e9lkou n\u00e1vrhov\u00e9 sr\u00e1\u017eky 6hod", 
@@ -470,18 +641,18 @@
     "decimal_places": 2
   }, 
   "extent": [
-    -927817.580699998, 
-    -1236550.6079, 
-    -422329.2568, 
-    -933179.390499998
+    -920001.6538227753, 
+    -1240000.6499007936, 
+    -420001.0663227754, 
+    -929999.9999007937
   ], 
   "online_resource": "http://rain.fsv.cvut.cz/nastroje/webapp/", 
   "canvas_color": "#ffffffff", 
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1506338196, 
-  "publish_date": "Mon Sep 25 13:16:36 2017", 
+  "publish_date_unix": 1514027705, 
+  "publish_date": "Sat Dec 23 12:15:05 2017", 
   "expiration": "", 
   "contact_person": "Martin Landa", 
   "extent_buffer": 0.0, 
@@ -490,10 +661,10 @@
       "name": "Blank", 
       "visible": false, 
       "extent": [
-        -927817.580699998, 
-        -1236550.6079, 
-        -422329.2568, 
-        -933179.390499998
+        -920001.6538227753, 
+        -1240000.6499007936, 
+        -420001.0663227754, 
+        -929999.9999007937
       ], 
       "resolutions": [
         2645.838625010583, 
@@ -506,7 +677,10 @@
         13.229193125052916, 
         6.614596562526458, 
         2.645838625010583, 
-        1.3229193125052916
+        1.3229193125052916, 
+        0.6614596562526458, 
+        0.2645838625010583, 
+        0.13229193125052915
       ], 
       "type": "blank", 
       "metadata": {
@@ -537,7 +711,10 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916
+            1.3229193125052916, 
+            0.6614596562526458, 
+            0.2645838625010583, 
+            0.13229193125052915
           ], 
           "name": "2-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "https://rain1.fsv.cvut.cz/services/wms", 
@@ -575,7 +752,10 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916
+            1.3229193125052916, 
+            0.6614596562526458, 
+            0.2645838625010583, 
+            0.13229193125052915
           ], 
           "name": "5-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "https://rain1.fsv.cvut.cz/services/wms", 
@@ -613,7 +793,10 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916
+            1.3229193125052916, 
+            0.6614596562526458, 
+            0.2645838625010583, 
+            0.13229193125052915
           ], 
           "name": "10-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "https://rain1.fsv.cvut.cz/services/wms", 
@@ -651,7 +834,10 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916
+            1.3229193125052916, 
+            0.6614596562526458, 
+            0.2645838625010583, 
+            0.13229193125052915
           ], 
           "name": "20-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "https://rain1.fsv.cvut.cz/services/wms", 
@@ -689,7 +875,10 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916
+            1.3229193125052916, 
+            0.6614596562526458, 
+            0.2645838625010583, 
+            0.13229193125052915
           ], 
           "name": "50-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "https://rain1.fsv.cvut.cz/services/wms", 
@@ -727,7 +916,10 @@
             13.229193125052916, 
             6.614596562526458, 
             2.645838625010583, 
-            1.3229193125052916
+            1.3229193125052916, 
+            0.6614596562526458, 
+            0.2645838625010583, 
+            0.13229193125052915
           ], 
           "name": "100-let\u00e9 max. denn\u00ed \u00fahrny", 
           "url": "https://rain1.fsv.cvut.cz/services/wms", 
@@ -748,14 +940,14 @@
       "name": "Maxim\u00e1ln\u00ed denn\u00ed \u00fahrny"
     }, 
     {
-      "projection": "EPSG:900913", 
-      "format": "image/png", 
+      "projection": "EPSG:5514", 
+      "format": "image/jpeg", 
       "visible": true, 
       "extent": [
-        -972628.0728206766, 
-        -1299101.467620251, 
-        -397019.3781763541, 
-        -868235.8370191448
+        -920001.6538227753, 
+        -1240000.6499007936, 
+        -420001.0663227754, 
+        -929999.9999007937
       ], 
       "resolutions": [
         2645.838625010583, 
@@ -768,7 +960,10 @@
         13.229193125052916, 
         6.614596562526458, 
         2.645838625010583, 
-        1.3229193125052916
+        1.3229193125052916, 
+        0.6614596562526458, 
+        0.2645838625010583, 
+        0.13229193125052915
       ], 
       "name": "Z\u00e1kladn\u00ed mapa 1:50 000", 
       "url": "https://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx", 
