@@ -203,37 +203,7 @@ class SubDayPrecipProcess(Process):
                LOGGER.info("R: {}".format(self.rainlength))
                if self.identifier == 'd-rain6h-timedist':
                     LOGGER.info('Using v.rast.stats')
-                    columns = []
-
-                    # check area size limit
-                    Module('v.db.addcolumn', map=self.map_name,
-                           columns='area double precision'
-                    )
-                    Module('v.to.db', map=self.map_name, option='area',
-                           columns='area', units='kilometers'
-                    )
-
-                    for rp in self.return_period:
-                         n = rp.lstrip('N')
-                         col_name = 'H_N{n}T360'.format(n=n)
-                         map_name = 'sjtsk_navrhove_srazky_6h_P_{n}yr_6h_mm@{ms}'.format(
-                              n=n, ms=self.mapset
-                         )
-                         Module('v.rast.stats', map=self.map_name, raster=map_name,
-                                method='average', column_prefix=col_name
-                         )
-                         Module('v.db.renamecolumn', map=self.map_name,
-                                column=[col_name + '_average', col_name]
-                         )
-                         Module('v.db.update', map=self.map_name,
-                                column=col_name, value='-1',
-                                where='area > {}'.format(self.area_size)
-                         )
-
-                    # cleanup
-                    Module('v.db.dropcolumn', map=self.map_name,
-                           columns='area'
-                    )
+                    self._v_rast_stats()
                else:
                     LOGGER.info('Using r.subdayprecip.design')
                     Module('g.region', raster=self.return_period[0])
@@ -246,7 +216,58 @@ class SubDayPrecipProcess(Process):
           response.outputs['output'].file = self.export()
 
           return response
-     
+
+     def _v_rast_stats(self):
+          columns = []
+
+          # check area size limit
+          Module('v.db.addcolumn', map=self.map_name,
+                 columns='area double precision'
+          )
+          Module('v.to.db', map=self.map_name, option='area',
+                 columns='area', units='kilometers'
+          )
+
+          for rp in self.return_period:
+               n = rp.lstrip('N')
+               col_name = 'H_N{n}T360'.format(n=n)
+               rast_name = 'sjtsk_navrhove_srazky_6h_P_{n}yr_6h_mm@{ms}'.format(
+                    n=n, ms=self.mapset
+               )
+               self.v_rast_stats(rast_name, col_name)
+                
+               Module('v.db.renamecolumn', map=self.map_name,
+                      column=[col_name + '_average', col_name]
+               )
+               Module('v.db.update', map=self.map_name,
+                      column=col_name, value='-1',
+                      where='area > {}'.format(self.area_size)
+               )
+
+          # cleanup
+          Module('v.db.dropcolumn', map=self.map_name,
+                 columns='area'
+          )
+
+     def v_rast_stats(self, rast_name, col_name):
+          try:
+               Module('v.rast.stats', map=self.map_name, raster=rast_name,
+                      method='average', column_prefix=col_name
+               )
+               null_values = Module('v.db.select', map=self.map_name, columns='cat', flags='c',
+                                    where="{}_average is NULL".format(col_name), stdout_=PIPE)
+               cats = null_values.outputs.stdout.splitlines()
+          except CalledModuleError:
+               cats = [1] # no category found, use pseudo category to call v.what.rast
+               
+          # handle NULL values (areas smaller than raster resolution)
+          LOGGER.info("Small areas: {}".format(len(cats)))
+          
+          if len(cats) > 0:
+               Module('v.what.rast', map=self.map_name, raster=rast_name, type='centroid',
+                      column='{}_average'.format(col_name), where="{}_average is NULL".format(col_name)
+               )
+          
      def check_keycolumn(self, keycol):
           # check if key columns exists
           map_cols = Module('db.columns',

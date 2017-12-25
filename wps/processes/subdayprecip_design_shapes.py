@@ -83,12 +83,10 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
                     columns.append('c{types}_{n}yr_perc'.format(
                          types=stype, n=n
                     ))
-                    map_name = 'sjtsk_zastoupeni_shluku_c{types}_{n}yr_perc@{ms}'.format(
+                    rast_name = 'sjtsk_zastoupeni_shluku_c{types}_{n}yr_perc@{ms}'.format(
                          types=stype, n=n, ms=self.mapset
                     )
-                    gscript.run_command('v.rast.stats', map=self.map_name, raster=map_name,
-                                        method='average', column_prefix=columns[-1]
-                    )
+                    self.v_rast_stats(rast_name, columns[-1])
 
           return gscript.vector_db_select(
                map=self.map_name,
