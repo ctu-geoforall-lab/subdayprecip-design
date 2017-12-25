@@ -37,6 +37,11 @@ MAP
     END # METADATA
   END # WEB
 
+  LEGEND
+      STATUS ON
+      KEYSIZE 200 250
+  END # LEGEND
+
   LAYER
     NAME "H_N2_24h"
     METADATA
@@ -53,7 +58,9 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_002.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_002"
-    CLASS NAME "H_N2_24h"
+    CLASS
+        NAME "H_N2_24h"
+	KEYIMAGE "legend/N2.png"
     END # CLASS
   END # LAYER
 
@@ -73,7 +80,9 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_005.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_005"
-    CLASS NAME "H_N5_24h"
+    CLASS
+        NAME "H_N5_24h"
+	KEYIMAGE "legend/N5.png"	 
     END # CLASS
   END # LAYER
 
@@ -93,7 +102,9 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_010.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_010"
-    CLASS NAME "H_N10_24h"
+    CLASS
+        NAME "H_N10_24h"
+	KEYIMAGE "legend/N10.png"    
     END # CLASS
   END # LAYER
 
@@ -113,7 +124,9 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_020.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_020"
-    CLASS NAME "H_N20_24h"
+    CLASS
+        NAME "H_N20_24h"
+    	KEYIMAGE "legend/N20.png"
     END # CLASS
   END # LAYER
 
@@ -133,7 +146,9 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_050.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_050"
-    CLASS NAME "H_N50_24h"
+    CLASS
+        NAME "H_N50_24h"
+    	KEYIMAGE "legend/N50.png"
     END # CLASS
   END # LAYER
 
@@ -153,7 +168,9 @@ MAP
     TYPE RASTER
     STATUS ON
     DATA "#DATADIR#/grassdata/subdayprecip/H_100.tif" # "#DATADIR#/grassdata/subdayprecip/PERMANENT/cellhd/H_100"
-    CLASS NAME "H_N100_24h"
+    CLASS
+        NAME "H_N100_24h"
+    	KEYIMAGE "legend/N100.png"
     END # CLASS
   END # LAYER
 
