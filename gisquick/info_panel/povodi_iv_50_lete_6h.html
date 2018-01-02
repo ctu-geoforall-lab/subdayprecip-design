@@ -18,6 +18,19 @@
 
   <h3>Průběh návrhových srážek [mm]</h3>
   <div class="graph"></div>
+
+  <div class="bar-graph">
+    <div
+      ng-repeat="type in ['a', 'b', 'c', 'd', 'e', 'f']"
+      ng-init="attr = 'p_n50typ' + type"
+      ng-style="{
+        width: feature.get(attr) + '%',
+        backgroundColor: Legend[type.toUpperCase()][1]
+      }">
+      {{ feature.get(attr) }}%
+    </div>
+  </div>
+
   <div style="text-align:center; margin-top: 1em">
     <a href="#" ng-click="downloadData($event)">Data CSV</a>
   </div>
@@ -112,12 +125,12 @@
 
     var data = {};
     var LegendData = {
-        'A' : ["typA", "rgb(255,0,0)"],
-        'B' : ["typB", "rgb(255,124,128)"],
-        'C' : ["typC", "rgb(255,192,0)"],
-        'D' : ["typD", "rgb(25,255,0)"],
-        'E' : ["typE", "rgb(146,208,80)"],
-        'F' : ["typF", "rgb(0,112,192)"],
+        'A' : ["typ A", "rgb(255,0,0)"],
+        'B' : ["typ B", "rgb(255,124,128)"],
+        'C' : ["typ C", "rgb(255,192,0)"],
+        'D' : ["typ D", "rgb(25,255,0)"],
+        'E' : ["typ E", "rgb(146,208,80)"],
+        'F' : ["typ F", "rgb(0,112,192)"],
     }
     // add legend   
     var legend = svg.append("g")
@@ -247,6 +260,7 @@
 
     }
 
+    $scope.Legend = LegendData;
     $scope.$on('featurechange', function(evt, feature) {
       console.log('featurechange')
       // y.domain([0, 16]);
@@ -328,4 +342,17 @@
     position: absolute;
     transform: translate(-50%, -110%);
   }
+  .bar-graph {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  .bar-graph > div {
+    border: 1px solid #333;
+    box-sizing: border-box;
+    padding: 1px 0;
+  }
+
 </style>
