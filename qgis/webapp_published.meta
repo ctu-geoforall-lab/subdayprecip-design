@@ -22,10 +22,10 @@
   ], 
   "abstract": "Tato webov\u00e1 aplikace umo\u017e\u0148uje prohl\u00ed\u017eet podkladov\u00e9 vrstvy (Z\u00e1kladn\u00ed mapu \u010cR a vrstvy maxim\u00e1ln\u00edch denn\u00edch \u00fahrn\u016f poskytovan\u00fdch v r\u00e1mci projektu ve\u0159ejnou slu\u017ebou OGC WMS) a vrstvu povod\u00ed IV. \u0159\u00e1du s vy\u010d\u00edslen\u00fdmi hodnotami n\u00e1vrhov\u00fdch sr\u00e1\u017eek s d\u00e9lkou sr\u00e1\u017eky 6 hodin. Na z\u00e1klad\u011b t\u011bchto hodnot je vrstva povod\u00ed IV. \u0159\u00e1du stylov\u00e1na v jednotliv\u00fdch t\u00e9matech (topics) podle doby opakov\u00e1n\u00ed (2 roky, 5, 10, 20, 50 a 100 let).", 
   "zoom_extent": [
-    -940454.789, 
-    -1248026.839, 
-    -409692.049, 
-    -921703.159
+    -913183.974, 
+    -1244649.734, 
+    -420756.609, 
+    -919891.852
   ], 
   "fees": "conditions unknown", 
   "message": null, 
@@ -629,6 +629,14 @@
         "Povod\u00ed IV.\u0159\u00e1du 100-let\u00e9 6h"
       ], 
       "title": "100-let\u00e9 max. \u00fahrny za 6h"
+    }, 
+    {
+      "abstract": "Klasifikovan\u00e1 povod\u00ed IV. \u0159\u00e1du: 0) Povod\u00ed s extr\u00e9my parametr\u016f ovlivn\u011bn\u00fdmi malou rozlohou a specifickou geometri\u00ed nebo v\u011bt\u0161\u00ed povod\u00ed s vysokou hustotou odvod\u0148ovac\u00edch kan\u00e1l\u016f. 1) Povod\u00ed v\u011bj\u00ed\u0159ovit\u00e1, st\u0159edn\u00ed hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b a odtokov\u00fdch drah. Sm\u00ed\u0161en\u00fd p\u016fdn\u00ed pokryv. 2) Prot\u00e1hl\u00e1 povod\u00ed, vysok\u00e1 hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b, kr\u00e1tk\u00e9 odtokov\u00e9 dr\u00e1hy. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s n\u00edzkou retenc\u00ed. 3) P\u0159echodn\u00fd tvar povod\u00ed, vy\u0161\u0161\u00ed hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b a st\u0159edn\u00ed odtokov\u00e9 dr\u00e1hy. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s vysokou retenc\u00ed. 4) Prot\u00e1hl\u00e1 povod\u00ed, n\u00edzk\u00e1 hustota \u0159\u00ed\u010dn\u00ed s\u00edt\u011b a del\u0161\u00ed odtokov\u00e9 dr\u00e1hy. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s n\u00edzkou retenc\u00ed. 5) P\u0159echodn\u00fd a\u017e v\u011bj\u00ed\u0159ovit\u00fd tvar povod\u00ed, velmi dlouh\u00e9 dr\u00e1hy odtoku. P\u0159eva\u017euje p\u016fdn\u00ed pokryv s vysokou retenc\u00ed.", 
+      "visible_overlays": [
+        "Statn\u00ed hranice \u010cR", 
+        "Klasifikovan\u00e1 povod\u00ed IV. \u0159\u00e1du"
+      ], 
+      "title": "Klasifikace povod\u00ed IV. \u0159\u00e1du"
     }
   ], 
   "measure_ellipsoid": "NONE", 
@@ -651,8 +659,8 @@
   "composer_templates": [], 
   "access_constrains": "None", 
   "plugin_version": "1.0.0", 
-  "publish_date_unix": 1514027705, 
-  "publish_date": "Sat Dec 23 12:15:05 2017", 
+  "publish_date_unix": 1514917043, 
+  "publish_date": "Tue Jan  2 19:17:23 2018", 
   "expiration": "", 
   "contact_person": "Martin Landa", 
   "extent_buffer": 0.0, 
