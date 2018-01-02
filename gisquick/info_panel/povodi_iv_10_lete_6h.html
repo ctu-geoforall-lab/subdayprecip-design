@@ -16,7 +16,7 @@
     </tbody>
   </table>
 
-  <h3>Průběh návrhových srážek [mm]</h3>
+  <h3>Úhrn návrhové srážky</h3>
   <div class="graph"></div>
 
   <div class="bar-graph">
@@ -86,7 +86,7 @@
       .attr("x", width/2)
       .attr("y",  height + margin.bottom)
       .style("text-anchor", "middle")
-      .text("Čas (v minutách)");
+      .text("Čas [min]");
 
       svg.append("text")      // text label for the y axis
       // .attr("x", -margin.left * .7)
@@ -95,7 +95,7 @@
       // .attr('dx', '-3em')
       // .attr('dy', '-7em')
       .attr('transform', 'translate('+(-margin.left * .7)+', '+(height/2)+') rotate(-90)')
-      .text("mm/5min");
+      .text("Úhrn [mm/5min]");
 
     // Set the ranges
     var x = d3.scale.linear().range([0, width]);
