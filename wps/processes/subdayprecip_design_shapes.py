@@ -142,6 +142,9 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
                                    sep=self.sep,
                                    val=val
                               ))
+                    fd.write('{seps}'.format(
+                         seps=self.sep * len(attrib[1:] * len(self.shapetype)))
+                    )
                     fd.write(nl)
 
 if __name__ == "__main__":
