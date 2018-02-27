@@ -272,16 +272,22 @@
 
     $scope.downloadData = function(evt) {
       var link = evt.target;
-      link.download = 'data.csv';
-      csv = ['CAS_min;H_N100typA_mm;H_N100typB_mm;H_N100typC_mm;H_N100typD_mm;H_N100typE_mm;H_N100typF_mm'];
+      link.download = $scope.feature.get('chp') + '_N100.csv';
+      csv = ['CAS_min,H_N100typA_mm,H_N100typB_mm,H_N100typC_mm,H_N100typD_mm,H_N100typE_mm,H_N100typF_mm,H_N2typF_mm,P_N100typA_%,P_N100typB_%,P_N100typC_%,P_N100typD_%,P_N100,typE_%,P_N100typF_%'];
 
+      line0 = '0,,,,,,';
+      ['a', 'b', 'c', 'd', 'e', 'f'].forEach(function(type) {
+      line0 += ',' + $scope.feature.get('p_n100typ' + type);
+      });
+      csv.push(line0);
+  
       var types = Object.keys(data);
       data[types[0]].forEach(function(d, index) {
         var rowData = [d.time];
         types.forEach(function(type) {
           rowData.push(data[type][index].value.toFixed(3));
         });
-        csv.push(rowData.join(';'));
+        csv.push(rowData.join(',') + ',,,,,,');
       })
 
       var blob = new Blob(
