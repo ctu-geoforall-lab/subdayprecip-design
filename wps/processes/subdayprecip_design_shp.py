@@ -36,6 +36,7 @@ class SubDayPrecipShp(SubDayPrecipProcess):
                  input=self.map_name,
                  flags='sme',
                  output='{}/{}.shp'.format(self.output_dir, self.map_name),
+                 format='ESRI_Shapefile',
                  overwrite=True)
           
           os.chdir(self.output_dir)

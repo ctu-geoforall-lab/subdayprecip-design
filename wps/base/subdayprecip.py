@@ -17,12 +17,15 @@ import types
 import shutil
 import magic
 import logging
+import math
 from subprocess import PIPE
 
 os.environ['GISBASE'] = '/opt/grass/dist.x86_64-pc-linux-gnu'
 sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
+os.environ['LD_LIBRARY_PATH'] = os.path.join(os.environ["GISBASE"], "lib")
 
 from grass.pygrass.modules import Module
+from grass.pygrass.vector import VectorTopo
 from grass.exceptions import CalledModuleError
 
 from pywps import Process, ComplexInput, LiteralInput, Format, ComplexOutput, LiteralOutput
@@ -208,6 +211,7 @@ class SubDayPrecipProcess(Process):
                     LOGGER.info('Using r.subdayprecip.design')
                     Module('g.region', raster=self.return_period[0])
                     Module('r.subdayprecip.design',
+                           flags='r',
                            map=self.map_name, return_period=self.return_period,
                            rainlength=self.rainlength, area_size=self.area_size
                     )
@@ -217,7 +221,25 @@ class SubDayPrecipProcess(Process):
 
           return response
 
-     def _v_rast_stats(self):
+     def _area_size_reduction(self, map_name, field_name, area_col_name):
+          """Taken from r.subdayprecip.design"""
+          vmap = VectorTopo(map_name)
+          vmap.open('rw')
+
+          cats = [] # TODO: do it better
+          for feat in vmap.viter('areas'):
+               if not feat.attrs[field_name]:
+                    continue
+               if feat.attrs['cat'] not in cats:
+                    x = math.log10(float(feat.attrs[area_col_name]) )- 0.9
+                    k = math.exp(-0.08515989 * pow(x, 2) - 0.001344925 * pow(x, 4))
+                    feat.attrs[field_name] *= k
+                    cats.append(feat.attrs['cat'])
+
+          vmap.table.conn.commit()
+          vmap.close()
+
+     def _v_rast_stats(self, reduction=True):
           columns = []
 
           # check area size limit
@@ -239,10 +261,15 @@ class SubDayPrecipProcess(Process):
                Module('v.db.renamecolumn', map=self.map_name,
                       column=[col_name + '_average', col_name]
                )
-               Module('v.db.update', map=self.map_name,
-                      column=col_name, value='-1',
-                      where='area > {}'.format(self.area_size)
-               )
+               if reduction:
+                    self._area_size_reduction(
+                         self.map_name, col_name, 'area'
+                    )
+               else:
+                    Module('v.db.update', map=self.map_name,
+                           column=col_name, value='-1',
+                           where='area > {}'.format(self.area_size)
+                    )
 
           # cleanup
           Module('v.db.dropcolumn', map=self.map_name,
