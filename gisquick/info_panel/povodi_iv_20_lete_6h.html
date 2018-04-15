@@ -273,7 +273,7 @@
     $scope.downloadData = function(evt) {
       var link = evt.target;
       link.download = $scope.feature.get('chp') + '_N20.csv';
-      csv = ['CAS_min,H_N20typA_mm,H_N20typB_mm,H_N20typC_mm,H_N20typD_mm,H_N20typE_mm,H_N20typF_mm,P_N20typA_%,P_N2typB_%,P_N20typC_%,P_N20typD_%,P_N20typE_%,P_N20typF_%'];
+      csv = ['CAS_min,H_N20typA_mm,H_N20typB_mm,H_N20typC_mm,H_N20typD_mm,H_N20typE_mm,H_N20typF_mm,P_N20typA_%,P_N20typB_%,P_N20typC_%,P_N20typD_%,P_N20typE_%,P_N20typF_%'];
 
       line0 = '0,,,,,,';
       ['a', 'b', 'c', 'd', 'e', 'f'].forEach(function(type) {
