@@ -241,12 +241,13 @@ class SubDayPrecipProcess(Process):
      def _v_rast_stats(self, reduction=True):
           columns = []
 
+          area_col_name = 'area_{}'.format(os.getpid())
           # check area size limit
           Module('v.db.addcolumn', map=self.map_name,
-                 columns='area double precision'
+                 columns='{} double precision'.format(area_col_name)
           )
           Module('v.to.db', map=self.map_name, option='area',
-                 columns='area', units='kilometers'
+                 columns=area_col_name, units='kilometers'
           )
 
           for rp in self.return_period:
@@ -262,17 +263,17 @@ class SubDayPrecipProcess(Process):
                )
                if reduction:
                     self._area_size_reduction(
-                         self.map_name, col_name, 'area'
+                         self.map_name, col_name, area_col_name
                     )
                else:
                     Module('v.db.update', map=self.map_name,
                            column=col_name, value='-1',
-                           where='area > {}'.format(self.area_size)
+                           where='{} > {}'.format(area_col_name, self.area_size)
                     )
 
           # cleanup
           Module('v.db.dropcolumn', map=self.map_name,
-                 columns='area'
+                 columns=area_col_name
           )
 
      def v_rast_stats(self, rast_name, col_name):
