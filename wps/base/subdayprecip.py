@@ -211,7 +211,6 @@ class SubDayPrecipProcess(Process):
                     LOGGER.info('Using r.subdayprecip.design')
                     Module('g.region', raster=self.return_period[0])
                     Module('r.subdayprecip.design',
-                           flags='r',
                            map=self.map_name, return_period=self.return_period,
                            rainlength=self.rainlength, area_size=self.area_size
                     )
