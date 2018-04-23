@@ -227,7 +227,7 @@ class SubDayPrecipProcess(Process):
 
           cats = [] # TODO: do it better
           for feat in vmap.viter('areas'):
-               if not feat.attrs[field_name]:
+               if not feat.attrs or feat.attrs[field_name]:
                     continue
                if feat.attrs['cat'] not in cats:
                     x = math.log10(float(feat.attrs[area_col_name]) )- 0.9
@@ -334,6 +334,9 @@ class SubDayPrecipProcess(Process):
                module_in_args['input'] = input_data
                # skip projection check
                module_in_args['flags'] = 'o'
+               # snap to 1cm (assuming ArcGIS data)
+               module_in_args['snap'] = 0.01
+
           LOGGER.debug("Import started ({})".format(input_data))
           start = time.time()
           try:
