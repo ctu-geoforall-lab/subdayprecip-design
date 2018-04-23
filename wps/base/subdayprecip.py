@@ -24,6 +24,7 @@ os.environ['GISBASE'] = '/opt/grass/dist.x86_64-pc-linux-gnu'
 sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
 os.environ['LD_LIBRARY_PATH'] = os.path.join(os.environ["GISBASE"], "lib")
 
+from grass.pygrass.gis import Mapset
 from grass.pygrass.modules import Module
 from grass.pygrass.vector import VectorTopo
 from grass.exceptions import CalledModuleError
@@ -97,6 +98,15 @@ class SubDayPrecipProcess(Process):
                     min_occurs=0)
                )
 
+          if 'area_red' in input_params:
+               inputs.append(LiteralInput(
+                    identifier="area_red",
+                    title=u"Provést redukci úhrnu pro povodí nad 20 km2",
+                    data_type='boolean',
+                    default='true',
+                    min_occurs=0)
+               )
+
           if 'type' in input_params:
                inputs.append(LiteralInput(
                     identifier="type",
@@ -136,11 +146,6 @@ class SubDayPrecipProcess(Process):
                     as_reference = True)
                )
           
-          # self.output_png = self.addComplexOutput(identifier = "output_png",
-          #                                       title = "Tvar návrhových srážek jako graf ve formátu PNG",
-          #                                       formats = [ {"mimeType":"image/png"} ],
-          #                                       asReference = True)
-
           super(SubDayPrecipProcess, self).__init__(
                self._handler,
                identifier=identifier,
@@ -182,11 +187,11 @@ class SubDayPrecipProcess(Process):
           if 'area_size' in request.inputs.keys():
                self.area_size = request.inputs['area_size'][0].data
           else:
-               if self.identifier == 'd-rain6h-timedist':
-                    self.area_size = -1
-               else:
-                    self.area_size = 20
-
+               self.area_size = 20
+          if 'area_red' in request.inputs.keys():
+               self.area_red = request.inputs['area_red'][0].data
+          else:
+               self.area_red = True
           if 'input' in request.inputs.keys():
                self.map_name = self.import_data(request.inputs['input'][0].file)
           
@@ -206,7 +211,7 @@ class SubDayPrecipProcess(Process):
                LOGGER.info("R: {}".format(self.rainlength))
                if self.identifier == 'd-rain6h-timedist':
                     LOGGER.info('Using v.rast.stats')
-                    self._v_rast_stats()
+                    self._v_rast_stats(self.area_red)
                else:
                     LOGGER.info('Using r.subdayprecip.design')
                     Module('g.region', raster=self.return_period[0])
@@ -222,7 +227,14 @@ class SubDayPrecipProcess(Process):
 
      def _area_size_reduction(self, map_name, field_name, area_col_name):
           """Taken from r.subdayprecip.design"""
-          vmap = VectorTopo(map_name)
+          mapset = Mapset()
+          # very strangely, current mapset can be reported by pygrass wrongly
+          import grass.script as gscript
+          cur_mapset = gscript.gisenv()['MAPSET']
+          if mapset.name != cur_mapset:
+               mapset = Mapset(cur_mapset)
+               mapset.current()
+          vmap = VectorTopo(map_name, mapset=cur_mapset)
           vmap.open('rw')
 
           cats = [] # TODO: do it better
@@ -250,6 +262,8 @@ class SubDayPrecipProcess(Process):
                  columns=area_col_name, units='kilometers'
           )
 
+          LOGGER.info("Reduction enabled?: {}".format(reduction))
+
           for rp in self.return_period:
                n = rp.lstrip('N')
                col_name = 'H_N{n}T360'.format(n=n)
@@ -265,11 +279,11 @@ class SubDayPrecipProcess(Process):
                     self._area_size_reduction(
                          self.map_name, col_name, area_col_name
                     )
-               else:
-                    Module('v.db.update', map=self.map_name,
-                           column=col_name, value='-1',
-                           where='{} > {}'.format(area_col_name, self.area_size)
-                    )
+               # else:
+               #      Module('v.db.update', map=self.map_name,
+               #             column=col_name, value='-1',
+               #             where='{} > {}'.format(area_col_name, self.area_size)
+               #      )
 
           # cleanup
           Module('v.db.dropcolumn', map=self.map_name,
@@ -288,7 +302,7 @@ class SubDayPrecipProcess(Process):
                cats = [1] # no category found, use pseudo category to call v.what.rast
                
           # handle NULL values (areas smaller than raster resolution)
-          LOGGER.info("Small areas: {}".format(len(cats)))
+          LOGGER.info("Number of small areas: {}".format(len(cats)))
           
           if len(cats) > 0:
                Module('v.what.rast', map=self.map_name, raster=rast_name, type='centroid',

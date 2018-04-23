@@ -69,7 +69,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           SubDayPrecipProcess.__init__(self,
                identifier="d-rain6h-timedist",
                description=u"Vraci tvary navrhovych srazek v tabulkove forme s pevne stanovenou delkou srazky 6 hodin.",
-               input_params=['input', 'keycolumn', 'return_period', 'type', 'area_size'],
+               input_params=['input', 'keycolumn', 'return_period', 'type', 'area_red'],
                output_params=['output_shapes']
           )
           SubDayPrecipShapesBase.__init__(self)
