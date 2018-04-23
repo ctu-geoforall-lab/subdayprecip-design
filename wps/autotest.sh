@@ -47,11 +47,23 @@ echo "RESULT:"
 echo $value
 
 echo "**************************************************************"
-echo "* d-rain6h-timedist"
+echo "* d-rain6h-timedist (reduction enabled)"
 echo "**************************************************************"
 
 file=`curl \
-"https://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP};area_size=${LIMIT}" | \
+"https://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP}" | \
+grep '\<wps:Reference' | cut -d'"' -f2`
+
+wget -q $file
+echo "RESULT:"
+cat `basename $file` |  grep -E '[0-9],[05],'
+
+echo "**************************************************************"
+echo "* d-rain6h-timedist (reduction disabled)"
+echo "**************************************************************"
+
+file=`curl \
+"https://rain1.fsv.cvut.cz/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP};area_red=false" | \
 grep '\<wps:Reference' | cut -d'"' -f2`
 
 wget -q $file
