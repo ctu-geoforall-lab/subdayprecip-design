@@ -114,6 +114,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
 
           # process features
           for fid, attrib in data['values'].iteritems():
+               LOGGER.info('FID={}: {}'.format(attrib[0], attrib[1:]))
                valid = True if float(attrib[1]) > 0 else False
                # write first line (percentage values)
                fd.write('{fid}{sep}0{seps}'.format(
@@ -137,7 +138,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
                          val = float(val)
                          for shape in timeshapes:
                               if valid:
-                                   val = (val * float(shape)) / 100.0
+                                   val *= float(shape) / 100.0
                               fd.write('{sep}{val:.3f}'.format(
                                    sep=self.sep,
                                    val=val
