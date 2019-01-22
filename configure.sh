@@ -14,12 +14,14 @@ host=`hostname`
 if [ $host = 'geo102' ] ; then
     # testing server
     wmsurl=http://geo102.fsv.cvut.cz/services/rainwms
+    wfsurl=http://geo102.fsv.cvut.cz/services/rainwfs    
     wpsurl=http://geo102.fsv.cvut.cz/services/rainwps
     data=/work/geodata/
     wwwdir=/var/www
 else
     # production server
     wmsurl=https://rain1.fsv.cvut.cz/services/wms
+    wfsurl=https://rain1.fsv.cvut.cz/services/wfs    
     wpsurl=https://rain1.fsv.cvut.cz/services/wps
     data=/opt
     wwwdir=/var/www/html
@@ -29,6 +31,11 @@ fi
 sed "s?#URL#?$wmsurl?g;s?#DATADIR#?$data?g" \
     wms/subdayprecip.map.sed > wms/subdayprecip.map
 chown $user:$user wms/subdayprecip.map
+
+# WFS
+sed "s?#URL#?$wfsurl?g" \
+    wfs/subdayprecip.map.sed > wfs/subdayprecip.map
+chown $user:$user wfs/subdayprecip.map
 
 # WPS
 sed "s?#URL#?$wpsurl?g;s?#DATADIR#?$data?g;s?#HOST#?$host?g;s?#WWWDIR#?$wwwdir?g" \
