@@ -3,7 +3,7 @@ Registrace
 
 Nejprve si vytvoříme účet na publikačním serveru Rain. Formulář pro
 vytvoření účtu je dostupný na adrese
-https://rain1.fsv.cvut.cz:4433/accounts/register/.
+https://rain1.fsv.cvut.cz/accounts/register/.
 
 .. figure:: img/gisquick-new-account-0.svg
 

@@ -28,7 +28,7 @@ Pro účely prezentace výsledků projektu byla vytvořena **ukázková
 webové mapová aplikace** prezentující vrstvu povodí IV. řádu s
 vyčíslenými úhrny návrhových srážek s délkou srážky 6 hodin. Aplikace
 je dostupná na adrese
-https://rain1.fsv.cvut.cz:4433/?PROJECT=rain%2Fwebapp. Vstup do
+https://rain1.fsv.cvut.cz/?PROJECT=rain%2Fwebapp. Vstup do
 aplikace je umožněn i bez přihlašovacích údajů uživateli *Guest*.
 
 .. figure:: img/gisquick-guest.svg

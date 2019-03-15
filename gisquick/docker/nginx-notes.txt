@@ -1,0 +1,14 @@
+   22  cd /opt/subdayprecip-design/wps/
+   24  ln -s ./pywps.wsgi ./pywps_app.py
+   32  apt install gunicorn
+   76  apt-get build-dep grass
+   78  apt-get install subversion
+   79  svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_7_6
+   80  cd releasebranch_7_6/
+   94  ./configure --with-freetype-includes=/usr/include/freetype2/
+   95  make
+   96  make install
+  108  ln -s /usr/local/grass76/ /opt/grass/dist.x86_64-pc-linux-gnu
+  115  cat /etc/ld.so.conf.d/grass.conf 
+  124  pip install pywps==4.0.0
+  147  pip install python-magic

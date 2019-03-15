@@ -2,3 +2,6 @@ pywps.cfg
 *~
 docs/_build
 gisquick/docker/_data
+*.pyc
+*data1
+wps/pywps_app.py

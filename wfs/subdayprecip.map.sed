@@ -41,7 +41,7 @@ MAP
     PROJECTION
 	"init=epsg:5514"
     END # PROJECTION
-    TYPE VECTOR
+    TYPE POLYGON
     STATUS ON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=localhost dbname=bpej user=mapserver password=XXX"

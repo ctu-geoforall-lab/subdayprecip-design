@@ -37,7 +37,10 @@ services:
       - django:ro
     volumes:
       - /etc/letsencrypt/:/etc/letsencrypt/
+      - /opt/subdayprecip-design/openlayers2/:/var/www/webapp/d-rain-point
+      - /var/www/html/docs/:/var/www/docs
+      - /opt/subdayprecip-design:/opt/subdayprecip-design
     ports:
-      - "4433:443"
+      - "443:443"
     environment:
       - NGINX_HOST=rain1.fsv.cvut.cz

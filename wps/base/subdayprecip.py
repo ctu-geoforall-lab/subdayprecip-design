@@ -322,7 +322,10 @@ class SubDayPrecipProcess(Process):
      def import_data(self, input_data, link_only=False):
           map_name = 'subdayprecip_output'
 
-          mime_type = magic.detect_from_filename(input_data).mime_type
+          try:
+               mime_type = magic.detect_from_filename(input_data).mime_type
+          except AttributeError:
+               mime_type = magic.from_file(input_data, mime=True)
 
           prefix = '/'
           ext = ''
