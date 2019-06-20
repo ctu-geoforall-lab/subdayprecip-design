@@ -2,10 +2,10 @@
    24  ln -s ./pywps.wsgi ./pywps_app.py
    32  apt install gunicorn
    76  apt-get build-dep grass
-   78  apt-get install subversion
-   79  svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_7_6
-   80  cd releasebranch_7_6/
-   94  ./configure --with-freetype-includes=/usr/include/freetype2/
+   78  apt-get install git python-pip python-pyproj python-sqlalchemy python-lxml python-dateutil python-numpy
+   79  git clone https://github.com/osgeo/grass.git
+   80  git checkout releasebranch_7_6
+   94  ./configure --with-freetype-includes=/usr/include/freetype2/ --without-zstd
    95  make
    96  make install
   108  ln -s /usr/local/grass76/ /opt/grass/dist.x86_64-pc-linux-gnu
