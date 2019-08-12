@@ -1,14 +1,27 @@
-   22  cd /opt/subdayprecip-design/wps/
-   24  ln -s ./pywps.wsgi ./pywps_app.py
-   32  apt install gunicorn
-   76  apt-get build-dep grass
-   78  apt-get install git python-pip python-pyproj python-sqlalchemy python-lxml python-dateutil python-numpy
-   79  git clone https://github.com/osgeo/grass.git
-   80  git checkout releasebranch_7_6
-   94  ./configure --with-freetype-includes=/usr/include/freetype2/ --without-zstd
-   95  make
-   96  make install
-  108  ln -s /usr/local/grass76/ /opt/grass/dist.x86_64-pc-linux-gnu
-  115  cat /etc/ld.so.conf.d/grass.conf 
-  124  pip install pywps==4.0.0
-  147  pip install python-magic
+cd /opt/subdayprecip-design/wps/
+ln -s ./pywps.wsgi ./pywps_app.py
+apt install gunicorn
+cat "deb-src http://httpredir.debian.org/debian jessie main" >> /etc/sources.list
+apt-get update
+apt-get build-dep grass
+apt-get install git python-pip python-pyproj python-sqlalchemy python-lxml python-dateutil python-numpy
+cd /tmp
+git clone https://github.com/osgeo/grass.git
+cd grass && git checkout releasebranch_7_6
+./configure --with-freetype-includes=/usr/include/freetype2/ --without-zstd
+make
+make install
+mkdir -p /opt/grass
+ln -s /usr/local/grass76/ /opt/grass/dist.x86_64-pc-linux-gnu
+echo "/opt/grass/dist.x86_64-pc-linux-gnu/lib" > /etc/ld.so.conf.d/grass.conf
+ldconfig
+pip install pywps==4.0.0
+pip install python-magic
+mkdir -p /opt/grassdata
+mv /opt/subdayprecip-design/subdayprecip /opt/grassdata
+mkdir -p /var/www/wps/outputs
+gunicorn -b 127.0.0.1:8081  --workers $((2*`nproc --all`)) --log-syslog  --pythonpath /opt/subdayprecip-design/wps pywps_app:application
+echo "<5514> +proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=570.8,85.7,462.8,4.998,1.587,5.261,3.56 +units=m +no_defs" >> /usr/share/proj/epsg
+grass76 /opt/grassdata/subdayprecip/PERMANENT/ --exec 'g.extension -s r.subdayprecip.design'
+mkdir -p /var/www/html/wps/outputs/
+
