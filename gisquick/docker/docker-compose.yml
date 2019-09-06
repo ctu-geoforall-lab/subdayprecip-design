@@ -30,7 +30,8 @@ services:
 
   nginx:
     restart: unless-stopped
-    image: gisquick/nginx
+#    image: gisquick/nginx
+    build: nginx_rain
     links:
       - django
     volumes_from:
@@ -40,6 +41,7 @@ services:
       - /opt/subdayprecip-design/openlayers2/:/var/www/webapp/d-rain-point
       - /var/www/html/docs/:/var/www/docs
       - /opt/subdayprecip-design:/opt/subdayprecip-design
+      - /opt/grassdata/subdayprecip:/opt/grassdata/subdayprecip
     ports:
       - "443:443"
     environment:

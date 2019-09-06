@@ -20,7 +20,7 @@ import logging
 import math
 from subprocess import PIPE
 
-os.environ['GISBASE'] = '/opt/grass/dist.x86_64-pc-linux-gnu'
+os.environ['GISBASE'] = '/usr/local/grass76' # '/opt/grass/dist.x86_64-pc-linux-gnu
 sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
 os.environ['LD_LIBRARY_PATH'] = os.path.join(os.environ["GISBASE"], "lib")
 

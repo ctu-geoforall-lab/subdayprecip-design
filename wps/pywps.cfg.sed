@@ -30,4 +30,4 @@ file=/var/log/pywps.log
 level=INFO
 
 [grass]
-gisbase=/opt/grass/dist.x86_64-pc-linux-gnu
+gisbase=/usr/local/grass76
