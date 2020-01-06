@@ -25,6 +25,7 @@ MAP
       "wfs_contactorganization"          "CVUT v Praze, Fakulta stavebni"
       "wfs_contactvoicetelephone"        "+420 224 354 644"
       "wfs_enable_request"               "*"
+      "wfs_maxfeatures"                  "500"
     END # METADATA
   END # WEB
 
@@ -36,7 +37,9 @@ MAP
       "wfs_onlineresource"  "#URL#"
       "wfs_srs"             "EPSG:5514 EPSG:2065 EPSG:102067"
       "wfs_enable_request"  "*"
-      "wfs_extent"           "-907000 -1230000 -429000 -933000"
+#      "wfs_extent"          "-907000 -1230000 -429000 -933000"
+      "gml_featureid"       "ogc_fid"
+      "gml_include_items"   "all"
     END # METADATA
     PROJECTION
 	"init=epsg:5514"
@@ -45,6 +48,6 @@ MAP
     STATUS ON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=localhost dbname=bpej user=mapserver password=XXX"
-    DATA "wkb_geometry from bpej"
+    DATA "geom from bpej"
   END # LAYER
 END # MAP

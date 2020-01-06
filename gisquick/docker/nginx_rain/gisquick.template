@@ -19,6 +19,7 @@ server {
 
     rewrite ^/webapp/gisquick$ https://rain1.fsv.cvut.cz/?PROJECT=rain%2Fwebapp permanent;
     rewrite ^/services/wms(.*)$ https://rain1.fsv.cvut.cz:4433/services/wms$1 permanent;
+    rewrite ^/services/wfs(.*)$ https://rain1.fsv.cvut.cz:4433/services/wfs$1 permanent;
     #    rewrite ^/services/wps(.*)$ https://rain1.fsv.cvut.cz:4433/services/wps$1 permanent;
     #    rewrite ^/wps/outputs/(.*)$ https://rain1.fsv.cvut.cz:4433/wps/outputs/$1 permanent;
 
