@@ -281,7 +281,9 @@
       });
       csv.push(line0);
   
-      var types = Object.keys(data);
+      // https://www.stefanjudis.com/today-i-learned/property-order-is-predictable-in-javascript-objects-since-es2015/
+      // var types = Object.keys(data);
+      var types = ['A', 'B', 'C', 'D', 'E', 'F'];
       data[types[0]].forEach(function(d, index) {
         var rowData = [d.time];
         types.forEach(function(type) {
