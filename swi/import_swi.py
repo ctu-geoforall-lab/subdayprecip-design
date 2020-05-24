@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 
+###
+# v.in.ascii in=~/geodata/k143/coo.txt x=3 y=2 sep=tab out=coo
+
 import os
 import re
 import tempfile
 import shutil
 from zipfile import ZipFile
-
+from datetime import datetime
+    
 from grass.pygrass.modules import Module
+import grass.script as gs
 
 DIR="/home/martin/geodata/k143/SWI 2018 GeoTIFF Clip OrLiRi/"
 
@@ -32,14 +37,27 @@ def process_zip(zip_file):
     with ZipFile(zip_file) as fd:
         fd.extractall(dir_path)
 
-    os.environ['GRASS_OVERWRITE'] = '1'
+    date = datetime.strptime(
+        os.path.basename(zip_file).split('_')[3], '%Y%m%d%H%M'
+    )
+    tlist = []
     for tf in filter_files(dir_path, 'tiff'):
         map_name = os.path.splitext(os.path.basename(tf))[0]
-        Module('r.import', input=tf, output=map_name)
+        tlist.append((map_name, date.strftime('%Y-%m-%d %H:%M')))
+        # Module('r.import', input=tf, output=map_name)
+
+    tlist_file = gs.tempfile()
+    with open(tlist_file, 'w') as fd:
+        for item in tlist:
+            fd.write('{}|{}{}'.format(item[0], item[1], os.linesep))
+    Module('t.register', input='swi', file=tlist_file)
 
     shutil.rmtree(dir_path)
     
 def main(directory):
+    os.environ['GRASS_OVERWRITE'] = '1'
+    Module('t.create', output='swi', title='swi', description='swi')
+
     for zip_file in filter_files(directory):
         process_zip(zip_file)
 
