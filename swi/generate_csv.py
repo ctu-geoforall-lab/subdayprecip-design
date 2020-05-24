@@ -27,7 +27,12 @@ def process_value(start, end, value, data):
         if item[3] not in data[item[0]]:
             data[item[0]][item[3]] = []
         try:
-            data[item[0]][item[3]].append(float(item[-1]))
+            value = float(item[-1])
+            if value > 240:
+                value = ''
+            else:
+                value *= 0.5
+            data[item[0]][item[3]].append(value)
         except ValueError:
             data[item[0]][item[3]].append('')
 
@@ -44,7 +49,7 @@ if __name__ == "__main__":
         process_value(START, END, '{:>03}'.format(val), data)
 
     for f in data.keys():
-        with open(f+'.csv', 'w') as fd:
+        with open('{:>03}.csv'.format(f), 'w') as fd:
             fd.write('time,{}{}'.format(
                 ','.join(map(lambda x: 'SWI{:>03}'.format(x), VALUES)), os.linesep
             ))
