@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
 import os
+from pathlib import Path
 from collections import OrderedDict
 from subprocess import PIPE
+
 from grass.pygrass.modules import Module
+import grass.script.setup as gsetup
 
 START = '2018-06-09'
 END = '2018-06-12'
@@ -19,7 +22,7 @@ def process_value(start, end, value, data):
         layout='row',
         stdout_=PIPE
     )
-
+    
     for line in what.outputs.stdout.splitlines():
         item = line.split('|')
         if item[0] not in data:
@@ -35,23 +38,30 @@ def process_value(start, end, value, data):
             data[item[0]][item[3]].append(value)
         except ValueError:
             data[item[0]][item[3]].append('')
-
-def write_csv(fd, data):
-        for time, values in data.items():
-            fd.write('{},{}{}'.format(
-                time, ','.join(map(lambda x: str(x), values)), os.linesep)
-            )
     
+def write_csv(fd, data):
+    for time, values in data.items():
+        fd.write('{},{}\n'.format(
+            time, ','.join(map(lambda x: str(x), values)))
+        )
 
 if __name__ == "__main__":
+    gisdbase = Path.home() / Path("grassdata")
+    location = 'swi'
+    gsetup.init(os.environ['GISBASE'], gisdbase, location, 'PERMANENT')
+
+    # region
+    tlist = Module('t.rast.list', input='swi', stdout_=PIPE, flags='u', columns='name')
+    Module('g.region', raster=tlist.outputs.stdout.splitlines()[0])
+
     data = {}
     for val in VALUES:
         process_value(START, END, '{:>03}'.format(val), data)
 
     for f in data.keys():
         with open('{:>03}.csv'.format(f), 'w') as fd:
-            fd.write('time,{}{}'.format(
-                ','.join(map(lambda x: 'SWI{:>03}'.format(x), VALUES)), os.linesep
+            fd.write('time,{}\n'.format(
+                ','.join(map(lambda x: 'SWI{:>03}'.format(x), VALUES))
             ))
             write_csv(fd, data[f])
 
