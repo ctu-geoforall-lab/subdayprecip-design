@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
 
 import os
-from pathlib import Path
 from collections import OrderedDict
 from subprocess import PIPE
 
 from grass.pygrass.modules import Module
 import grass.script.setup as gsetup
-
-### !!! CHANGE START/END DATE !!!
-START = '2018-06-09'
-END = '2018-06-12'
 
 VALUES = [2, 5, 10, 15, 20, 40, 60, 100]
 
@@ -47,7 +42,11 @@ def write_csv(fd, data):
         )
 
 if __name__ == "__main__":
-    gisdbase = Path.home() / Path("grassdata")
+    if len(sys.argv) != 3:
+        sys.exit("Define start and end date\n"
+                 "Example:\n./generate_csv.py 2018-06-09 2018-06-12")
+
+    gisdbase = os.path.join(os.path.dirname(__file__), "grassdata")
     location = 'swi'
     gsetup.init(os.environ['GISBASE'], gisdbase, location, 'PERMANENT')
 

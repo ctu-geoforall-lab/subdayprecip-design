@@ -9,7 +9,6 @@ import time
 from datetime import timedelta
 from zipfile import ZipFile
 from datetime import datetime
-from pathlib import Path
 
 from grass.pygrass.modules import Module
 import grass.script as gs
@@ -64,7 +63,7 @@ def main(points, directory):
     os.environ['GRASS_OVERWRITE'] = '1'
     os.environ['GRASS_VERBOSE'] = '-1'
 
-    gisdbase = Path.home() / Path("grassdata")
+    gisdbase = os.path.join(os.path.dirname(__file__), "grassdata")
     location = 'swi'
     gsetup.init(os.environ['GISBASE'], gisdbase, location, 'PERMANENT')
     gs.create_location(gisdbase, location, epsg=4326)
