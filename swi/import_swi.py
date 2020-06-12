@@ -12,8 +12,11 @@ from grass.pygrass.modules import Module
 import grass.script as gs
 import grass.script.setup as gsetup
 
-POINTS=r"Z:\k143\coo.txt"
-DIR=r"Z:\k143\SWI 2018 GeoTIFF Clip OrLiRi"
+# !!! CHANGE INPUT DIRECTORY FOLDER !!!
+DIR = r"Z:\k143"
+
+POINTS = os.path.join(DIR, "coo.txt")
+INPUT = os.path.join(DIR, "SWI 2018 GeoTIFF Clip OrLiRi")
 
 def import_points(points):
     Module('v.in.ascii',
@@ -76,4 +79,4 @@ def main(directory, points):
         process_zip(zip_file)
 
 if __name__ == "__main__":
-    main(DIR, POINTS)
+    main(INPUT, POINTS)

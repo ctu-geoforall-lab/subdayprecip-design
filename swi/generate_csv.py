@@ -8,6 +8,7 @@ from subprocess import PIPE
 from grass.pygrass.modules import Module
 import grass.script.setup as gsetup
 
+### !!! CHANGE START/END DATE !!!
 START = '2018-06-09'
 END = '2018-06-12'
 
