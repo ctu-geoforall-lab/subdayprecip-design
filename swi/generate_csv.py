@@ -57,7 +57,7 @@ if __name__ == "__main__":
 
     data = {}
     for val in VALUES:
-        process_value(START, END, '{:>03}'.format(val), data)
+        process_value(sys.argv[1], sys.argv[2], '{:>03}'.format(val), data)
 
     for f in data.keys():
         with open('{:>03}.csv'.format(f), 'w') as fd:
