@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
 import os
+import sys
 import re
 import tempfile
 import shutil
+import time
+from datetime import timedelta
 from zipfile import ZipFile
 from datetime import datetime
 from pathlib import Path
@@ -11,12 +14,6 @@ from pathlib import Path
 from grass.pygrass.modules import Module
 import grass.script as gs
 import grass.script.setup as gsetup
-
-# !!! CHANGE INPUT DIRECTORY FOLDER !!!
-DIR = r"Z:\k143"
-
-POINTS = os.path.join(DIR, "coo.txt")
-INPUT = os.path.join(DIR, "SWI 2018 GeoTIFF Clip OrLiRi")
 
 def import_points(points):
     Module('v.in.ascii',
@@ -63,7 +60,7 @@ def process_zip(zip_file):
 
     shutil.rmtree(dir_path)
     
-def main(directory, points):
+def main(points, directory):
     os.environ['GRASS_OVERWRITE'] = '1'
     os.environ['GRASS_VERBOSE'] = '-1'
 
@@ -74,9 +71,16 @@ def main(directory, points):
     
     Module('t.create', output='swi', title='swi', description='swi')
 
+    start = time.time()
     import_points(points)
     for zip_file in filter_files(directory):
         process_zip(zip_file)
 
+    print("Elapsed: {}".format(timedelta(seconds=time.time() - start)))
+    
 if __name__ == "__main__":
-    main(INPUT, POINTS)
+    if len(sys.argv) != 3:
+        sys.exit("Define input points file and data dir\n"
+                 "Example:\n./import_swi.py ~/geodata/k143/coo.txt ~/geodata/k143/SWI\ 2018\ GeoTIFF\ Clip\ OrLiRi/")
+
+    main(sys.argv[1], sys.argv[2])
