@@ -2,6 +2,7 @@
 
 import os
 import sys
+import time
 from collections import OrderedDict
 from subprocess import PIPE
 
@@ -51,6 +52,8 @@ if __name__ == "__main__":
     location = 'swi'
     gsetup.init(os.environ['GISBASE'], gisdbase, location, 'PERMANENT')
 
+    start = time.time()
+
     # region
     tlist = Module('t.rast.list', input='swi', stdout_=PIPE, flags='u', columns='name')
     Module('g.region', raster=tlist.outputs.stdout.splitlines()[0])
@@ -66,3 +69,4 @@ if __name__ == "__main__":
             ))
             write_csv(fd, data[f])
 
+    print("Elapsed: {}".format(timedelta(seconds=time.time() - start)))
