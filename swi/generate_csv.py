@@ -5,6 +5,7 @@ import sys
 import time
 from collections import OrderedDict
 from subprocess import PIPE
+from datetime import timedelta
 
 from grass.pygrass.modules import Module
 import grass.script.setup as gsetup
