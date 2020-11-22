@@ -31,7 +31,7 @@ LOGGER = logging.getLogger('PYWPS')
 
 class SubDayPrecipProcess(Process):
      def __init__(self, identifier, description,
-                  location='/opt/grassdata/subdayprecip',
+                  location='/opt/grass_location',
                   input_params=[], output_params=[]):
           inputs = []
           outputs = []

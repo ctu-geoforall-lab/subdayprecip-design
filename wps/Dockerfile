@@ -10,6 +10,7 @@ RUN python3 -m pip install -r /tmp/requirements.txt
 
 # set up pyWPS
 RUN mkdir -p /var/www/wps/output
+RUN mkdir -p /var/log/pypws
 RUN rm /etc/nginx/sites-enabled/default
 
 # run pyWPS Gunicorn

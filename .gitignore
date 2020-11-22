@@ -5,3 +5,4 @@ gisquick/docker/_data
 *data1
 wps/pywps/pywps.cfg
 wps/nginx/conf.d/default.conf
+wps/log

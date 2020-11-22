@@ -26,8 +26,8 @@ contact_hours=9:00-17:00
 contact_instructions=Preferovan e-mail
 
 [logging]
-file=/var/log/pywps.log
-database=sqlite:////var/log/pywps.db
+file=/var/log/pywps/pywps.log
+database=sqlite:////var/log/pywps/pywps.db
 level=INFO
 
 #[grass]
