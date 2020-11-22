@@ -1,8 +1,13 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 __author__ = "Martin Landa"
 
+import os
+import sys
 from pywps.app.Service import Service
+
+os.environ['GISBASE'] = '/usr/lib/grass78' 
+sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
 
 from processes.subdayprecip_design_shp import SubDayPrecipShp
 from processes.subdayprecip_design_csv import SubDayPrecipCsv
@@ -15,13 +20,10 @@ processes = [
     SubDayPrecipCsv(),
     SubDayPrecipPoint(),
     SubDayPrecipShapes(),
-    SubDayPrecipShapesTotal(),
+    SubDayPrecipShapesTotal()
 ]
 
-# Service accepts two parameters:
-# 1 - list of process instances
-# 2 - list of configuration files
 application = Service(
     processes,
-    ['/opt/subdayprecip-design/wps/pywps.cfg']
+    ['/opt/pywps/pywps.cfg']
 )

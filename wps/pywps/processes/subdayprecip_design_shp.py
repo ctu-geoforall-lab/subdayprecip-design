@@ -15,8 +15,7 @@ import os
 import sys
 from zipfile import ZipFile
 
-sys.path.insert(0, '..')
-from base.subdayprecip import SubDayPrecipProcess, LOGGER
+from . import SubDayPrecipProcess, LOGGER
 from grass.pygrass.modules import Module
 
 class SubDayPrecipShp(SubDayPrecipProcess):

@@ -20,10 +20,6 @@ import logging
 import math
 from subprocess import PIPE
 
-os.environ['GISBASE'] = '/usr/local/grass76' # '/opt/grass/dist.x86_64-pc-linux-gnu
-sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
-os.environ['LD_LIBRARY_PATH'] = os.path.join(os.environ["GISBASE"], "lib")
-
 from grass.pygrass.gis import Mapset
 from grass.pygrass.modules import Module
 from grass.pygrass.vector import VectorTopo

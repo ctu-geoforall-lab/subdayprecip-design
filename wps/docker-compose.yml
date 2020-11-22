@@ -1,0 +1,16 @@
+version: "3"
+services:
+  nginx:
+    restart: unless-stopped
+    build: .
+    image: rain_wps_demo
+    container_name: rain_wps_demo_1
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./pywps/:/opt/pywps
+      - /home/martin/git/ctu-geoforall-lab/subdayprecip-design-data/grass/:/opt/grass_location
+    ports:
+      - 8080:80
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=8080

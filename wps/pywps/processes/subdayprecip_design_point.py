@@ -12,8 +12,7 @@
 import sys
 from subprocess import PIPE
 
-sys.path.insert(0, '..')
-from base.subdayprecip import SubDayPrecipProcess, LOGGER
+from . import SubDayPrecipProcess, LOGGER
 from grass.pygrass.modules import Module
 
 class SubDayPrecipPoint(SubDayPrecipProcess):
