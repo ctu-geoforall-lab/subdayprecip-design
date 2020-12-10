@@ -5,9 +5,9 @@ server {
 
     client_max_body_size 50M;
 
-    location /wps/outputs {
+    location /wps/output {
             autoindex on;
-	    alias /var/www/wps/outputs;
+	    alias /var/www/wps/output;
     }
 
     location /services/wps {

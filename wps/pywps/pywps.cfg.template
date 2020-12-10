@@ -30,5 +30,5 @@ file=/var/log/pywps/pywps.log
 database=sqlite:////var/log/pywps/pywps.db
 level=INFO
 
-#[grass]
-#gisbase=/usr/lib/grass78
+[grass]
+gisbase=/usr/lib/grass78
