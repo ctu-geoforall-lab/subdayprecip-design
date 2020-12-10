@@ -250,9 +250,6 @@ class SubDayPrecipProcess(Process):
 
           area_col_name = 'area_{}'.format(os.getpid())
           # check area size limit
-          # Module('v.db.addcolumn', map=self.map_name,
-          #        columns='{} double precision'.format(area_col_name)
-          # )
           Module('v.to.db', map=self.map_name, option='area',
                  columns=area_col_name, units='kilometers'
           )
