@@ -15,9 +15,8 @@ import types
 import time
 from zipfile import ZipFile
 
-sys.path.insert(0, '..')
-from base.subdayprecip import SubDayPrecipProcess, LOGGER
-from subdayprecip_design_shapes import SubDayPrecipShapesBase
+from . import SubDayPrecipProcess, LOGGER
+from .subdayprecip_design_shapes import SubDayPrecipShapesBase
 
 import grass.script as gscript # TODO: replace by pyGRASS
 

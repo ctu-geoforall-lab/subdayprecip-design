@@ -20,22 +20,17 @@ import logging
 import math
 from subprocess import PIPE
 
-os.environ['GISBASE'] = '/usr/local/grass76' # '/opt/grass/dist.x86_64-pc-linux-gnu
-sys.path.append(os.path.join(os.environ["GISBASE"], "etc", "python"))
-os.environ['LD_LIBRARY_PATH'] = os.path.join(os.environ["GISBASE"], "lib")
-
 from grass.pygrass.gis import Mapset
 from grass.pygrass.modules import Module
 from grass.pygrass.vector import VectorTopo
 from grass.exceptions import CalledModuleError
 
-from pywps import Process, ComplexInput, LiteralInput, Format, ComplexOutput, LiteralOutput
-
-LOGGER = logging.getLogger('PYWPS')
+from pywps import Process, ComplexInput, LiteralInput, Format, ComplexOutput, LiteralOutput, LOGGER
+from pywps.app.exceptions import ProcessError
 
 class SubDayPrecipProcess(Process):
      def __init__(self, identifier, description,
-                  location='/opt/grassdata/subdayprecip',
+                  location='/opt/grass_location',
                   input_params=[], output_params=[]):
           inputs = []
           outputs = []
@@ -168,7 +163,7 @@ class SubDayPrecipProcess(Process):
           
           os.environ['GRASS_SKIP_MAPSET_OWNER_CHECK'] = '1'
           os.environ['HOME'] = '/tmp' # needed by G_home()
-          
+
      # def __del__(self):
      #      if self.output_dir:
      #           shutil.rmtree(self.output_dir)
@@ -255,9 +250,6 @@ class SubDayPrecipProcess(Process):
 
           area_col_name = 'area_{}'.format(os.getpid())
           # check area size limit
-          Module('v.db.addcolumn', map=self.map_name,
-                 columns='{} double precision'.format(area_col_name)
-          )
           Module('v.to.db', map=self.map_name, option='area',
                  columns=area_col_name, units='kilometers'
           )
@@ -342,13 +334,12 @@ class SubDayPrecipProcess(Process):
 
           # link or import ?
           module_in_args = {}
+          module_in_args['input'] = input_data
           if link_only:
                module_in = 'v.external'
-               module_in_args['input'] = input_data
                module_in_args['layer'] = 'basin' # TODO: fix it!
           else:
                module_in = 'v.in.ogr'
-               module_in_args['input'] = input_data
                # skip projection check
                module_in_args['flags'] = 'o'
                # snap to 1cm (assuming ArcGIS data)
@@ -363,7 +354,9 @@ class SubDayPrecipProcess(Process):
                       **module_in_args
                )
           except CalledModuleError as e:
-               raise Exception("Unable to import input vector data: {}".format(e))
+               with open(input_data) as fd:
+                    LOGGER.info("Input data content: {}".format(fd.read()))
+               raise ProcessError("Unable to import input vector data - {}".format(e))
           
           LOGGER.info("Input data imported ({}): {} sec".format(
                module_in, time.time() - start)

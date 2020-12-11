@@ -1,12 +1,12 @@
 [server]
 encoding=utf-8
 language=cs-CZ
-parallelprocesses=4
+parallelprocesses=2
 maxrequestsize=10mb
 maxsingleinputsize=10mb
-outputurl=https://#HOST#.fsv.cvut.cz/wps/outputs/
-outputpath=#WWWDIR#/wps/outputs
-url=#URL#
+outputurl=http://${NGINX_HOST}:${NGINX_PORT}/wps/output/
+outputpath=/var/www/wps/output
+url=http://${NGINX_HOST}:${NGINX_PORT}/services/wps
 
 [metadata:main]
 identification_title=Rain WPS Server
@@ -22,12 +22,13 @@ contact_postalcode=166 29
 contact_country=cz
 contact_email=martin.landa@fsv.cvut.cz
 contact_phone=+420 224 354 644
-contact_hours=0:00-24:00
+contact_hours=9:00-17:00
 contact_instructions=Preferovan e-mail
 
 [logging]
-file=/var/log/pywps.log
+file=/var/log/pywps/pywps.log
+database=sqlite:////var/log/pywps/pywps.db
 level=INFO
 
 [grass]
-gisbase=/usr/local/grass76
+gisbase=/usr/lib/grass78
