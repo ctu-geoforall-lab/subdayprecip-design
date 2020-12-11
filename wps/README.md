@@ -1,4 +1,4 @@
-# Rain Web Processing Service
+# Rain Demo Web Processing Service
 
 ## Deploy Rain WPS server using Docker
 
@@ -10,7 +10,7 @@
 
     docker-compose up
     
-### Call WPS
+## Test WPS Requests
 
 GetCapabilities:
 
@@ -22,4 +22,8 @@ http://localhost:8080/services/wps?service=wps&request=describeprocess&version=2
     
 Execute (POST):
 
-    wget --post-file request.xml 'http://localhost:8080/services/wps?' -O /tmp/response.xml
+    wget -q --post-file request-d-rain-shp.xml 'http://localhost:8080/services/wps?' -O /tmp/response.xml
+
+## Run tests
+
+   ./autotests.sh
