@@ -15,20 +15,22 @@ cp request-d-rain-shp.xml /tmp
 cd /tmp
 
 echo "**************************************************************"
-echo "* d-rain-shp"
+echo "* d-rain-shp (POST) "
 echo "**************************************************************"
 
-wget --post-file request-d-rain-shp.xml 'http://localhost:8080/services/wps?' -O response.xml
-
-exit 0
+wget -q --post-file request-d-rain-shp.xml 'http://localhost:8080/services/wps?' -O response.xml
+file=`cat response.xml | grep '\<wps:Reference' | cut -d'"' -f2`
+wget -q $file
+echo "RESULT:"
+ogrinfo -ro -so /vsizip/`basename $file` subdayprecip_output | grep 'H_N'
 
 echo "**************************************************************"
-echo "* d-rain-shp (xlink)"
+echo "* d-rain-shp (GET|XLINK)"
 echo "**************************************************************"
 
 CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-shp&datainputs=input=${DATA};return_period=${RP};rainlength=${RL};area_size=${LIMIT}"
 echo $CURL
-file=`curl "$CURL" | grep '\<wps:Reference' | cut -d'"' -f2`
+file=`curl "$CURL" |  grep '\<wps:Reference' | cut -d'"' -f2`
 
 wget -q $file
 echo "RESULT:"
