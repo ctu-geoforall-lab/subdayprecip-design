@@ -9,7 +9,7 @@ services:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
       - ./pywps/:/opt/pywps
       - ./log/:/var/log/pywps
-      - /home/martin/git/ctu-geoforall-lab/subdayprecip-design-data/grass/:/opt/grass_location
+      - ./grass_data/:/opt/grass_location
     ports:
       - 8080:80
     environment:

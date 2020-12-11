@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wps:Execute service="WPS" version="1.0.0" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsExecute_request.xsd">
+  <ows:Identifier>d-rain-shp</ows:Identifier>
+  <wps:DataInputs>
+    <wps:Input>
+      <ows:Identifier>input</ows:Identifier>
+      <wps:Data>
+        <wps:ComplexData mimeType="text/xml"><![CDATA[]]></wps:ComplexData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>return_period</ows:Identifier>
+      <wps:Data>N2,N5,N100</wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>rainlength</ows:Identifier>
+      <wps:Data>360</wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>area_size</ows:Identifier>
+      <wps:Data>10000</wps:Data>
+    </wps:Input>
+  </wps:DataInputs>
+  <wps:ResponseForm>
+    <wps:ResponseDocument lineage="false" storeExecuteResponse="false" status="false">
+      <wps:Output asreference="true" mimeType="application/x-zipped-shp">
+        <ows:Identifier>output</ows:Identifier>
+      </wps:Output>
+    </wps:ResponseDocument>
+  </wps:ResponseForm>
+</wps:Execute>

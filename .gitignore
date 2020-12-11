@@ -6,3 +6,4 @@ gisquick/docker/_data
 wps/pywps/pywps.cfg
 wps/nginx/conf.d/default.conf
 wps/log
+wps/grass_data
