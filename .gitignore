@@ -3,7 +3,7 @@ docs/_build
 gisquick/docker/_data
 *.pyc
 *data1
-wps/pywps/pywps.cfg
-wps/nginx/conf.d/default.conf
-wps/log
-wps/grass_data
+ows/wps/pywps/pywps.cfg
+ows/nginx/conf.d/default.conf
+ows/wps/log
+ows/wps/grass_data*

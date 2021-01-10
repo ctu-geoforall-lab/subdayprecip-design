@@ -11,7 +11,7 @@ STYP="E,F"
 VALUE="25"
 LIMIT="10000"
 
-cp tests/request-d-rain-shp.xml /tmp
+cp wps/tests/request-d-rain-shp.xml /tmp
 cd /tmp
 
 # echo "**************************************************************"

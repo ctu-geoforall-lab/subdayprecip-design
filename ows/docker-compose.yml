@@ -1,15 +1,15 @@
 version: "3"
 services:
-  nginx:
+  rain_ows:
     restart: unless-stopped
     build: .
-    image: rain_wps_demo
+    image: rain_ows_demo
     container_name: rain_wps_demo_1
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
-      - ./pywps/:/opt/pywps
-      - ./log/:/var/log/pywps
-      - ./grass_data/:/opt/grass_location
+      - ./wps/pywps/:/opt/pywps
+      - ./wps/log/:/var/log/pywps
+      - ./wps/grass_data/:/opt/grass_location
     ports:
       - 8080:80
     environment:

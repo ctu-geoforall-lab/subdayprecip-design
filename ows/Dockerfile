@@ -5,7 +5,7 @@ FROM ubuntu:18.04
 COPY requirements.txt /tmp/requirements.txt
 RUN apt-get update && apt-get install --yes software-properties-common gettext-base
 RUN add-apt-repository --yes ppa:ubuntugis/ubuntugis-unstable
-RUN apt-get update && apt-get install --yes python3-pip python3-pyproj gunicorn3 nginx grass-core grass-doc grass-dev
+RUN apt-get update && apt-get install --yes python3-pip python3-pyproj gunicorn3 nginx grass-core grass-doc grass-dev cgi-mapserver
 RUN python3 -m pip install -r /tmp/requirements.txt
 
 # set up pyWPS
@@ -17,5 +17,5 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN grass --tmp-location EPSG:5514 --exec g.extension -s r.subdayprecip.design
 
 # run pyWPS Gunicorn
-COPY startup.sh /opt/startup.sh
+COPY wps/startup.sh /opt/startup.sh
 CMD /opt/startup.sh
