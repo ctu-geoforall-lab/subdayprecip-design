@@ -20,9 +20,7 @@ import logging
 import math
 from subprocess import PIPE
 
-from grass.pygrass.gis import Mapset
 from grass.pygrass.modules import Module
-from grass.pygrass.vector import VectorTopo
 from grass.exceptions import CalledModuleError
 
 from pywps import Process, ComplexInput, LiteralInput, Format, ComplexOutput, LiteralOutput, LOGGER
@@ -222,6 +220,9 @@ class SubDayPrecipProcess(Process):
 
      def _area_size_reduction(self, map_name, field_name, area_col_name):
           """Taken from r.subdayprecip.design"""
+          from grass.pygrass.gis import Mapset
+          from grass.pygrass.vector import VectorTopo
+
           mapset = Mapset()
           # very strangely, current mapset can be reported by pygrass wrongly
           import grass.script as gscript
@@ -229,21 +230,18 @@ class SubDayPrecipProcess(Process):
           if mapset.name != cur_mapset:
                mapset = Mapset(cur_mapset)
                mapset.current()
-          vmap = VectorTopo(map_name, mapset=cur_mapset)
-          vmap.open('rw')
+          with VectorTopo(map_name, mapset=cur_mapset) as vmap:
+               cats = [] # TODO: do it better
+               for feat in vmap.viter('areas'):
+                    if not feat.attrs or feat.attrs[field_name]:
+                         continue
+                    if feat.attrs['cat'] not in cats:
+                         x = math.log10(float(feat.attrs[area_col_name]) ) - 0.9
+                         k = math.exp(-0.08515989 * pow(x, 2) - 0.001344925 * pow(x, 4))
+                         feat.attrs[field_name] *= k
+                         cats.append(feat.attrs['cat'])
 
-          cats = [] # TODO: do it better
-          for feat in vmap.viter('areas'):
-               if not feat.attrs or feat.attrs[field_name]:
-                    continue
-               if feat.attrs['cat'] not in cats:
-                    x = math.log10(float(feat.attrs[area_col_name]) )- 0.9
-                    k = math.exp(-0.08515989 * pow(x, 2) - 0.001344925 * pow(x, 4))
-                    feat.attrs[field_name] *= k
-                    cats.append(feat.attrs['cat'])
-
-          vmap.table.conn.commit()
-          vmap.close()
+               vmap.table.conn.commit()
 
      def _v_rast_stats(self, reduction=True):
           columns = []
@@ -263,7 +261,7 @@ class SubDayPrecipProcess(Process):
                     n=n, ms=self.mapset
                )
                self.v_rast_stats(rast_name, col_name)
-                
+
                Module('v.db.renamecolumn', map=self.map_name,
                       column=[col_name + '_average', col_name]
                )
