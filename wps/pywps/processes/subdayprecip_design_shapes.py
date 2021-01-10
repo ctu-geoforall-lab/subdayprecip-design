@@ -43,7 +43,7 @@ class SubDayPrecipShapesBase(object):
 
           if self.identifier == 'd-rain6h-timedist':
                # query map attributes
-               columns = map(lambda x: 'H_{}T{}'.format(x, self.rainlength), self.return_period)
+               columns = list(map(lambda x: 'H_{}T{}'.format(x, self.rainlength), self.return_period))
                columns.insert(0, self.keycolumn)
                data = gscript.vector_db_select(map=self.map_name, columns=','.join(columns))
           else:
@@ -112,7 +112,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           data_perc = self._compute_timeshapes_perc()
 
           # process features
-          for fid, attrib in data['values'].iteritems():
+          for fid, attrib in data['values'].items():
                LOGGER.info('FID={}: {}'.format(attrib[0], attrib[1:]))
                valid = True if float(attrib[1]) > 0 else False
                # write first line (percentage values)
