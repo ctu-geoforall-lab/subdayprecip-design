@@ -3,8 +3,8 @@ services:
   rain_ows:
     restart: unless-stopped
     build: .
-    image: rain_ows_demo
-    container_name: rain_wps_demo_1
+    image: rain_ows
+    container_name: rain_wps_1
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
       - ./wps/pywps/:/opt/pywps
