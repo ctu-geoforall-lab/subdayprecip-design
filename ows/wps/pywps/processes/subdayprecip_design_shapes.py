@@ -113,7 +113,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
 
           # process features
           for fid, attrib in data['values'].items():
-               LOGGER.info('FID={}: {}'.format(attrib[0], attrib[1:]))
+               LOGGER.debug('FID={}: {}'.format(attrib[0], attrib[1:]))
                valid = True if float(attrib[1]) > 0 else False
                # write first line (percentage values)
                fd.write('{fid}{sep}0{seps}'.format(

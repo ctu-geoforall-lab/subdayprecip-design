@@ -292,7 +292,8 @@ class SubDayPrecipProcess(Process):
                cats = [1] # no category found, use pseudo category to call v.what.rast
                
           # handle NULL values (areas smaller than raster resolution)
-          LOGGER.info("Number of small areas: {}".format(len(cats)))
+          LOGGER.info("Number of small areas: {} (raster: {} column {})".format(
+               len(cats), rast_name, col_name))
           
           if len(cats) > 0:
                Module('v.what.rast', map=self.map_name, raster=rast_name, type='centroid',
