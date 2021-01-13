@@ -14,50 +14,50 @@ LIMIT="10000"
 cp wps/tests/request-d-rain-shp.xml /tmp
 cd /tmp
 
-# echo "**************************************************************"
-# echo "* d-rain-shp (POST) "
-# echo "**************************************************************"
+echo "**************************************************************"
+echo "* d-rain-shp (POST) "
+echo "**************************************************************"
 
-# wget -q --post-file request-d-rain-shp.xml 'http://localhost:8080/services/wps?' -O response.xml
-# file=`cat response.xml | grep '\<wps:Reference' | cut -d'"' -f2`
-# wget -q $file
-# echo "RESULT:"
-# ogrinfo -ro -so /vsizip/`basename $file` subdayprecip_output | grep 'H_N'
+wget -q --post-file request-d-rain-shp.xml 'http://localhost:8080/services/wps?' -O response.xml
+file=`cat response.xml | grep '\<wps:Reference' | cut -d'"' -f2`
+wget -q $file
+echo "RESULT:"
+ogrinfo -ro -so /vsizip/`basename $file` subdayprecip_output | grep 'H_N'
 
-# echo "**************************************************************"
-# echo "* d-rain-shp (GET|XLINK)"
-# echo "**************************************************************"
+echo "**************************************************************"
+echo "* d-rain-shp (GET|XLINK)"
+echo "**************************************************************"
 
-# CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-shp&datainputs=input=${DATA};return_period=${RP};rainlength=${RL};area_size=${LIMIT}"
-# echo $CURL
-# file=`curl "$CURL" |  grep '\<wps:Reference' | cut -d'"' -f2`
+CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-shp&datainputs=input=${DATA};return_period=${RP};rainlength=${RL};area_size=${LIMIT}"
+echo $CURL
+file=`curl "$CURL" |  grep '\<wps:Reference' | cut -d'"' -f2`
 
-# wget -q $file
-# echo "RESULT:"
-# ogrinfo -ro -so /vsizip/`basename $file` subdayprecip_output | grep 'H_N'
+wget -q $file
+echo "RESULT:"
+ogrinfo -ro -so /vsizip/`basename $file` subdayprecip_output | grep 'H_N'
 
-# echo "**************************************************************"
-# echo "* d-rain-csv"
-# echo "**************************************************************"
+echo "**************************************************************"
+echo "* d-rain-csv"
+echo "**************************************************************"
 
-# CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-csv&datainputs=input=${DATA};return_period=${RP};rainlength=${RL};keycolumn=$COL;area_size=${LIMIT}"
-# echo $CURL
-# file=`curl "$CURL" | grep '\<wps:Reference' | cut -d'"' -f2`
+CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-csv&datainputs=input=${DATA};return_period=${RP};rainlength=${RL};keycolumn=$COL;area_size=${LIMIT}"
+echo $CURL
+file=`curl "$CURL" | grep '\<wps:Reference' | cut -d'"' -f2`
 
-# wget -q $file
-# echo "RESULT:"
-# cat `basename $file`
+wget -q $file
+echo "RESULT:"
+cat `basename $file`
 
-# echo "**************************************************************"
-# echo "* d-rain-point"
-# echo "**************************************************************"
+echo "**************************************************************"
+echo "* d-rain-point"
+echo "**************************************************************"
 
-# CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-point&datainputs=obs_x=15.11784;obs_y=49.88598;return_period=${RP};rainlength=${RL}"
-# echo $CURL
-# value=`curl $CURL | grep "\<wps:LiteralData" | cut -d'>' -f 2 | cut -d'<' -f 1`
+CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain-point&datainputs=obs_x=15.11784;obs_y=49.88598;return_period=${RP};rainlength=${RL}"
+echo $CURL
+value=`curl $CURL | grep "\<wps:LiteralData" | cut -d'>' -f 2 | cut -d'<' -f 1`
 
-# echo "RESULT:"
-# echo $value
+echo "RESULT:"
+echo $value
 
 echo "**************************************************************"
 echo "* d-rain6h-timedist (reduction enabled)"

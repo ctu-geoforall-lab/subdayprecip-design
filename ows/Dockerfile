@@ -16,6 +16,11 @@ RUN rm /etc/nginx/sites-enabled/default
 # install GRASS extensions
 RUN grass --tmp-location EPSG:5514 --exec g.extension -s r.subdayprecip.design
 
+# patch pyWPS 4.2.8
+COPY wps/pywps/patches/ /tmp/
+RUN patch -p0 < /tmp/Service.diff
+RUN patch -p0 < /tmp/Process.diff
+
 # run pyWPS Gunicorn
 COPY wps/startup.sh /opt/startup.sh
 CMD /opt/startup.sh

@@ -1,0 +1,33 @@
+--- /var/log/pywps/Process.py	2021-01-13 10:43:04.178810906 +0000
++++ /usr/local/lib/python3.6/dist-packages/pywps/app/Process.py	2021-01-13 17:55:15.199894101 +0000
+@@ -417,22 +417,23 @@
+ 
+             # create temporary mapset within existing location
+             elif os.path.isdir(self.grass_location):
+-                from grass.pygrass.gis import make_mapset
+-
+                 LOGGER.debug('Temporary mapset will be created')
+ 
+                 dbase = os.path.dirname(self.grass_location)
+                 location = os.path.basename(self.grass_location)
+ 
+-                grass.run_command('g.gisenv', set="GISDBASE={}".format(dbase))
+-                grass.run_command('g.gisenv', set="LOCATION_NAME=%s" % location)
++                gsetup.init(os.environ['GISBASE'], dbase,
++                            location, 'PERMANENT')
+ 
+                 while os.path.isdir(os.path.join(dbase, location, mapset_name)):
+                     mapset_name = 'pywps_ms_{}'.format(
+                         ''.join(random.sample(string.ascii_letters, 5)))
+-                make_mapset(mapset=mapset_name, location=location,
+-                            gisdbase=dbase)
+-                grass.run_command('g.gisenv', set="MAPSET=%s" % mapset_name)
++                grass.run_command('g.mapset',
++                                  mapset=mapset_name,
++                                  flags='c',
++                                  dbase=dbase,
++                                  location=location,
++                                  quiet=True)
+ 
+             else:
+                 raise NoApplicableCode('Location does exists or does not seem '
