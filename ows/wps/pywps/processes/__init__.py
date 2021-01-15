@@ -133,12 +133,20 @@ class SubDayPrecipProcess(Process):
 
           if 'output_shapes' in output_params:
                outputs.append(ComplexOutput(
-                    identifier="output",
+                    identifier="output_shapes",
                     title=u"Vysledne hodnoty prubehu navrhovych srazek ve formatu CSV",
                     supported_formats=[Format('application/csv')],
                     as_reference = True)
                )
-          
+
+          if 'output_probabilities' in output_params:
+               outputs.append(ComplexOutput(
+                    identifier="output_probabilities",
+                    title=u"Vysledne hodnoty pravdepodobnosti prubehu navrhovych srazek ve formatu CSV",
+                    supported_formats=[Format('application/csv')],
+                    as_reference = True)
+               )
+
           super(SubDayPrecipProcess, self).__init__(
                self._handler,
                identifier=identifier,
@@ -214,7 +222,11 @@ class SubDayPrecipProcess(Process):
                     )
                LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
 
-          response.outputs['output'].file = self.export()
+          if self.identifier == 'd-rain6h-timedist':
+               response.outputs['output_shapes'].file, response.outputs['output_probabilities'].file = \
+                    self.export()
+          else:
+               response.outputs['output'].file = self.export()
 
           return response
 
