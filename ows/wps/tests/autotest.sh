@@ -63,10 +63,9 @@ echo "**************************************************************"
 echo "* d-rain6h-timedist (reduction enabled)"
 echo "**************************************************************"
 
-file=`curl \
-"${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP}" | \
-grep '\<wps:Reference' | cut -d'"' -f2`
-
+CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP}"
+echo $CURL
+file=`curl $CURL | grep '\<wps:Reference' | cut -d'"' -f2`
 wget -q $file
 echo "RESULT:"
 cat `basename $file` |  grep -E '[0-9],[05],'
@@ -75,10 +74,9 @@ echo "**************************************************************"
 echo "* d-rain6h-timedist (reduction disabled)"
 echo "**************************************************************"
 
-file=`curl \
-"${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP};area_red=false" | \
-grep '\<wps:Reference' | cut -d'"' -f2`
-
+CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=d-rain6h-timedist&datainputs=input=${DATA};return_period=${RP};keycolumn=${COL};type=${STYP};area_red=false"
+echo $CURL
+file=`curl $CURL | grep '\<wps:Reference' | cut -d'"' -f2`
 wget -q $file
 echo "RESULT:"
 cat `basename $file` |  grep -E '[0-9],[05],'
@@ -87,10 +85,9 @@ echo "**************************************************************"
 echo "* raintotal6h-timedist"
 echo "**************************************************************"
 
-file=`curl \
-"${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=raintotal6h-timedist&datainputs=value=${VALUE};type=${STYP}" | \
-grep '\<wps:Reference' | cut -d'"' -f2`
-
+CURL="${URL}/services/wps?service=wps&version=1.0.0&request=Execute&identifier=raintotal6h-timedist&datainputs=value=${VALUE};type=${STYP}"
+echo $CURL
+file=`curl $CURL | grep '\<wps:Reference' | cut -d'"' -f2`
 wget -q $file
 echo "RESULT:"
 cat `basename $file` | head -n2
