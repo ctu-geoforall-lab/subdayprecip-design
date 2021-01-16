@@ -27,6 +27,9 @@ RUN patch -p0 < /tmp/Process.diff
 # set up MapServer
 RUN mkdir -p /opt/mapserv/
 RUN mkdir -p /var/log/mapserv/
+RUN touch /var/log/mapserv/mapserv.log
+RUN chmod 664 /var/log/mapserv/mapserv.log
+RUN chgrp www-data /var/log/mapserv/mapserv.log
 
 # run Gunicorn
 COPY startup.sh /opt/startup.sh
