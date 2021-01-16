@@ -7,9 +7,13 @@ services:
     container_name: rain_wps_1
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./nginx/log/:/var/log/nginx/
       - ./wps/pywps/:/opt/pywps
       - ./wps/log/:/var/log/pywps
       - ./wps/grass_data/:/opt/grass_location
+      - ./wms:/opt/mapserv/wms
+      - ./wms/data:/opt/mapserv/wms_data
+      - ./wms/log/:/var/log/mapserv
     ports:
       - 8080:80
     environment:

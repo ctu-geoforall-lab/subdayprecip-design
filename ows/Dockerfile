@@ -21,6 +21,11 @@ COPY wps/pywps/patches/ /tmp/
 RUN patch -p0 < /tmp/Service.diff
 RUN patch -p0 < /tmp/Process.diff
 
+# configure MapServer
+RUN apt-get install --yes fcgiwrap
+RUN mkdir -p /opt/mapserv/
+RUN mkdir -p /var/log/mapserv/
+
 # run pyWPS Gunicorn
-COPY wps/startup.sh /opt/startup.sh
+COPY startup.sh /opt/startup.sh
 CMD /opt/startup.sh
