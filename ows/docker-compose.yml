@@ -20,3 +20,8 @@ services:
     environment:
       - NGINX_HOST=localhost
       - NGINX_PORT=8080
+  rain_db:
+    restart: unless-stopped
+    build: db/
+    image: rain_db
+    container_name: rain_db_1

@@ -20,6 +20,6 @@ ogr2ogr -f PostgreSQL -overwrite -nln bpej -a_srs EPSG:5514 -nlt MULTIPOLYGON \
 	-lco GEOMETRY_NAME=geom \
         PG:dbname=$DB /vsizip/$DIR/$FILE # BPEJ_20200102
 
-# rm -f $FILE
+rm -f $FILE
 
 exit 0
