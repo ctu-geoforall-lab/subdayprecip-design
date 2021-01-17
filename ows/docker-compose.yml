@@ -4,7 +4,7 @@ services:
     restart: unless-stopped
     build: .
     image: rain_ows
-    container_name: rain_wps_1
+    container_name: rain_ows_1
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
       - ./nginx/log/:/var/log/nginx/
