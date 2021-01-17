@@ -14,6 +14,7 @@ services:
       - ./wms:/opt/mapserv/wms
       - ./wms/data:/opt/mapserv/wms_data
       - ./wms/log/:/var/log/mapserv
+      - ./wfs:/opt/mapserv/wfs
     ports:
       - 8080:80
     environment:

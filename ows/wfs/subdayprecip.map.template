@@ -16,7 +16,7 @@ MAP
     IMAGEURL "/tmp/"
     METADATA
       "wfs_title"                        "Rain WFS server"
-      "wfs_onlineresource"               "#URL#"
+      "wfs_onlineresource"               "http://${NGINX_HOST}:${NGINX_PORT}/services/wfs"
       "wfs_abstract"                     "WFS server projektu Rain, vice informaci na http://rain.fsv.cvut.cz"
       "wfs_srs"                          "EPSG:5514 EPSG:2065 EPSG:102067"
       "wfs_encoding"                     "UTF-8"
@@ -34,7 +34,7 @@ MAP
     METADATA
       "wfs_title"           "Celostátní databáze BPEJ"
       "wfs_abstract"        "Celostátní databáze BPEJ, https://www.spucr.cz/bpej/celostatni-databaze-bpej"
-      "wfs_onlineresource"  "#URL#"
+      "wfs_onlineresource"  "http://${NGINX_HOST}:${NGINX_PORT}/services/wfs"
       "wfs_srs"             "EPSG:5514 EPSG:2065 EPSG:102067"
       "wfs_enable_request"  "*"
 #      "wfs_extent"          "-907000 -1230000 -429000 -933000"
