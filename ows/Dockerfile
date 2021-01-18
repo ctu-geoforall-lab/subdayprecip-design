@@ -30,4 +30,4 @@ RUN mkdir -p /var/log/mapserv/
 
 # run Gunicorn
 COPY startup.sh /opt/startup.sh
-CMD /opt/startup.sh
+CMD ["/opt/startup.sh"]

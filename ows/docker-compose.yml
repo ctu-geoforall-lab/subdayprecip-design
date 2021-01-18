@@ -25,3 +25,7 @@ services:
     build: db/
     image: rain_db
     container_name: rain_db_1
+    volumes:
+      - ./db/data:/data
+    environment:
+      - POSTGRES_PASSWORD=20rain20

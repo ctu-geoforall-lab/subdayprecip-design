@@ -10,3 +10,4 @@ ows/wps/grass_data*
 ows/wms/log
 ows/wms/data
 ows/nginx/log
+ows/db/data
