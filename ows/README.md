@@ -10,6 +10,10 @@ docker-compose build
 
 ### Run container
 
+Download [BPEJ
+data](https://www.spucr.cz/bpej/celostatni-databaze-bpej) from SPU
+website. Place a downloaded zip file into `db/data` directory.
+
 ```
 docker-compose up
 ```
