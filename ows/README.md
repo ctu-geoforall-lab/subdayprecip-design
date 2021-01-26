@@ -18,7 +18,15 @@ website. Place a downloaded zip file into `db/data` directory.
 docker-compose up
 ```
 
-## Test WPS Requests
+## Quick test
+
+### Test DB connection
+
+```
+PGPASSWD=20rain20 docker-compose exec rain_db psql -U mapserv -d bpej -c 'select count(*) from bpej'
+```
+
+### Test WPS Requests
 
 GetCapabilities:
 
@@ -34,7 +42,7 @@ Execute (POST):
 wget -q --post-file request-d-rain-shp.xml 'http://localhost:8080/services/wps?' -O -
 ```
 
-## Run tests
+### Run tests
 
 ```
 ./autotests.sh

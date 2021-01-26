@@ -29,3 +29,7 @@ services:
       - ./db/data:/data
     environment:
       - POSTGRES_PASSWORD=20rain20
+      - MAPSERV_USER=mapserv
+      - MAPSERV_PASSWORD=20rain20
+      - DBNAME=bpej
+      - BPEJ_FILE=bpej_2021010410908.zip
