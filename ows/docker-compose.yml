@@ -1,5 +1,21 @@
 version: "3"
 services:
+  rain_db:
+    restart: unless-stopped
+    build: db/
+    image: rain_db
+    container_name: rain_db_1
+    volumes:
+      - ./db/data:/data
+    ports:
+      - 5434:5432
+    environment:
+      - POSTGRES_PASSWORD=20rain20
+      - MAPSERV_USER=mapserv
+      - MAPSERV_PASSWORD=20rain20
+      - DBNAME=bpej
+      - BPEJ_FILE=bpej_2021010410908.zip
+
   rain_ows:
     restart: unless-stopped
     build: .
@@ -17,19 +33,10 @@ services:
       - ./wfs:/opt/mapserv/wfs
     ports:
       - 8080:80
+    expose:
+      - 5434
     environment:
       - NGINX_HOST=localhost
       - NGINX_PORT=8080
-  rain_db:
-    restart: unless-stopped
-    build: db/
-    image: rain_db
-    container_name: rain_db_1
-    volumes:
-      - ./db/data:/data
-    environment:
-      - POSTGRES_PASSWORD=20rain20
-      - MAPSERV_USER=mapserv
-      - MAPSERV_PASSWORD=20rain20
-      - DBNAME=bpej
-      - BPEJ_FILE=bpej_2021010410908.zip
+    links:
+      - rain_db
