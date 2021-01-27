@@ -7,8 +7,6 @@ services:
     container_name: rain_db_1
     volumes:
       - ./db/data:/data
-    ports:
-      - 5434:5432
     environment:
       - POSTGRES_PASSWORD=20rain20
       - MAPSERV_USER=mapserv
@@ -33,8 +31,6 @@ services:
       - ./wfs:/opt/mapserv/wfs
     ports:
       - 8080:80
-    expose:
-      - 5434
     environment:
       - NGINX_HOST=localhost
       - NGINX_PORT=8080
