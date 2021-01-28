@@ -47,7 +47,7 @@ MAP
     TYPE POLYGON
     STATUS ON
     CONNECTIONTYPE POSTGIS
-    CONNECTION "host=localhost dbname=bpej user=mapserver password=XXX"
+    CONNECTION "host=rain_db dbname=${DBNAME} user=${MAPSERV_USER} password=${MAPSERV_PASSWORD}"
     DATA "geom from bpej"
   END # LAYER
 END # MAP

@@ -8,7 +8,8 @@ envsubst '$NGINX_HOST $NGINX_PORT' < /opt/mapserv/wms/subdayprecip.map.template 
          /opt/mapserv/wms/subdayprecip.map
 
 # WFS
-envsubst '$NGINX_HOST $NGINX_PORT' < /opt/mapserv/wfs/subdayprecip.map.template > \
+envsubst '$NGINX_HOST $NGINX_PORT $MAPSERV_USER $MAPSERV_PASSWORD $DBNAME' \
+         < /opt/mapserv/wfs/subdayprecip.map.template > \
          /opt/mapserv/wfs/subdayprecip.map
 
 envsubst '$NGINX_HOST' < /etc/nginx/conf.d/default.conf.template > \
