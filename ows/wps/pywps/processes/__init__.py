@@ -142,7 +142,7 @@ class SubDayPrecipProcess(Process):
           if 'output_probabilities' in output_params:
                outputs.append(ComplexOutput(
                     identifier="output_probabilities",
-                    title=u"Vysledne hodnoty pravdepodobnosti prubehu navrhovych srazek ve formatu CSV",
+                    title=u"Vysledne hodnoty pravdepodobnosti tvaru navrhovych srazek ve formatu CSV",
                     supported_formats=[Format('application/csv')],
                     as_reference = True)
                )
