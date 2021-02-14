@@ -131,18 +131,18 @@ class SubDayPrecipProcess(Process):
                     data_type='string')
                )
 
-          if 'output_shapes' in output_params:
-               outputs.append(ComplexOutput(
-                    identifier="output_shapes",
-                    title=u"Vysledne hodnoty prubehu navrhovych srazek ve formatu CSV",
-                    supported_formats=[Format('application/csv')],
-                    as_reference = True)
-               )
-
           if 'output_probabilities' in output_params:
                outputs.append(ComplexOutput(
                     identifier="output",
                     title=u"Vysledne hodnoty pravdepodobnosti tvaru navrhovych srazek ve formatu CSV",
+                    supported_formats=[Format('application/csv')],
+                    as_reference = True)
+               )
+
+          if 'output_shapes' in output_params:
+               outputs.append(ComplexOutput(
+                    identifier="output_shapes",
+                    title=u"Vysledne hodnoty prubehu navrhovych srazek ve formatu CSV",
                     supported_formats=[Format('application/csv')],
                     as_reference = True)
                )
@@ -223,7 +223,7 @@ class SubDayPrecipProcess(Process):
                LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
 
           if self.identifier == 'd-rain6h-timedist':
-               response.outputs['output_shapes'].file, response.outputs['output_probabilities'].file = \
+               response.outputs['output_shapes'].file, response.outputs['output'].file = \
                     self.export()
           else:
                response.outputs['output'].file = self.export()
@@ -374,14 +374,6 @@ class SubDayPrecipProcess(Process):
           )
           
           return map_name
-     
-     # def copy(self):
-     #      map_name = request.inputs['input'][0].data
-     #      Module('g.copy', vector=['{}@PERMANENT'.format(map_name),map_name],
-     #             overwrite=True
-     #      )
-
-     #      return map_name
      
      def export(self):
           pass

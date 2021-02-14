@@ -80,7 +80,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           with open(self.output_shapes, 'w') as fd:
                self.export_shapes(fd, self.query_shapes(), data)
 
-          self.output_probabilities = '{}/{}-probabilities.csv'.format(
+          self.output_probabilities = '{}/{}.csv'.format(
                self.output_dir, self.identifier)
           with open(self.output_probabilities, 'w') as fd:
                self.export_probabilities(fd, data)
@@ -126,6 +126,10 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           nl = '\r\n'
           # write header
           fd.write('{key}'.format(key=self.keycolumn))
+          # H columns
+          for col in data['columns'][1:]: # skip key column
+               fd.write('{sep}{col}_mm'.format(sep=self.sep, col=col))
+          # P columns
           for rp in self.return_period:
                for stype in self.shapetype:
                     fd.write('{sep}P_{rast}typ{stype}_%'.format(
@@ -140,10 +144,11 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           for fid, attrib in data['values'].items():
                LOGGER.debug('FID={}: {}'.format(attrib[0], attrib[1:]))
                valid = True if float(attrib[1]) > 0 else False
-               # write first line (percentage values)
                fd.write('{fid}'.format(
                     fid=attrib[0]
                ))
+               for val in data['values'][fid][1:]: # skip key column
+                    fd.write('{sep}{val:.1f}'.format(sep=self.sep, val=float(val)))
                for val in data_perc['values'][fid]:
                     if valid:
                          val = float(val)
