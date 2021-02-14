@@ -141,7 +141,7 @@ class SubDayPrecipProcess(Process):
 
           if 'output_probabilities' in output_params:
                outputs.append(ComplexOutput(
-                    identifier="output_probabilities",
+                    identifier="output",
                     title=u"Vysledne hodnoty pravdepodobnosti tvaru navrhovych srazek ve formatu CSV",
                     supported_formats=[Format('application/csv')],
                     as_reference = True)
@@ -150,7 +150,7 @@ class SubDayPrecipProcess(Process):
           super(SubDayPrecipProcess, self).__init__(
                self._handler,
                identifier=identifier,
-               version="0.1",
+               version="2.0",
                title=u"Navrhova srazka pro zvolenou lokalitu. " + description,
                abstract=u"Pocita navrhovou srazku pro zvolenou lokalitu s vyuzitim nastroje GRASS GIS r.subdayprecip.design. Vice informaci na http://rain.fsv.cvut.cz/nastroje/r.subdayprecip.design",
                inputs=inputs,
