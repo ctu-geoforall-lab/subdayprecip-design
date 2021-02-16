@@ -65,5 +65,5 @@ wget -q --post-file request-d-rain-shp.xml 'http://localhost:8080/services/wps?'
 ### Run tests
 
 ```
-./autotests.sh
+./wps/tests/autotest.sh
 ```
