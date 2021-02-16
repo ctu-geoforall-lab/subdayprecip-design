@@ -1,0 +1,43 @@
+--- /usr/local/lib/python3.6/dist-packages/pywps/app/Service.py 	2021-01-13 10:42:04.722309347 +0000
++++ /usr/local/lib/python3.6/dist-packages/pywps/app/Service.py.new	2021-01-13 10:36:30.971511495 +0000
+@@ -246,22 +246,27 @@
+ 
+             os.environ['GISBASE'] = gisbase
+ 
+-            os.environ['LD_LIBRARY_PATH'] = '{}:{}'.format(
+-                os.environ.get('LD_LIBRARY_PATH'),
+-                os.path.join(gisbase, 'lib'))
+-            os.putenv('LD_LIBRARY_PATH', os.environ.get('LD_LIBRARY_PATH'))
++            ld_library_path = os.environ.get('LD_LIBRARY_PATH', '').split(os.pathsep)
++            ld_library_path.insert(0, os.path.join(gisbase, 'lib'))
++            os.environ['LD_LIBRARY_PATH'] = os.pathsep.join(ld_library_path)
++            os.putenv('LD_LIBRARY_PATH', os.environ['LD_LIBRARY_PATH'])
++            LOGGER.debug('LD_LIBRARY_PATH set to {}'.format(os.environ['LD_LIBRARY_PATH']))
+ 
+-            os.environ['PATH'] = '{}:{}:{}'.format(
+-                os.environ.get('PATH'),
+-                os.path.join(gisbase, 'bin'),
+-                os.path.join(gisbase, 'scripts'))
++            os.environ['PATH'] = '{b}{s}{c}{s}{p}'.format(
++                b=os.path.join(gisbase, 'bin'),
++                c=os.path.join(gisbase, 'scripts'),
++                p=os.environ.get('PATH'),
++                s=os.pathsep)
+             os.putenv('PATH', os.environ.get('PATH'))
++            LOGGER.debug('PATH set to {}'.format(os.environ['PATH']))
+ 
+-            python_path = os.path.join(gisbase, 'etc', 'python')
+-            os.environ['PYTHONPATH'] = '{}:{}'.format(os.environ.get('PYTHONPATH'),
+-                                                      python_path)
+-            os.putenv('PYTHONPATH', os.environ.get('PYTHONPATH'))
+-            sys.path.insert(0, python_path)
++            python_path = os.environ.get('PYTHONPATH', '').split(os.pathsep)
++            grass_python_path = os.path.join(gisbase, 'etc', 'python')
++            python_path.insert(0, grass_python_path)
++            os.environ['PYTHONPATH'] = os.pathsep.join(python_path)
++            os.putenv('PYTHONPATH', os.environ['PYTHONPATH'])
++            sys.path.insert(0, grass_python_path)
++            LOGGER.debug('PYTHONPATH set to {}'.format(os.environ['PYTHONPATH']))
+ 
+     def create_bbox_inputs(self, source, inputs):
+         """ Takes the http_request and parses the input to objects

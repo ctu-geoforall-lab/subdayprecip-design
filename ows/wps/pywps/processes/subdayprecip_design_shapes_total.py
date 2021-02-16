@@ -30,6 +30,19 @@ class SubDayPrecipShapesTotal(SubDayPrecipShapesBase, SubDayPrecipProcess):
           )
           SubDayPrecipShapesBase.__init__(self)
 
+     def export(self):
+          LOGGER.debug("Shapes computation started")
+          start = time.time()
+
+          # export csv
+          self.output_file = '{}/{}.csv'.format(self.output_dir, self.identifier)
+          with open(self.output_file, 'w') as fd:
+               self.export_csv(fd, self.query_shapes(), data=None)
+
+          LOGGER.info("Shapes calculated successfully: {} sec".format(time.time() - start))
+
+          return self.output_file
+
      def export_csv(self, fd, shapes, data=None):
           # write header
           fd.write('CAS_min')

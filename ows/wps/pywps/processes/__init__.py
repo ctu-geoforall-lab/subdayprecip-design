@@ -131,18 +131,26 @@ class SubDayPrecipProcess(Process):
                     data_type='string')
                )
 
-          if 'output_shapes' in output_params:
+          if 'output_probabilities' in output_params:
                outputs.append(ComplexOutput(
                     identifier="output",
+                    title=u"Vysledne hodnoty pravdepodobnosti tvaru navrhovych srazek ve formatu CSV",
+                    supported_formats=[Format('application/csv')],
+                    as_reference = True)
+               )
+
+          if 'output_shapes' in output_params:
+               outputs.append(ComplexOutput(
+                    identifier="output_shapes",
                     title=u"Vysledne hodnoty prubehu navrhovych srazek ve formatu CSV",
                     supported_formats=[Format('application/csv')],
                     as_reference = True)
                )
-          
+
           super(SubDayPrecipProcess, self).__init__(
                self._handler,
                identifier=identifier,
-               version="0.1",
+               version="2.0",
                title=u"Navrhova srazka pro zvolenou lokalitu. " + description,
                abstract=u"Pocita navrhovou srazku pro zvolenou lokalitu s vyuzitim nastroje GRASS GIS r.subdayprecip.design. Vice informaci na http://rain.fsv.cvut.cz/nastroje/r.subdayprecip.design",
                inputs=inputs,
@@ -214,7 +222,11 @@ class SubDayPrecipProcess(Process):
                     )
                LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
 
-          response.outputs['output'].file = self.export()
+          if self.identifier == 'd-rain6h-timedist':
+               response.outputs['output_shapes'].file, response.outputs['output'].file = \
+                    self.export()
+          else:
+               response.outputs['output'].file = self.export()
 
           return response
 
@@ -292,7 +304,8 @@ class SubDayPrecipProcess(Process):
                cats = [1] # no category found, use pseudo category to call v.what.rast
                
           # handle NULL values (areas smaller than raster resolution)
-          LOGGER.info("Number of small areas: {}".format(len(cats)))
+          LOGGER.info("Number of small areas: {} (raster: {} column {})".format(
+               len(cats), rast_name, col_name))
           
           if len(cats) > 0:
                Module('v.what.rast', map=self.map_name, raster=rast_name, type='centroid',
@@ -361,14 +374,6 @@ class SubDayPrecipProcess(Process):
           )
           
           return map_name
-     
-     # def copy(self):
-     #      map_name = request.inputs['input'][0].data
-     #      Module('g.copy', vector=['{}@PERMANENT'.format(map_name),map_name],
-     #             overwrite=True
-     #      )
-
-     #      return map_name
      
      def export(self):
           pass

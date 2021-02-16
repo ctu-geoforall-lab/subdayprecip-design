@@ -1,0 +1,39 @@
+version: "3"
+services:
+  rain_db:
+    restart: unless-stopped
+    build: db/
+    image: rain_db
+    container_name: rain_db_1
+    volumes:
+      - ./db/data:/data
+    env_file:
+      - ./ows.env      
+    environment:
+      - POSTGRES_PASSWORD=20rain20
+      - BPEJ_FILE=bpej_2021010410908.zip
+
+  rain_ows:
+    restart: unless-stopped
+    build: .
+    image: rain_ows
+    container_name: rain_ows_1
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./nginx/log/:/var/log/nginx/
+      - ./wps/pywps/:/opt/pywps
+      - ./wps/log/:/var/log/pywps
+      - ./wps/grass_data/:/opt/grass_location
+      - ./wms:/opt/mapserv/wms
+      - ./wms/data:/opt/mapserv/wms_data
+      - ./wms/log/:/var/log/mapserv
+      - ./wfs:/opt/mapserv/wfs
+    ports:
+      - 8080:80
+    env_file:
+      - ./ows.env      
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=8080
+    links:
+      - rain_db
