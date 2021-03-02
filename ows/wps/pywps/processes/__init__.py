@@ -35,7 +35,7 @@ class SubDayPrecipProcess(Process):
           if 'input' in input_params:
                inputs.append(ComplexInput(
                     identifier="input",
-                    title=u"Vstupni bodova nebo polygonova vektorova data",
+                    title="Vstupni bodova nebo polygonova vektorova data",
                     supported_formats=[Format('text/xml'), # requires QGIS WPS client
                                        Format('GML'),
                                        Format('application/zip; charset=binary')])
@@ -44,33 +44,33 @@ class SubDayPrecipProcess(Process):
           if 'obs' in input_params:
                inputs.append(LiteralInput(
                     identifier="obs_x",
-                    title=u"Zemepisna delka zajmoveho bodu",
+                    title="Zemepisna delka zajmoveho bodu",
                     data_type='float')
                )
                inputs.append(LiteralInput(
                     identifier="obs_y",
-                    title=u"Zemepisna sirka zajmoveho bodu",
+                    title="Zemepisna sirka zajmoveho bodu",
                     data_type='float')
                )
 
           if 'value' in input_params:
                inputs.append(LiteralInput(
                     identifier="value",
-                    title=u"Hodnota navrhove srazky v mm",
+                    title="Hodnota navrhove srazky v mm",
                     data_type='float')
                )
 
           if 'keycolumn' in input_params:
                inputs.append(LiteralInput(
                     identifier="keycolumn",
-                    title=u"Klicovy atribut vstupnich dat",
+                    title="Klicovy atribut vstupnich dat",
                     data_type='string')
                )
           
           if 'return_period' in input_params:
                inputs.append(LiteralInput(
                     identifier="return_period",
-                    title=u"Doby opakovani",
+                    title="Doby opakovani",
                     data_type='string',
                     default="N2,N5,N10,N20,N50,N100")
                )
@@ -78,14 +78,14 @@ class SubDayPrecipProcess(Process):
           if 'rainlength' in input_params:
                inputs.append(LiteralInput(
                     identifier="rainlength",
-                    title=u"Delka srazky v minutach",
+                    title="Delka srazky v minutach",
                     data_type='integer')
                )
 
           if 'area_size' in input_params:
                inputs.append(LiteralInput(
                     identifier="area_size",
-                    title=u"Maximalni vymera plochy v km2 pro kterou bude navrhova srazka vypoctena (-1 pro zadny limit)",
+                    title="Maximalni vymera plochy v km2 pro kterou bude navrhova srazka vypoctena (-1 pro zadny limit)",
                     data_type='float',
                     default='20',
                     min_occurs=0)
@@ -94,7 +94,7 @@ class SubDayPrecipProcess(Process):
           if 'area_red' in input_params:
                inputs.append(LiteralInput(
                     identifier="area_red",
-                    title=u"Provést redukci úhrnu pro povodí nad 20 km2",
+                    title="Provest redukci uhrnu pro povodi nad 20 km2",
                     data_type='boolean',
                     default='true',
                     min_occurs=0)
@@ -103,7 +103,7 @@ class SubDayPrecipProcess(Process):
           if 'type' in input_params:
                inputs.append(LiteralInput(
                     identifier="type",
-                    title=u"Typy rozlozeni srazky",
+                    title="Typy rozlozeni srazky",
                     data_type='string',
                     default='A,B,C,D,E,F')
                )
@@ -111,7 +111,7 @@ class SubDayPrecipProcess(Process):
           if 'output_shp' in output_params:
                outputs.append(ComplexOutput(
                     identifier="output",
-                    title=u"Vysledek ve formatu Esri Shapefile",
+                    title="Vysledek ve formatu Esri Shapefile",
                     supported_formats=[Format('application/x-zipped-shp')],
                     as_reference=True)
                )
@@ -119,31 +119,31 @@ class SubDayPrecipProcess(Process):
           if 'output_csv' in output_params:
                outputs.append(ComplexOutput(
                     identifier="output",
-                    title=u"Vysledek ve formatu CSV",
-                    supported_formats=[Format('application/csv')],
+                    title="Vysledek ve formatu CSV",
+                    supported_formats=[Format('text/csv')],
                     as_reference = True)
                )
 
           if 'output_value' in output_params:
                outputs.append(LiteralOutput(
                     identifier="output",
-                    title=u"Vycislena hodnota navrhove srazky v mm",
+                    title="Vycislena hodnota navrhove srazky v mm",
                     data_type='string')
                )
 
           if 'output_probabilities' in output_params:
                outputs.append(ComplexOutput(
                     identifier="output",
-                    title=u"Vysledne hodnoty pravdepodobnosti tvaru navrhovych srazek ve formatu CSV",
-                    supported_formats=[Format('application/csv')],
+                    title="Vysledne hodnoty pravdepodobnosti tvaru navrhovych srazek ve formatu CSV",
+                    supported_formats=[Format('text/csv')],
                     as_reference = True)
                )
 
           if 'output_shapes' in output_params:
                outputs.append(ComplexOutput(
                     identifier="output_shapes",
-                    title=u"Vysledne hodnoty prubehu navrhovych srazek ve formatu CSV",
-                    supported_formats=[Format('application/csv')],
+                    title="Vysledne hodnoty prubehu navrhovych srazek ve formatu CSV",
+                    supported_formats=[Format('text/csv')],
                     as_reference = True)
                )
 
@@ -151,8 +151,8 @@ class SubDayPrecipProcess(Process):
                self._handler,
                identifier=identifier,
                version="2.0",
-               title=u"Navrhova srazka pro zvolenou lokalitu. " + description,
-               abstract=u"Pocita navrhovou srazku pro zvolenou lokalitu s vyuzitim nastroje GRASS GIS r.subdayprecip.design. Vice informaci na http://rain.fsv.cvut.cz/nastroje/r.subdayprecip.design",
+               title="Navrhova srazka pro zvolenou lokalitu. " + description,
+               abstract="Pocita navrhovou srazku pro zvolenou lokalitu s vyuzitim nastroje GRASS GIS r.subdayprecip.design. Vice informaci na http://rain.fsv.cvut.cz/nastroje/r.subdayprecip.design",
                inputs=inputs,
                outputs=outputs,
                grass_location=location,
@@ -209,6 +209,8 @@ class SubDayPrecipProcess(Process):
           if 'input' in request.inputs.keys():
                LOGGER.debug("Subday computation started")
                start = time.time()
+               self.report_progress(response, 0)
+
                LOGGER.info("R: {}".format(self.rainlength))
                if self.identifier == 'd-rain6h-timedist':
                     LOGGER.info('Using v.rast.stats')
@@ -216,19 +218,30 @@ class SubDayPrecipProcess(Process):
                else:
                     LOGGER.info('Using r.subdayprecip.design')
                     Module('g.region', raster=self.return_period[0])
+                    self.report_progress(response, 10)
                     Module('r.subdayprecip.design',
                            map=self.map_name, return_period=self.return_period,
                            rainlength=self.rainlength, area_size=self.area_size
                     )
                LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
+          self.report_progress(response, 90)
 
+          # export output
           if self.identifier == 'd-rain6h-timedist':
                response.outputs['output_shapes'].file, response.outputs['output'].file = \
                     self.export()
           else:
                response.outputs['output'].file = self.export()
+          self.report_progress(response, 100)
 
           return response
+
+     @staticmethod
+     def report_progress(response, value):
+          response.update_status(
+               message='Computation progress',
+               status_percentage=str(value)
+          )
 
      def _area_size_reduction(self, map_name, field_name, area_col_name):
           """Taken from r.subdayprecip.design"""
