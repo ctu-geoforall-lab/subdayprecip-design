@@ -62,11 +62,11 @@ http://localhost:8080/services/wps?service=wps&request=describeprocess&version=2
 Execute (POST):
 
 ```
-wget -q --post-file request-d-rain-shp.xml 'http://localhost:8080/services/wps?' -O -
+wget -q --post-file ./ows/wps/tests/request-d-rain-shp.xml 'http://localhost:8080/services/wps?' -O -
 ```
 
 ### Run tests
 
 ```
-./wps/tests/autotest.sh
+./ows/wps/tests/autotest.sh
 ```
