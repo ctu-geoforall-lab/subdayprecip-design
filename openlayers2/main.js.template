@@ -2,7 +2,7 @@
 var map, wpsObj, urlWPS, obsPoint;
 
 // URLs change according to needs
-var urlWPS="https://rain1.fsv.cvut.cz/services/wps";
+var urlWPS="${NGINX_HTTP}://${NGINX_HOST}:${NGINX_PORT}/services/wps";
 
 // OPTION GRITTER
 $.extend($.gritter.options,{position:'top-left',fade_in_speed:'medium',fade_out_speed:2000,time:3000});

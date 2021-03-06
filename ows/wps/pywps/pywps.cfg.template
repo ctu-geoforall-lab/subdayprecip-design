@@ -4,9 +4,9 @@ language=cs-CZ
 parallelprocesses=2
 maxrequestsize=10mb
 maxsingleinputsize=10mb
-outputurl=http://${NGINX_HOST}:${NGINX_PORT}/wps/output/
+outputurl=${NGINX_HTTP}://${NGINX_HOST}:${NGINX_PORT}/wps/output/
 outputpath=/var/www/wps/output
-url=http://${NGINX_HOST}:${NGINX_PORT}/services/wps
+url=${NGINX_HTTP}://${NGINX_HOST}:${NGINX_PORT}/services/wps
 
 [metadata:main]
 identification_title=Rain WPS Server
