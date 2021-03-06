@@ -62,7 +62,8 @@ location /services/wfs {
 }
 
 # d-rain-point app
-location /d-rain-point {
+# https://rain.fsv.cvut.cz/webapp/d-rain-point/
+location /webapp/d-rain-point {
        autoindex on;
        alias /var/www/html/d-rain-point;
 }
