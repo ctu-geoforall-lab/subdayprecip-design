@@ -70,12 +70,18 @@ services:
       - media:/var/www/media/
       - ./gisquick/nginx/conf.local/:/etc/nginx/conf.d/
       - ./gisquick/nginx/error/:/var/www/error/
-# Rain modification ends here
+# Rain modification starts here
       - wps_output_data:/var/www/wps/output/
+      - docs_data:/var/www/html/docs
 # Rain modification ends here
     ports:
       - 80:80
     logging: *default-logging
+# Rain modification starts here
+    links:
+      - docs
+      - ows
+# Rain modification ends here
 
   web-map:
     image: gisquick/web-map
@@ -128,6 +134,15 @@ services:
       - NGINX_PORT=80
     links:
       - db
+
+  docs:
+    restart: unless-stopped
+    build: docs/
+    image: rain_docs
+    container_name: rain_docs_1
+    volumes:
+      - ./docs/:/docs/
+      - docs_data:/docs/_build/html
 # Rain modification ends here
 
 volumes:
@@ -142,4 +157,5 @@ volumes:
   media:
 # Rain modification starts here
   wps_output_data:
+  docs_data:
 # Rain modification ends here
