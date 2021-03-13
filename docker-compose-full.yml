@@ -70,6 +70,9 @@ services:
       - media:/var/www/media/
       - ./gisquick/nginx/conf.local/:/etc/nginx/conf.d/
       - ./gisquick/nginx/error/:/var/www/error/
+# Rain modification ends here
+      - wps_output_data:/var/www/wps/output/
+# Rain modification ends here
     ports:
       - 80:80
     logging: *default-logging
@@ -86,6 +89,7 @@ services:
       - assets:/assets/
     command: "copy-assets /var/www /assets/user"
 
+# Rain modification starts here
   db:
     restart: unless-stopped
     build: ows/db/
@@ -99,7 +103,6 @@ services:
       - POSTGRES_PASSWORD=20rain20
       - BPEJ_FILE=bpej_2021010410908.zip
 
-  # Rain modification starts here
   ows:
     restart: unless-stopped
     build: ows/
@@ -117,15 +120,15 @@ services:
       - ./ows/wfs:/opt/mapserv/wfs
       - wps_output_data:/var/www/wps/output/
     ports:
-      - 8080:80
+      - 8081
     env_file:
       - ./ows/ows.env
     environment:
-      - NGINX_HOST=localhost
-      - NGINX_PORT=8080
+      - NGINX_HOST=ows
+      - NGINX_PORT=8081
     links:
       - db
-    # Rain modification ends here
+# Rain modification ends here
 
 volumes:
   publish:
@@ -137,6 +140,6 @@ volumes:
   db-data:
   assets:
   media:
-  # Rain modification starts here
+# Rain modification starts here
   wps_output_data:
-  # Rain modification ends here
+# Rain modification ends here
