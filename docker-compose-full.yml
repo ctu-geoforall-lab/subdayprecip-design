@@ -86,7 +86,7 @@ services:
       - assets:/assets/
     command: "copy-assets /var/www /assets/user"
 
-  rain_db:
+  db:
     restart: unless-stopped
     build: ows/db/
     image: rain_db
@@ -100,7 +100,7 @@ services:
       - BPEJ_FILE=bpej_2021010410908.zip
 
   # Rain modification starts here
-  rain_ows:
+  ows:
     restart: unless-stopped
     build: ows/
     image: rain_ows
@@ -124,7 +124,7 @@ services:
       - NGINX_HOST=localhost
       - NGINX_PORT=8080
     links:
-      - rain_db
+      - db
     # Rain modification ends here
 
 volumes:

@@ -1,6 +1,6 @@
 version: "3"
 services:
-  rain_ows:
+  ows:
     restart: unless-stopped
     build: ows/
     image: rain_ows
