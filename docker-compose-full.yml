@@ -127,6 +127,7 @@ services:
       - wps_output_data:/var/www/wps/output/
     ports:
       - 8081
+      - 80
     env_file:
       - ./ows/ows.env
     environment:
