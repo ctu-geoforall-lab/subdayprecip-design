@@ -83,7 +83,7 @@ services:
 # Rain modification ends here      
     ports:
       - 8083:80
-      - 4455:443
+      - 443:443
     logging: *default-logging
 # Rain modification starts here
     links:
@@ -138,7 +138,7 @@ services:
     environment:
       - NGINX_HTTP=https
       - NGINX_HOST=rain1.fsv.cvut.cz
-      - NGINX_PORT=4455
+      - NGINX_PORT=443
     links:
       - db
 
