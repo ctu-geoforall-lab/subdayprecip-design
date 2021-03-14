@@ -35,7 +35,7 @@ touch /var/log/mapserv/mapserv.log
 chmod 664 /var/log/mapserv/mapserv.log
 chgrp www-data /var/log/mapserv/mapserv.log
 
-gunicorn3 -b 127.0.0.1:8081 --workers $((2*`nproc --all`)) \
+gunicorn3 -b 0.0.0.0:8081 --workers $((2*`nproc --all`)) \
           --log-syslog  --pythonpath /opt/pywps pywps_app:application
 
 exit 0

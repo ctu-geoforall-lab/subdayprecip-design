@@ -1,22 +1,19 @@
 version: "3"
 services:
-  rain_ows:
+  ows:
     restart: unless-stopped
     build: ows/
-    image: rain_ows
-    container_name: rain_ows_1
     volumes:
-      - ./ows/nginx/conf.d/:/etc/nginx/conf.d/
-      - ./ows/nginx/log/:/var/log/nginx/
-      - ./ows/wps/pywps/:/opt/pywps
-      - ./ows/wps/log/:/var/log/pywps
-      - ./ows/wps/grass_data/:/opt/grass_location
-      - ./openlayers2/:/var/www/html/d-rain-point
+      - ./ows/nginx/conf.d:/etc/nginx/conf.d/
+      - ./ows/nginx/log:/var/log/nginx/
+      - ./ows/wps/pywps:/opt/pywps/
+      - ./ows/wps/log:/var/log/pywps/
+      - ./ows/wps/grass_data:/opt/grass_location/
     ports:
       - 8080:80
     env_file:
       - ./ows/ows.env      
     environment:
+      - NGINX_HTTP=http
       - NGINX_HOST=localhost
       - NGINX_PORT=8080
-      - NGINX_HTTP=http

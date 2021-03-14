@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # Test WPS processes
-URL="http://localhost:8080"
+URL="http://localhost"
 DATA="@xlink:href=http://rain.fsv.cvut.cz/geodata/test.gml"
 KEY="RAD_I"
 RP="N2,N5,N100"
@@ -18,7 +18,7 @@ echo "**************************************************************"
 echo "* d-rain-shp (POST) "
 echo "**************************************************************"
 
-wget -q --post-file request-d-rain-shp.xml 'http://localhost:8080/services/wps?' -O response.xml
+wget -q --post-file request-d-rain-shp.xml 'http://localhost/services/wps?' -O response.xml
 file=`cat response.xml | grep '\<wps:Reference' | cut -d'"' -f2`
 wget -q $file
 echo "RESULT:"
