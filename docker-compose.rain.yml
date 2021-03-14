@@ -105,7 +105,7 @@ services:
 
 # Rain modification starts here
   db:
-    restart: unless-stopped
+    restart: always
     build: ows/db/
     volumes:
       - ./ows/db/data:/data
@@ -116,7 +116,7 @@ services:
       - BPEJ_FILE=bpej_2021010410908.zip
 
   ows:
-    restart: unless-stopped
+    restart: always
     build: ows/
     volumes:
       - ./ows/nginx/conf.d/:/etc/nginx/conf.d/
