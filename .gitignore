@@ -12,3 +12,4 @@ ows/wms/data
 ows/nginx/log
 ows/db/data
 openlayers2/main.js
+.env
