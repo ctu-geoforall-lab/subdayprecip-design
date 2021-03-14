@@ -17,6 +17,6 @@ services:
     env_file:
       - ./ows/ows.env      
     environment:
+      - NGINX_HTTP=http
       - NGINX_HOST=localhost
       - NGINX_PORT=8080
-      - NGINX_HTTP=http
