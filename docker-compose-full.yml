@@ -73,6 +73,7 @@ services:
 # Rain modification starts here
       - wps_output_data:/var/www/wps/output/
       - docs_data:/var/www/html/docs
+      - ./openlayers2:/var/www/html/d-rain-point/
 # Rain modification ends here
     ports:
       - 80:80
@@ -99,8 +100,6 @@ services:
   db:
     restart: unless-stopped
     build: ows/db/
-    image: rain_db
-    container_name: rain_db_1
     volumes:
       - ./ows/db/data:/data
     env_file:
@@ -112,8 +111,6 @@ services:
   ows:
     restart: unless-stopped
     build: ows/
-    image: rain_ows
-    container_name: rain_ows_1
     volumes:
       - ./ows/nginx/conf.d/:/etc/nginx/conf.d/
       - ./ows/nginx/log/:/var/log/nginx/
@@ -125,6 +122,7 @@ services:
       - ./ows/wms/log/:/var/log/mapserv
       - ./ows/wfs:/opt/mapserv/wfs
       - wps_output_data:/var/www/wps/output/
+      - ./openlayers2:/var/www/html/d-rain-point/
     ports:
       - 8081
       - 80
@@ -139,8 +137,6 @@ services:
 
   docs:
     build: docs/
-    image: rain_docs
-    container_name: rain_docs_1
     volumes:
       - ./docs/:/docs/
       - docs_data:/docs/_build/html

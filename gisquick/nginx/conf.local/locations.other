@@ -1,7 +1,8 @@
 # d-rain-point app
 # https://rain.fsv.cvut.cz/webapp/d-rain-point/
 location /webapp/d-rain-point {
-    alias /var/www/webapp/d-rain-point;
+    client_max_body_size 50M;
+    alias /var/www/html/d-rain-point/;
     if ($request_method = 'OPTIONS') {
        add_header 'Access-Control-Allow-Origin' '*';
        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
