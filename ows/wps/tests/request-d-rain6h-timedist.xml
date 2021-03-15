@@ -248,7 +248,7 @@
     <wps:Input>
       <ows:Identifier>return_period</ows:Identifier>
       <wps:Data>
-	<wps:LiteralData>N2,N5,N100</wps:LiteralData>
+	<wps:LiteralData>N2,N5,N10,N20,N50,N100</wps:LiteralData>
       </wps:Data>
     </wps:Input>
     <wps:Input>

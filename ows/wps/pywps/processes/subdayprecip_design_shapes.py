@@ -50,7 +50,10 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
      def _compute_timeshapes_perc(self):
           # filename syntax: sjtsk_zastoupeni_shluku_cA_100yr_perc
           columns = []
+          i = 1
+          count = len(self.return_period)
           for rp in self.return_period:
+               self.report_progress(25 + (i * 65/count), f"Computing timeshapes for {rp}")
                for stype in self.shapetype:
                     n = rp.lstrip('N')
                     columns.append('c{types}_{n}yr_perc'.format(
@@ -60,6 +63,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
                          types=stype, n=n, ms=self.mapset
                     )
                     self.v_rast_stats(rast_name, columns[-1])
+               i += 1
 
           return gscript.vector_db_select(
                map=self.map_name,
@@ -101,6 +105,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           fd.write(nl)
 
           # process features
+          self.report_progress(25, f"Exporting shapes")
           for fid, attrib in data['values'].items():
                LOGGER.debug('FID={}: {}'.format(attrib[0], attrib[1:]))
                valid = True if float(attrib[1]) > 0 else False
@@ -141,6 +146,7 @@ class SubDayPrecipShapes(SubDayPrecipShapesBase, SubDayPrecipProcess):
           data_perc = self._compute_timeshapes_perc()
 
           # process features
+          self.report_progress(90, f"Exporting probabilities")
           for fid, attrib in data['values'].items():
                LOGGER.debug('FID={}: {}'.format(attrib[0], attrib[1:]))
                valid = True if float(attrib[1]) > 0 else False

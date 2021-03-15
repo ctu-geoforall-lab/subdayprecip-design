@@ -206,10 +206,12 @@ class SubDayPrecipProcess(Process):
                shutil.rmtree(self.output_dir)
           os.mkdir(self.output_dir)
 
+          self._response = response # report_progress() can be called by other methods
+
           if 'input' in request.inputs.keys():
                LOGGER.debug("Subday computation started")
                start = time.time()
-               self.report_progress(response, 0)
+               self.report_progress(1, "Starting computation")
 
                LOGGER.info("R: {}".format(self.rainlength))
                if self.identifier == 'd-rain6h-timedist':
@@ -218,13 +220,12 @@ class SubDayPrecipProcess(Process):
                else:
                     LOGGER.info('Using r.subdayprecip.design')
                     Module('g.region', raster=self.return_period[0])
-                    self.report_progress(response, 10)
+                    self.report_progress(10, "Performing r.subdayprecip.design")
                     Module('r.subdayprecip.design',
                            map=self.map_name, return_period=self.return_period,
                            rainlength=self.rainlength, area_size=self.area_size
                     )
                LOGGER.info("Subday computation finished: {} sec".format(time.time() - start))
-          self.report_progress(response, 90)
 
           # export output
           if self.identifier == 'd-rain6h-timedist':
@@ -232,15 +233,16 @@ class SubDayPrecipProcess(Process):
                     self.export()
           else:
                response.outputs['output'].file = self.export()
-          self.report_progress(response, 100)
+          self.report_progress(100, "Computation finished")
+
+          del self._response
 
           return response
 
-     @staticmethod
-     def report_progress(response, value):
-          response.update_status(
-               message='Computation progress',
-               status_percentage=str(value)
+     def report_progress(self, value, message=None):
+          self._response.update_status(
+               message='Computation progress' if message is None else message,
+               status_percentage=int(value)
           )
 
      def _area_size_reduction(self, map_name, field_name, area_col_name):
@@ -279,7 +281,11 @@ class SubDayPrecipProcess(Process):
 
           LOGGER.info("Reduction enabled?: {}".format(reduction))
 
+          i = 1
+          count = len(self.return_period)
           for rp in self.return_period:
+               self.report_progress(i * 20/count, f"Computing {rp}")
+
                n = rp.lstrip('N')
                col_name = 'H_N{n}T360'.format(n=n)
                rast_name = 'sjtsk_navrhove_srazky_6h_P_{n}yr_6h_mm@{ms}'.format(
@@ -299,6 +305,7 @@ class SubDayPrecipProcess(Process):
                #             column=col_name, value='-1',
                #             where='{} > {}'.format(area_col_name, self.area_size)
                #      )
+               i += 1
 
           # cleanup
           Module('v.db.dropcolumn', map=self.map_name,
