@@ -17,9 +17,11 @@ if [ -d /opt/mapserv/wfs ] ; then
 fi
 
 # d-rain-point
-envsubst '$NGINX_HTTP $NGINX_HOST $NGINX_PORT' \
-         < /var/www/html/d-rain-point/main.js.template > \
-         /var/www/html/d-rain-point/main.js
+if [ -d /var/www/html/d-rain-point ] ; then
+    envsubst '$NGINX_HTTP $NGINX_HOST $NGINX_PORT' \
+             < /var/www/html/d-rain-point/main.js.template > \
+             /var/www/html/d-rain-point/main.js
+fi
 
 # nginx
 envsubst '$NGINX_HOST' < /etc/nginx/conf.d/default.conf.template > \

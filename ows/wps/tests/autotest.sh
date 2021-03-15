@@ -3,10 +3,10 @@
 # Test WPS processes
 URL="http://localhost"
 DATA="@xlink:href=http://rain.fsv.cvut.cz/geodata/test.gml"
-KEY="RAD_I"
+KEY="HLGP_ID"
 RP="N2,N5,N100"
 RL="360"
-COL="RAD_I"
+COL="HLGP_ID"
 STYP="E,F"
 VALUE="25"
 LIMIT="10000"

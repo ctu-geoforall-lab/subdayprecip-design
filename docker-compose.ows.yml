@@ -10,10 +10,10 @@ services:
       - ./ows/wps/log:/var/log/pywps/
       - ./ows/wps/grass_data:/opt/grass_location/
     ports:
-      - 8080:80
+      - 80:80
     env_file:
       - ./ows/ows.env      
     environment:
       - NGINX_HTTP=http
       - NGINX_HOST=localhost
-      - NGINX_PORT=8080
+      - NGINX_PORT=80
