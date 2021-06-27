@@ -8,7 +8,7 @@ from pywps.app.exceptions import ProcessError
 from grass.exceptions import CalledModuleError
 from grass.pygrass.modules import Module
 
-class GranularityProcess(Process):
+class SoilGranProcess(Process):
     def __init__(self):
         self.layers = ["sand", "silt", "clay", "usda-texture-class", "hsg"]
         inputs = [
@@ -34,7 +34,7 @@ class GranularityProcess(Process):
             )
         ]
 
-        super(GranularityProcess, self).__init__(
+        super(SoilGranProcess, self).__init__(
             self._handler,
             identifier="soil-gran-hsg",
             version="1.0",

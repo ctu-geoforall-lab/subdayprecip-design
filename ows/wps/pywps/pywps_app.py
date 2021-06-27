@@ -14,7 +14,7 @@ from processes.subdayprecip_design_csv import SubDayPrecipCsv
 from processes.subdayprecip_design_point import SubDayPrecipPoint
 from processes.subdayprecip_design_shapes import SubDayPrecipShapes
 from processes.subdayprecip_design_shapes_total import SubDayPrecipShapesTotal
-from processes.granularity import GranularityProcess
+from processes.soil_gran import SoilGranProcess
 
 processes = [
     SubDayPrecipShp(),
@@ -22,7 +22,7 @@ processes = [
     SubDayPrecipPoint(),
     SubDayPrecipShapes(),
     SubDayPrecipShapesTotal(),
-    GranularityProcess()
+    SoilGranProcess()
 ]
 
 application = Service(
