@@ -10,25 +10,25 @@ from grass.pygrass.modules import Module
 
 class GranularityProcess(Process):
     def __init__(self):
-        self.layers = ["jil_les", "jil_zpf", "pisek_les", "pisek_zpf", "prach_les", "prach_zpf"]
+        self.layers = ["sand", "silt", "clay", "usda-texture-class", "hsg"]
         inputs = [
             ComplexInput(
                 identifier="input",
-                title="Zajmove uzemi definovane polygonem",
+                title="Zajmove uzemi definovane polygonem do 20 km2",
                 supported_formats=[Format('text/xml'), # requires by QGIS WPS client
                                    Format('GML'),
                                    Format('application/zip; charset=binary')]
             ),
             LiteralInput(
                 identifier="layers",
-                title="Zajmove vrstvy ({})".format(",".join(self.layers)),
+                title="Vrstvy hydropedologickych charakteristik ({})".format(",".join(self.layers)),
                 data_type='string'
             )
         ]
         outputs = [
             ComplexOutput(
                 identifier="output",
-                title="Vysledek ve formatu ZIP",
+                title="Vysledny vyrez rastru hydropedologickych charakteristik (ZIP)",
                 supported_formats=[Format('application/zip; charset=binary')],
                 as_reference=True
             )
@@ -36,13 +36,13 @@ class GranularityProcess(Process):
 
         super(GranularityProcess, self).__init__(
             self._handler,
-            identifier="d-rain-gran",
+            identifier="soil-gran-hsg",
             version="1.0",
-            title="Zrnitost",
-            abstract="Zrnitost",
+            title="Zrnitost a hydrologicka skupina pudy",
+            abstract="Sluzba vraci vyrez rastru zvolene hydropedologicke charakteristiky dle zadaneho polygonu o velikosti do 20 km2.",
             inputs=inputs,
             outputs=outputs,
-            grass_location="/grassdata/granularity",
+            grass_location="/grassdata/soil_gran",
             store_supported=True,
             status_supported=True)
 
