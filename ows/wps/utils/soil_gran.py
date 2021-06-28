@@ -11,4 +11,4 @@ input_dir = sys.argv[1]
 for tif in glob.glob(input_dir + "/*.tif"):
     tif_path = os.path.abspath(tif)
     map_name = os.path.splitext(os.path.basename(tif))[0]
-    Module("r.external", flags="o", input=tif_path, output=map_name)
+    Module("r.in.gdal", flags="o", input=tif_path, output=map_name)

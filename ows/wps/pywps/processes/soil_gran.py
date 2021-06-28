@@ -10,7 +10,7 @@ from grass.pygrass.modules import Module
 
 class SoilGranProcess(Process):
     def __init__(self):
-        self.layers = ["sand", "silt", "clay", "usda-texture-class", "hsg"]
+        self.layers = ["sand", "silt", "clay", "usda-texture-class"]
         inputs = [
             ComplexInput(
                 identifier="input",
@@ -89,7 +89,7 @@ class SoilGranProcess(Process):
             ))
 
         # set computational region
-        Module("g.region", vector=aoi, align="jil_les")
+        Module("g.region", vector=aoi, align="sand")
         Module("r.mask", vector=aoi)
 
         # export data
