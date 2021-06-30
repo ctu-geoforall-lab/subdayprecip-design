@@ -6,7 +6,7 @@ gisquick/data
 ows/wps/pywps/pywps.cfg
 ows/nginx/conf.d/default.conf
 ows/wps/log
-ows/wps/grass_data*
+ows/wps/grassdata*
 ows/wms/log
 ows/wms/data
 ows/nginx/log

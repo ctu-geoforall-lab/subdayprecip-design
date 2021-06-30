@@ -8,7 +8,7 @@ services:
       - ./ows/nginx/log:/var/log/nginx/
       - ./ows/wps/pywps:/opt/pywps/
       - ./ows/wps/log:/var/log/pywps/
-      - ./ows/wps/grass_data:/opt/grass_location/
+      - ./ows/wps/grassdata:/grassdata
     ports:
       - 80:80
     env_file:

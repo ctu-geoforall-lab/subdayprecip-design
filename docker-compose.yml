@@ -120,7 +120,7 @@ services:
       - ./ows/nginx/log/:/var/log/nginx/
       - ./ows/wps/pywps/:/opt/pywps
       - ./ows/wps/log/:/var/log/pywps
-      - ./ows/wps/grass_data/:/opt/grass_location
+      - ./ows/wps/grassdata:/grassdata      
       - ./ows/wms:/opt/mapserv/wms
       - ./ows/wms/data:/opt/mapserv/wms_data
       - ./ows/wms/log/:/var/log/mapserv

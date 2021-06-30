@@ -14,13 +14,15 @@ from processes.subdayprecip_design_csv import SubDayPrecipCsv
 from processes.subdayprecip_design_point import SubDayPrecipPoint
 from processes.subdayprecip_design_shapes import SubDayPrecipShapes
 from processes.subdayprecip_design_shapes_total import SubDayPrecipShapesTotal
+from processes.soil_gran import SoilGranProcess
 
 processes = [
     SubDayPrecipShp(),
     SubDayPrecipCsv(),
     SubDayPrecipPoint(),
     SubDayPrecipShapes(),
-    SubDayPrecipShapesTotal()
+    SubDayPrecipShapesTotal(),
+    SoilGranProcess()
 ]
 
 application = Service(
