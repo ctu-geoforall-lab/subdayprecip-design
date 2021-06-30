@@ -72,12 +72,22 @@ class SoilGranProcess(Process):
             Module("v.import",
                    input=input_data,
                    output=aoi,
-                   overwrite=True,
+                   overwrite=True
             )
         except CalledModuleError as e:
-            with open(input_data) as fd:
-                LOGGER.info("Input data content: {}".format(fd.read()))
-            raise ProcessError("Unable to import input vector data - {}".format(e))
+            # try also v.in.ogr with -f flag
+            try:
+                LOGGER.info("Unable to import input vector data. Projection check skipped")
+                Module("v.in.ogr",
+                       flags="o",
+                       input=input_data,
+                       output=aoi,
+                       overwrite=True
+                       )
+            except CalledModuleError as e:
+                with open(input_data) as fd:
+                    LOGGER.info("Input data content: {}".format(fd.read()))
+                raise ProcessError("Unable to import input vector data - {}".format(e))
 
         # check aoi limit
         v_to_db = Module("v.to.db", flags="pc", map=aoi, option="area", stdout_=PIPE)
